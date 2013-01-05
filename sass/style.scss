@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* ==========================================================================
+   Your project!
+   ========================================================================== */
+/*
+ * Don't write any css in here, just import your partials.
+ * This will compile to css/style.css
+ */
+
+
+/*
+ * Import your vars and cssframework
+ */
+@import "partials/vars";
+@import "cssframework/cssframework";
+
+
+/*
+ * This is where you start importing all of your partials.
+ *
+ * If you are styling objects from cssframework, I recommend creating a partial with the same name
+ * as the one in cssframework and importing it here.
+ *
+ * Example: use @import "partials/nav" if you are adding style to the nav object.
+ */
+ @import "partials/nav";

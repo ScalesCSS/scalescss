@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+/*
+ * Default font stack
+ */
+@mixin typeface($font-family: sans-serif) {
+    font-family: $font-family;
+    color: $text-color;
+}
+
+/*
+ * Set font sizes using rems with a px fallback
+ *
+ * Usage: @include font-size(24)
+ * Compiles to: "font-size: 24px; font-size: 2.4rem"
+ */
+@mixin font-size($size-value: 16){
+    font-size: $size-value + px;
+    font-size: ($size-value / 10) + rem;
+}
+
+/*
+ * If you want to force text to truncate rather than wrap to 2 lines
+ */
+@mixin overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}

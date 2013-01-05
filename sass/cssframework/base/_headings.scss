@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Headings
+   ========================================================================== */
+/**
+ * Each heading also has a class so that you can apply the size to a different heading if you need to.
+ */
+h1, .alpha{
+    @include font-size($h1-size);
+}
+h2, .beta{
+    @include font-size($h2-size);
+}
+h3, .gamma{
+    @include font-size($h3-size);
+}
+h4, .delta{
+    @include font-size($h4-size);
+}
+h5, .epsilon{
+    @include font-size($h5-size);
+}
+h6, .zeta{
+    @include font-size($h6-size);
+}

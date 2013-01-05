@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Styles from HTML5 Boilerplate - h5bp.com
+   ========================================================================== */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+body, button, input, select, textarea {
+    @include typeface;
+}
+
+img, object {
+    max-width: 100%;
+}
+
+// Fancy color for when you select stuff! Change the color for your app.
+::-moz-selection {
+    background: #4F89A1;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #4F89A1;
+    color: #fff;
+    text-shadow: none;
+}
+
+// Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+img {
+    vertical-align: middle;
+}
+
+// Remove default fieldset styles.
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+// Allow only vertical resizing of textareas.
+textarea {
+    resize: vertical;
+}
+
+// Chrome Frame prompt
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}

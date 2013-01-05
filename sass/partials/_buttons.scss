@@ -1,0 +1,22 @@
+.btn {
+    font: inherit;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    padding: rhythm(.25, ms(0)) ms(0);
+    line-height: normal;
+}
+
+.btn, .btn:hover {
+    text-decoration: none;
+}
+
+// makes a button the full width of its container
+.btnFull {
+    display: block;
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+}

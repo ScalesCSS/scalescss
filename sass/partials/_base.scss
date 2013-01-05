@@ -1,0 +1,161 @@
+// Core imports
+@import "compass";
+
+// Default project mixins
+@import "mixins";
+
+// normalize.css
+@import "normalize";
+
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { margin: 0; }
+body, button, input, select, textarea { @include typeface; }
+img, object { max-width: 100%; }
+
+// Fancy color for when you select stuff! Change the color for your app.
+::-moz-selection { background: #4F89A1; color: #fff; text-shadow: none; }
+::selection { background: #4F89A1; color: #fff; text-shadow: none; }
+
+// Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+img { vertical-align: middle; }
+
+// Remove default fieldset styles.
+fieldset { border: 0; margin: 0; padding: 0; }
+
+// Allow only vertical resizing of textareas.
+textarea { resize: vertical; }
+
+// Chrome Frame prompt
+.chromeframe { margin: 0.2em 0; background: #ccc; color: #000; padding: 0.2em 0; }
+
+/* ==========================================================================
+   Project Base styles
+   ========================================================================== */
+
+// Default spacing
+h1, h2, h3, h4, h5, h6, ul, ol, dl, p, blockquote, .media, form {margin: 0 10px; }
+h1, h2, h3, h4, h5, h6, img{ padding-bottom: 0px; }
+pre { margin: 0 10px; }
+table h1, table h2, table h3, table h4, table h5, table h6, table p, table ul, table ol, table dl { padding: 0; }
+p, figure { @include trailer; }
+
+// links
+a:link {
+    // Set colors etc in _project
+    &:active,
+    &:focus {
+        text-decoration: underline;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+    &:active,
+    &:hover {
+        outline: 0;
+    }
+    &:focus {
+        outline: thin dotted;
+    }
+}
+
+.current a {
+    cursor: text;
+}
+
+// Headings
+h1,h2,h3,h4,h5,h6 {
+    @include rhythm(.5,0,0,.5);
+}
+
+// Lists
+ul, ol { margin: 0 ms(0); padding: 0; }
+dd { margin: 0 0 0 ms(3); }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+// modules
+.mod { margin: 0 ms(0); }
+.bd, .ft, .mod header { overflow: hidden; *overflow: visible; zoom: 1; }
+
+// media
+%media {
+  @include clearfix;
+  .img {
+    float: left;
+    margin-right: ms(0);
+      img {
+        display: block;
+      }
+  }
+}
+
+// grid
+$total-columns: 7;
+$column-width: 4%;
+$gutter-width: 5%;
+$grid-padding: 5%;
+$break: 47.9375em 12;
+$container-style: magic;
+$container-width: 70em;
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+// Modular Scale
+$base-size: $base-font-size $base-line-height;
+// @include ms-list();
+
+@import "susy";
+@include border-box-sizing;
+
+// establish your vertical baseline grid.
+@include establish-baseline;
+
+/* spacing helpers
+ * p,m = padding,margin
+ * a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
+ * s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
+ */
+
+.ptn, .pvn, .pan { padding-top: 0px; }
+.pts, .pvs, .pas { padding-top: 5px; }
+.ptm, .pvm, .pam { padding-top: 10px; }
+.ptl, .pvl, .pal { padding-top: 20px; }
+.ptg, .pvg, .pag { padding-top: 40px; }
+.prn, .phn, .pan { padding-right: 0px; }
+.prs, .phs, .pas { padding-right: 5px; }
+.prm, .phm, .pam { padding-right: 10px; }
+.prl, .phl, .pal { padding-right: 20px; }
+.prg, .phg, .pag { padding-right: 40px; }
+.pbn, .pvn, .pan { padding-bottom: 0px; }
+.pbs, .pvs, .pas { padding-bottom: 5px; }
+.pbm, .pvm, .pam { padding-bottom: 10px; }
+.pbl, .pvl, .pal { padding-bottom: 20px; }
+.pbg, .pvg, .pag { padding-bottom: 40px; }
+.pln, .phn, .pan { padding-left: 0px; }
+.pls, .phs, .pas { padding-left: 5px; }
+.plm, .phm, .pam { padding-left: 10px; }
+.pll, .phl, .pal { padding-left: 20px; }
+.plg, .phg, .pag { padding-left: 40px; }
+.mtn, .mvn, .man { margin-top: 0px; }
+.mts, .mvs, .mas { margin-top: 5px; }
+.mtm, .mvm, .mam { margin-top: 10px; }
+.mtl, .mvl, .mal { margin-top: 20px; }
+.mtg, .mvg, .mag { margin-top: 40px; }
+.mrn, .mhn, .man { margin-right: 0px; }
+.mrs, .mhs, .mas { margin-right: 5px; }
+.mrm, .mhm, .mam { margin-right: 10px; }
+.mrl, .mhl, .mal { margin-right: 20px; }
+.mrg, .mhg, .mag { margin-right: 40px; }
+.mbn, .mvn, .man { margin-bottom: 0px; }
+.mbs, .mvs, .mas { margin-bottom: 5px; }
+.mbm, .mvm, .mam { margin-bottom: 10px; }
+.mbl, .mvl, .mal { margin-bottom: 20px; }
+.mbg, .mvg, .mag { margin-bottom: 40px; }
+.mln, .mhn, .man { margin-left: 0px; }
+.mls, .mhs, .mas { margin-left: 5px; }
+.mlm, .mhm, .mam { margin-left: 10px; }
+.mll, .mhl, .mal { margin-left: 20px; }
+.mlg, .mhg, .mag { margin-left: 40px; }

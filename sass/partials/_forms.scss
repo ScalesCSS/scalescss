@@ -1,0 +1,45 @@
+fieldset{
+    padding: 0 ms(-1);
+    @include rhythm(0,1,1,0);
+}
+
+.formFields {
+    list-style: none;
+    margin: 0;
+}
+
+.formFields > li {
+    @include trailer;
+}
+
+label, .label {
+    display: block;
+    font-weight: bold;
+}
+
+// Usage: <label>Card number <small class=additional>No spaces</small></label>
+.additional {
+    display: block;
+    font-weight: normal;
+}
+
+// Group of checkboxes and radios
+.check-list {
+    list-style: none;
+    margin: 0;
+}
+
+ // Labels in check-lists
+.check-label, .check-list label, .check-list .label {
+    display: inline-block;
+}
+
+// Extra help text displayed after a field when that field is in focus
+.extraHelp{
+    display: inline-block;
+    visibility: hidden;
+}
+
+input[type="text"]:active + .extraHelp, input[type="text"]:focus + .extraHelp {
+    visibility: visible;
+}
