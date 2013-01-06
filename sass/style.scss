@@ -9,17 +9,17 @@
 
 
 /*
- * Import your vars and cssframework
+ * Import your variables and Scales
  */
 @import "partials/vars";
-@import "cssframework/cssframework";
+@import "scales/scales";
 
 
 /*
  * This is where you start importing all of your partials.
  *
- * If you are styling objects from cssframework, I recommend creating a partial with the same name
- * as the one in cssframework and importing it here.
+ * If you are styling objects from Scales, I recommend creating a partial with the same name
+ * as the one in Scales and importing it here.
  *
  * Example: use @import "partials/nav" if you are adding style to the nav object.
  */
