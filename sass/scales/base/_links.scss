@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/*
+ * Set in _vars.scss
+ */
+a {
+    color: $link-color;
+
+    &:hover,
+    &:active,
+    &:focus{
+        color: $link-interaction-color;
+    }
+}
+
+/*
+ * Current state, like the currently selected nav item.
+ * This just makes changes the cursor
+ *
+   <ul class="nav">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li class="current"><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.current a {
+    cursor: default;
+}

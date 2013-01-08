@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Code
+   ========================================================================== */
+pre, code {
+    font-family: menlo, monospace, sans-serif;
+    @include font-size(14px);
+    line-height:1.5em;
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 0 15px 0 25px;
+    @include rhythm(1,0,0,1);
+    background-color: #444;
+    color: #fff;
+}

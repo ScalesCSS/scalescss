@@ -2,22 +2,15 @@
    Mixins
    ========================================================================== */
 /*
- * Default font stack
- */
-@mixin typeface($font-family: sans-serif) {
-    font-family: $font-family;
-    color: $text-color;
-}
-
-/*
- * Set font sizes using rems with a px fallback
+ * Set font sizes using rems with a px fallback and adjusted line-height
  *
- * Usage: @include font-size(24)
- * Compiles to: "font-size: 24px; font-size: 2.4rem"
+ * Usage: @include font-size(24px)
+ *
  */
-@mixin font-size($size-value: 16){
-    font-size: $size-value + px;
-    font-size: ($size-value / 10) + rem;
+@mixin font-size($font-size){
+    font-size:$font-size;
+    font-size:($font-size / $base-font-size)*1rem;
+    line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
 }
 
 /*
