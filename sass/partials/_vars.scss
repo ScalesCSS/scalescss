@@ -4,12 +4,12 @@
 /*
  * These variables give you access to change many of the values in Scales.
  * You should also add your own project specific variables to this file.
- * Values are in px for familiarity, but are converted to rem.
+ * Some values are in px for familiarity, but are converted to em.
  */
 
 
 /*
- * Base font and line height for vertical rhythm
+ * Base font and line height for vertical rhythm.
  */
 $base-font-size: 16px;
 $base-line-height: 24px;
@@ -23,16 +23,18 @@ $base-line-height: 24px;
 
 
 /**
- * Responsiveness?
- * Tell inuit.css when breakpoints start, in pixels.
+ * Variables you can use in your media queries so you don't have to try to remember the numbers.
+ * Add or change these to fit your needs.
+ *
+ * Usage:
+    @media screen and (min-width: $lap-start) { [Styles Here] }
  */
-$responsive: true;
-$lap-start: 481px;
-$desk-start: 1024px;
+$palm-end: 30.0625em; // 481px
+$desk-start: 64.0625em; // 1025px
 
 
 /*
- * Font-sizes (in pixels).
+ * Font-sizes in pixels.
  */
 $h1-size: 36px; // .alpha
 $h2-size: 30px; // .beta
@@ -46,14 +48,14 @@ $micro-text: 10px;
 
 
 /*
- * Link state colors
+ * Link state colors.
  */
 $link-color: blue;
 $link-interaction-color: cornflowerblue; // :hover, :active, :focus
 
 
 /*
- * Easier way to declare your font stack
+ * Easier way to declare your font stack.
  */
 $typeface: Calibri, Candara, "Gill Sans", "Gill Sans MT", sans-serif;
 
