@@ -2,18 +2,6 @@
    Mixins
    ========================================================================== */
 /*
- * Set font sizes using rems with a px fallback and adjusted line-height
- *
- * Usage: @include font-size(24px)
- *
- */
-@mixin font-size($font-size){
-    font-size:$font-size;
-    font-size:($font-size / $base-font-size)*1rem;
-    line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
-}
-
-/*
  * If you want to force text to truncate rather than wrap to 2 lines
  */
 @mixin overflow {
@@ -21,4 +9,66 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     display: block;
+}
+
+/**
+ * Media query mixin.
+ *
+ * It’s not great practice to define solid breakpoints up-front, preferring to
+ * modify your design when it needs it, rather than assuming you’ll want a
+ * change at ‘mobile’. However, as inuit.css is required to take a hands off
+ * approach to design decisions, this is the closest we can get to baked-in
+ * responsiveness. It’s flexible enough to allow you to set your own breakpoints
+ * but solid enough to be frameworkified.
+ *
+ * We define some broad breakpoints in our vars file that are picked up here
+ * for use in a simple media query mixin. Our options are:
+ *
+ * palm
+ * lap
+ * lap-and-up
+ * portable
+ * desk
+ *
+ * Not using a media query will, naturally, serve styles to all devices.
+ *
+ * `@include media-query(palm){ [styles here] }`
+ *
+ * We work out your end points for you:
+ */
+$palm-end:              $lap-start - 1;
+$lap-end:               $desk-start - 1;
+
+@mixin media-query($media-query){
+
+    @if $media-query == palm{
+
+        @media only screen and (max-width:$palm-end) { @content; }
+
+    }
+
+    @if $media-query == lap{
+
+        @media only screen and (min-width:$lap-start) and (max-width:$lap-end) { @content; }
+
+    }
+
+    @if $media-query == lap-and-up{
+
+        @media only screen and (min-width:$lap-start) { @content; }
+
+    }
+
+    @if $media-query == portable{
+
+        @media only screen and (max-width:$lap-end) { @content; }
+
+    }
+
+    @if $media-query == desk{
+
+        @media only screen and (min-width:$desk-start) { @content; }
+
+    }
+
 }

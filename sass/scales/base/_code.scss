@@ -3,8 +3,7 @@
    ========================================================================== */
 pre, code {
     font-family: menlo, monospace, sans-serif;
-    @include font-size(14px);
-    line-height:1.5em;
+    @include adjust-font-size-to(14px);
 }
 
 pre {
@@ -12,7 +11,7 @@ pre {
     white-space: pre-wrap;
     word-wrap: break-word;
     padding: 0 15px 0 25px;
-    @include rhythm(1,0,0,1);
+    @include trailer(1, 14px);
     background-color: #444;
     color: #fff;
 }

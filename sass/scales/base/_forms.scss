@@ -3,7 +3,7 @@
    ========================================================================== */
 
 fieldset {
-    padding: $base-spacing-unit;
+    padding: $base-rhythm-unit;
 }
 
 /*
@@ -110,7 +110,7 @@ label, .label {
  *
    <label for="email">Username:</label>
    <input type="email" id="email" class="text-input">
-   <small class="extra-help">Enter your email address</small>
+   <span class="extra-help">Enter your email address</span>
  *
  * We leave the help text in the document flow and merely set it to
  * `visibility: hidden;`. This means that it won’t interfere with anything once

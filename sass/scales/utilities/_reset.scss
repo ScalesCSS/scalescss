@@ -38,17 +38,11 @@ abbr[title], dfn[title] {
 }
 
 /*
- * Remove underlines from potentially troublesome elements.
+ * Fixing small so it doesn't break vertical rhythm
  */
-a, u, ins {
-    text-decoration: none;
-}
-
-/*
- * Apply faux underline via "border-bottom"
- */
-ins {
-    border-bottom: 1px solid;
+small {
+    @include adjust-font-size-to($small-text);
+    @include trailer(1, $small-text);
 }
 
 /*

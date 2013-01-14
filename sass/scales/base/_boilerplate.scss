@@ -5,7 +5,7 @@
  * Well, except for this first bit
  */
 html {
-    font: #{($base-font-size/16px)*1em}/#{$line-height-ratio} $typeface;
+    font: $typeface;
     overflow-y: scroll;
     min-height: 100%;
 }
@@ -29,6 +29,15 @@ html, body, button, input, select, textarea {
     color: #fff;
     text-shadow: none;
 }
+
+// A better looking default hr
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
 
 // Remove the gap between images and the bottom of their containers: h5bp.com/i/440
 img {

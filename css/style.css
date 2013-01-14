@@ -1,14 +1,21 @@
 @charset "UTF-8";
 /* ========================================================================== Your project! ========================================================================== */
 /* Don't write any css in here, just import your partials. This will compile to css/style.css */
+/* Import Compass and Compass plugins */
 /* Import your variables and Scales */
 /* ========================================================================== Variables ========================================================================== */
 /* These variables give you access to change many of the values in Scales. You should also add your own project specific variables to this file. Values are in px for familiarity, but are converted to rem. */
-/* Base font and line height */
+/* Base font and line height for vertical rhythm */
+/* A good primer on Compass Vertical Rhythm. Read this before you get lost: http://atendesigngroup.com/blog/vertical-rhythm-compass */
+/* line 61, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html { font-size: 100%; }
+
+/* line 64, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html { font-size: 16px; line-height: 1.5em; }
+
 /** Responsiveness? Tell inuit.css when breakpoints start, in pixels. */
 /* Font-sizes (in pixels). */
 /* Link state colors */
-/* Assign our `$base-line-height` to a new spacing var for more transparency. */
 /* Easier way to declare your font stack */
 /* Color variables - You should change these! */
 /* ========================================================================== Scales ========================================================================== */
@@ -16,11 +23,10 @@
 /* ========================================================================== !!! WARNING !!! ========================================================================== */
 /* You shouldn't modify anything here, other than commenting out patterns that you don't need. Everything here is simplified as much as possible so that you don't have to remove anything.  Scales doesn't make any design decisions for you. To give design to these elements and patterns simply create your own partials and extend these styles. I recommend naming your partials the same as these for the sake of consistency in your project. */
 /* ========================================================================== Imports ========================================================================== */
-/* Compass, obvs. */
 /* These are basic utility styles */
 /* ========================================================================== Mixins ========================================================================== */
-/* Set font sizes using rems with a px fallback and adjusted line-height  Usage: @include font-size(24px)  */
 /* If you want to force text to truncate rather than wrap to 2 lines */
+/** Media query mixin.  It’s not great practice to define solid breakpoints up-front, preferring to modify your design when it needs it, rather than assuming you’ll want a change at ‘mobile’. However, as inuit.css is required to take a hands off approach to design decisions, this is the closest we can get to baked-in responsiveness. It’s flexible enough to allow you to set your own breakpoints but solid enough to be frameworkified.  We define some broad breakpoints in our vars file that are picked up here for use in a simple media query mixin. Our options are:  palm lap lap-and-up portable desk  Not using a media query will, naturally, serve styles to all devices.  `@include media-query(palm){ [styles here] }`  We work out your end points for you: */
 /* normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
 /* Corrects `block` display not defined in IE 8/9. */
@@ -182,23 +188,19 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, form, fieldset, lege
 /* line 36, ../sass/scales/utilities/_reset.scss */
 abbr[title], dfn[title] { cursor: help; }
 
-/* Remove underlines from potentially troublesome elements. */
+/* Fixing small so it doesn't break vertical rhythm */
 /* line 43, ../sass/scales/utilities/_reset.scss */
-a, u, ins { text-decoration: none; }
-
-/* Apply faux underline via "border-bottom" */
-/* line 50, ../sass/scales/utilities/_reset.scss */
-ins { border-bottom: 1px solid; }
+small { font-size: 0.75em; line-height: 2em; margin-bottom: 2em; }
 
 /* So that "alt" text is visually offset if images don’t load. */
-/* line 57, ../sass/scales/utilities/_reset.scss */
+/* line 51, ../sass/scales/utilities/_reset.scss */
 img { font-style: italic; }
 
 /* Give form elements some cursor interactions */
-/* line 67, ../sass/scales/utilities/_reset.scss */
+/* line 61, ../sass/scales/utilities/_reset.scss */
 label, button, select, option { cursor: pointer; }
 
-/* line 74, ../sass/scales/utilities/_reset.scss */
+/* line 68, ../sass/scales/utilities/_reset.scss */
 .text-input:active, .text-input:focus, textarea:active, textarea:focus { cursor: text; outline: none; }
 
 /* ========================================================================== Clearfix ========================================================================== */
@@ -207,27 +209,27 @@ label, button, select, option { cursor: pointer; }
 /* Where `margin-bottom` is concerned, this value will be the same as the base line-height. This allows us to keep a consistent vertical rhythm. As per: csswizardry.com/2012/06/single-direction-margin-declarations */
 /* Base elements */
 /* line 26, ../sass/scales/utilities/_spacing.scss */
-h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, .form-fields > li, .check-list > li, .media, .island, .islet { margin-bottom: 24px; margin-bottom: 1.5rem; }
-/* line 30, ../sass/scales/utilities/_spacing.scss */
-.islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet ul, .islet ol, .islet dl, .islet blockquote, .islet p, .islet address, .islet table, .islet fieldset, .islet figure, .islet pre, .islet .form-fields > li, .islet .check-list > li, .islet .media, .islet .island, .islet .islet { margin-bottom: 12px; margin-bottom: 0.75rem; }
+h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, .form-fields > li, .check-list > li, .media, .island, .islet { margin-bottom: 1.5em; }
+/* line 29, ../sass/scales/utilities/_spacing.scss */
+.islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet ul, .islet ol, .islet dl, .islet blockquote, .islet p, .islet address, .islet table, .islet fieldset, .islet figure, .islet pre, .islet .form-fields > li, .islet .check-list > li, .islet .media, .islet .island, .islet .islet { margin-bottom: 0.75em; }
 
 /* Doubled up `margin-bottom` helper class. */
-/* line 40, ../sass/scales/utilities/_spacing.scss */
-.landmark { margin-bottom: 48px; margin-bottom: 3rem; }
+/* line 38, ../sass/scales/utilities/_spacing.scss */
+.landmark { margin-bottom: 3em; }
 
 /* `hr` elements only take up a few pixels, so we need to give them special treatment regarding vertical rhythm. */
-/* line 50, ../sass/scales/utilities/_spacing.scss */
-hr { margin-bottom: 22px; margin-bottom: 1.375rem; }
+/* line 47, ../sass/scales/utilities/_spacing.scss */
+hr { margin-bottom: 1.375em; }
 
 /* Where `margin-left` is concerned we want to try and indent certain elements by a consistent amount. */
-/* line 60, ../sass/scales/utilities/_spacing.scss */
-ul, ol, dd { margin-left: 48px; margin-left: 3rem; }
+/* line 56, ../sass/scales/utilities/_spacing.scss */
+ul, ol, dd { margin-left: 3em; }
 
 /* These are the base structure styles for standard HTML elements */
 /* ========================================================================== Styles from HTML5 Boilerplate - h5bp.com ========================================================================== */
 /* Well, except for this first bit */
 /* line 7, ../sass/scales/base/_boilerplate.scss */
-html { font: 1em/1.5 Calibri, Candara, "Gill Sans", "Gill Sans MT", sans-serif; overflow-y: scroll; min-height: 100%; }
+html { font: Calibri, Candara, "Gill Sans", "Gill Sans MT", sans-serif; overflow-y: scroll; min-height: 100%; }
 
 /* Now the boilerplate stuff */
 /* line 16, ../sass/scales/base/_boilerplate.scss */
@@ -240,36 +242,39 @@ html, body, button, input, select, textarea { color: #333333; }
 ::selection { background: #4F89A1; color: #fff; text-shadow: none; }
 
 /* line 34, ../sass/scales/base/_boilerplate.scss */
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; }
+
+/* line 43, ../sass/scales/base/_boilerplate.scss */
 img { vertical-align: middle; }
 
-/* line 39, ../sass/scales/base/_boilerplate.scss */
+/* line 48, ../sass/scales/base/_boilerplate.scss */
 fieldset { border: 0; margin: 0; padding: 0; }
 
-/* line 46, ../sass/scales/base/_boilerplate.scss */
+/* line 55, ../sass/scales/base/_boilerplate.scss */
 textarea { resize: vertical; }
 
-/* line 51, ../sass/scales/base/_boilerplate.scss */
+/* line 60, ../sass/scales/base/_boilerplate.scss */
 .chromeframe { margin: 0.2em 0; background: #ccc; color: #000; padding: 0.2em 0; }
 
 /* ========================================================================== Headings ========================================================================== */
 /** Each heading also has a class so that you can apply the size to a different heading if you need to. */
 /* line 7, ../sass/scales/base/_headings.scss */
-h1, .alpha { font-size: 36px; font-size: 2.25rem; line-height: 1.33333; }
+h1, .alpha { font-size: 2.25em; line-height: 1.33333em; margin-bottom: 0.66667em; }
 
-/* line 10, ../sass/scales/base/_headings.scss */
-h2, .beta { font-size: 30px; font-size: 1.875rem; line-height: 1.6; }
+/* line 11, ../sass/scales/base/_headings.scss */
+h2, .beta { font-size: 1.875em; line-height: 1.6em; margin-bottom: 0.8em; }
 
-/* line 13, ../sass/scales/base/_headings.scss */
-h3, .gamma { font-size: 24px; font-size: 1.5rem; line-height: 1; }
-
-/* line 16, ../sass/scales/base/_headings.scss */
-h4, .delta { font-size: 20px; font-size: 1.25rem; line-height: 1.2; }
+/* line 15, ../sass/scales/base/_headings.scss */
+h3, .gamma { font-size: 1.5em; line-height: 2em; margin-bottom: 1em; }
 
 /* line 19, ../sass/scales/base/_headings.scss */
-h5, .epsilon { font-size: 16px; font-size: 1rem; line-height: 1.5; }
+h4, .delta { font-size: 1.25em; line-height: 1.2em; margin-bottom: 1.2em; }
 
-/* line 22, ../sass/scales/base/_headings.scss */
-h6, .zeta { font-size: 14px; font-size: 0.875rem; line-height: 1.71429; }
+/* line 23, ../sass/scales/base/_headings.scss */
+h5, .epsilon { font-size: 1em; line-height: 1.5em; margin-bottom: 1.5em; }
+
+/* line 27, ../sass/scales/base/_headings.scss */
+h6, .zeta { font-size: 0.875em; line-height: 1.71429em; margin-bottom: 1.71429em; }
 
 /* ========================================================================== Quotes ========================================================================== */
 /* line 4, ../sass/scales/base/_quotes.scss */
@@ -312,10 +317,10 @@ blockquote p:last-of-type { margin-bottom: 0; }
 
 /* ========================================================================== Code ========================================================================== */
 /* line 4, ../sass/scales/base/_code.scss */
-pre, code { font-family: menlo, monospace, sans-serif; font-size: 14px; font-size: 0.875rem; line-height: 1.71429; line-height: 1.5em; }
+pre, code { font-family: menlo, monospace, sans-serif; font-size: 0.875em; line-height: 1.71429em; }
 
-/* line 10, ../sass/scales/base/_code.scss */
-pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 0 15px 0 25px; margin-top: 1.5em; padding-top: 0em; padding-bottom: 0em; margin-bottom: 1.5em; background-color: #444; color: #fff; }
+/* line 9, ../sass/scales/base/_code.scss */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 0 15px 0 25px; margin-bottom: 1.71429em; background-color: #444; color: #fff; }
 
 /* ========================================================================== Links ========================================================================== */
 /* Set in _vars.scss */
@@ -342,7 +347,7 @@ li > ul, li > ol { margin-bottom: 0; }
 
 /* ========================================================================== Forms ========================================================================== */
 /* line 5, ../sass/scales/base/_forms.scss */
-fieldset { padding: 24px; }
+fieldset { padding: 1.5em; }
 
 /* **NOTE** on Text inputs  Instead of a `[type]` selector for each kind of form input, we just use a class to target any/every one, e.g.: <input type="text" class="text-input"> <input type="email" class="text-input"> <input type="password" class="text-input">  You should style .text-input and textarea in your own partial  */
 /* Use an unordered list to mark up your groups of form fields  <ul class="form-fields"> <li> <label /> <input /> </li> <li> <label /> <select /> </li> <li> <label /> <input /> </li> </ul>  */
@@ -365,7 +370,7 @@ label, .label { display: block; }
 /* line 103, ../sass/scales/base/_forms.scss */
 .check-label, .check-list label, .check-list .label { display: inline-block; }
 
-/* Extra help text displayed after a field when that field is in focus  <label for="email">Username:</label> <input type="email" id="email" class="text-input"> <small class="extra-help">Enter your email address</small>  We leave the help text in the document flow and merely set it to `visibility: hidden;`. This means that it won’t interfere with anything once it reappears.  */
+/* Extra help text displayed after a field when that field is in focus  <label for="email">Username:</label> <input type="email" id="email" class="text-input"> <span class="extra-help">Enter your email address</span>  We leave the help text in the document flow and merely set it to `visibility: hidden;`. This means that it won’t interfere with anything once it reappears.  */
 /* line 120, ../sass/scales/base/_forms.scss */
 .extra-help { display: inline-block; visibility: hidden; }
 
@@ -375,3 +380,5 @@ label, .label { display: block; }
 /* These are OOCSS based design patterns. If you come up with new one's, please contribute on github!  If you don't need a pattern, comment out the line and it wont be included in your project. */
 /* Style trumps; helper and brand classes */
 /* This is where you start importing all of your partials.  If you are styling objects from Scales, I recommend creating a partial with the same name as the one in Scales and importing it here.  Example: use @import "partials/nav" if you are adding style to the nav object. */
+/* line 33, ../sass/style.scss */
+html { background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(0, 0, 0, 0.5)), color-stop(5%, rgba(0, 0, 0, 0))); background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%); background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%); -webkit-background-size: 100% 1.5em; -moz-background-size: 100% 1.5em; -o-background-size: 100% 1.5em; background-size: 100% 1.5em; background-position: left top; }

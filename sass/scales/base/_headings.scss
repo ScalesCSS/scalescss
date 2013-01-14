@@ -5,20 +5,26 @@
  * Each heading also has a class so that you can apply the size to a different heading if you need to.
  */
 h1, .alpha{
-    @include font-size($h1-size);
+    @include adjust-font-size-to($h1-size);
+    @include trailer(1, $h1-size);
 }
 h2, .beta{
-    @include font-size($h2-size);
+    @include adjust-font-size-to($h2-size);
+    @include trailer(1, $h2-size);
 }
 h3, .gamma{
-    @include font-size($h3-size);
+    @include adjust-font-size-to($h3-size);
+    @include trailer(1, $h3-size);
 }
 h4, .delta{
-    @include font-size($h4-size);
+    @include adjust-font-size-to($h4-size);
+    @include trailer(1, $h4-size);
 }
 h5, .epsilon{
-    @include font-size($h5-size);
+    @include adjust-font-size-to($h5-size);
+    @include trailer(1, $h5-size);
 }
 h6, .zeta{
-    @include font-size($h6-size);
+    @include adjust-font-size-to($h6-size);
+    @include trailer(1, $h6-size);
 }
