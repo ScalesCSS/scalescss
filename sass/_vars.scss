@@ -23,14 +23,22 @@ $base-line-height: 24px;
 
 
 /**
- * Variables you can use in your media queries so you don't have to try to remember the numbers.
- * Add or change these to fit your needs.
+ * Responsive design breakpoints
+ *
+ * Scales is a mobile-first framework, so it needs to know when you want
+ * to begin applying "non-mobile" styles to the design patterns.
+ *
+ * It is not advisable to set breakpoints in responsive designs based on specific
+ * device widths. Instead, breakpoints should be applied when your content begins
+ * to look awkward. If there are other widths that you need to specifically support
+ * and a named variable makes sense, feel free to add it here (ex. $desk-start: 64.0625em; // 1025px ).
+ *
+ * Using ems instead of px allows your breakpoints to be relative to your $base-font-size.
  *
  * Usage:
-    @media screen and (min-width: $lap-start) { [Styles Here] }
+    @media screen and (min-width: $palm-end) { [Styles Here] }
  */
 $palm-end: 30.0625em; // 481px
-$desk-start: 64.0625em; // 1025px
 
 
 /*

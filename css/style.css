@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /* ========================================================================== Your project! ========================================================================== */
 /* Don't write any css in here, just import your partials. This will compile to css/style.css */
-/* Import Compass and Compass plugins */
-/* Import your variables and Scales */
+/* Import Compass and Compass plugins. */
+/* Import your variables and Scales. */
 /* ========================================================================== Variables ========================================================================== */
 /* These variables give you access to change many of the values in Scales. You should also add your own project specific variables to this file. Some values are in px for familiarity, but are converted to em. */
 /* Base font and line height for vertical rhythm. */
@@ -13,7 +13,7 @@
 /* line 64, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html { font-size: 16px; line-height: 1.5em; }
 
-/** Variables you can use in your media queries so you don't have to try to remember the numbers. Add or change these to fit your needs.  Usage: @media screen and (min-width: $lap-start) { [Styles Here] } */
+/** Responsive design breakpoints  Scales is a mobile-first framework, so it needs to know when you want to begin applying "non-mobile" styles to the design patterns.  It is not advisable to set breakpoints in responsive designs based on specific device widths. Instead, breakpoints should be applied when your content begins to look awkward. If there are other widths that you need to specifically support and a named variable makes sense, feel free to add it here (ex. $desk-start: 64.0625em; // 1025px ).  Using ems instead of px allows your breakpoints to be relative to your $base-font-size.  Usage: @media screen and (min-width: $palm-end) { [Styles Here] } */
 /* Font-sizes in pixels. */
 /* Link state colors. */
 /* Easier way to declare your font stack. */
@@ -25,7 +25,7 @@ html { font-size: 16px; line-height: 1.5em; }
 /* ========================================================================== Imports ========================================================================== */
 /* These are basic utility styles */
 /* ========================================================================== Mixins ========================================================================== */
-/* If you want to force text to truncate rather than wrap to 2 lines */
+/* If you want to force text to truncate rather than wrap to 2 lines. */
 /* normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
 /* Corrects `block` display not defined in IE 8/9. */
@@ -174,20 +174,20 @@ textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
 table { border-collapse: collapse; border-spacing: 0; }
 
 /* ========================================================================== Reset ========================================================================== */
-/* Most of this is borrowed from csswizardry.com/2011/10/reset-restarted */
-/* Set all elements to use "box-sizing: border-box;" Thanks to paulirish.com/2012/box-sizing-border-box-ftw */
+/* Most of this is borrowed from csswizardry.com/2011/10/reset-restarted. */
+/* Set all elements to use "box-sizing: border-box;" Thanks to paulirish.com/2012/box-sizing-border-box-ftw. */
 /* line 15, ../sass/scales/utilities/_reset.scss */
 *, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-/* Remove padding and margins */
+/* Remove padding and margins. */
 /* line 28, ../sass/scales/utilities/_reset.scss */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, form, fieldset, legend, table, th, td, caption, hr { margin: 0; padding: 0; }
 
-/* Give a help cursor to elements that give extra info on ":hover" */
+/* Give a help cursor to elements that give extra info on ":hover". */
 /* line 36, ../sass/scales/utilities/_reset.scss */
 abbr[title], dfn[title] { cursor: help; }
 
-/* Fixing small so it doesn't break vertical rhythm */
+/* Fixing small so it doesn't break vertical rhythm. */
 /* line 43, ../sass/scales/utilities/_reset.scss */
 small { font-size: 0.75em; line-height: 2em; margin-bottom: 2em; }
 
@@ -195,7 +195,7 @@ small { font-size: 0.75em; line-height: 2em; margin-bottom: 2em; }
 /* line 51, ../sass/scales/utilities/_reset.scss */
 img { font-style: italic; }
 
-/* Give form elements some cursor interactions */
+/* Give form elements some cursor interactions. */
 /* line 61, ../sass/scales/utilities/_reset.scss */
 label, button, select, option { cursor: pointer; }
 
@@ -203,34 +203,30 @@ label, button, select, option { cursor: pointer; }
 .text-input:active, .text-input:focus, textarea:active, textarea:focus { cursor: text; outline: none; }
 
 /* ========================================================================== Clearfix ========================================================================== */
-/* Extend the clearfix placeholder: @extend %clearfix */
+/* Extend the clearfix placeholder: @extend %clearfix. */
 /* ========================================================================== Spacing ========================================================================== */
-/* Where `margin-bottom` is concerned, this value will be the same as the base line-height. This allows us to keep a consistent vertical rhythm. As per: csswizardry.com/2012/06/single-direction-margin-declarations */
+/* Some default vertical spacing for elements so they follow the vertical rhythm of the page. */
 /* Base elements */
-/* line 26, ../sass/scales/utilities/_spacing.scss */
+/* line 24, ../sass/scales/utilities/_spacing.scss */
 h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, .form-fields > li, .check-list > li, .media, .island, .islet { margin-bottom: 1.5em; }
-/* line 29, ../sass/scales/utilities/_spacing.scss */
+/* line 27, ../sass/scales/utilities/_spacing.scss */
 .islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet ul, .islet ol, .islet dl, .islet blockquote, .islet p, .islet address, .islet table, .islet fieldset, .islet figure, .islet pre, .islet .form-fields > li, .islet .check-list > li, .islet .media, .islet .island, .islet .islet { margin-bottom: 0.75em; }
 
-/* Doubled up `margin-bottom` helper class. */
-/* line 38, ../sass/scales/utilities/_spacing.scss */
-.landmark { margin-bottom: 3em; }
-
 /* `hr` elements only take up a few pixels, so we need to give them special treatment regarding vertical rhythm. */
-/* line 47, ../sass/scales/utilities/_spacing.scss */
+/* line 37, ../sass/scales/utilities/_spacing.scss */
 hr { margin-bottom: 1.375em; }
 
 /* Where `margin-left` is concerned we want to try and indent certain elements by a consistent amount. */
-/* line 56, ../sass/scales/utilities/_spacing.scss */
+/* line 46, ../sass/scales/utilities/_spacing.scss */
 ul, ol, dd { margin-left: 3em; }
 
 /* These are the base structure styles for standard HTML elements */
 /* ========================================================================== Styles from HTML5 Boilerplate - h5bp.com ========================================================================== */
-/* Well, except for this first bit */
+/* Well, except for this first bit. */
 /* line 7, ../sass/scales/base/_boilerplate.scss */
 html { font: Calibri, Candara, "Gill Sans", "Gill Sans MT", sans-serif; overflow-y: scroll; min-height: 100%; }
 
-/* Now the boilerplate stuff */
+/* Now the boilerplate stuff. */
 /* line 16, ../sass/scales/base/_boilerplate.scss */
 html, body, button, input, select, textarea { color: #333333; }
 
@@ -322,13 +318,13 @@ pre, code { font-family: menlo, monospace, sans-serif; font-size: 0.875em; line-
 pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 0 15px 0 25px; margin-bottom: 1.71429em; background-color: #444; color: #fff; }
 
 /* ========================================================================== Links ========================================================================== */
-/* Set in _vars.scss */
+/* Set in _vars.scss. */
 /* line 8, ../sass/scales/base/_links.scss */
 a { color: blue; }
 /* line 13, ../sass/scales/base/_links.scss */
 a:hover, a:active, a:focus { color: cornflowerblue; }
 
-/* Current state, like the currently selected nav item. This just makes changes the cursor  <ul class="nav"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li class="current"><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  */
+/* Current state, like the currently selected nav item. This just changes the cursor.  <ul class="nav"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li class="current"><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  */
 /* line 30, ../sass/scales/base/_links.scss */
 .current a { cursor: default; }
 
@@ -348,8 +344,8 @@ li > ul, li > ol { margin-bottom: 0; }
 /* line 5, ../sass/scales/base/_forms.scss */
 fieldset { padding: 1.5em; }
 
-/* **NOTE** on Text inputs  Instead of a `[type]` selector for each kind of form input, we just use a class to target any/every one, e.g.: <input type="text" class="text-input"> <input type="email" class="text-input"> <input type="password" class="text-input">  You should style .text-input and textarea in your own partial  */
-/* Use an unordered list to mark up your groups of form fields  <ul class="form-fields"> <li> <label /> <input /> </li> <li> <label /> <select /> </li> <li> <label /> <input /> </li> </ul>  */
+/* **NOTE** on Text inputs.  Instead of a `[type]` selector for each kind of form input, we just use a class to target any/every one, e.g.: <input type="text" class="text-input"> <input type="email" class="text-input"> <input type="password" class="text-input">  You should style .text-input and textarea in your own partial.  */
+/* Use an unordered list to mark up your groups of form fields.  <ul class="form-fields"> <li> <label /> <input /> </li> <li> <label /> <select /> </li> <li> <label /> <input /> </li> </ul>  */
 /* line 42, ../sass/scales/base/_forms.scss */
 .form-fields, .check-list { list-style: none; margin: 0; }
 
@@ -360,16 +356,16 @@ fieldset { padding: 1.5em; }
 /* line 63, ../sass/scales/base/_forms.scss */
 label, .label { display: block; }
 
-/* Extra help text in labels  <label>Username <small class="additional">No special characters</small></label>  */
+/* Extra help text in labels.  <label>Username <small class="additional">No special characters</small></label>  */
 /* line 73, ../sass/scales/base/_forms.scss */
 .additional { display: block; font-weight: normal; }
 
-/* Groups of checkboxes and radios  <li> <ul class="check-list"> <li> <input /> <label /> </li> <li> <input /> <label /> </li> </ul> </li>  */
-/* Labels in check-lists */
+/* Groups of checkboxes and radios.  <li> <ul class="check-list"> <li> <input /> <label /> </li> <li> <input /> <label /> </li> </ul> </li>  */
+/* Labels in check-lists. */
 /* line 103, ../sass/scales/base/_forms.scss */
 .check-label, .check-list label, .check-list .label { display: inline-block; }
 
-/* Extra help text displayed after a field when that field is in focus  <label for="email">Username:</label> <input type="email" id="email" class="text-input"> <span class="extra-help">Enter your email address</span>  We leave the help text in the document flow and merely set it to `visibility: hidden;`. This means that it won’t interfere with anything once it reappears.  */
+/* Extra help text displayed after a field when that field is in focus.  <label for="email">Username:</label> <input type="email" id="email" class="text-input"> <span class="extra-help">Enter your email address</span>  We leave the help text in the document flow and merely set it to `visibility: hidden;`. This means that it won’t interfere with anything once it reappears.  */
 /* line 120, ../sass/scales/base/_forms.scss */
 .extra-help { display: inline-block; visibility: hidden; }
 
@@ -378,6 +374,5 @@ label, .label { display: block; }
 
 /* These are OOCSS based design patterns. If you come up with new one's, please contribute on github!  If you don't need a pattern, comment out the line and it wont be included in your project. */
 /* Style trumps; helper and brand classes */
+/* A background image for making sure your elements line up to you baseline.  Uncomment to use. */
 /* This is where you start importing all of your partials.  If you are styling objects from Scales, I recommend creating a partial with the same name as the one in Scales and importing it here.  Example: use @import "partials/nav" if you are adding style to the nav object. */
-/* line 33, ../sass/style.scss */
-html { background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(0, 0, 0, 0.5)), color-stop(5%, rgba(0, 0, 0, 0))); background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%); background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%); -webkit-background-size: 100% 1.5em; -moz-background-size: 100% 1.5em; -o-background-size: 100% 1.5em; background-size: 100% 1.5em; background-position: left top; }

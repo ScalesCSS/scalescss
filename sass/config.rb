@@ -1,14 +1,10 @@
 # Require any additional compass plugins here.
 require "susy"
-require "modular-scale"
 
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "../css"
 sass_dir = "./"
-images_dir = "../img"
-javascripts_dir = "../js"
-fonts_dir = "../type"
 
 # You can select your preferred output style here (can be overridden via the command line):
 output_style = :compact

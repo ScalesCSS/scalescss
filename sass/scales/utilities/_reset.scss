@@ -2,12 +2,12 @@
    Reset
    ========================================================================== */
 /*
- * Most of this is borrowed from csswizardry.com/2011/10/reset-restarted
+ * Most of this is borrowed from csswizardry.com/2011/10/reset-restarted.
  */
 
 /*
  * Set all elements to use "box-sizing: border-box;"
- * Thanks to paulirish.com/2012/box-sizing-border-box-ftw
+ * Thanks to paulirish.com/2012/box-sizing-border-box-ftw.
  */
 * {
     &,
@@ -18,7 +18,7 @@
 }
 
 /*
- * Remove padding and margins
+ * Remove padding and margins.
  */
 h1,h2,h3,h4,h5,h6,
 p,blockquote,pre,
@@ -31,14 +31,14 @@ hr {
 }
 
 /*
- * Give a help cursor to elements that give extra info on ":hover"
+ * Give a help cursor to elements that give extra info on ":hover".
  */
 abbr[title], dfn[title] {
     cursor: help;
 }
 
 /*
- * Fixing small so it doesn't break vertical rhythm
+ * Fixing small so it doesn't break vertical rhythm.
  */
 small {
     @include adjust-font-size-to($small-text);
@@ -53,7 +53,7 @@ img {
 }
 
 /*
- * Give form elements some cursor interactions
+ * Give form elements some cursor interactions.
  */
 label,
 button,

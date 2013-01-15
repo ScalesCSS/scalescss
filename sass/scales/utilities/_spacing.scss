@@ -2,9 +2,7 @@
    Spacing
    ========================================================================== */
 /*
- * Where `margin-bottom` is concerned, this value will be the same as the
- * base line-height. This allows us to keep a consistent vertical rhythm.
- * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+ * Some default vertical spacing for elements so they follow the vertical rhythm of the page.
  */
 
 /*
@@ -29,14 +27,6 @@ pre,
     .islet & {
         @include trailer(.5);
     }
-}
-
-
-/*
- * Doubled up `margin-bottom` helper class.
- */
-.landmark {
-    @include trailer(2);
 }
 
 

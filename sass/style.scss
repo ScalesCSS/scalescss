@@ -8,17 +8,25 @@
  */
 
 /*
- * Import Compass and Compass plugins
+ * Import Compass and Compass plugins.
  */
 @import "compass";
 @import "compass/typography/vertical_rhythm";
-@import "modular-scale";
+
 
 /*
- * Import your variables and Scales
+ * Import your variables and Scales.
  */
-@import "partials/vars";
+@import "vars";
 @import "scales/scales";
+
+
+/*
+ * A background image for making sure your elements line up to you baseline.
+ *
+ * Uncomment to use.
+ */
+ // html{@include debug-vertical-alignment();}
 
 
 /*
@@ -29,5 +37,4 @@
  *
  * Example: use @import "partials/nav" if you are adding style to the nav object.
  */
- // @import "partials/nav";
- html{@include debug-vertical-alignment();}
+
