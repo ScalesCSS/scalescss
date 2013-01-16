@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+/**
+ * Nav abstraction.
+ * On small screens, .nav simply removes list markers and left margin, applies
+ * clearfix, and makes the <li> and <a> display block. Style in your nav partial.
+ *
+ * usage:
+ *
+    <ul class="nav">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+    </ul>
+ *
+ */
+.nav {
+    list-style-type: none;
+    margin-left: 0;
+    @extend %clearfix;
+
+    > li {
+
+        &,
+        > a {
+            display: block;
+        }
+    }
+}
+
+/*
+ * Makes a list of comma separated keywords. Extends .nav.
+ *
+ * usage:
+ *
+    <ul class="nav  nav--keywords>
+ *
+ */
+.nav--keywords {
+
+    > li {
+
+        &,
+        > a {
+            display: inline-block;
+        }
+
+        &:after {
+            content: ", ";
+        }
+
+        &:last-child:after {
+            display: none;
+        }
+    }
+}
+
+
+/*
+ * Nav abstractions on screens larger than $palm-end.
+ */
+@media screen and (min-width: $palm-end) {
+    /*
+     * Makes the .nav horizontal
+     */
+    .nav {
+        > li {
+
+            &,
+            > a {
+                display: inline-block;
+                *display: inline;
+                zoom: 1;
+            }
+        }
+    }
+
+
+    /*
+     * Force nav to occupy 100% of the available width of its parent. Extends .nav.
+     *
+     * usage:
+     *
+        <ul class="nav  nav--fit>
+     *
+     */
+    .nav--fit {
+        display: table;
+        width: 100%;
+
+        > li {
+            display: table-cell;
+
+            > a {
+                display: block;
+            }
+        }
+    }
+}

@@ -204,6 +204,11 @@ label, button, select, option { cursor: pointer; }
 
 /* ========================================================================== Clearfix ========================================================================== */
 /* Extend the clearfix placeholder: @extend %clearfix. */
+/* line 9, ../scales/utilities/_clearfix.scss */
+.nav:before, .nav:after { content: " "; display: table; }
+/* line 14, ../scales/utilities/_clearfix.scss */
+.nav:after { clear: both; }
+
 /* ========================================================================== Spacing ========================================================================== */
 /* Some default vertical spacing for elements so they follow the vertical rhythm of the page. */
 /* Base elements */
@@ -373,6 +378,32 @@ label, .label { display: block; }
 .text-input:active + .extra-help, .text-input:focus + .extra-help { visibility: visible; }
 
 /* These are OOCSS based design patterns. If you come up with new one's, please contribute on github!  If you don't need a pattern, comment out the line and it wont be included in your project. */
+/* ========================================================================== Navigation ========================================================================== */
+/** Nav abstraction. On small screens, .nav simply removes list markers and left margin, applies clearfix, and makes the <li> and <a> display block. Style in your nav partial.  usage:  <ul class="nav"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  */
+/* line 20, ../scales/patterns/_nav.scss */
+.nav { list-style-type: none; margin-left: 0; }
+/* line 28, ../scales/patterns/_nav.scss */
+.nav > li, .nav > li > a { display: block; }
+
+/* Makes a list of comma separated keywords. Extends .nav.  usage:  <ul class="nav  nav--keywords>  */
+/* line 47, ../scales/patterns/_nav.scss */
+.nav--keywords > li, .nav--keywords > li > a { display: inline-block; }
+/* line 51, ../scales/patterns/_nav.scss */
+.nav--keywords > li:after { content: ", "; }
+/* line 55, ../scales/patterns/_nav.scss */
+.nav--keywords > li:last-child:after { display: none; }
+
+/* Nav abstractions on screens larger than $palm-end. */
+@media screen and (min-width: 30.0625em) { /* Makes the .nav horizontal */
+  /* line 73, ../scales/patterns/_nav.scss */
+  .nav > li, .nav > li > a { display: inline-block; *display: inline; zoom: 1; }
+  /* Force nav to occupy 100% of the available width of its parent. Extends .nav.  usage:  <ul class="nav  nav--fit>  */
+  /* line 90, ../scales/patterns/_nav.scss */
+  .nav--fit { display: table; width: 100%; }
+  /* line 94, ../scales/patterns/_nav.scss */
+  .nav--fit > li { display: table-cell; }
+  /* line 97, ../scales/patterns/_nav.scss */
+  .nav--fit > li > a { display: block; } }
 /* Style trumps; helper and brand classes */
 /* A background image for making sure your elements line up to you baseline.  Uncomment to use. */
 /* This is where you start importing all of your partials.  If you are styling objects from Scales, I recommend creating a partial with the same name as the one in Scales and importing it here.  Example: use @import "partials/nav" if you are adding style to the nav object. */
