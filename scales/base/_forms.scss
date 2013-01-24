@@ -119,10 +119,9 @@ label, .label {
  *
  */
 .extra-help {
-    display: inline-block;
-    visibility: hidden;
+    display: none;
 }
 .text-input:active + .extra-help,
 .text-input:focus + .extra-help {
-    visibility: visible;
+    display: inline-block;
 }

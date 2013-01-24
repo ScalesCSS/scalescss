@@ -62,11 +62,11 @@ table {
 
 th,
 td {
-    padding: 0 $base-rhythm-unit / 4;
-    @include rhythm(0,.5,.5,0);
+    padding: 0 ms(-3);
+    @include rhythm(0,.25,.25,0, ms(0));
     @media screen and (min-width: $palm-end) {
-        padding: 0 $base-rhythm-unit / 2;
-        @include rhythm(0,.25,.25,0, $base-rhythm-unit);
+        padding: 0 ms(-1);
+        @include rhythm(0,.5,.5,0);
     }
     text-align:left;
 }

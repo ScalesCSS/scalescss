@@ -350,9 +350,9 @@ li > ul, li > ol { margin-bottom: 0; }
 table { width: 100%; }
 
 /* line 64, ../scales/base/_tables.scss */
-th, td { padding: 0 0.375em; margin-top: 0em; padding-top: 0.75em; padding-bottom: 0.75em; margin-bottom: 0em; text-align: left; }
+th, td { padding: 0 10px; margin-top: 0em; padding-top: 0.375em; padding-bottom: 0.375em; margin-bottom: 0em; text-align: left; }
 @media screen and (min-width: 30.0625em) { /* line 64, ../scales/base/_tables.scss */
-  th, td { padding: 0 0.75em; margin-top: 0px; padding-top: 4px; padding-bottom: 4px; margin-bottom: 0px; } }
+  th, td { padding: 0 12px; margin-top: 0em; padding-top: 0.75em; padding-bottom: 0.75em; margin-bottom: 0em; } }
 
 /* Cell alignments */
 /* line 78, ../scales/base/_tables.scss */
@@ -495,10 +495,10 @@ label, .label { display: block; }
 
 /* Extra help text displayed after a field when that field is in focus.  <label for="email">Username:</label> <input type="email" id="email" class="text-input"> <span class="extra-help">Enter your email address</span>  We leave the help text in the document flow and merely set it to `visibility: hidden;`. This means that it won’t interfere with anything once it reappears.  */
 /* line 121, ../scales/base/_forms.scss */
-.extra-help { display: inline-block; visibility: hidden; }
+.extra-help { display: none; }
 
-/* line 126, ../scales/base/_forms.scss */
-.text-input:active + .extra-help, .text-input:focus + .extra-help { visibility: visible; }
+/* line 125, ../scales/base/_forms.scss */
+.text-input:active + .extra-help, .text-input:focus + .extra-help { display: inline-block; }
 
 /* These are OOCSS based design patterns. If you come up with new one's, please contribute on github!  If you don't need a pattern, comment out the line and it wont be included in your project. */
 /* ========================================================================== Navigation ========================================================================== */
