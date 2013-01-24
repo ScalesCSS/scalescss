@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Block List
+   ========================================================================== */
+
+/*
+ * A list with top and bottom borders
+ *
+   <ul class="block-list">
+      <li>Foo</li>
+      <li>Bar</li>
+      <li>Baz</li>
+   </ul>
+ *
+ * Extend this object in your own partial to give it more style.
+ *
+ */
+.block-list {
+    &,
+    > li {
+        border-color: #ccc; /* Override this color in your own partial */
+    }
+}
+.block-list {
+    list-style: none;
+    margin-left: 0;
+    @include leading-border;
+    padding-top: 0;
+
+    > li {
+        @include trailing-border;
+        @include padding-leader;
+    }
+}

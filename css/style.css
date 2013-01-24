@@ -527,6 +527,23 @@ label, .label { display: block; }
   .nav--fit > li { display: table-cell; }
   /* line 97, ../scales/patterns/_nav.scss */
   .nav--fit > li > a { display: block; } }
+/* ========================================================================== Breadcrumbs ========================================================================== */
+/* Simple breadcrumb styling to apply to ordered lists. Extends .nav  <ol class="nav breadcrumb"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Staff</a></li> <li>Proles</li> </ol>  */
+/* line 16, ../scales/patterns/_breadcrumbs.scss */
+.breadcrumb > li + li:before { content: "» "; }
+
+/* Path-like structure for breadcrumbs. Extends .nav  <ol class="nav breadcrumb--path"> <li class="breadcrumb__root"><a href=#>scales</a></li> <li><a href=#>patterns</a></li> <li>breadcrumbs</li> </ol>  */
+/* line 31, ../scales/patterns/_breadcrumbs.scss */
+.breadcrumb--path > li + li:before { content: "/ "; }
+
+/* Assign a delimiter through a data attribute  <ol class="nav breadcrumb"> <li><a href=#>Home</a></li> <li data-breadcrumb="|"><a href=#>About</a></li> <li data-breadcrumb="|"><a href=#>Staff</a></li> <li data-breadcrumb="|">Proles</li> </ol>  */
+/* line 47, ../scales/patterns/_breadcrumbs.scss */
+.breadcrumb > li + li[data-breadcrumb]:before { content: attr(data-breadcrumb) " "; }
+
+/* The root of the tree. */
+/* line 55, ../scales/patterns/_breadcrumbs.scss */
+.breadcrumb__root { font-weight: bold; }
+
 /* ========================================================================== Media ========================================================================== */
 /* Use the media pattern any time you have an image and text next to each other.  The media element is probably the most useful OOCSS abstraction. Read more here: stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code  Usage:  <div class="media"> <img src="images/your-image.png" alt="" class="media__img"> <p class="media__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> </div>  */
 /* line 20, ../scales/patterns/_media.scss */
@@ -547,6 +564,16 @@ label, .label { display: block; }
 
 /* line 48, ../scales/patterns/_media.scss */
 .media__body, .media__body > :last-child { margin-bottom: 0; }
+
+/* ========================================================================== Block List ========================================================================== */
+/* A list with top and bottom borders  <ul class="block-list"> <li>Foo</li> <li>Bar</li> <li>Baz</li> </ul>  Extend this object in your own partial to give it more style.  */
+/* line 19, ../scales/patterns/_block-list.scss */
+.block-list, .block-list > li { border-color: #ccc; /* Override this color in your own partial */ }
+
+/* line 23, ../scales/patterns/_block-list.scss */
+.block-list { list-style: none; margin-left: 0; border-top-style: solid; border-top-width: 0.0625em; padding-top: 1.4375em; padding-top: 0; }
+/* line 29, ../scales/patterns/_block-list.scss */
+.block-list > li { border-bottom-style: solid; border-bottom-width: 0.0625em; padding-bottom: 1.4375em; padding-top: 1.5em; }
 
 /* ========================================================================== Buttons ========================================================================== */
 /* Basic button structural styling. Extend in your own partial.  */
@@ -572,8 +599,3 @@ label, .label { display: block; }
 html { background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, #ffc0cb), color-stop(5%, rgba(255, 192, 203, 0))); background-image: -webkit-linear-gradient(bottom, #ffc0cb 5%, rgba(255, 192, 203, 0) 5%); background-image: -moz-linear-gradient(bottom, #ffc0cb 5%, rgba(255, 192, 203, 0) 5%); background-image: -o-linear-gradient(bottom, #ffc0cb 5%, rgba(255, 192, 203, 0) 5%); background-image: linear-gradient(bottom, #ffc0cb 5%, rgba(255, 192, 203, 0) 5%); -webkit-background-size: 100% 1.5em; -moz-background-size: 100% 1.5em; -o-background-size: 100% 1.5em; background-size: 100% 1.5em; background-position: left top; }
 
 /* This is where you start importing all of your partials.  If you are styling objects from Scales, I recommend creating a partial with the same name as the one in Scales and importing it here.  Example: use @import "partials/nav" if you are adding style to the nav object. */
-/* line 42, ../style.scss */
-.small-text { font-size: 12px; display: block; }
-
-/* line 43, ../style.scss */
-.micro-text { font-size: 10px; }
