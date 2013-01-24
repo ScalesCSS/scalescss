@@ -14,6 +14,42 @@
 $base-font-size: 16px;
 $base-line-height: 24px;
 
+/*
+ * Modular Scale
+ *
+ * Instead of setting arbitrary values for font sizes, padding, widths, etc.
+ * we can use values up and down our modular scale which have meaning
+ * in relation to one another.
+ *
+ * Don't be scared. Start here: http://thesassway.com/projects/modular-scale
+ *
+ */
+$base-size: $base-font-size $base-line-height;
+$ratio: fourth();
+
+/*
+ * At 16px $base-font-size your available modular scale values are:
+ *
+ ms(-3)  =  10px
+ ms(-1)  =  12px
+ ms(0)   =  16px
+ ms(1)   =  18px
+ ms(2)   =  21px
+ ms(3)   =  24px
+ ms(4)   =  28px
+ ms(5)   =  32px
+ ms(6)   =  38px
+ ms(7)   =  43px
+ ms(8)   =  51px
+ ms(9)   =  57px
+ ms(10)  =  67px
+ *
+ */
+
+/*
+ * This will output the modular scale values when you compile. Comment out to hide.
+ */
+// @include ms-list();
 
 /*
  * A good primer on Compass Vertical Rhythm. Read this before you get lost:
@@ -44,15 +80,15 @@ $palm-end: 30.0625em; // 481px
 /*
  * Font-sizes in pixels.
  */
-$h1-size: 36px; // .alpha
-$h2-size: 30px; // .beta
-$h3-size: 24px; // .gamma
-$h4-size: 20px; // .delta
-$h5-size: 16px; // .epsilon
-$h6-size: 14px; // .zeta
+$h1-size: ms(5); // .alpha
+$h2-size: ms(4); // .beta
+$h3-size: ms(3); // .gamma
+$h4-size: ms(2); // .delta
+$h5-size: ms(1); // .epsilon
+$h6-size: ms(0); // .zeta
 
-$small-text: 12px;
-$micro-text: 10px;
+$small-text: ms(-1);
+$micro-text: ms(-3);
 
 
 /*

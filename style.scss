@@ -12,6 +12,7 @@
  */
 @import "compass";
 @import "compass/typography/vertical_rhythm";
+@import "modular-scale";
 
 
 /*
@@ -26,7 +27,8 @@
  *
  * Uncomment to use.
  */
- // html{@include debug-vertical-alignment();}
+ $grid-background-baseline-color: pink;
+ html{@include debug-vertical-alignment();}
 
 
 /*
@@ -37,4 +39,5 @@
  *
  * Example: use @import "partials/nav" if you are adding style to the nav object.
  */
-
+.small-text {font-size: $small-text; display: block;}
+.micro-text {font-size: $micro-text;}

@@ -3,15 +3,14 @@
    ========================================================================== */
 pre, code {
     font-family: menlo, monospace, sans-serif;
-    @include adjust-font-size-to(14px);
 }
 
 pre {
     white-space: pre;
     white-space: pre-wrap;
     word-wrap: break-word;
-    padding: 0 15px 0 25px;
-    @include trailer(1, 14px);
+    padding: 0 ms(0) 0 ms(3);
+    @include trailer;
     background-color: #444;
     color: #fff;
 }

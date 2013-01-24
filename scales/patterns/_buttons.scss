@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+/*
+ * Basic button structural styling. Extend in your own partial.
+ *
+ */
+.btn {
+    font: inherit;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    @include rhythm(0,.25,.25,1, ms(0));
+    padding-right: ms(0);
+    padding-left: ms(0);
+}
+
+.btn,
+.btn:hover {
+    text-decoration: none;
+}
+
+/*
+ * Basic button modifiers
+ */
+.btn--small { font-size: ms(-2); }
+.btn--large { font-size: ms(3); }
+
+.btn--full {
+    display: block;
+    text-align: center;
+    /*
+     * The following is so that .btn-full works properly on <input> as well
+     * as <a>.
+     */
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+}

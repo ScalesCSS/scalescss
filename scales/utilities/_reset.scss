@@ -42,7 +42,6 @@ abbr[title], dfn[title] {
  */
 small {
     @include adjust-font-size-to($small-text);
-    @include trailer(1, $small-text);
 }
 
 /*

@@ -3,7 +3,8 @@
    ========================================================================== */
 
 fieldset {
-    padding: $base-rhythm-unit;
+    padding: 0 ms(0);
+    @include rhythm(0,1,0,0);
 }
 
 /*
@@ -45,7 +46,7 @@ fieldset {
 }
 
 .form-fields > li {
-    @extend %sass-margin-bottom;
+    @include trailer;
 }
 
 .form-fields > li:last-child {

@@ -6,6 +6,9 @@
 /* ========================================================================== Variables ========================================================================== */
 /* These variables give you access to change many of the values in Scales. You should also add your own project specific variables to this file. Some values are in px for familiarity, but are converted to em. */
 /* Base font and line height for vertical rhythm. */
+/* Modular Scale  Instead of setting arbitrary values for font sizes, padding, widths, etc. we can use values up and down our modular scale which have meaning in relation to one another.  Don't be scared. Start here: http://thesassway.com/projects/modular-scale  */
+/* At 16px $base-font-size your available modular scale values are:  ms(-3)  =  10px ms(-1)  =  12px ms(0)   =  16px ms(1)   =  18px ms(2)   =  21px ms(3)   =  24px ms(4)   =  28px ms(5)   =  32px ms(6)   =  38px ms(7)   =  43px ms(8)   =  51px ms(9)   =  57px ms(10)  =  67px  */
+/* This will output the modular scale values when you compile. Comment out to hide. */
 /* A good primer on Compass Vertical Rhythm. Read this before you get lost: http://atendesigngroup.com/blog/vertical-rhythm-compass */
 /* line 61, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html { font-size: 100%; }
@@ -189,41 +192,37 @@ abbr[title], dfn[title] { cursor: help; }
 
 /* Fixing small so it doesn't break vertical rhythm. */
 /* line 43, ../scales/utilities/_reset.scss */
-small { font-size: 0.75em; line-height: 2em; margin-bottom: 2em; }
+small { font-size: 0.75em; line-height: 2em; }
 
 /* So that "alt" text is visually offset if images don’t load. */
-/* line 51, ../scales/utilities/_reset.scss */
+/* line 50, ../scales/utilities/_reset.scss */
 img { font-style: italic; }
 
 /* Give form elements some cursor interactions. */
-/* line 61, ../scales/utilities/_reset.scss */
+/* line 60, ../scales/utilities/_reset.scss */
 label, button, select, option { cursor: pointer; }
 
-/* line 68, ../scales/utilities/_reset.scss */
+/* line 67, ../scales/utilities/_reset.scss */
 .text-input:active, .text-input:focus, textarea:active, textarea:focus { cursor: text; outline: none; }
 
 /* ========================================================================== Clearfix ========================================================================== */
 /* Extend the clearfix placeholder: @extend %clearfix. */
 /* line 9, ../scales/utilities/_clearfix.scss */
-.nav:before, .nav:after { content: " "; display: table; }
+.nav:before, .media:before, .nav:after, .media:after { content: " "; display: table; }
 /* line 14, ../scales/utilities/_clearfix.scss */
-.nav:after { clear: both; }
+.nav:after, .media:after { clear: both; }
 
 /* ========================================================================== Spacing ========================================================================== */
 /* Some default vertical spacing for elements so they follow the vertical rhythm of the page. */
 /* Base elements */
-/* line 24, ../scales/utilities/_spacing.scss */
-h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, .form-fields > li, .check-list > li, .media, .island, .islet { margin-bottom: 1.5em; }
-/* line 27, ../scales/utilities/_spacing.scss */
-.islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet ul, .islet ol, .islet dl, .islet blockquote, .islet p, .islet address, .islet table, .islet fieldset, .islet figure, .islet pre, .islet .form-fields > li, .islet .check-list > li, .islet .media, .islet .island, .islet .islet { margin-bottom: 0.75em; }
-
-/* `hr` elements only take up a few pixels, so we need to give them special treatment regarding vertical rhythm. */
-/* line 37, ../scales/utilities/_spacing.scss */
-hr { margin-bottom: 1.375em; }
+/* line 23, ../scales/utilities/_spacing.scss */
+h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, .media, .island, .islet { margin-bottom: 1.5em; }
+/* line 26, ../scales/utilities/_spacing.scss */
+.islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet ul, .islet ol, .islet dl, .islet blockquote, .islet p, .islet address, .islet table, .islet fieldset, .islet figure, .islet pre, .islet .media, .islet .island, .islet .islet { margin-bottom: 0.75em; }
 
 /* Where `margin-left` is concerned we want to try and indent certain elements by a consistent amount. */
-/* line 46, ../scales/utilities/_spacing.scss */
-ul, ol, dd { margin-left: 3em; }
+/* line 35, ../scales/utilities/_spacing.scss */
+ul, ol, dd { margin-left: 32px; }
 
 /* These are the base structure styles for standard HTML elements */
 /* ========================================================================== Styles from HTML5 Boilerplate - h5bp.com ========================================================================== */
@@ -242,39 +241,39 @@ html, body, button, input, select, textarea { color: #333333; }
 ::selection { background: #4F89A1; color: #fff; text-shadow: none; }
 
 /* line 34, ../scales/base/_boilerplate.scss */
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; }
+hr { display: block; height: 1px; border: 0; border-top-style: solid; border-top-width: 0.0625em; padding-top: 1.4375em; border-color: #ccc; }
 
-/* line 43, ../scales/base/_boilerplate.scss */
+/* line 44, ../scales/base/_boilerplate.scss */
 img { vertical-align: middle; }
 
-/* line 48, ../scales/base/_boilerplate.scss */
+/* line 49, ../scales/base/_boilerplate.scss */
 fieldset { border: 0; margin: 0; padding: 0; }
 
-/* line 55, ../scales/base/_boilerplate.scss */
+/* line 56, ../scales/base/_boilerplate.scss */
 textarea { resize: vertical; }
 
-/* line 60, ../scales/base/_boilerplate.scss */
+/* line 61, ../scales/base/_boilerplate.scss */
 .chromeframe { margin: 0.2em 0; background: #ccc; color: #000; padding: 0.2em 0; }
 
 /* ========================================================================== Headings ========================================================================== */
 /** Each heading also has a class so that you can apply the size to a different heading if you need to. */
 /* line 7, ../scales/base/_headings.scss */
-h1, .alpha { font-size: 2.25em; line-height: 1.33333em; margin-bottom: 0.66667em; }
+h1, .alpha { font-size: 2em; line-height: 1.5em; margin-bottom: 0.75em; }
 
 /* line 11, ../scales/base/_headings.scss */
-h2, .beta { font-size: 1.875em; line-height: 1.6em; margin-bottom: 0.8em; }
+h2, .beta { font-size: 1.75em; line-height: 1.71429em; margin-bottom: 0.85714em; }
 
 /* line 15, ../scales/base/_headings.scss */
 h3, .gamma { font-size: 1.5em; line-height: 2em; margin-bottom: 1em; }
 
 /* line 19, ../scales/base/_headings.scss */
-h4, .delta { font-size: 1.25em; line-height: 1.2em; margin-bottom: 1.2em; }
+h4, .delta { font-size: 1.3125em; line-height: 2.28571em; margin-bottom: 1.14286em; }
 
 /* line 23, ../scales/base/_headings.scss */
-h5, .epsilon { font-size: 1em; line-height: 1.5em; margin-bottom: 1.5em; }
+h5, .epsilon { font-size: 1.125em; line-height: 1.33333em; margin-bottom: 1.33333em; }
 
 /* line 27, ../scales/base/_headings.scss */
-h6, .zeta { font-size: 0.875em; line-height: 1.71429em; margin-bottom: 1.71429em; }
+h6, .zeta { font-size: 1em; line-height: 1.5em; margin-bottom: 1.5em; }
 
 /* ========================================================================== Quotes ========================================================================== */
 /* line 4, ../scales/base/_quotes.scss */
@@ -317,10 +316,10 @@ blockquote p:last-of-type { margin-bottom: 0; }
 
 /* ========================================================================== Code ========================================================================== */
 /* line 4, ../scales/base/_code.scss */
-pre, code { font-family: menlo, monospace, sans-serif; font-size: 0.875em; line-height: 1.71429em; }
+pre, code { font-family: menlo, monospace, sans-serif; }
 
-/* line 9, ../scales/base/_code.scss */
-pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 0 15px 0 25px; margin-bottom: 1.71429em; background-color: #444; color: #fff; }
+/* line 8, ../scales/base/_code.scss */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 0 16px 0 24px; margin-bottom: 1.5em; background-color: #444; color: #fff; }
 
 /* ========================================================================== Links ========================================================================== */
 /* Set in _vars.scss. */
@@ -345,36 +344,160 @@ figure > img { display: block; }
 /* line 10, ../scales/base/_lists.scss */
 li > ul, li > ol { margin-bottom: 0; }
 
+/* ========================================================================== Tables ========================================================================== */
+/* Tables can get pretty crazy. Take a look at this example to see all of the helper classes Scales gives you and how to use them:  <table class="table--bordered  table--striped"> <colgroup> <col class="col20"> <col class="col30"> <col class="col10"> <col> </colgroup> <thead> <tr> <th colspan="3">Foo</th> <th>Bar</th> </tr> <tr> <th>Lorem</th> <th>Ipsum</th> <th>Dolor</th> <th>Sit</th> </tr> </thead> <tbody> <tr> <th rowspan="3">Sit</th> <td>Dolor</td> <td class="numerical">03.788</td> <td>Lorem</td> </tr> <tr> <td>Dolor</td> <td class="numerical">32.210</td> <td>Lorem</td> </tr> <tr> <td>Dolor</td> <td class="numerical">47.797</td> <td>Lorem</td> </tr> <tr> <th rowspan="2">Sit</th> <td>Dolor</td> <td class="numerical">09.640</td> <td>Lorem</td> </tr> <tr> <td>Dolor</td> <td class="numerical">12.117</td> <td>Lorem</td> </tr> </tbody> </table>  */
+/* line 59, ../scales/base/_tables.scss */
+table { width: 100%; }
+
+/* line 64, ../scales/base/_tables.scss */
+th, td { padding: 0 0.375em; margin-top: 0em; padding-top: 0.75em; padding-bottom: 0.75em; margin-bottom: 0em; text-align: left; }
+@media screen and (min-width: 30.0625em) { /* line 64, ../scales/base/_tables.scss */
+  th, td { padding: 0 0.75em; margin-top: 0px; padding-top: 4px; padding-bottom: 4px; margin-bottom: 0px; } }
+
+/* Cell alignments */
+/* line 78, ../scales/base/_tables.scss */
+[colspan] { text-align: center; }
+
+/* line 81, ../scales/base/_tables.scss */
+[colspan="1"] { text-align: left; }
+
+/* line 84, ../scales/base/_tables.scss */
+[rowspan] { vertical-align: middle; }
+
+/* line 87, ../scales/base/_tables.scss */
+[rowspan="1"] { vertical-align: top; }
+
+/* line 90, ../scales/base/_tables.scss */
+.numerical { text-align: right; }
+
+/* In the example markup above you can see several <col> elements with classes whose numbers represent a percentage width for that column. You can leave one of the cols class-less and it will take up whatever space is left over. You can also use these classes on the <table> element to restrict the width of the whole table. */
+/* line 100, ../scales/base/_tables.scss */
+.t5 { width: 5%; }
+
+/* line 101, ../scales/base/_tables.scss */
+.t10 { width: 10%; }
+
+/* line 102, ../scales/base/_tables.scss */
+.t12 { width: 12.5%; }
+
+/* 1/8 */
+/* line 103, ../scales/base/_tables.scss */
+.t15 { width: 15%; }
+
+/* line 104, ../scales/base/_tables.scss */
+.t20 { width: 20%; }
+
+/* line 105, ../scales/base/_tables.scss */
+.t25 { width: 25%; }
+
+/* 1/4 */
+/* line 106, ../scales/base/_tables.scss */
+.t30 { width: 30%; }
+
+/* line 107, ../scales/base/_tables.scss */
+.t33 { width: 33.333%; }
+
+/* 1/3 */
+/* line 108, ../scales/base/_tables.scss */
+.t35 { width: 35%; }
+
+/* line 109, ../scales/base/_tables.scss */
+.t37 { width: 37.5%; }
+
+/* 3/8 */
+/* line 110, ../scales/base/_tables.scss */
+.t40 { width: 40%; }
+
+/* line 111, ../scales/base/_tables.scss */
+.t45 { width: 45%; }
+
+/* line 112, ../scales/base/_tables.scss */
+.t50 { width: 50%; }
+
+/* 1/2 */
+/* line 113, ../scales/base/_tables.scss */
+.t55 { width: 55%; }
+
+/* line 114, ../scales/base/_tables.scss */
+.t60 { width: 60%; }
+
+/* line 115, ../scales/base/_tables.scss */
+.t62 { width: 62.5%; }
+
+/* 5/8 */
+/* line 116, ../scales/base/_tables.scss */
+.t65 { width: 65%; }
+
+/* line 117, ../scales/base/_tables.scss */
+.t66 { width: 66.666%; }
+
+/* 2/3 */
+/* line 118, ../scales/base/_tables.scss */
+.t70 { width: 70%; }
+
+/* line 119, ../scales/base/_tables.scss */
+.t75 { width: 75%; }
+
+/* 3/4*/
+/* line 120, ../scales/base/_tables.scss */
+.t80 { width: 80%; }
+
+/* line 121, ../scales/base/_tables.scss */
+.t85 { width: 85%; }
+
+/* line 122, ../scales/base/_tables.scss */
+.t87 { width: 87.5%; }
+
+/* 7/8 */
+/* line 123, ../scales/base/_tables.scss */
+.t90 { width: 90%; }
+
+/* line 124, ../scales/base/_tables.scss */
+.t95 { width: 95%; }
+
+/* Bordered tables  This uses Compass Vertical Rhythm's "rhythm-borders" to apply borders and whitespace equally to all sides.  */
+/* line 137, ../scales/base/_tables.scss */
+.table--bordered th, .table--bordered td { border-style: solid; border-width: 0.0625em; padding: 1.4375em; }
+/* line 140, ../scales/base/_tables.scss */
+.table--bordered th:empty, .table--bordered td:empty { border: none; }
+
+/* Striped tables */
+/* line 153, ../scales/base/_tables.scss */
+.table--striped tbody tr:nth-of-type(odd) { background-color: lightgrey; /* Override this color in your own partial */ }
+
 /* ========================================================================== Forms ========================================================================== */
 /* line 5, ../scales/base/_forms.scss */
-fieldset { padding: 1.5em; }
+fieldset { padding: 0 16px; margin-top: 0em; padding-top: 1.5em; padding-bottom: 0em; margin-bottom: 0em; }
 
 /* **NOTE** on Text inputs.  Instead of a `[type]` selector for each kind of form input, we just use a class to target any/every one, e.g.: <input type="text" class="text-input"> <input type="email" class="text-input"> <input type="password" class="text-input">  You should style .text-input and textarea in your own partial.  */
 /* Use an unordered list to mark up your groups of form fields.  <ul class="form-fields"> <li> <label /> <input /> </li> <li> <label /> <select /> </li> <li> <label /> <input /> </li> </ul>  */
-/* line 42, ../scales/base/_forms.scss */
+/* line 43, ../scales/base/_forms.scss */
 .form-fields, .check-list { list-style: none; margin: 0; }
 
-/* line 51, ../scales/base/_forms.scss */
+/* line 48, ../scales/base/_forms.scss */
+.form-fields > li, .check-list > li { margin-bottom: 1.5em; }
+
+/* line 52, ../scales/base/_forms.scss */
 .form-fields > li:last-child, .check-list > li:last-child { margin-bottom: 0; }
 
 /* Labels  The ".label" class can be used to make an element look like a label if an actual label isn't suitable.  */
-/* line 63, ../scales/base/_forms.scss */
+/* line 64, ../scales/base/_forms.scss */
 label, .label { display: block; }
 
 /* Extra help text in labels.  <label>Username <small class="additional">No special characters</small></label>  */
-/* line 73, ../scales/base/_forms.scss */
+/* line 74, ../scales/base/_forms.scss */
 .additional { display: block; font-weight: normal; }
 
 /* Groups of checkboxes and radios.  <li> <ul class="check-list"> <li> <input /> <label /> </li> <li> <input /> <label /> </li> </ul> </li>  */
 /* Labels in check-lists. */
-/* line 103, ../scales/base/_forms.scss */
+/* line 104, ../scales/base/_forms.scss */
 .check-label, .check-list label, .check-list .label { display: inline-block; }
 
 /* Extra help text displayed after a field when that field is in focus.  <label for="email">Username:</label> <input type="email" id="email" class="text-input"> <span class="extra-help">Enter your email address</span>  We leave the help text in the document flow and merely set it to `visibility: hidden;`. This means that it won’t interfere with anything once it reappears.  */
-/* line 120, ../scales/base/_forms.scss */
+/* line 121, ../scales/base/_forms.scss */
 .extra-help { display: inline-block; visibility: hidden; }
 
-/* line 125, ../scales/base/_forms.scss */
+/* line 126, ../scales/base/_forms.scss */
 .text-input:active + .extra-help, .text-input:focus + .extra-help { visibility: visible; }
 
 /* These are OOCSS based design patterns. If you come up with new one's, please contribute on github!  If you don't need a pattern, comment out the line and it wont be included in your project. */
@@ -404,6 +527,53 @@ label, .label { display: block; }
   .nav--fit > li { display: table-cell; }
   /* line 97, ../scales/patterns/_nav.scss */
   .nav--fit > li > a { display: block; } }
+/* ========================================================================== Media ========================================================================== */
+/* Use the media pattern any time you have an image and text next to each other.  The media element is probably the most useful OOCSS abstraction. Read more here: stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code  Usage:  <div class="media"> <img src="images/your-image.png" alt="" class="media__img"> <p class="media__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> </div>  */
+/* line 20, ../scales/patterns/_media.scss */
+.media { display: block; }
+
+/* line 25, ../scales/patterns/_media.scss */
+.media__img { float: left; margin-right: 9px; }
+
+/* Reversed image location (right instead of left). */
+/* line 33, ../scales/patterns/_media.scss */
+.media__img--rev { float: right; margin-left: 9px; }
+
+/* line 39, ../scales/patterns/_media.scss */
+.media__img img, .media__img--rev img { display: block; }
+
+/* line 43, ../scales/patterns/_media.scss */
+.media__body { overflow: hidden; }
+
+/* line 48, ../scales/patterns/_media.scss */
+.media__body, .media__body > :last-child { margin-bottom: 0; }
+
+/* ========================================================================== Buttons ========================================================================== */
+/* Basic button structural styling. Extend in your own partial.  */
+/* line 9, ../scales/patterns/_buttons.scss */
+.btn { font: inherit; cursor: pointer; border: none; display: inline-block; margin-top: 0em; padding-top: 0.375em; padding-bottom: 0.375em; margin-bottom: 1.5em; padding-right: 16px; padding-left: 16px; }
+
+/* line 20, ../scales/patterns/_buttons.scss */
+.btn, .btn:hover { text-decoration: none; }
+
+/* Basic button modifiers */
+/* line 27, ../scales/patterns/_buttons.scss */
+.btn--small { font-size: 12px; }
+
+/* line 28, ../scales/patterns/_buttons.scss */
+.btn--large { font-size: 24px; }
+
+/* line 30, ../scales/patterns/_buttons.scss */
+.btn--full { display: block; text-align: center; /* The following is so that .btn-full works properly on <input> as well as <a>. */ padding-right: 0; padding-left: 0; width: 100%; }
+
 /* Style trumps; helper and brand classes */
 /* A background image for making sure your elements line up to you baseline.  Uncomment to use. */
+/* line 31, ../style.scss */
+html { background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, #ffc0cb), color-stop(5%, rgba(255, 192, 203, 0))); background-image: -webkit-linear-gradient(bottom, #ffc0cb 5%, rgba(255, 192, 203, 0) 5%); background-image: -moz-linear-gradient(bottom, #ffc0cb 5%, rgba(255, 192, 203, 0) 5%); background-image: -o-linear-gradient(bottom, #ffc0cb 5%, rgba(255, 192, 203, 0) 5%); background-image: linear-gradient(bottom, #ffc0cb 5%, rgba(255, 192, 203, 0) 5%); -webkit-background-size: 100% 1.5em; -moz-background-size: 100% 1.5em; -o-background-size: 100% 1.5em; background-size: 100% 1.5em; background-position: left top; }
+
 /* This is where you start importing all of your partials.  If you are styling objects from Scales, I recommend creating a partial with the same name as the one in Scales and importing it here.  Example: use @import "partials/nav" if you are adding style to the nav object. */
+/* line 42, ../style.scss */
+.small-text { font-size: 12px; display: block; }
+
+/* line 43, ../style.scss */
+.micro-text { font-size: 10px; }

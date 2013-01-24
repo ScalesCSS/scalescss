@@ -18,7 +18,6 @@ pre,
 /*
  * Objects and abstractions
  */
-%sass-margin-bottom,
 .media,
 .island,
 .islet {
@@ -29,20 +28,10 @@ pre,
     }
 }
 
-
-/*
- * `hr` elements only take up a few pixels, so we need to give them special
- * treatment regarding vertical rhythm.
- */
-hr {
-    margin-bottom: $base-rhythm-unit - .125em;
-}
-
-
 /*
  * Where `margin-left` is concerned we want to try and indent certain elements
  * by a consistent amount.
  */
 ul,ol,dd {
-    margin-left: 2 * $base-rhythm-unit;
+    margin-left: ms(5);
 }
