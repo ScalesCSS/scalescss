@@ -3,21 +3,22 @@
    ========================================================================== */
 
 /*
- * Set in _vars.scss.
+ * Set colors in _vars.scss.
  */
 a {
     color: $link-color;
+    text-decoration: none;
 
     &:hover,
     &:active,
     &:focus{
         color: $link-interaction-color;
+        text-decoration: underline;
     }
 }
 
 /*
  * Current state, like the currently selected nav item.
- * This just changes the cursor.
  *
    <ul class="nav">
        <li><a href=#>Home</a></li>
@@ -29,4 +30,5 @@ a {
  */
 .current a {
     cursor: default;
+    text-decoration: underline;
 }

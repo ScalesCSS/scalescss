@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Multi-List
+   ========================================================================== */
+
+/*
+ * This helps create a multi-column list out of a single list.
+ *
+   <ul class="multi-list four-columns">
+       <li>Lorem</li>
+       <li>Ipsum</li>
+       <li>Dolor</li>
+       <li>Sit</li>
+   </ul>
+ *
+ */
+.multi-list {
+    list-style: none;
+    margin-left: 0;
+    @extend %clearfix;
+}
+
+.multi-list > li {
+    float: left;
+}
+
+
+/*
+ * Apply these classes alongside the .multi-list class on
+ * lists to determine how wide their columns are.
+ */
+.two-columns > li {
+    width: 50%;
+}
+.three-columns > li {
+    width: 33.333%;
+}
+.four-columns > li {
+    width: 25%;
+}
+.five-columns > li {
+    width: 20%;
+}

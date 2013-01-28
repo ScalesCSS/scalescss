@@ -31,6 +31,21 @@
     }
 }
 
+
+/*
+ * Make these nav pattern extensions horizontal instead of stacking them.
+ */
+.nav--breadcrumb > li, .nav--breadcrumb-path > li, .nav--keywords > li {
+
+    &,
+    > a {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+    }
+}
+
+
 /*
  * Makes a list of comma separated keywords. Extends .nav.
  *
@@ -43,11 +58,6 @@
 
     > li {
 
-        &,
-        > a {
-            display: inline-block;
-        }
-
         &:after {
             content: ", ";
         }
@@ -56,6 +66,61 @@
             display: none;
         }
     }
+}
+
+
+/*
+ * Simple breadcrumb styling to apply to ordered lists. Extends .nav
+ *
+   <ol class="nav breadcrumb">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Staff</a></li>
+       <li>Proles</li>
+   </ol>
+ *
+ */
+.nav--breadcrumb > li + li:before {
+    content: "» ";
+}
+
+
+/*
+ * Path-like structure for breadcrumbs. Extends .nav
+ *
+   <ol class="nav breadcrumb--path">
+       <li class="breadcrumb__root"><a href=#>scales</a></li>
+       <li><a href=#>patterns</a></li>
+       <li>breadcrumbs</li>
+   </ol>
+ *
+ */
+.nav--breadcrumb-path > li + li:before {
+    content: "/ ";
+}
+
+
+/*
+ * Assign a delimiter through a data attribute
+ *
+   <ol class="nav breadcrumb">
+       <li><a href=#>Home</a></li>
+       <li data-breadcrumb="|"><a href=#>About</a></li>
+       <li data-breadcrumb="|"><a href=#>Staff</a></li>
+       <li data-breadcrumb="|">Proles</li>
+   </ol>
+ *
+ */
+.nav--breadcrumb > li + li[data-breadcrumb]:before {
+    content: attr(data-breadcrumb)" ";
+}
+
+
+/*
+ * The root of the tree.
+ */
+.nav--breadcrumb__root {
+    font-weight: bold;
 }
 
 

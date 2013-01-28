@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Island
+   ========================================================================== */
+
+/*
+ * Boxed off content
+ *
+   <div class="island">
+       I am boxed off.
+   </div>
+ *
+ */
+.island,
+.islet {
+    display: block;
+    @extend %clearfix;
+}
+
+.island {
+    padding: 0 ms(0);
+    @include rhythm(0,1,1,0);
+}
+
+.island > :last-child,
+.islet > :last-child {
+    margin-bottom: 0;
+}
+
+
+/*
+ * Just like .island, only smaller.
+ */
+.islet {
+    padding: 0 ms(-4);
+    @include rhythm(0,.5,.5,0);
+}
