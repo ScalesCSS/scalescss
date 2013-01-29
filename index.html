@@ -43,24 +43,34 @@
                <li><a href="">SASS</a></li>
            </ul>
 
-           <ol class="nav nav--breadcrumb">
-                    <li><a href=#>Home</a></li>
-                    <li><a href=#>About</a></li>
-                    <li><a href=#>Staff</a></li>
-                    <li>Proles</li>
+           <ol class="nav breadcrumb">
+                    <li><a href=#>Scales</a></li>
+                    <li><a href=#>Patterns</a></li>
+                    <li>Breadcrumb</li>
                 </ol>
 
-                <ol class="nav nav--breadcrumb-path">
-                    <li class="nav--breadcrumb__root"><a href=#>scales</a></li>
-                    <li><a href=#>patterns</a></li>
-                    <li>breadcrumbs</li>
+                <ol class="nav breadcrumb--path">
+                    <li class="breadcrumb__root"><a href=#>Scales</a></li>
+                    <li><a href=#>Patterns</a></li>
+                    <li>Breadcrumb</li>
                 </ol>
 
-                <ol class="nav nav--breadcrumb">
-                    <li><a href=#>Home</a></li>
-                    <li data-breadcrumb="|"><a href=#>About</a></li>
-                    <li data-breadcrumb="|"><a href=#>Staff</a></li>
-                    <li data-breadcrumb="|">Proles</li>
+                <ol class="nav breadcrumb">
+                    <li><a href=#>Scales</a></li>
+                    <li data-breadcrumb="|"><a href=#>Patterns</a></li>
+                    <li data-breadcrumb="|"><a href=#>Breadcrumb</a></li>
+                </ol>
+
+                <ol class="nav pagination">
+                    <li class="pagination__first">First</li>
+                    <li class="pagination__prev">Previous</li>
+                    <li><a href=/page/1>1</a></li>
+                    <li><a href=/page/2>2</a></li>
+                    <li class="current"><a href=/page/3>3</a></li>
+                    <li><a href=/page/4>4</a></li>
+                    <li><a href=/page/5>5</a></li>
+                    <li class="pagination__next"><a href=/page/next>Next</a></li>
+                    <li class="pagination__last"><a href=/page/last>Last</a></li>
                 </ol>
         </header>
 
@@ -72,6 +82,40 @@
                 <h4>This is an H4</h4>
                 <h5>This is an H5</h5>
                 <h6>This is an H6</h6>
+
+                <dl class="split websites">
+                    <dt class="split__title">Google</dt>
+                    <dd>google.com</dd>
+                    <dt class="split__title">Wikipedia</dt>
+                    <dd>wikipedia.org</dd>
+                    <dt class="split__title">CNN</dt>
+                    <dd>cnn.com</dd>
+                </dl>
+
+                <ul class="split inventory">
+                    <li><span class="split__title">Noodles</span> 600</li>
+                    <li><span class="split__title">Sauce</span> 250</li>
+                    <li><span class="split__title">Mushrooms</span> 530</li>
+                </ul>​
+
+                <div class="stat-group">
+                    <dl class="stat">
+                        <a href="#">
+                            <dt class="stat__title">Noodles</dt>
+                            <dd class="stat__value">600</dd>
+                        </a>
+                    </dl>
+
+                    <dl class="stat">
+                        <dt class="stat__title">Sauce</dt>
+                        <dd class="stat__value">250</dd>
+                    </dl>
+
+                    <dl class="stat">
+                        <dt class="stat__title">Mushrooms</dt>
+                        <dd class="stat__value">530</dd>
+                    </dl>
+                </div>
 
                 <a href="" class="link-complex">
                     <span class="link-complex__target">Log in</span> to your account.

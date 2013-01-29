@@ -42,7 +42,6 @@
     @import "utilities/mixins";
     @import "utilities/normalize";
     @import "utilities/reset";
-    @import "utilities/clearfix";
     @import "utilities/spacing";
 
 
@@ -65,28 +64,20 @@
  *
  * If you don't need a pattern, comment out the line and it wont be included in your project.
  */
-    // @import "patterns/columns";
     @import "patterns/nav";
-    // @import "patterns/options";
-    // @import "patterns/pagination";
+    @import "patterns/pagination";
+    @import "patterns/breadcrumb";
     @import "patterns/media";
     @import "patterns/island";
     @import "patterns/block-list";
     @import "patterns/multi-list";
-    // @import "patterns/split";
-    // @import "patterns/this-or-this";
+    @import "patterns/split";
     @import "patterns/link-complex";
-    // @import "patterns/arrows";
-    // @import "patterns/sprite";
     @import "patterns/buttons";
-    // @import "patterns/rules";
-    // @import "patterns/stats";
+    @import "patterns/stats";
 
 
 /*
- * Style trumps; helper and brand classes
+ * Utility styles that need come later in the cascade
  */
-    // @import "generic/widths";
-    // @import "generic/push";
-    // @import "generic/pull";
-    // @import "generic/helper";
+    @import "utilities/placeholders";

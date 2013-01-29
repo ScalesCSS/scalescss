@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Placeholders
+   ========================================================================== */
+
+/*
+ * Extend the clearfix placeholder: @extend %clearfix.
+ */
+%clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+
+/*
+ * Placeholder to make something horizontal.
+ */
+%horizontal {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
