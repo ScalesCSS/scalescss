@@ -1,6 +1,10 @@
 /* ==========================================================================
    Quotes
    ========================================================================== */
+
+/*
+ * Put quotes around q and blockquote elements.
+ */
 q {
     quotes: "“" "”" "‘" "’";
 }
@@ -26,6 +30,10 @@ blockquote {
 }
 
 blockquote p:before {
+    content: ""; content: no-open-quote;
+}
+
+blockquote p:first-of-type:before {
     content: "“"; content: open-quote;
 }
 
@@ -39,17 +47,22 @@ blockquote p:last-of-type:after {
 
 
 /*
+ * See http://alistapart.com/blog/post/more-thoughts-about-blockquotes-than-are-strictly-required
+ * for rational of using <figure>. Not required for these styles to work, but good semantics.
  *
-   <blockquote>
-       <p>Insanity: doing the same thing over and over again and expecting
-       different results.</p>
-       <footer class=source>Albert Einstein</footer>
-   </blockquote>
+   <figure class="quote">
+        <blockquote>
+            <p>It is the unofficial force—the Baker Street irregulars.</p>
+        </blockquote>
+        <figcaption class="source">Sherlock Holmes, <cite>Sign of Four</cite></figcaption>
+    </figure>
  *
  */
 blockquote {
-    text-indent: -0.4em;
-
+    p {
+        @include rhythm(0,0,0,.25, ms(0));
+    }
+    &,
     p:last-of-type {
         margin-bottom: 0;
     }

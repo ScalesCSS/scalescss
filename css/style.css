@@ -269,42 +269,46 @@ h5, .epsilon { font-size: 1.125em; line-height: 1.33333em; margin-bottom: 1.3333
 h6, .zeta { font-size: 1em; line-height: 1.5em; margin-bottom: 1.5em; }
 
 /* ========================================================================== Quotes ========================================================================== */
-/* line 4, ../scales/base/_quotes.scss */
+/* Put quotes around q and blockquote elements. */
+/* line 8, ../scales/base/_quotes.scss */
 q { quotes: "“" "”" "‘" "’"; }
 
-/* line 8, ../scales/base/_quotes.scss */
+/* line 12, ../scales/base/_quotes.scss */
 q:before { content: "“"; content: open-quote; }
 
-/* line 12, ../scales/base/_quotes.scss */
+/* line 16, ../scales/base/_quotes.scss */
 q:after { content: "”"; content: close-quote; }
 
-/* line 16, ../scales/base/_quotes.scss */
+/* line 20, ../scales/base/_quotes.scss */
 q q:before { content: "‘"; content: open-quote; }
 
-/* line 20, ../scales/base/_quotes.scss */
+/* line 24, ../scales/base/_quotes.scss */
 q q:after { content: "’"; content: close-quote; }
 
-/* line 24, ../scales/base/_quotes.scss */
+/* line 28, ../scales/base/_quotes.scss */
 blockquote { quotes: "“" "”"; }
 
-/* line 28, ../scales/base/_quotes.scss */
-blockquote p:before { content: "“"; content: open-quote; }
-
 /* line 32, ../scales/base/_quotes.scss */
-blockquote p:after { content: ""; content: no-close-quote; }
+blockquote p:before { content: ""; content: no-open-quote; }
 
 /* line 36, ../scales/base/_quotes.scss */
+blockquote p:first-of-type:before { content: "“"; content: open-quote; }
+
+/* line 40, ../scales/base/_quotes.scss */
+blockquote p:after { content: ""; content: no-close-quote; }
+
+/* line 44, ../scales/base/_quotes.scss */
 blockquote p:last-of-type:after { content: "”"; content: close-quote; }
 
-/*  <blockquote> <p>Insanity: doing the same thing over and over again and expecting different results.</p> <footer class=source>Albert Einstein</footer> </blockquote>  */
-/* line 50, ../scales/base/_quotes.scss */
-blockquote { text-indent: -0.4em; }
-/* line 53, ../scales/base/_quotes.scss */
-blockquote p:last-of-type { margin-bottom: 0; }
-
-/* line 58, ../scales/base/_quotes.scss */
-.source { display: block; text-indent: 0; }
+/* See http://alistapart.com/blog/post/more-thoughts-about-blockquotes-than-are-strictly-required for rational of using <figure>. Not required for these styles to work, but good semantics.  <figure class="quote"> <blockquote> <p>It is the unofficial force—the Baker Street irregulars.</p> </blockquote> <figcaption class="source">Sherlock Holmes, <cite>Sign of Four</cite></figcaption> </figure>  */
 /* line 62, ../scales/base/_quotes.scss */
+blockquote p { margin-top: 0em; padding-top: 0em; padding-bottom: 0em; margin-bottom: 0.375em; }
+/* line 66, ../scales/base/_quotes.scss */
+blockquote, blockquote p:last-of-type { margin-bottom: 0; }
+
+/* line 71, ../scales/base/_quotes.scss */
+.source { display: block; text-indent: 0; }
+/* line 75, ../scales/base/_quotes.scss */
 .source:before { content: "—"; }
 
 /* ========================================================================== Code ========================================================================== */
