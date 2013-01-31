@@ -62,10 +62,10 @@ table {
 
 th,
 td {
-    padding: 0 ms(-3);
+    padding: 0 msem(-3);
     @include rhythm(0,.25,.25,0, ms(0));
     @media screen and (min-width: $palm-end) {
-        padding: 0 ms(-1);
+        padding: 0 msem(-1);
         @include rhythm(0,.5,.5,0);
     }
     text-align:left;
