@@ -17,7 +17,7 @@
 }
 
 .island {
-    padding: 0 ms(0);
+    padding: 0 msem(0);
     @include rhythm(0,1,1,0);
 }
 
@@ -31,6 +31,6 @@
  * Just like .island, only smaller.
  */
 .islet {
-    padding: 0 ms(-4);
+    padding: 0 msem(-4);
     @include rhythm(0,.5,.5,0);
 }

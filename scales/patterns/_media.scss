@@ -24,7 +24,7 @@
 
 .media__img {
         float: left;
-        margin-right: ms(-4);
+        margin-right: msem(-4);
     }
 
 /*
@@ -32,7 +32,7 @@
  */
 .media__img--rev {
     float: right;
-    margin-left: ms(-4);
+    margin-left: msem(-4);
 }
 
 .media__img img,
