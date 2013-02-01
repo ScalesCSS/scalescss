@@ -11,7 +11,7 @@
  * Usage:
  *
    <div class="media">
-       <img src="images/your-image.png" alt="" class="media__img">
+       <img src="images/your-image.png" alt="" class="media__fig">
        <p class="media__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
    </div>
@@ -22,7 +22,7 @@
     @extend %clearfix;
 }
 
-.media__img {
+.media__fig {
         float: left;
         margin-right: msem(-4);
     }
@@ -30,13 +30,13 @@
 /*
  * Reversed image location (right instead of left).
  */
-.media__img--rev {
+.media__fig--rev {
     float: right;
     margin-left: msem(-4);
 }
 
-.media__img img,
-.media__img--rev img {
+.media__fig img,
+.media__fig--rev img {
     display: block;
 }
 

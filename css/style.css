@@ -558,19 +558,19 @@ label, .label { display: block; }
 .breadcrumb__root { font-weight: bold; }
 
 /* ========================================================================== Media ========================================================================== */
-/* Use the media pattern any time you have an image and text next to each other.  The media element is probably the most useful OOCSS abstraction. Read more here: stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code  Usage:  <div class="media"> <img src="images/your-image.png" alt="" class="media__img"> <p class="media__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> </div>  */
+/* Use the media pattern any time you have an image and text next to each other.  The media element is probably the most useful OOCSS abstraction. Read more here: stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code  Usage:  <div class="media"> <img src="images/your-image.png" alt="" class="media__fig"> <p class="media__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> </div>  */
 /* line 20, ../scales/patterns/_media.scss */
 .media { display: block; }
 
 /* line 25, ../scales/patterns/_media.scss */
-.media__img { float: left; margin-right: 0.5625em; }
+.media__fig { float: left; margin-right: 0.5625em; }
 
 /* Reversed image location (right instead of left). */
 /* line 33, ../scales/patterns/_media.scss */
-.media__img--rev { float: right; margin-left: 0.5625em; }
+.media__fig--rev { float: right; margin-left: 0.5625em; }
 
 /* line 39, ../scales/patterns/_media.scss */
-.media__img img, .media__img--rev img { display: block; }
+.media__fig img, .media__fig--rev img { display: block; }
 
 /* line 43, ../scales/patterns/_media.scss */
 .media__body { overflow: hidden; }
