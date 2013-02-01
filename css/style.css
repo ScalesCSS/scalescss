@@ -27,6 +27,8 @@ html { font-size: 16px; line-height: 1.5em; }
 /* You shouldn't modify anything here, other than commenting out patterns that you don't need. Everything here is simplified as much as possible so that you don't have to remove anything.  Scales doesn't make any design decisions for you. To give design to these elements and patterns simply create your own partials and extend these styles. I recommend naming your partials the same as these for the sake of consistency in your project. */
 /* ========================================================================== Imports ========================================================================== */
 /* These are basic utility styles */
+/* ========================================================================== Functions ========================================================================== */
+/* Declare your modular-scale values in ems instead of pixels when using them  outside of a vertical-rhythm mixin. */
 /* ========================================================================== Mixins ========================================================================== */
 /* If you want to force text to truncate rather than wrap to 2 lines. */
 /* normalize.css v2.0.1 | MIT License | git.io/normalize */
@@ -215,7 +217,7 @@ h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, field
 
 /* Where `margin-left` is concerned we want to try and indent certain elements by a consistent amount. */
 /* line 35, ../scales/utilities/_spacing.scss */
-ul, ol, dd { margin-left: 32px; }
+ul, ol, dd { margin-left: 2em; }
 
 /* These are the base structure styles for standard HTML elements */
 /* ========================================================================== Styles from HTML5 Boilerplate - h5bp.com ========================================================================== */
@@ -347,9 +349,9 @@ li > ul, li > ol { margin-bottom: 0; }
 table { width: 100%; }
 
 /* line 64, ../scales/base/_tables.scss */
-th, td { padding: 0 10px; margin-top: 0em; padding-top: 0.375em; padding-bottom: 0.375em; margin-bottom: 0em; text-align: left; }
+th, td { padding: 0 0.625em; margin-top: 0em; padding-top: 0.375em; padding-bottom: 0.375em; margin-bottom: 0em; text-align: left; }
 @media screen and (min-width: 30.0625em) { /* line 64, ../scales/base/_tables.scss */
-  th, td { padding: 0 12px; margin-top: 0em; padding-top: 0.75em; padding-bottom: 0.75em; margin-bottom: 0em; } }
+  th, td { padding: 0 0.75em; margin-top: 0em; padding-top: 0.75em; padding-bottom: 0.75em; margin-bottom: 0em; } }
 
 /* Cell alignments */
 /* line 78, ../scales/base/_tables.scss */
@@ -529,7 +531,7 @@ label, .label { display: block; }
 .pagination { text-align: center; /* Remove whitespace caused by inline-block. */ letter-spacing: -0.31em; word-spacing: -0.43em; }
 
 /* line 30, ../scales/patterns/_pagination.scss */
-.pagination > li { padding: 0 8px; letter-spacing: normal; word-spacing: normal; }
+.pagination > li { padding: 0 0.5em; letter-spacing: normal; word-spacing: normal; }
 
 /* line 41, ../scales/patterns/_pagination.scss */
 .pagination__first a:before { content: "« "; }
@@ -561,11 +563,11 @@ label, .label { display: block; }
 .media { display: block; }
 
 /* line 25, ../scales/patterns/_media.scss */
-.media__img { float: left; margin-right: 9px; }
+.media__img { float: left; margin-right: 0.5625em; }
 
 /* Reversed image location (right instead of left). */
 /* line 33, ../scales/patterns/_media.scss */
-.media__img--rev { float: right; margin-left: 9px; }
+.media__img--rev { float: right; margin-left: 0.5625em; }
 
 /* line 39, ../scales/patterns/_media.scss */
 .media__img img, .media__img--rev img { display: block; }
@@ -582,14 +584,14 @@ label, .label { display: block; }
 .island, .islet { display: block; }
 
 /* line 19, ../scales/patterns/_island.scss */
-.island { padding: 0 16px; margin-top: 0em; padding-top: 1.5em; padding-bottom: 1.5em; margin-bottom: 0em; }
+.island { padding: 0 1.5em; margin-top: 0em; padding-top: 1.5em; padding-bottom: 1.5em; margin-bottom: 0em; }
 
 /* line 25, ../scales/patterns/_island.scss */
 .island > :last-child, .islet > :last-child { margin-bottom: 0; }
 
 /* Just like .island, only smaller. */
 /* line 33, ../scales/patterns/_island.scss */
-.islet { padding: 0 9px; margin-top: 0em; padding-top: 0.75em; padding-bottom: 0.75em; margin-bottom: 0em; }
+.islet { padding: 0 0.75em; margin-top: 0em; padding-top: 0.75em; padding-bottom: 0.75em; margin-bottom: 0em; }
 
 /* ========================================================================== Block List ========================================================================== */
 /* A list with top and bottom borders  <ul class="block-list"> <li>Foo</li> <li>Bar</li> <li>Baz</li> </ul>  Extend this object in your own partial to give it more style.  */
@@ -664,7 +666,7 @@ label, .label { display: block; }
 .stat-group { margin-left: 0; }
 
 /* line 31, ../scales/patterns/_stats.scss */
-.stat { float: left; margin-left: 16px; }
+.stat { float: left; margin-left: 1em; }
 
 /* line 36, ../scales/patterns/_stats.scss */
 .stat > a { display: block; }
