@@ -8,6 +8,8 @@ This is a framework for serious developers and designers who aren't afraid to ge
 
 Scales is a highly _scalable_ CSS architecture, it contains design _patterns_ (scales in nature form patterns), and it is responsive so it _scales_ to the width of the viewport. So clever it hurts.
 
+<img src="http://i1.kym-cdn.com/photos/images/original/000/243/561/afc.gif" alt="Deal With It" width="250">
+
 ## Techniques used in Scales
 * Mobile-First and Responsive Design
 * SASS and Compass
@@ -60,4 +62,4 @@ A special note of thanks also goes out to [Vince Speelman](https://github.com/Vi
 * Follow me on twitter [@yodasw16](http://twitter.com/yodasw16)
 * Detroit people: Check out [Devtroit](http://devtroit.com/)
 
-![Devtroit](http://devtroit.com/img/badges/badge-medium.png "Devtroit")
+![Devtroit](http://devtroit.com/img/badges/badge-medium.png)
