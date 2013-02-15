@@ -22,56 +22,56 @@
         <header role="banner">
             <h1>Scales Component Library</h1>
             <nav>
-                <ul class="nav nav--fit nav--main">
-                   <li><a href=#>Link 1</a></li>
-                   <li><a href=#>Link 2</a></li>
-                   <li><a href=#>Link 3</a></li>
-                   <li><a href=#>Link 4</a></li>
-                   <li><a href=#>Link 5</a></li>
-                   <li><a href=#>Link 6</a></li>
-                   <li><a href=#>Link 7</a></li>
-                   <li><a href=#>Link 8</a></li>
-                   <li><a href=#>Link 9</a></li>
-                   <li><a href=#>Link 10</a></li>
-               </ul>
-           </nav>
+                <ul class="nav--fit nav--main">
+                    <li><a href=#>Link 1</a></li>
+                    <li><a href=#>Link 2</a></li>
+                    <li><a href=#>Link 3</a></li>
+                    <li><a href=#>Link 4</a></li>
+                    <li><a href=#>Link 5</a></li>
+                    <li><a href=#>Link 6</a></li>
+                    <li><a href=#>Link 7</a></li>
+                    <li><a href=#>Link 8</a></li>
+                    <li><a href=#>Link 9</a></li>
+                    <li><a href=#>Link 10</a></li>
+                </ul>
+            </nav>
 
-           <ul class="nav nav--keywords">
-               <li><a href="">Mobile First</a></li>
-               <li><a href="">OOCSS</a></li>
-               <li><a href="">RWD</a></li>
-               <li><a href="">SASS</a></li>
-           </ul>
+            <ul class="nav--keywords">
+                <li><a href="">Mobile First</a></li>
+                <li><a href="">OOCSS</a></li>
+                <li><a href="">RWD</a></li>
+                <li><a href="">SASS</a></li>
+            </ul>
 
-           <ol class="nav breadcrumb">
-                    <li><a href=#>Scales</a></li>
-                    <li><a href=#>Patterns</a></li>
-                    <li>Breadcrumb</li>
-                </ol>
+            <ol class="nav--breadcrumb">
+                <li><a href=#>Scales</a></li>
+                <li><a href=#>Patterns</a></li>
+                <li>Breadcrumb</li>
+            </ol>
 
-                <ol class="nav breadcrumb--path">
-                    <li class="breadcrumb__root"><a href=#>Scales</a></li>
-                    <li><a href=#>Patterns</a></li>
-                    <li>Breadcrumb</li>
-                </ol>
+            <ol class="nav--breadcrumb--path">
+                <li class="nav--breadcrumb__root"><a href=#>Scales</a></li>
+                <li><a href=#>Patterns</a></li>
+                <li>Breadcrumb</li>
+            </ol>
 
-                <ol class="nav breadcrumb">
-                    <li><a href=#>Scales</a></li>
-                    <li data-breadcrumb="|"><a href=#>Patterns</a></li>
-                    <li data-breadcrumb="|"><a href=#>Breadcrumb</a></li>
-                </ol>
+            <ol class="nav--breadcrumb">
+                <li><a href=#>Scales</a></li>
+                <li data-breadcrumb="|"><a href=#>Patterns</a></li>
+                <li data-breadcrumb="|"><a href=#>Breadcrumb</a></li>
+            </ol>
 
-                <ol class="nav pagination">
-                    <li class="pagination__first">First</li>
-                    <li class="pagination__prev">Previous</li>
-                    <li><a href=/page/1>1</a></li>
-                    <li><a href=/page/2>2</a></li>
-                    <li class="current"><a href=/page/3>3</a></li>
-                    <li><a href=/page/4>4</a></li>
-                    <li><a href=/page/5>5</a></li>
-                    <li class="pagination__next"><a href=/page/next>Next</a></li>
-                    <li class="pagination__last"><a href=/page/last>Last</a></li>
-                </ol>
+            <ol class="nav--pagination">
+                <li class="nav--pagination__first">First</li>
+                <li class="nav--pagination__prev">Previous</li>
+                <li><a href=/page/1>1</a></li>
+                <li><a href=/page/2>2</a></li>
+                <li class="current"><a href=/page/3>3</a></li>
+                <li><a href=/page/4>4</a></li>
+                <li><a href=/page/5>5</a></li>
+                <li class="nav--pagination__next"><a href=/page/next>Next</a></li>
+                <li class="nav--pagination__last"><a href=/page/last>Last</a></li>
+            </ol>
         </header>
 
         <div class="content">
@@ -110,7 +110,6 @@
                 <figure class="quote">
                     <blockquote>
                         <p>It is the unofficial force—the Baker Street irregulars.</p>
-                        <p>It is the unofficial force—the Baker Street irregulars.</p>
                     </blockquote>
                     <figcaption class="source">Sherlock Holmes, <cite>Sign of Four</cite></figcaption>
                 </figure>
@@ -125,10 +124,10 @@
                 </dl>
 
                 <ul class="split inventory">
-                    <li><span class="split__title">Noodles</span> 600</li>
-                    <li><span class="split__title">Sauce</span> 250</li>
-                    <li><span class="split__title">Mushrooms</span> 530</li>
-                </ul>​
+                    <li><span class="split__title">Noodles</span> 600 </li>
+                    <li><span class="split__title">Sauce</span> 250 </li>
+                    <li><span class="split__title">Mushrooms</span> 530 </li>
+                </ul>
 
                 <div class="stat-group">
                     <dl class="stat">
@@ -169,6 +168,26 @@
                     <li>Dolor</li>
                     <li>Sit</li>
                 </ul>
+
+                <form method="" action="">
+                    <fieldset>
+                        <legend>Login Form</legend>
+                    <ul class="form-fields">
+                        <li>
+                            <label for="username">Username</label>
+                            <input type="text" class="text-input" id="username" name="username" />
+                            <span class="extra-help">Your email address</span>
+                        </li>
+                        <li>
+                            <label for="password">Password</label>
+                            <input type="text" class="text-input" id="password" name="password" />
+                        </li>
+                        <li>
+                            <input type="submit" value="Sign In" name="submit" class="btn" />
+                        </li>
+                    </ul>
+                    </fieldset>
+                </form>
 
                 <table>
                     <colgroup>
@@ -391,26 +410,6 @@
 
                 <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ipsum posuere felis mollis interdum. Etiam posuere purus non neque interdum tristique. Nulla facilisi. Vivamus sem nulla, accumsan mollis condimentum ut, facilisis ut felis. Sed eu iaculis eros. Cras suscipit, risus non lacinia luctus, justo felis consectetur sem, a ullamcorper tortor quam in dui.</small></p>
 
-                <h1>Login Form</h1>
-                <form method="" action="">
-                    <fieldset>
-                        <legend>Login Form</legend>
-                    <ul class="form-fields">
-                        <li>
-                            <label for="username">Username</label>
-                            <input type="text" class="text-input" id="username" name="username" />
-                            <span class="extra-help">Your email address</span>
-                        </li>
-                        <li>
-                            <label for="password">Password</label>
-                            <input type="text" class="text-input" id="password" name="password" />
-                        </li>
-                        <li>
-                            <input type="submit" value="Sign In" name="submit" class="btn" />
-                        </li>
-                    </ul>
-                    </fieldset>
-                </form>
                 <hr>
                 <pre class="markup" id="normalList" style="display: block;"><code>
     &lt;ul class="normalList"&gt;

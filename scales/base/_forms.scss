@@ -3,7 +3,6 @@
    ========================================================================== */
 
 fieldset {
-    padding: 0 ms(0);
     @include rhythm(0,1,0,0);
 }
 
@@ -47,10 +46,6 @@ fieldset {
 
 .form-fields > li {
     @include trailer;
-}
-
-.form-fields > li:last-child {
-    margin-bottom: 0;
 }
 
 

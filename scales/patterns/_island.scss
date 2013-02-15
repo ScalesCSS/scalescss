@@ -10,19 +10,19 @@
    </div>
  *
  */
-.island,
-.islet {
+[class*="island"],
+[class*="islet"] {
     display: block;
     @extend %clearfix;
 }
 
-.island {
+[class*="island"] {
     padding: 0 msem(3);
     @include rhythm(0,1,1,0);
 }
 
-.island > :last-child,
-.islet > :last-child {
+[class*="island"] > :last-child,
+[class*="islet"] > :last-child {
     margin-bottom: 0;
 }
 
@@ -30,7 +30,7 @@
 /*
  * Just like .island, only smaller.
  */
-.islet {
+[class*="islet"] {
     padding: 0 msem(-1);
     @include rhythm(0,.5,.5,0);
 }

@@ -17,7 +17,7 @@
     </ul>
  *
  */
-.nav {
+[class*="nav"] {
     list-style-type: none;
     margin-left: 0;
     @extend %clearfix;
@@ -49,7 +49,7 @@
  *
  * usage:
  *
-    <ul class="nav  nav--keywords>
+    <ul class="nav--keywords>
  *
  */
 .nav--keywords {
@@ -74,7 +74,7 @@
     /*
      * Makes the .nav horizontal
      */
-    .nav {
+    [class*="nav"] {
         > li {
 
             &,
@@ -92,7 +92,7 @@
      *
      * usage:
      *
-        <ul class="nav  nav--fit>
+        <ul class="nav--fit>
      *
      */
     .nav--fit {

@@ -13,13 +13,13 @@
    </ul>
  *
  */
-.multi-list {
+[class*="multi-list"] {
     list-style: none;
     margin-left: 0;
     @extend %clearfix;
 }
 
-.multi-list > li {
+[class*="multi-list"] > li {
     float: left;
 }
 

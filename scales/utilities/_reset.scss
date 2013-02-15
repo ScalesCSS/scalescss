@@ -68,3 +68,15 @@ textarea:focus {
     cursor: text;
     outline: none;
 }
+
+/*
+ * Get rid of all the form input styles and set the font size to match the $base-font-size;
+ */
+.text-input, textarea {
+    @include appearance(none);
+    @include adjust-font-size-to($base-font-size);
+    padding: 0;
+    margin: 0;
+    border: 0;
+    @include box-shadow(inset 0 1px 0 #000, inset 1px 0px 0 #000, inset -1px 0px 0 #000, inset 0px -1px 0 #000);
+}

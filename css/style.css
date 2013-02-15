@@ -23,6 +23,7 @@ html { font-size: 16px; line-height: 1.5em; }
 /* Color variables - You should change these! */
 /* ========================================================================== Scales ========================================================================== */
 /*  Copyright (C) 2012 Dave Gillhespy  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  */
+/* Scales wouldn't be possible without the amazing work of Harry Roberts (http://csswizardry.com/) on Inuit.css (https://github.com/csswizardry/inuit.css). A number of the design patterns and techniques in Scales were borrowed from Inuit.css. */
 /* ========================================================================== !!! WARNING !!! ========================================================================== */
 /* You shouldn't modify anything here, other than commenting out patterns that you don't need. Everything here is simplified as much as possible so that you don't have to remove anything.  Scales doesn't make any design decisions for you. To give design to these elements and patterns simply create your own partials and extend these styles. I recommend naming your partials the same as these for the sake of consistency in your project. */
 /* ========================================================================== Imports ========================================================================== */
@@ -206,6 +207,10 @@ label, button, select, option { cursor: pointer; }
 
 /* line 67, ../scales/utilities/_reset.scss */
 .text-input:active, .text-input:focus, textarea:active, textarea:focus { cursor: text; outline: none; }
+
+/* Get rid of all the form input styles and set the font size to match the $base-font-size; */
+/* line 75, ../scales/utilities/_reset.scss */
+.text-input, textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; font-size: 1em; line-height: 1.5em; padding: 0; margin: 0; border: 0; -webkit-box-shadow: inset 0 1px 0 black, inset 1px 0px 0 black, inset -1px 0px 0 black, inset 0px -1px 0 black; -moz-box-shadow: inset 0 1px 0 black, inset 1px 0px 0 black, inset -1px 0px 0 black, inset 0px -1px 0 black; box-shadow: inset 0 1px 0 black, inset 1px 0px 0 black, inset -1px 0px 0 black, inset 0px -1px 0 black; }
 
 /* ========================================================================== Spacing ========================================================================== */
 /* Some default vertical spacing for elements so they follow the vertical rhythm of the page. */
@@ -466,49 +471,46 @@ th, td { padding: 0 0.625em; margin-top: 0em; padding-top: 0.375em; padding-bott
 
 /* ========================================================================== Forms ========================================================================== */
 /* line 5, ../scales/base/_forms.scss */
-fieldset { padding: 0 16px; margin-top: 0em; padding-top: 1.5em; padding-bottom: 0em; margin-bottom: 0em; }
+fieldset { margin-top: 0em; padding-top: 1.5em; padding-bottom: 0em; margin-bottom: 0em; }
 
 /* **NOTE** on Text inputs.  Instead of a `[type]` selector for each kind of form input, we just use a class to target any/every one, e.g.: <input type="text" class="text-input"> <input type="email" class="text-input"> <input type="password" class="text-input">  You should style .text-input and textarea in your own partial.  */
 /* Use an unordered list to mark up your groups of form fields.  <ul class="form-fields"> <li> <label /> <input /> </li> <li> <label /> <select /> </li> <li> <label /> <input /> </li> </ul>  */
-/* line 43, ../scales/base/_forms.scss */
+/* line 42, ../scales/base/_forms.scss */
 .form-fields, .check-list { list-style: none; margin: 0; }
 
-/* line 48, ../scales/base/_forms.scss */
+/* line 47, ../scales/base/_forms.scss */
 .form-fields > li, .check-list > li { margin-bottom: 1.5em; }
 
-/* line 52, ../scales/base/_forms.scss */
-.form-fields > li:last-child, .check-list > li:last-child { margin-bottom: 0; }
-
 /* Labels  The ".label" class can be used to make an element look like a label if an actual label isn't suitable.  */
-/* line 64, ../scales/base/_forms.scss */
+/* line 59, ../scales/base/_forms.scss */
 label, .label { display: block; }
 
 /* Extra help text in labels.  <label>Username <small class="additional">No special characters</small></label>  */
-/* line 74, ../scales/base/_forms.scss */
+/* line 69, ../scales/base/_forms.scss */
 .additional { display: block; font-weight: normal; }
 
 /* Groups of checkboxes and radios.  <li> <ul class="check-list"> <li> <input /> <label /> </li> <li> <input /> <label /> </li> </ul> </li>  */
 /* Labels in check-lists. */
-/* line 104, ../scales/base/_forms.scss */
+/* line 99, ../scales/base/_forms.scss */
 .check-label, .check-list label, .check-list .label { display: inline-block; }
 
 /* Extra help text displayed after a field when that field is in focus.  <label for="email">Username:</label> <input type="email" id="email" class="text-input"> <span class="extra-help">Enter your email address</span>  We leave the help text in the document flow and merely set it to `visibility: hidden;`. This means that it won’t interfere with anything once it reappears.  */
-/* line 121, ../scales/base/_forms.scss */
+/* line 116, ../scales/base/_forms.scss */
 .extra-help { display: none; }
 
-/* line 125, ../scales/base/_forms.scss */
+/* line 120, ../scales/base/_forms.scss */
 .text-input:active + .extra-help, .text-input:focus + .extra-help { display: inline-block; }
 
 /* These are OOCSS based design patterns. If you come up with new one's, please contribute on github!  If you don't need a pattern, comment out the line and it wont be included in your project. */
 /* ========================================================================== Navigation ========================================================================== */
 /** Nav abstraction. On small screens, .nav simply removes list markers and left margin, applies clearfix, and makes the <li> and <a> display block. Style in your nav partial.  usage:  <ul class="nav"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  */
 /* line 20, ../scales/patterns/_nav.scss */
-.nav { list-style-type: none; margin-left: 0; }
+[class*="nav"] { list-style-type: none; margin-left: 0; }
 /* line 28, ../scales/patterns/_nav.scss */
-.nav > li, .nav > li > a { display: block; }
+[class*="nav"] > li, [class*="nav"] > li > a { display: block; }
 
 /* Make nav--keywords horizontal instead of stacking them. */
-/* Makes a list of comma separated keywords. Extends .nav.  usage:  <ul class="nav  nav--keywords>  */
+/* Makes a list of comma separated keywords. Extends .nav.  usage:  <ul class="nav--keywords>  */
 /* line 59, ../scales/patterns/_nav.scss */
 .nav--keywords > li:after { content: ", "; }
 /* line 63, ../scales/patterns/_nav.scss */
@@ -517,8 +519,8 @@ label, .label { display: block; }
 /* Nav abstractions on screens larger than $palm-end. */
 @media screen and (min-width: 30.0625em) { /* Makes the .nav horizontal */
   /* line 81, ../scales/patterns/_nav.scss */
-  .nav > li, .nav > li > a { display: inline-block; *display: inline; zoom: 1; }
-  /* Force nav to occupy 100% of the available width of its parent. Extends .nav.  usage:  <ul class="nav  nav--fit>  */
+  [class*="nav"] > li, [class*="nav"] > li > a { display: inline-block; *display: inline; zoom: 1; }
+  /* Force nav to occupy 100% of the available width of its parent. Extends .nav.  usage:  <ul class="nav--fit>  */
   /* line 98, ../scales/patterns/_nav.scss */
   .nav--fit { display: table; width: 100%; }
   /* line 102, ../scales/patterns/_nav.scss */
@@ -526,36 +528,36 @@ label, .label { display: block; }
   /* line 105, ../scales/patterns/_nav.scss */
   .nav--fit > li > a { display: block; } }
 /* ========================================================================== Pagination ========================================================================== */
-/* Basic pagination object, extends .nav.  <ol class="nav pagination"> <li class="pagination__first">First</li> <li class="pagination__prev">Previous</li> <li><a href=/page/1>1</a></li> <li><a href=/page/2>2</a></li> <li class=current><a href=/page/3>3</a></li> <li><a href=/page/4>4</a></li> <li><a href=/page/5>5</a></li> <li class="pagination__next"><a href=/page/next>Next</a></li> <li class="pagination__last"><a href=/page/last>Last</a></li> </ol>  */
+/* Basic pagination object, extends .nav.  <ol class="nav--pagination"> <li class="nav--pagination__first">First</li> <li class="nav--pagination__prev">Previous</li> <li><a href=/page/1>1</a></li> <li><a href=/page/2>2</a></li> <li class=current><a href=/page/3>3</a></li> <li><a href=/page/4>4</a></li> <li><a href=/page/5>5</a></li> <li class="nav--pagination__next"><a href=/page/next>Next</a></li> <li class="nav--pagination__last"><a href=/page/last>Last</a></li> </ol>  */
 /* line 21, ../scales/patterns/_pagination.scss */
-.pagination { text-align: center; /* Remove whitespace caused by inline-block. */ letter-spacing: -0.31em; word-spacing: -0.43em; }
+.nav--pagination { text-align: center; /* Remove whitespace caused by inline-block. */ letter-spacing: -0.31em; word-spacing: -0.43em; }
 
 /* line 30, ../scales/patterns/_pagination.scss */
-.pagination > li { padding: 0 0.5em; letter-spacing: normal; word-spacing: normal; }
+.nav--pagination > li { padding: 0 0.5em; letter-spacing: normal; word-spacing: normal; }
 
 /* line 41, ../scales/patterns/_pagination.scss */
-.pagination__first a:before { content: "« "; }
+.nav--pagination__first a:before { content: "« "; }
 
 /* line 45, ../scales/patterns/_pagination.scss */
-.pagination__last a:after { content: " »"; }
+.nav--pagination__last a:after { content: " »"; }
 
 /* ========================================================================== Breadcrumb ========================================================================== */
 /* Make breadcrumbs horizontal instead of stacked */
-/* Simple breadcrumb styling to apply to ordered lists. Extends .nav  <ol class="nav breadcrumb"> <li><a href=#>Scales</a></li> <li><a href=#>Patterns</a></li> <li>Breadcrumb</li> </ol>  */
+/* Simple breadcrumb styling to apply to ordered lists. Extends .nav  <ol class="nav--breadcrumb"> <li><a href=#>Scales</a></li> <li><a href=#>Patterns</a></li> <li>Breadcrumb</li> </ol>  */
 /* line 27, ../scales/patterns/_breadcrumb.scss */
-.breadcrumb > li + li:before { content: "» "; }
+.nav--breadcrumb > li + li:before { content: "» "; }
 
-/* Path-like structure for breadcrumbs. Extends .nav  <ol class="nav breadcrumb--path"> <li class="breadcrumb__root"><a href=#>Scales</a></li> <li><a href=#>Patterns</a></li> <li>Breadcrumb</li> </ol>  */
+/* Path-like structure for breadcrumbs. Extends .nav  <ol class="nav--breadcrumb--path"> <li class="nav--breadcrumb__root"><a href=#>Scales</a></li> <li><a href=#>Patterns</a></li> <li>Breadcrumb</li> </ol>  */
 /* line 42, ../scales/patterns/_breadcrumb.scss */
-.breadcrumb--path > li + li:before { content: "/ "; }
+.nav--breadcrumb--path > li + li:before { content: "/ "; }
 
-/* Assign a delimiter through a data attribute  <ol class="nav breadcrumb"> <li><a href=#>Scales</a></li> <li data-breadcrumb="|"><a href=#>Patterns</a></li> <li data-breadcrumb="|"><a href=#>Breadcrumb</a></li> </ol>  */
+/* Assign a delimiter through a data attribute  <ol class="nav--breadcrumb"> <li><a href=#>Scales</a></li> <li data-breadcrumb="|"><a href=#>Patterns</a></li> <li data-breadcrumb="|"><a href=#>Breadcrumb</a></li> </ol>  */
 /* line 57, ../scales/patterns/_breadcrumb.scss */
-.breadcrumb > li + li[data-breadcrumb]:before { content: attr(data-breadcrumb) " "; }
+.nav--breadcrumb > li + li[data-breadcrumb]:before { content: attr(data-breadcrumb) " "; }
 
 /* The root of the tree. */
 /* line 65, ../scales/patterns/_breadcrumb.scss */
-.breadcrumb__root { font-weight: bold; }
+.nav--breadcrumb__root { font-weight: bold; }
 
 /* ========================================================================== Media ========================================================================== */
 /* Use the media pattern any time you have an image and text next to each other.  The media element is probably the most useful OOCSS abstraction. Read more here: stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code  Usage:  <div class="media"> <img src="images/your-image.png" alt="" class="media__fig"> <p class="media__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> </div>  */
@@ -581,35 +583,35 @@ label, .label { display: block; }
 /* ========================================================================== Island ========================================================================== */
 /* Boxed off content  <div class="island"> I am boxed off. </div>  */
 /* line 14, ../scales/patterns/_island.scss */
-.island, .islet { display: block; }
+[class*="island"], [class*="islet"] { display: block; }
 
 /* line 19, ../scales/patterns/_island.scss */
-.island { padding: 0 1.5em; margin-top: 0em; padding-top: 1.5em; padding-bottom: 1.5em; margin-bottom: 0em; }
+[class*="island"] { padding: 0 1.5em; margin-top: 0em; padding-top: 1.5em; padding-bottom: 1.5em; margin-bottom: 0em; }
 
 /* line 25, ../scales/patterns/_island.scss */
-.island > :last-child, .islet > :last-child { margin-bottom: 0; }
+[class*="island"] > :last-child, [class*="islet"] > :last-child { margin-bottom: 0; }
 
 /* Just like .island, only smaller. */
 /* line 33, ../scales/patterns/_island.scss */
-.islet { padding: 0 0.75em; margin-top: 0em; padding-top: 0.75em; padding-bottom: 0.75em; margin-bottom: 0em; }
+[class*="islet"] { padding: 0 0.75em; margin-top: 0em; padding-top: 0.75em; padding-bottom: 0.75em; margin-bottom: 0em; }
 
 /* ========================================================================== Block List ========================================================================== */
 /* A list with top and bottom borders  <ul class="block-list"> <li>Foo</li> <li>Bar</li> <li>Baz</li> </ul>  Extend this object in your own partial to give it more style.  */
 /* line 19, ../scales/patterns/_block-list.scss */
-.block-list, .block-list > li { border-color: #ccc; /* Override this color in your own partial */ }
+[class*="block-list"], [class*="block-list"] > li { border-color: #ccc; /* Override this color in your own partial */ }
 
 /* line 23, ../scales/patterns/_block-list.scss */
-.block-list { list-style: none; margin-left: 0; border-top-style: solid; border-top-width: 0.0625em; padding-top: 1.4375em; padding-top: 0; }
+[class*="block-list"] { list-style: none; margin-left: 0; border-top-style: solid; border-top-width: 0.0625em; padding-top: 1.4375em; padding-top: 0; }
 /* line 29, ../scales/patterns/_block-list.scss */
-.block-list > li { border-bottom-style: solid; border-bottom-width: 0.0625em; padding-bottom: 1.4375em; padding-top: 1.5em; }
+[class*="block-list"] > li { border-bottom-style: solid; border-bottom-width: 0.0625em; padding-bottom: 1.4375em; padding-top: 1.5em; }
 
 /* ========================================================================== Multi-List ========================================================================== */
 /* This helps create a multi-column list out of a single list.  <ul class="multi-list four-columns"> <li>Lorem</li> <li>Ipsum</li> <li>Dolor</li> <li>Sit</li> </ul>  */
 /* line 16, ../scales/patterns/_multi-list.scss */
-.multi-list { list-style: none; margin-left: 0; }
+[class*="multi-list"] { list-style: none; margin-left: 0; }
 
 /* line 22, ../scales/patterns/_multi-list.scss */
-.multi-list > li { float: left; }
+[class*="multi-list"] > li { float: left; }
 
 /* Apply these classes alongside the .multi-list class on lists to determine how wide their columns are. */
 /* line 31, ../scales/patterns/_multi-list.scss */
@@ -643,10 +645,10 @@ label, .label { display: block; }
 /* ========================================================================== Buttons ========================================================================== */
 /* Basic button structural styling. Extend in your own partial.  */
 /* line 9, ../scales/patterns/_buttons.scss */
-.btn { font: inherit; cursor: pointer; border: none; display: inline-block; margin-top: 0em; padding-top: 0.375em; padding-bottom: 0.375em; margin-bottom: 1.5em; padding-right: 16px; padding-left: 16px; }
+[class*="btn"] { font: inherit; cursor: pointer; border: none; display: inline-block; margin-top: 0em; padding-top: 0.375em; padding-bottom: 0.375em; margin-bottom: 0.75em; padding-right: 16px; padding-left: 16px; }
 
 /* line 20, ../scales/patterns/_buttons.scss */
-.btn, .btn:hover { text-decoration: none; }
+[class*="btn"], [class*="btn"]:hover { text-decoration: none; }
 
 /* Basic button modifiers */
 /* line 27, ../scales/patterns/_buttons.scss */
@@ -678,13 +680,13 @@ label, .label { display: block; }
 /* ========================================================================== Placeholders ========================================================================== */
 /* Extend the clearfix placeholder: @extend %clearfix. */
 /* line 10, ../scales/utilities/_placeholders.scss */
-.nav:before, .media:before, .island:before, .islet:before, .multi-list:before, .stat-group:before, .nav:after, .media:after, .island:after, .islet:after, .multi-list:after, .stat-group:after { content: " "; display: table; }
+[class*="nav"]:before, .media:before, [class*="island"]:before, [class*="islet"]:before, [class*="multi-list"]:before, .stat-group:before, [class*="nav"]:after, .media:after, [class*="island"]:after, [class*="islet"]:after, [class*="multi-list"]:after, .stat-group:after { content: " "; display: table; }
 /* line 15, ../scales/utilities/_placeholders.scss */
-.nav:after, .media:after, .island:after, .islet:after, .multi-list:after, .stat-group:after { clear: both; }
+[class*="nav"]:after, .media:after, [class*="island"]:after, [class*="islet"]:after, [class*="multi-list"]:after, .stat-group:after { clear: both; }
 
 /* Placeholder to make something horizontal. */
 /* line 24, ../scales/utilities/_placeholders.scss */
-.nav--keywords > li, .nav--keywords > li > a, .pagination > li, .pagination > li > a, .breadcrumb > li, .breadcrumb > li > a, .breadcrumb--path > li, .breadcrumb--path > li > a { display: inline-block; *display: inline; zoom: 1; }
+.nav--keywords > li, .nav--keywords > li > a, .nav--pagination > li, .nav--pagination > li > a, .nav--breadcrumb > li, .nav--breadcrumb > li > a, .nav--breadcrumb--path > li, .nav--breadcrumb--path > li > a { display: inline-block; *display: inline; zoom: 1; }
 
 /* A background image for making sure your elements line up to you baseline.  Uncomment to use. */
 /* line 31, ../style.scss */

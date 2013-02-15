@@ -14,13 +14,13 @@
  * Extend this object in your own partial to give it more style.
  *
  */
-.block-list {
+[class*="block-list"] {
     &,
     > li {
         border-color: #ccc; /* Override this color in your own partial */
     }
 }
-.block-list {
+[class*="block-list"] {
     list-style: none;
     margin-left: 0;
     @include leading-border;

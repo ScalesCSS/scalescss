@@ -5,7 +5,7 @@
 /*
  * Make breadcrumbs horizontal instead of stacked
  */
- .breadcrumb > li, .breadcrumb--path > li {
+ .nav--breadcrumb > li, .nav--breadcrumb--path > li {
 
     &,
     > a {
@@ -17,14 +17,14 @@
 /*
  * Simple breadcrumb styling to apply to ordered lists. Extends .nav
  *
-   <ol class="nav breadcrumb">
+   <ol class="nav--breadcrumb">
        <li><a href=#>Scales</a></li>
        <li><a href=#>Patterns</a></li>
        <li>Breadcrumb</li>
    </ol>
  *
  */
-.breadcrumb > li + li:before {
+.nav--breadcrumb > li + li:before {
     content: "» ";
 }
 
@@ -32,14 +32,14 @@
 /*
  * Path-like structure for breadcrumbs. Extends .nav
  *
-   <ol class="nav breadcrumb--path">
-       <li class="breadcrumb__root"><a href=#>Scales</a></li>
+   <ol class="nav--breadcrumb--path">
+       <li class="nav--breadcrumb__root"><a href=#>Scales</a></li>
        <li><a href=#>Patterns</a></li>
        <li>Breadcrumb</li>
    </ol>
  *
  */
-.breadcrumb--path > li + li:before {
+.nav--breadcrumb--path > li + li:before {
     content: "/ ";
 }
 
@@ -47,14 +47,14 @@
 /*
  * Assign a delimiter through a data attribute
  *
-   <ol class="nav breadcrumb">
+   <ol class="nav--breadcrumb">
        <li><a href=#>Scales</a></li>
        <li data-breadcrumb="|"><a href=#>Patterns</a></li>
        <li data-breadcrumb="|"><a href=#>Breadcrumb</a></li>
    </ol>
  *
  */
-.breadcrumb > li + li[data-breadcrumb]:before {
+.nav--breadcrumb > li + li[data-breadcrumb]:before {
     content: attr(data-breadcrumb)" ";
 }
 
@@ -62,6 +62,6 @@
 /*
  * The root of the tree.
  */
-.breadcrumb__root {
+.nav--breadcrumb__root {
     font-weight: bold;
 }

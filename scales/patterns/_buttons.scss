@@ -6,18 +6,18 @@
  * Basic button structural styling. Extend in your own partial.
  *
  */
-.btn {
+[class*="btn"] {
     font: inherit;
     cursor: pointer;
     border: none;
     display: inline-block;
-    @include rhythm(0,.25,.25,1, ms(0));
+    @include rhythm(0,.25,.25,.5, ms(0));
     padding-right: ms(0);
     padding-left: ms(0);
 }
 
-.btn,
-.btn:hover {
+[class*="btn"],
+[class*="btn"]:hover {
     text-decoration: none;
 }
 
