@@ -1,8 +1,4 @@
-<!-- This is just for testing. It will eventually be a component library for all of the Scales design patterns. For now, please ignore it. -->
-
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
@@ -17,409 +13,881 @@
     </head>
 
     <body>
-        <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-
         <header role="banner">
             <h1>Scales Component Library</h1>
-            <nav>
+
+            <nav role="navigation">
                 <ul class="nav--fit nav--main">
-                    <li><a href=#>Link 1</a></li>
-                    <li><a href=#>Link 2</a></li>
-                    <li><a href=#>Link 3</a></li>
-                    <li><a href=#>Link 4</a></li>
-                    <li><a href=#>Link 5</a></li>
-                    <li><a href=#>Link 6</a></li>
-                    <li><a href=#>Link 7</a></li>
-                    <li><a href=#>Link 8</a></li>
-                    <li><a href=#>Link 9</a></li>
-                    <li><a href=#>Link 10</a></li>
+                    <li><a href="#headings">Headings</a></li>
+                    <li><a href="#text">Text</a></li>
+                    <li><a href="#blockquotes">Blockquotes</a></li>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="#tables">Tables</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#nav">Navigation</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#island">Island</a></li>
+                    <li><a href="#block-list">Block List</a></li>
+                    <li><a href="#multi-list">Multi List</a></li>
+                    <li><a href="#split">Split</a></li>
+                    <li><a href="#complex-link">Complex Link</a></li>
+                    <li><a href="#buttons">Buttons</a></li>
+                    <li><a href="#stats">Stats</a></li>
                 </ul>
             </nav>
-
-            <ul class="nav--keywords">
-                <li><a href="">Mobile First</a></li>
-                <li><a href="">OOCSS</a></li>
-                <li><a href="">RWD</a></li>
-                <li><a href="">SASS</a></li>
-            </ul>
-
-            <ol class="nav--breadcrumb">
-                <li><a href=#>Scales</a></li>
-                <li><a href=#>Patterns</a></li>
-                <li>Breadcrumb</li>
-            </ol>
-
-            <ol class="nav--breadcrumb--path">
-                <li class="nav--breadcrumb__root"><a href=#>Scales</a></li>
-                <li><a href=#>Patterns</a></li>
-                <li>Breadcrumb</li>
-            </ol>
-
-            <ol class="nav--breadcrumb">
-                <li><a href=#>Scales</a></li>
-                <li data-breadcrumb="|"><a href=#>Patterns</a></li>
-                <li data-breadcrumb="|"><a href=#>Breadcrumb</a></li>
-            </ol>
-
-            <ol class="nav--pagination">
-                <li class="nav--pagination__first">First</li>
-                <li class="nav--pagination__prev">Previous</li>
-                <li><a href=/page/1>1</a></li>
-                <li><a href=/page/2>2</a></li>
-                <li class="current"><a href=/page/3>3</a></li>
-                <li><a href=/page/4>4</a></li>
-                <li><a href=/page/5>5</a></li>
-                <li class="nav--pagination__next"><a href=/page/next>Next</a></li>
-                <li class="nav--pagination__last"><a href=/page/last>Last</a></li>
-            </ol>
         </header>
 
         <div class="content">
             <div role="main">
-                <h1>This is an H1</h1>
-                <h2>This is an H2</h2>
-                <h3>This is an H3</h3>
-                <h4>This is an H4</h4>
-                <h5>This is an H5</h5>
-                <h6>This is an H6</h6>
+                <section class="island" id="headings">
+                    <header>
+                        <h2>Headings</h2>
+                    </header>
+                    <div class="pattern">
+                        <h1>This is an H1</h1>
+                        <h2>This is an H2</h2>
+                        <h3>This is an H3</h3>
+                        <h4>This is an H4</h4>
+                        <h5>This is an H5</h5>
+                        <h6>This is an H6</h6>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;h1&gt;This is an H1&lt;/h1&gt;
+&lt;h2&gt;This is an H2&lt;/h2&gt;
+&lt;h3&gt;This is an H3&lt;/h3&gt;
+&lt;h4&gt;This is an H4&lt;/h4&gt;
+&lt;h5&gt;This is an H5&lt;/h5&gt;
+&lt;h6&gt;This is an H6&lt;/h6&gt;
+                        </code></pre>
+                    </div>
+                </section>
 
-                <div class="media">
-                    <figure>
-                        <a href="http://devtroit.com">
-                            <img class="media__fig" src="http://devtroit.com/img/badges/badge-medium.png">
-                        </a>
-                        <figcaption class="media__body">
-                            <p>Are you a designer or developer who's proud to say your from Detroit?</p>
-                            <p>Grab a badge from <a href="http://devtroit.com">devtroit.com</a> for your site!</p>
-                        </figcaption>
-                    </figure>
-                </div>
+                <section class="island" id="text">
+                    <header>
+                        <h2>Text</h2>
+                    </header>
+                    <div class="pattern">
+                        <h3>Paragraph Text</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ipsum posuere felis mollis interdum. Etiam posuere purus non neque interdum tristique. Nulla facilisi. Vivamus sem nulla, accumsan mollis condimentum ut, facilisis ut felis. Sed eu iaculis eros. Cras suscipit, risus non lacinia luctus, justo felis consectetur sem, a ullamcorper tortor quam in dui.</p>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ipsum posuere felis mollis interdum. Etiam posuere purus non neque interdum tristique. Nulla facilisi. Vivamus sem nulla, accumsan mollis condimentum ut, facilisis ut felis. Sed eu iaculis eros. Cras suscipit, risus non lacinia luctus, justo felis consectetur sem, a ullamcorper tortor quam in dui.&lt;/p&gt;
+                        </code></pre>
+                    </div>
 
-                <div class="media">
-                    <figure>
-                        <a href="http://devtroit.com">
-                            <img class="media__fig--rev" src="http://devtroit.com/img/badges/badge-medium.png">
-                        </a>
-                        <figcaption class="media__body">
-                            <p>Are you a designer or developer who's proud to say your from Detroit?</p>
-                            <p>Grab a badge from <a href="http://devtroit.com">devtroit.com</a> for your site!</p>
-                        </figcaption>
-                    </figure>
-                </div>
+                    <div class="pattern">
+                        <h3>Small Text</h3>
+                        <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ipsum posuere felis mollis interdum. Etiam posuere purus non neque interdum tristique. Nulla facilisi. Vivamus sem nulla, accumsan mollis condimentum ut, facilisis ut felis. Sed eu iaculis eros. Cras suscipit, risus non lacinia luctus, justo felis consectetur sem, a ullamcorper tortor quam in dui.</small></p>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;p&gt;&lt;small&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ipsum posuere felis mollis interdum. Etiam posuere purus non neque interdum tristique. Nulla facilisi. Vivamus sem nulla, accumsan mollis condimentum ut, facilisis ut felis. Sed eu iaculis eros. Cras suscipit, risus non lacinia luctus, justo felis consectetur sem, a ullamcorper tortor quam in dui.&lt;/small&gt;&lt;/p&gt;
+                        </code></pre>
+                    </div>
+                </section>
 
-                <figure class="quote">
-                    <blockquote>
-                        <p>It is the unofficial force—the Baker Street irregulars.</p>
-                    </blockquote>
-                    <figcaption class="source">Sherlock Holmes, <cite>Sign of Four</cite></figcaption>
-                </figure>
+                <section class="island" id="blockquotes">
+                    <header>
+                        <h2>Blockquotes</h2>
+                    </header>
+                    <div class="pattern">
+                        <figure class="quote">
+                            <blockquote>
+                                <p>It is the unofficial force—the Baker Street irregulars.</p>
+                            </blockquote>
+                            <figcaption class="source">Sherlock Holmes, <cite>Sign of Four</cite></figcaption>
+                        </figure>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;figure class="quote"&gt;
+    &lt;blockquote&gt;
+        &lt;p&gt;It is the unofficial force—the Baker Street irregulars.&lt;/p&gt;
+    &lt;/blockquote&gt;
+    &lt;figcaption class="source"&gt;Sherlock Holmes, &lt;cite&gt;Sign of Four&lt;/cite&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+                        </code></pre>
+                    </div>
+                </section>
 
-                <dl class="split websites">
-                    <dt class="split__title">Google</dt>
-                    <dd>google.com</dd>
-                    <dt class="split__title">Wikipedia</dt>
-                    <dd>wikipedia.org</dd>
-                    <dt class="split__title">CNN</dt>
-                    <dd>cnn.com</dd>
-                </dl>
+                <section class="island" id="links">
+                    <header>
+                        <h2>Links</h2>
+                    </header>
+                    <div class="pattern">
+                        <p><a href="#">This is a Link</a></p>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;a href="#"&gt;This is a Link&lt;/a&gt;
+                        </code></pre>
+                    </div>
+                </section>
 
-                <ul class="split inventory">
-                    <li><span class="split__title">Noodles</span> 600 </li>
-                    <li><span class="split__title">Sauce</span> 250 </li>
-                    <li><span class="split__title">Mushrooms</span> 530 </li>
-                </ul>
+                <section class="island" id="tables">
+                    <header>
+                        <h2>Tables</h2>
+                    </header>
+                    <div class="pattern">
+                        <h3>Basic Table</h3>
+                        <table>
+                            <colgroup>
+                                <col class="t15">
+                                <col class="t15">
+                                <col class="t15">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Lorem</th>
+                                    <th>Ipsum</th>
+                                    <th>Dolor</th>
+                                    <th>Sit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Sit</th>
+                                    <td>Dolor</td>
+                                    <td class="numerical">03.788</td>
+                                    <td>Lorem</td>
+                                </tr>
+                                <tr>
+                                    <th>Sit</th>
+                                    <td>Dolor</td>
+                                    <td class="numerical">32.210</td>
+                                    <td>Lorem</td>
+                                </tr>
+                                <tr>
+                                    <th>Sit</th>
+                                    <td>Dolor</td>
+                                    <td class="numerical">47.797</td>
+                                    <td>Lorem</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;table&gt;
+    &lt;colgroup&gt;
+        &lt;col class="t15"&gt;
+        &lt;col class="t15"&gt;
+        &lt;col class="t15"&gt;
+        &lt;col&gt;
+    &lt;/colgroup&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Lorem&lt;/th&gt;
+            &lt;th&gt;Ipsum&lt;/th&gt;
+            &lt;th&gt;Dolor&lt;/th&gt;
+            &lt;th&gt;Sit&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Sit&lt;/th&gt;
+            &lt;td&gt;Dolor&lt;/td&gt;
+            &lt;td class="numerical"&gt;03.788&lt;/td&gt;
+            &lt;td&gt;Lorem&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                        </code></pre>
+                    </div>
 
-                <div class="stat-group">
-                    <dl class="stat">
-                        <a href="#">
-                            <dt class="stat__title">Noodles</dt>
-                            <dd class="stat__value">600</dd>
-                        </a>
-                    </dl>
+                    <div class="pattern">
+                        <h3>Striped Tabled</h3>
+                        <table class="table--striped">
+                            <colgroup>
+                                <col class="t15">
+                                <col class="t15">
+                                <col class="t15">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Lorem</th>
+                                    <th>Ipsum</th>
+                                    <th>Dolor</th>
+                                    <th>Sit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Sit</th>
+                                    <td>Dolor</td>
+                                    <td class="numerical">03.788</td>
+                                    <td>Lorem</td>
+                                </tr>
+                                <tr>
+                                    <th>Sit</th>
+                                    <td>Dolor</td>
+                                    <td class="numerical">32.210</td>
+                                    <td>Lorem</td>
+                                </tr>
+                                <tr>
+                                    <th>Sit</th>
+                                    <td>Dolor</td>
+                                    <td class="numerical">47.797</td>
+                                    <td>Lorem</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;table class="table--stiped"&gt;
+    &lt;colgroup&gt;
+        &lt;col class="t15"&gt;
+        &lt;col class="t15"&gt;
+        &lt;col class="t15"&gt;
+        &lt;col&gt;
+    &lt;/colgroup&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Lorem&lt;/th&gt;
+            &lt;th&gt;Ipsum&lt;/th&gt;
+            &lt;th&gt;Dolor&lt;/th&gt;
+            &lt;th&gt;Sit&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Sit&lt;/th&gt;
+            &lt;td&gt;Dolor&lt;/td&gt;
+            &lt;td class="numerical"&gt;03.788&lt;/td&gt;
+            &lt;td&gt;Lorem&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                        </code></pre>
+                    </div>
 
-                    <dl class="stat">
-                        <dt class="stat__title">Sauce</dt>
-                        <dd class="stat__value">250</dd>
-                    </dl>
+                    <div class="pattern">
+                        <h3>Bordered Tabled</h3>
+                        <table class="table--bordered">
+                            <colgroup>
+                                <col class="t15">
+                                <col class="t15">
+                                <col class="t15">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Lorem</th>
+                                    <th>Ipsum</th>
+                                    <th>Dolor</th>
+                                    <th>Sit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Sit</th>
+                                    <td>Dolor</td>
+                                    <td class="numerical">03.788</td>
+                                    <td>Lorem</td>
+                                </tr>
+                                <tr>
+                                    <th>Sit</th>
+                                    <td>Dolor</td>
+                                    <td class="numerical">32.210</td>
+                                    <td>Lorem</td>
+                                </tr>
+                                <tr>
+                                    <th>Sit</th>
+                                    <td>Dolor</td>
+                                    <td class="numerical">47.797</td>
+                                    <td>Lorem</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;table class="table--bordered"&gt;
+    &lt;colgroup&gt;
+        &lt;col class="t15"&gt;
+        &lt;col class="t15"&gt;
+        &lt;col class="t15"&gt;
+        &lt;col&gt;
+    &lt;/colgroup&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Lorem&lt;/th&gt;
+            &lt;th&gt;Ipsum&lt;/th&gt;
+            &lt;th&gt;Dolor&lt;/th&gt;
+            &lt;th&gt;Sit&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Sit&lt;/th&gt;
+            &lt;td&gt;Dolor&lt;/td&gt;
+            &lt;td class="numerical"&gt;03.788&lt;/td&gt;
+            &lt;td&gt;Lorem&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                        </code></pre>
+                    </div>
+                </section>
 
-                    <dl class="stat">
-                        <dt class="stat__title">Mushrooms</dt>
-                        <dd class="stat__value">530</dd>
-                    </dl>
-                </div>
+                <section class="island" id="forms">
+                    <header>
+                        <h2>Forms</h2>
+                    </header>
+                    <div class="pattern">
+                        <form method="" action="#">
+                            <fieldset>
+                                <legend>Login Form</legend>
+                            <ul class="form-fields">
+                                <li>
+                                    <label for="username">Username</label>
+                                    <input type="text" class="text-input" id="username" name="username" />
+                                    <span class="extra-help">Your email address</span>
+                                </li>
+                                <li>
+                                    <label for="password">Password <span class="additional">(Case Sensitive)</span></label>
+                                    <input type="text" class="text-input" id="password" name="password" />
+                                </li>
+                                <li>
+                                    <input type="submit" value="Sign In" name="submit" class="btn" />
+                                </li>
+                            </ul>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;form method="" action="#"&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Login Form&lt;/legend&gt;
+        &lt;ul class="form-fields"&gt;
+            &lt;li&gt;
+                &lt;label for="username"&gt;Username&lt;/label&gt;
+                &lt;input type="text" class="text-input" id="username" name="username" /&gt;
+                &lt;span class="extra-help"&gt;Your email address&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;label for="password"&gt;Password &lt;span class="additional"&gt;(Case Sensitive)&lt;/span&gt;&lt;/label&gt;
+                &lt;input type="text" class="text-input" id="password" name="password" /&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="submit" value="Sign In" name="submit" class="btn" /&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+                        </code></pre>
+                    </div>
+                </section>
 
-                <a href="" class="link-complex">
-                    <span class="link-complex__target">Log in</span> to your account.
-                </a>
-
-                <ul class="block-list">
-                    <li>Foo</li>
-                    <li>Bar</li>
-                    <li>Baz</li>
-                </ul>
-
-                <ul class="multi-list four-columns">
-                    <li>Lorem</li>
-                    <li>Ipsum</li>
-                    <li>Dolor</li>
-                    <li>Sit</li>
-                    <li>Lorem</li>
-                    <li>Ipsum</li>
-                    <li>Dolor</li>
-                    <li>Sit</li>
-                </ul>
-
-                <form method="" action="">
-                    <fieldset>
-                        <legend>Login Form</legend>
-                    <ul class="form-fields">
-                        <li>
-                            <label for="username">Username</label>
-                            <input type="text" class="text-input" id="username" name="username" />
-                            <span class="extra-help">Your email address</span>
-                        </li>
-                        <li>
-                            <label for="password">Password</label>
-                            <input type="text" class="text-input" id="password" name="password" />
-                        </li>
-                        <li>
-                            <input type="submit" value="Sign In" name="submit" class="btn" />
-                        </li>
-                    </ul>
-                    </fieldset>
-                </form>
-
-                <table>
-                    <colgroup>
-                        <col class="t10">
-                        <col class="t10">
-                        <col class="t10">
-                        <col>
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>Lorem</th>
-                            <th>Ipsum</th>
-                            <th>Dolor</th>
-                            <th>Sit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">03.788</td>
-                            <td>Lorem</td>
-                        </tr>
-                        <tr>
-                            <th>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">32.210</td>
-                            <td>Lorem</td>
-                        </tr>
-                        <tr>
-                            <th>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">47.797</td>
-                            <td>Lorem</td>
-                        </tr>
-                        <tr>
-                            <th>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">09.640</td>
-                            <td>Lorem</td>
-                        </tr>
-                        <tr>
-                            <th>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">12.117</td>
-                            <td>Lorem</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <table class="table--striped t60">
-                    <colgroup>
-                        <col class="t20">
-                        <col class="t20">
-                        <col class="t10">
-                        <col class="t20">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>Lorem</th>
-                            <th>Ipsum</th>
-                            <th>Dolor</th>
-                            <th>Sit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">03.788</td>
-                            <td>Lorem</td>
-                        </tr>
-                        <tr>
-                            <th>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">32.210</td>
-                            <td>Lorem</td>
-                        </tr>
-                        <tr>
-                            <th>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">47.797</td>
-                            <td>Lorem</td>
-                        </tr>
-                        <tr>
-                            <th>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">09.640</td>
-                            <td>Lorem</td>
-                        </tr>
-                        <tr>
-                            <th>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">12.117</td>
-                            <td>Lorem</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <table class="table--bordered t60">
-                    <colgroup>
-                        <col class="t10">
-                        <col class="t10">
-                        <col class="t10">
-                        <col class="t10">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>Lorem</th>
-                            <th>Ipsum</th>
-                            <th>Dolor</th>
-                            <th>Sit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">03.788</td>
-                            <td>Lorem</td>
-                        </tr>
-                        <tr>
-                            <th>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">32.210</td>
-                            <td>Lorem</td>
-                        </tr>
-                        <tr>
-                            <th>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">47.797</td>
-                            <td>Lorem</td>
-                        </tr>
-                        <tr>
-                            <th>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">09.640</td>
-                            <td>Lorem</td>
-                        </tr>
-                        <tr>
-                            <th>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">12.117</td>
-                            <td>Lorem</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <table class="table--bordered table--striped">
-                    <colgroup>
-                        <col class="t10">
-                        <col class="t30">
-                        <col class="t20">
-                        <col>
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th colspan=3>Foo</th>
-                            <th>Bar</th>
-                        </tr>
-                        <tr>
-                            <th>Lorem</th>
-                            <th>Ipsum</th>
-                            <th>Dolor</th>
-                            <th>Sit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th rowspan=3>Sit</th>
-                            <td>Dolor</td>
-                            <td class="numerical">03.788</td>
-                            <td>Lorem</td>
-                        </tr>
-                        <tr>
-                            <td>Dolor</td>
-                            <td class="numerical">32.210</td>
-                            <td>Lorem</td>
-                        </tr>
-                        <tr>
-                           <td>Dolor</td>
-                           <td class="numerical">47.797</td>
-                           <td>Lorem</td>
-                        </tr>
-                        <tr>
-                           <th rowspan=2>Sit</th>
-                           <td>Dolor</td>
-                           <td class="numerical">09.640</td>
-                           <td>Lorem</td>
-                        </tr>
-                        <tr>
-                           <td>Dolor</td>
-                           <td class="numerical">12.117</td>
-                           <td>Lorem</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="island">
-                    <h3>Island Content</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ipsum posuere felis mollis interdum.</p>
-                    <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                    </ul>
-                </div>
-
-                <div class="islet">
-                    <h3>Islet Content</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ipsum posuere felis mollis interdum.</p>
-                    <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                    </ul>
-                </div>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ipsum posuere felis mollis interdum. Etiam posuere purus non neque interdum tristique. Nulla facilisi. Vivamus sem nulla, accumsan mollis condimentum ut, facilisis ut felis. Sed eu iaculis eros. Cras suscipit, risus non lacinia luctus, justo felis consectetur sem, a ullamcorper tortor quam in dui.</p>
-
-                <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ipsum posuere felis mollis interdum. Etiam posuere purus non neque interdum tristique. Nulla facilisi. Vivamus sem nulla, accumsan mollis condimentum ut, facilisis ut felis. Sed eu iaculis eros. Cras suscipit, risus non lacinia luctus, justo felis consectetur sem, a ullamcorper tortor quam in dui.</small></p>
-
-                <hr>
-                <pre class="markup" id="normalList" style="display: block;"><code>
-    &lt;ul class="normalList"&gt;
-        &lt;li&gt;item&lt;/li&gt;
-        &lt;li&gt;item&lt;/li&gt;
-        &lt;li&gt;item&lt;/li&gt;
+                <section class="island" id="nav">
+                    <header>
+                        <h2>Navigation</h2>
+                    </header>
+                    <div class="pattern">
+                        <h3>Standard Navigation</h3>
+                        <nav>
+                            <ul class="nav">
+                                <li><a href=#>Link 1</a></li>
+                                <li><a href=#>Link 2</a></li>
+                                <li><a href=#>Link 3</a></li>
+                                <li><a href=#>Link 4</a></li>
+                                <li><a href=#>Link 5</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;nav&gt;
+    &lt;ul class="nav"&gt;
+        &lt;li&gt;&lt;a href=#&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=#&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=#&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=#&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=#&gt;Link 5&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
-                </code></pre>
-            </div>
-        </div>
+&lt;/nav&gt;
+                        </code></pre>
+                    </div>
+
+                    <div class="pattern">
+                        <h3>Fit Navigation</h3>
+                        <nav>
+                            <ul class="nav--fit">
+                                <li><a href=#>Link 1</a></li>
+                                <li><a href=#>Link 2</a></li>
+                                <li><a href=#>Link 3</a></li>
+                                <li><a href=#>Link 4</a></li>
+                                <li><a href=#>Link 5</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;nav&gt;
+    &lt;ul class="nav--fit"&gt;
+        &lt;li&gt;&lt;a href=#&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=#&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=#&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=#&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=#&gt;Link 5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                        </code></pre>
+                    </div>
+
+                    <div class="pattern">
+                        <h3>Keywords</h3>
+                        <ul class="nav--keywords">
+                            <li><a href="">Mobile First</a></li>
+                            <li><a href="">OOCSS</a></li>
+                            <li><a href="">RWD</a></li>
+                            <li><a href="">SASS</a></li>
+                        </ul>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;ul class="nav--keywords"&gt;
+    &lt;li&gt;&lt;a href=""&gt;Mobile First&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;OOCSS&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;RWD&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;SASS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+                        </code></pre>
+                    </div>
+
+                    <div class="pattern">
+                        <h3>Breadcrumb</h3>
+                        <ol class="nav--breadcrumb">
+                            <li class="nav--breadcrumb__root"><a href=#>Scales</a></li>
+                            <li><a href=#>Patterns</a></li>
+                            <li>Breadcrumb</li>
+                        </ol>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;ol class="nav--breadcrumb"&gt;
+    &lt;li class="nav--breadcrumb__root"&gt;&lt;a href=#&gt;Scales&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=#&gt;Patterns&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Breadcrumb&lt;/li&gt;
+&lt;/ol&gt;
+                        </code></pre>
+                    </div>
+
+                    <div class="pattern">
+                        <h3>Breadcrumb Path</h3>
+                        <ol class="nav--breadcrumb--path">
+                            <li class="nav--breadcrumb__root"><a href=#>Scales</a></li>
+                            <li><a href=#>Patterns</a></li>
+                            <li>Breadcrumb</li>
+                        </ol>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;ol class="nav--breadcrumb--path"&gt;
+    &lt;li class="nav--breadcrumb__root"&gt;&lt;a href=#&gt;Scales&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=#&gt;Patterns&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Breadcrumb&lt;/li&gt;
+&lt;/ol&gt;
+                        </code></pre>
+                    </div>
+
+                    <div class="pattern">
+                        <h3>Breadcrumb using data attribute</h3>
+                        <ol class="nav--breadcrumb">
+                            <li><a href=#>Scales</a></li>
+                            <li data-breadcrumb="|"><a href=#>Patterns</a></li>
+                            <li data-breadcrumb="|"><a href=#>Breadcrumb</a></li>
+                        </ol>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;ol class="nav--breadcrumb"&gt;
+    &lt;li&gt;&lt;a href=#&gt;Scales&lt;/a&gt;&lt;/li&gt;
+    &lt;li data-breadcrumb="|"&gt;&lt;a href=#&gt;Patterns&lt;/a&gt;&lt;/li&gt;
+    &lt;li data-breadcrumb="|"&gt;&lt;a href=#&gt;Breadcrumb&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+                        </code></pre>
+                    </div>
+
+                    <div class="pattern">
+                        <h3>Pagination</h3>
+                        <ol class="nav--pagination">
+                            <li class="nav--pagination__first">First</li>
+                            <li class="nav--pagination__prev">Previous</li>
+                            <li><a href=/page/1>1</a></li>
+                            <li><a href=/page/2>2</a></li>
+                            <li class="current"><a href=/page/3>3</a></li>
+                            <li><a href=/page/4>4</a></li>
+                            <li><a href=/page/5>5</a></li>
+                            <li class="nav--pagination__next"><a href=/page/next>Next</a></li>
+                            <li class="nav--pagination__last"><a href=/page/last>Last</a></li>
+                        </ol>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;ol class="nav--pagination"&gt;
+    &lt;li class="nav--pagination__first"&gt;First&lt;/li&gt;
+    &lt;li class="nav--pagination__prev"&gt;Previous&lt;/li&gt;
+    &lt;li&gt;&lt;a href=/page/1&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=/page/2&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="current"&gt;&lt;a href=/page/3&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=/page/4&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=/page/5&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="nav--pagination__next"&gt;&lt;a href=/page/next&gt;Next&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="nav--pagination__last"&gt;&lt;a href=/page/last&gt;Last&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section class="island" id="media">
+                    <header>
+                        <h2>Media</h2>
+                    </header>
+                    <div class="pattern">
+                        <div class="media">
+                            <figure>
+                                <a href="http://devtroit.com">
+                                    <img class="media__fig" src="http://devtroit.com/img/badges/badge-medium.png">
+                                </a>
+                                <figcaption class="media__body">
+                                    <p>Are you a designer or developer who's proud to say your from Detroit?</p>
+                                    <p>Grab a badge from <a href="http://devtroit.com">devtroit.com</a> for your site!</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;div class="media"&gt;
+    &lt;figure&gt;
+        &lt;a href="http://devtroit.com"&gt;
+            &lt;img class="media__fig" src="http://devtroit.com/img/badges/badge-medium.png"&gt;
+        &lt;/a&gt;
+        &lt;figcaption class="media__body"&gt;
+            &lt;p&gt;Are you a designer or developer who's proud to say your from Detroit?&lt;/p&gt;
+            &lt;p&gt;Grab a badge from &lt;a href="http://devtroit.com"&gt;devtroit.com&lt;/a&gt; for your site!&lt;/p&gt;
+        &lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+                        </code></pre>
+                    </div>
+
+                    <div class="pattern">
+                        <h3>Media Reversed</h3>
+                        <div class="media">
+                            <figure>
+                                <a href="http://devtroit.com">
+                                    <img class="media__fig--rev" src="http://devtroit.com/img/badges/badge-medium.png">
+                                </a>
+                                <figcaption class="media__body">
+                                    <p>Are you a designer or developer who's proud to say your from Detroit?</p>
+                                    <p>Grab a badge from <a href="http://devtroit.com">devtroit.com</a> for your site!</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;div class="media"&gt;
+    &lt;figure&gt;
+        &lt;a href="http://devtroit.com"&gt;
+            &lt;img class="media__fig--rev" src="http://devtroit.com/img/badges/badge-medium.png"&gt;
+        &lt;/a&gt;
+        &lt;figcaption class="media__body"&gt;
+            &lt;p&gt;Are you a designer or developer who's proud to say your from Detroit?&lt;/p&gt;
+            &lt;p&gt;Grab a badge from &lt;a href="http://devtroit.com"&gt;devtroit.com&lt;/a&gt; for your site!&lt;/p&gt;
+        &lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section class="island" id="island">
+                    <header>
+                        <h2>Island</h2>
+                    </header>
+                    <div class="pattern">
+                        <div class="island">
+                            <h3>Island Content</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ipsum posuere felis mollis interdum.</p>
+                            <ul>
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;div class="island"&gt;
+    &lt;h3&gt;Island Content&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ipsum posuere felis mollis interdum.&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                        </code></pre>
+                    </div>
+
+                    <div class="pattern">
+                        <h3>Islet</h3>
+                        <div class="islet">
+                            <h3>Islet Content</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ipsum posuere felis mollis interdum.</p>
+                            <ul>
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;div class="islet"&gt;
+    &lt;h3&gt;Islet Content&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ipsum posuere felis mollis interdum.&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section class="island" id="block-list">
+                    <header>
+                        <h2>Block List</h2>
+                    </header>
+                    <div class="pattern">
+                        <ul class="block-list">
+                            <li>Foo</li>
+                            <li>Bar</li>
+                            <li>Baz</li>
+                        </ul>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;ul class="block-list"&gt;
+    &lt;li&gt;Foo&lt;/li&gt;
+    &lt;li&gt;Bar&lt;/li&gt;
+    &lt;li&gt;Baz&lt;/li&gt;
+&lt;/ul&gt;
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section class="island" id="multi-list">
+                    <header>
+                        <h2>Multi List</h2>
+                    </header>
+                    <div class="pattern">
+                        <ul class="multi-list four-columns">
+                            <li>Lorem</li>
+                            <li>Ipsum</li>
+                            <li>Dolor</li>
+                            <li>Sit</li>
+                            <li>Lorem</li>
+                            <li>Ipsum</li>
+                            <li>Dolor</li>
+                            <li>Sit</li>
+                            <li>Lorem</li>
+                            <li>Ipsum</li>
+                            <li>Dolor</li>
+                            <li>Sit</li>
+                        </ul>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;ul class="multi-list four-columns"&gt;
+    &lt;li&gt;Lorem&lt;/li&gt;
+    &lt;li&gt;Ipsum&lt;/li&gt;
+    &lt;li&gt;Dolor&lt;/li&gt;
+    &lt;li&gt;Sit&lt;/li&gt;
+    &lt;li&gt;Lorem&lt;/li&gt;
+    &lt;li&gt;Ipsum&lt;/li&gt;
+    &lt;li&gt;Dolor&lt;/li&gt;
+    &lt;li&gt;Sit&lt;/li&gt;
+    &lt;li&gt;Lorem&lt;/li&gt;
+    &lt;li&gt;Ipsum&lt;/li&gt;
+    &lt;li&gt;Dolor&lt;/li&gt;
+    &lt;li&gt;Sit&lt;/li&gt;
+&lt;/ul&gt;
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section class="island" id="split">
+                    <header>
+                        <h2>Split</h2>
+                    </header>
+                    <div class="pattern">
+                        <h3>With a definition list</h3>
+                        <dl class="split">
+                            <dt class="split__title">Google</dt>
+                            <dd>google.com</dd>
+                            <dt class="split__title">Wikipedia</dt>
+                            <dd>wikipedia.org</dd>
+                            <dt class="split__title">CNN</dt>
+                            <dd>cnn.com</dd>
+                        </dl>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;dl class="split"&gt;
+    &lt;dt class="split__title"&gt;Google&lt;/dt&gt;
+    &lt;dd&gt;google.com&lt;/dd&gt;
+    &lt;dt class="split__title"&gt;Wikipedia&lt;/dt&gt;
+    &lt;dd&gt;wikipedia.org&lt;/dd&gt;
+    &lt;dt class="split__title"&gt;CNN&lt;/dt&gt;
+    &lt;dd&gt;cnn.com&lt;/dd&gt;
+&lt;/dl&gt;
+                        </code></pre>
+                    </div>
+
+                    <div class="pattern">
+                        <h3>With a list</h3>
+                        <ul class="split">
+                            <li><span class="split__title">Noodles</span> 600</li>
+                            <li><span class="split__title">Sauce</span> 250</li>
+                            <li><span class="split__title">Mushrooms</span> 530</li>
+                        </ul>​
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;ul class="split"&gt;
+    &lt;li&gt;&lt;span class="split__title"&gt;Noodles&lt;/span&gt; 600&lt;/li&gt;
+    &lt;li&gt;&lt;span class="split__title"&gt;Sauce&lt;/span&gt; 250&lt;/li&gt;
+    &lt;li&gt;&lt;span class="split__title"&gt;Mushrooms&lt;/span&gt; 530&lt;/li&gt;
+&lt;/ul&gt;​
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section class="island" id="complex-link">
+                    <header>
+                        <h2>Complex Link</h2>
+                    </header>
+                    <div class="pattern">
+                        <p><a href="" class="link-complex">
+                            <span class="link-complex__target">Log in</span> to your account.
+                        </a></p>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;a href="" class="link-complex"&gt;
+    &lt;span class="link-complex__target"&gt;Log in&lt;/span&gt; to your account.
+&lt;/a&gt;
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section class="island" id="buttons">
+                    <header>
+                        <h2>Buttons</h2>
+                    </header>
+                    <div class="pattern">
+                        <h3>Button</h3>
+                        <a href="#" class="btn">Click Me</a>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;a href="#" class="btn"&gt;Click Me&lt;/a&gt;
+                        </code></pre>
+                    </div>
+
+                    <div class="pattern">
+                        <h3>Small Button</h3>
+                        <a href="#" class="btn--small">Click Me</a>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;a href="#" class="btn--small"&gt;Click Me&lt;/a&gt;
+                        </code></pre>
+                    </div>
+
+                    <div class="pattern">
+                        <h3>Large Button</h3>
+                        <a href="#" class="btn--large">Click Me</a>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;a href="#" class="btn--large"&gt;Click Me&lt;/a&gt;
+                        </code></pre>
+                    </div>
+
+                    <div class="pattern">
+                        <h3>Full Width Button</h3>
+                        <a href="#" class="btn--full">Click Me</a>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;a href="#" class="btn--full"&gt;Click Me&lt;/a&gt;
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section class="island" id="stats">
+                    <header>
+                        <h2>Stats</h2>
+                    </header>
+                    <div class="pattern">
+                        <div class="stat-group">
+                            <dl class="stat">
+                                <a href="#">
+                                    <dt class="stat__title">Features</dt>
+                                    <dd class="stat__value">150</dd>
+                                </a>
+                            </dl>
+
+                            <dl class="stat">
+                                <dt class="stat__title">Releases</dt>
+                                <dd class="stat__value">6</dd>
+                            </dl>
+
+                            <dl class="stat">
+                                <dt class="stat__title">Bugs</dt>
+                                <dd class="stat__value">12</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="markup">
+                        <pre><code>
+&lt;div class="stat-group"&gt;
+    &lt;dl class="stat"&gt;
+        &lt;a href="#"&gt;
+            &lt;dt class="stat__title"&gt;Features&lt;/dt&gt;
+            &lt;dd class="stat__value"&gt;150&lt;/dd&gt;
+        &lt;/a&gt;
+    &lt;/dl&gt;
+
+    &lt;dl class="stat"&gt;
+        &lt;dt class="stat__title"&gt;Releases&lt;/dt&gt;
+        &lt;dd class="stat__value"&gt;6&lt;/dd&gt;
+    &lt;/dl&gt;
+
+    &lt;dl class="stat"&gt;
+        &lt;dt class="stat__title"&gt;Bugs&lt;/dt&gt;
+        &lt;dd class="stat__value"&gt;12&lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/div&gt;
+                        </code></pre>
+                    </div>
+                </section>
+
+            </div><!-- main content end -->
+        </div> <!-- content wrapper end -->
 
     </body>
 </html>
