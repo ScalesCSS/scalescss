@@ -41,7 +41,7 @@ Whenever you save an `.scss` file, Compass will compile to `css/style.css`. You 
 This documentation is meant to point you to the files that are most important to understand when you are getting started. The real documentation is in the Scales `.scss` files themselves. Spend some time browsing around the files so you know everything Scales is capable of. Start with `scales/scales.scss`, `style.scss`, and `_vars.scss`.
 
 ### scales/scales.scss
-Once you have everything set up, you should start by looking at `sclaes/scales.scss`. This is where all of the base styles, design patterns, and utilities get imported. You can comment out individual design patterns that you don't intend to use and they wont be included in the outputted CSS. You can also add new design patterns that you might come up with. Other than that, you should leave this file alone so nothing breaks!
+Once you have everything set up, you should start by looking at `scales/scales.scss`. This is where all of the base styles, design patterns, and utilities get imported. You can comment out individual design patterns that you don't intend to use and they wont be included in the outputted CSS. You can also add new design patterns that you might come up with. Other than that, you should leave this file alone so nothing breaks!
 
 ### style.scss
 Next, take a look at `style.scss`. This is the file that imports everything before Compass compiles to `css/style.css`. At the bottom of the file is where you should import any new `.scss` files that you create.
