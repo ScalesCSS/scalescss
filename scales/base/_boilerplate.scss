@@ -19,14 +19,14 @@ html, body, button, input, select, textarea {
 
 // Fancy color for when you select stuff! Change the color for your app.
 ::-moz-selection {
-    background: #4F89A1;
-    color: #fff;
+    background: $selection-bg-color;
+    color: $selection-text-color;
     text-shadow: none;
 }
 
 ::selection {
-    background: #4F89A1;
-    color: #fff;
+    background: $selection-bg-color;
+    color: $selection-text-color;
     text-shadow: none;
 }
 

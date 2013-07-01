@@ -25,7 +25,7 @@
 /*
  * A background image for making sure your elements line up to you baseline.
  *
- * Uncomment to use.
+ * Comment out to hide before going to production.
  */
  $grid-background-baseline-color: pink;
  html{@include debug-vertical-alignment();}

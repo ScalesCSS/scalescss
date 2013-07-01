@@ -101,17 +101,25 @@ $link-interaction-color: darkblue; // :hover, :active, :focus
 
 
 /*
- * Easier way to declare your font stack.
+ * Set your default font stack and headline font options.
  */
 $typeface: Calibri, Candara, "Gill Sans", "Gill Sans MT", sans-serif;
+$headline-font: "pt-sans-1","pt-sans-2", arial, sans-serif;
+$headline-weight: normal;
 
 /*
  * Color variables - You should change these!
  */
 $primary-color: blue;
 $secondary-color: purple;
-$text-color: #333;
+$text-color: #333; //http://ianstormtaylor.com/design-tip-never-use-black/
 $warning-color: orange;
 $error-color: red;
 $success-color: green;
 $highlight-color: yellow;
+
+/*
+ * Highlight colors for when you select text on the page
+ */
+$selection-bg-color: azure;
+$selection-text-color: $text-color;
