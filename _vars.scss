@@ -10,9 +10,17 @@
 
 /*
  * Base font and line height for vertical rhythm.
+ * For accessibility, $base-line-height should be 1.5 times the $base-font-size
+ * http://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation
  */
 $base-font-size: 16px;
 $base-line-height: 24px;
+
+/*
+ * Set this to true to cut the space between lines in half.
+ * Your vertical rhythm will not line up with the pink debug lines if you use this.
+ */
+$round-to-nearest-half-line: false;
 
 /*
  * Modular Scale
@@ -103,8 +111,8 @@ $link-interaction-color: darkblue; // :hover, :active, :focus
 /*
  * Set your default font stack and headline font options.
  */
-$typeface: Calibri, Candara, "Gill Sans", "Gill Sans MT", sans-serif;
-$headline-font: "pt-sans-1","pt-sans-2", arial, sans-serif;
+$typeface: sans-serif;
+$headline-font: sans-serif;
 $headline-weight: normal;
 
 /*
