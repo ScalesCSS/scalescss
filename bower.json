@@ -1,0 +1,13 @@
+{
+  "name": "scales",
+  "version": "1.0.0",
+  "main": "style.scss",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "LICENSE.md",
+    "README.md",
+    "index.html",
+    "config.rb"
+  ]
+}
