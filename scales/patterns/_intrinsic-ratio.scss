@@ -1,0 +1,26 @@
+/* ==========================================================================
+Intrinsic Ratio
+========================================================================== */
+
+/*
+ * Content with a specific ratio, often video or other media
+ *
+     <div class="ratio-wrapper">
+        <iframe class="ratio-preserve" src="video.html"></iframe>
+     </div>
+ *
+ */
+[class*=ratio-wrapper] {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 */
+
+    > [class*=ratio-preserve] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+}
