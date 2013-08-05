@@ -8,7 +8,7 @@ This is a framework for serious developers and designers who aren't afraid to ge
 
 Scales is a highly _scalable_ CSS architecture, it contains design _patterns_ (scales in nature form patterns), and it is responsive so it _scales_ to the width of the viewport. So clever it hurts.
 
-<img src="http://i1.kym-cdn.com/photos/images/original/000/243/561/afc.gif" alt="Deal With It" width="250">
+![Deal With It](http://i1.kym-cdn.com/photos/images/original/000/243/561/afc.gif)
 
 ## Techniques used in Scales
 * Mobile-First and Responsive Design
@@ -34,7 +34,7 @@ $ compass watch
 
 Whenever you save an `.scss` file, Compass will compile to `css/style.css`. You can change this location in the `config.rb` file. You can also change the output style and many other options.
 
-**By default, the output is set to `:compact`, but for production use, you should change it to `:compressed`**. Scales has a _lot_ of comments that you are going to want removed for performance reasons.
+**By default, the output is set to `:compact`, but for production use, you should change it to `:compressed`**.
 
 ## Getting Started
 
@@ -49,7 +49,36 @@ Next, take a look at `style.scss`. This is the file that imports everything befo
 I recommend creating a directory in your project called "partials". Everything in Scales is broken into separate `.scss` files, so if you want to add your own styles for forms, for example, simply create a new partial in your partials directory and then import it in `style.scss`.
 
 ### _vars.scss
-The next place you should look is `_vars.scss`. This is where you can change many default values without having to touch anything in the `scales/` directory.
+The next place you should look is `_vars.scss`. This is where you can change many default values without having to touch anything in the `scales/` directory. If you're using scales as a bower component and want to change variables in your own project directory, here's a list of those variables:
+
+- `$base-font-size`
+- `$base-line-height`
+- `$round-to-nearest-half-line`
+- `$base-size`
+- `$ratio`
+- `$palm-end`
+- `$h1-size`
+- `$h2-size`
+- `$h3-size`
+- `$h4-size`
+- `$h5-size`
+- `$h6-size`
+- `$small-text`
+- `$micro-text`
+- `$link-color`
+- `$link-interaction-color`
+- `$typeface`
+- `$headline-font`
+- `$headline-weight`
+- `$primary-color`
+- `$secondary-color`
+- `$text-color`
+- `$warning-color`
+- `$error-color`
+- `$success-color`
+- `$highlight-color`
+- `$selection-bg-color`
+- `$selection-text-color`
 
 ## Props
 This couldn't have been done without the amazing work of [Harry Roberts](http://csswizardry.com/) on [Inuit.css](https://github.com/csswizardry/inuit.css). A number of the design patterns and techniques in Scales were borrowed from Inuit.css.
