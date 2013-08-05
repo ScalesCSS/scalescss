@@ -1,41 +1,41 @@
 @charset "UTF-8";
-/* ==========================================================================
-   Your project!
-   ========================================================================== */
-/*
- * Don't write any css in here, just import your partials.
- * This will compile to css/style.css
- */
 
-/*
- * Import Compass and Compass plugins.
- */
+// ==========================================================================
+// Your project!
+// ========================================================================== //
+//
+// Don't write any css in here, just import your partials.
+// This will compile to css/style.css
+///
+
+//
+// Import Compass and Compass plugins.
+///
 @import "compass";
-@import "compass/typography/vertical_rhythm";
 @import "modular-scale";
 
 
-/*
- * Import your variables and Scales.
- */
+//
+// Import your variables and Scales.
+///
 @import "vars";
 @import "scales/scales";
 
 
-/*
- * A background image for making sure your elements line up to you baseline.
- *
- * Comment out to hide before going to production.
- */
- $grid-background-baseline-color: pink;
- html{@include debug-vertical-alignment();}
+//
+// A background image for making sure your elements line up to you baseline.
+//
+// Comment out to hide before going to production.
+///
+$grid-background-baseline-color: pink;
+html{@include debug-vertical-alignment();}
 
 
-/*
- * This is where you start importing all of your partials.
- *
- * If you are styling objects from Scales, I recommend creating a partial with the same name
- * as the one in Scales and importing it here.
- *
- * Example: use @import "partials/nav" if you are adding style to the nav object.
- */
+//
+// This is where you start importing all of your partials.
+//
+// If you are styling objects from Scales, I recommend creating a partial with the same name
+// as the one in Scales and importing it here.
+//
+// Example: use @import "partials/nav" if you are adding style to the nav object.
+///

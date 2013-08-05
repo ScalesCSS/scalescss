@@ -1,11 +1,11 @@
-/* ==========================================================================
-   Buttons
-   ========================================================================== */
+// ==========================================================================
+// Buttons
+// ========================================================================== //
 
-/*
- * Basic button structural styling. Extend in your own partial.
- *
- */
+//
+// Basic button structural styling. Extend in your own partial.
+//
+///
 [class*="btn"] {
     font: inherit;
     cursor: pointer;
@@ -21,19 +21,19 @@
     text-decoration: none;
 }
 
-/*
- * Basic button modifiers
- */
+//
+// Basic button modifiers
+///
 .btn--small { font-size: ms(-2); }
 .btn--large { font-size: ms(3); }
 
 .btn--full {
     display: block;
     text-align: center;
-    /*
-     * The following is so that .btn-full works properly on <input> as well
-     * as <a>.
-     */
+    //
+    // The following is so that .btn-full works properly on <input> as well
+    // as <a>.
+    ///
     padding-right: 0;
     padding-left: 0;
     width: 100%;
