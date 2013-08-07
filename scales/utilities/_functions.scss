@@ -1,10 +1,10 @@
-/* ==========================================================================
-   Functions
-   ========================================================================== */
-/*
- * Declare your modular-scale values in ems instead of pixels when using them 
- * outside of a vertical-rhythm mixin.
- */
+// ==========================================================================
+// Functions
+// ========================================================================== //
+//
+// Declare your modular-scale values in ems instead of pixels when using them 
+// outside of a vertical-rhythm mixin.
+///
 @function msem($val) {
   @return (ms($val) / 1px) / ($base-font-size / 1px) * 1em;
 }

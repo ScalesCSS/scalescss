@@ -1,10 +1,10 @@
-/* ==========================================================================
-   Placeholders
-   ========================================================================== */
+// ==========================================================================
+// Placeholders
+// ========================================================================== //
 
-/*
- * Extend the clearfix placeholder: @extend %clearfix.
- */
+//
+// Extend the clearfix placeholder: @extend %clearfix.
+///
 %clearfix {
     &:before,
     &:after {
@@ -18,9 +18,9 @@
 }
 
 
-/*
- * Placeholder to make something horizontal.
- */
+//
+// Placeholder to make something horizontal.
+///
 %horizontal {
     display: inline-block;
 }

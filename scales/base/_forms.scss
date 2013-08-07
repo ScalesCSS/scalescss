@@ -1,44 +1,44 @@
-/* ==========================================================================
-   Forms
-   ========================================================================== */
+// ==========================================================================
+// Forms
+// ========================================================================== //
 
 fieldset {
     @include rhythm(0,1,0,0);
 }
 
-/*
- * **NOTE** on Text inputs.
- *
- * Instead of a `[type]` selector for each kind of form input, we just use a
- * class to target any/every one, e.g.:
-   <input type="text" class="text-input">
-   <input type="email" class="text-input">
-   <input type="password" class="text-input">
- *
- * You should style .text-input and textarea in your own partial.
- *
- */
+//
+// **NOTE** on Text inputs.
+//
+// Instead of a `[type]` selector for each kind of form input, we just use a
+// class to target any/every one, e.g.:
+// <input type="text" class="text-input">
+// <input type="email" class="text-input">
+// <input type="password" class="text-input">
+//
+// You should style .text-input and textarea in your own partial.
+//
+///
 
 
-/*
- * Use an unordered list to mark up your groups of form fields.
- *
-   <ul class="form-fields">
-       <li>
-           <label />
-           <input />
-       </li>
-       <li>
-           <label />
-           <select />
-       </li>
-       <li>
-           <label />
-           <input />
-       </li>
-   </ul>
- *
- */
+//
+// Use an unordered list to mark up your groups of form fields.
+//
+// <ul class="form-fields">
+//     <li>
+//         <label />
+//         <input />
+//     </li>
+//     <li>
+//         <label />
+//         <select />
+//     </li>
+//     <li>
+//         <label />
+//         <input />
+//     </li>
+// </ul>
+//
+///
 .form-fields {
     list-style: none;
     margin: 0;
@@ -49,51 +49,51 @@ fieldset {
 }
 
 
-/*
- * Labels
- *
- * The ".label" class can be used to make an element look like a label if an actual label
- * isn't suitable.
- *
- */
+//
+// Labels
+//
+// The ".label" class can be used to make an element look like a label if an actual label
+// isn't suitable.
+//
+///
 label, .label {
     display: block;
 }
 
-/*
- * Extra help text in labels.
- *
-   <label>Username <small class="additional">No special characters</small></label>
- *
- */
+//
+// Extra help text in labels.
+//
+// <label>Username <small class="additional">No special characters</small></label>
+//
+///
 .additional {
     display: block;
     font-weight: normal;
 }
 
 
-/*
- * Groups of checkboxes and radios.
- *
-   <li>
-       <ul class="check-list">
-           <li>
-               <input /> <label />
-           </li>
-           <li>
-               <input /> <label />
-           </li>
-       </ul>
-   </li>
- *
- */
+//
+// Groups of checkboxes and radios.
+//
+// <li>
+//     <ul class="check-list">
+//         <li>
+//             <input /> <label />
+//         </li>
+//         <li>
+//             <input /> <label />
+//         </li>
+//     </ul>
+// </li>
+//
+///
 .check-list {
     @extend .form-fields;
 }
 
-/*
- * Labels in check-lists.
- */
+//
+// Labels in check-lists.
+///
 .check-label,
 .check-list label,
 .check-list .label {
@@ -101,18 +101,18 @@ label, .label {
 }
 
 
-/*
- * Extra help text displayed after a field when that field is in focus.
- *
-   <label for="email">Username:</label>
-   <input type="email" id="email" class="text-input">
-   <span class="extra-help">Enter your email address</span>
- *
- * We leave the help text in the document flow and merely set it to
- * `visibility: hidden;`. This means that it won’t interfere with anything once
- * it reappears.
- *
- */
+//
+// Extra help text displayed after a field when that field is in focus.
+//
+// <label for="email">Username:</label>
+// <input type="email" id="email" class="text-input">
+// <span class="extra-help">Enter your email address</span>
+//
+// We leave the help text in the document flow and merely set it to
+// `visibility: hidden;`. This means that it won’t interfere with anything once
+// it reappears.
+//
+///
 .extra-help {
     display: none;
 }

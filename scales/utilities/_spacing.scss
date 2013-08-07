@@ -1,13 +1,13 @@
-/* ==========================================================================
-   Spacing
-   ========================================================================== */
-/*
- * Some default vertical spacing for elements so they follow the vertical rhythm of the page.
- */
+// ==========================================================================
+// Spacing
+// ========================================================================== //
+//
+// Some default vertical spacing for elements so they follow the vertical rhythm of the page.
+///
 
-/*
- * Base elements
- */
+//
+// Base elements
+///
 h1,h2,h3,h4,h5,h6,hgroup,
 ul,ol,dl,
 blockquote,p,address,
@@ -15,9 +15,9 @@ table,
 fieldset,figure,
 pre,
 
-/*
- * Objects and abstractions
- */
+//
+// Objects and abstractions
+///
 .media,
 .island,
 .islet {
@@ -28,10 +28,10 @@ pre,
     }
 }
 
-/*
- * Where `margin-left` is concerned we want to try and indent certain elements
- * by a consistent amount.
- */
+//
+// Where `margin-left` is concerned we want to try and indent certain elements
+// by a consistent amount.
+///
 ul,ol,dd {
     margin-left: msem(5);
 }

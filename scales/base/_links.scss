@@ -1,10 +1,10 @@
-/* ==========================================================================
-   Links
-   ========================================================================== */
+// ==========================================================================
+// Links
+// ========================================================================== //
 
-/*
- * Set colors in _vars.scss.
- */
+//
+// Set colors in _vars.scss.
+///
 a {
     color: $link-color;
     text-decoration: none;
@@ -17,17 +17,17 @@ a {
     }
 }
 
-/*
- * Current state, like the currently selected nav item.
- *
-   <ul class="nav">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li class="current"><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
+//
+// Current state, like the currently selected nav item.
+//
+// <ul class="nav">
+//     <li><a href=#>Home</a></li>
+//     <li><a href=#>About</a></li>
+//     <li class="current"><a href=#>Portfolio</a></li>
+//     <li><a href=#>Contact</a></li>
+// </ul>
+//
+///
 .current a {
     cursor: default;
     text-decoration: underline;
