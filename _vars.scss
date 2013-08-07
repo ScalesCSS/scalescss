@@ -13,14 +13,14 @@
  * For accessibility, $base-line-height should be 1.5 times the $base-font-size
  * http://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation
  */
-$base-font-size: 16px;
-$base-line-height: 24px;
+$base-font-size: 16px !default;
+$base-line-height: $base-font-size * 2 !default;
 
 /*
  * Set this to true to cut the space between lines in half.
  * Your vertical rhythm will not line up with the pink debug lines if you use this.
  */
-$round-to-nearest-half-line: false;
+$round-to-nearest-half-line: false !default;
 
 /*
  * Modular Scale
@@ -32,8 +32,8 @@ $round-to-nearest-half-line: false;
  * Don't be scared. Start here: http://thesassway.com/projects/modular-scale
  *
  */
-$base-size: $base-font-size $base-line-height;
-$ratio: fourth();
+$base-size: $base-font-size $base-line-height !default;
+$ratio: fourth() !default;
 
 /*
  * At 16px $base-font-size your available modular scale values are:
@@ -84,50 +84,50 @@ $ratio: fourth();
  * Usage:
     @media screen and (min-width: $palm-end) { [Styles Here] }
  */
-$palm-end: 30.0625em; // 481px
+$palm-end: 30.0625em !default; // 481px
 
 
 /*
  * Font-sizes in pixels.
  */
-$h1-size: ms(5); // .alpha
-$h2-size: ms(4); // .beta
-$h3-size: ms(3); // .gamma
-$h4-size: ms(2); // .delta
-$h5-size: ms(1); // .epsilon
-$h6-size: ms(0); // .zeta
+$h1-size: ms(5) !default; // .alpha
+$h2-size: ms(4) !default; // .beta
+$h3-size: ms(3) !default; // .gamma
+$h4-size: ms(2) !default; // .delta
+$h5-size: ms(1) !default; // .epsilon
+$h6-size: ms(0) !default; // .zeta
 
-$small-text: ms(-1);
-$micro-text: ms(-3);
+$small-text: ms(-1) !default;
+$micro-text: ms(-3) !default;
 
 
 /*
  * Link state colors.
  */
-$link-color: blue;
-$link-interaction-color: darkblue; // :hover, :active, :focus
+$link-color: blue !default;
+$link-interaction-color: darkblue !default; // :hover, :active, :focus
 
 
 /*
  * Set your default font stack and headline font options.
  */
-$typeface: sans-serif;
-$headline-font: sans-serif;
-$headline-weight: normal;
+$typeface: sans-serif !default;
+$headline-font: sans-serif !default;
+$headline-weight: normal !default;
 
 /*
  * Color variables - You should change these!
  */
-$primary-color: blue;
-$secondary-color: purple;
-$text-color: #333; //http://ianstormtaylor.com/design-tip-never-use-black/
-$warning-color: orange;
-$error-color: red;
-$success-color: green;
-$highlight-color: yellow;
+$primary-color: blue !default;
+$secondary-color: purple !default;
+$text-color: #333 !default; //http://ianstormtaylor.com/design-tip-never-use-black/
+$warning-color: orange !default;
+$error-color: red !default;
+$success-color: green !default;
+$highlight-color: yellow !default;
 
 /*
  * Highlight colors for when you select text on the page
  */
-$selection-bg-color: azure;
-$selection-text-color: $text-color;
+$selection-bg-color: azure !default;
+$selection-text-color: $text-color !default;
