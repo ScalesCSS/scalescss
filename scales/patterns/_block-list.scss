@@ -1,19 +1,19 @@
-/* ==========================================================================
-   Block List
-   ========================================================================== */
+// ==========================================================================
+// Block List
+// ========================================================================== //
 
-/*
- * A list with top and bottom borders
- *
-   <ul class="block-list">
-      <li>Foo</li>
-      <li>Bar</li>
-      <li>Baz</li>
-   </ul>
- *
- * Extend this object in your own partial to give it more style.
- *
- */
+//
+// A list with top and bottom borders
+//
+// <ul class="block-list">
+//    <li>Foo</li>
+//    <li>Bar</li>
+//    <li>Baz</li>
+// </ul>
+//
+// Extend this object in your own partial to give it more style.
+//
+///
 [class*="block-list"] {
     &,
     > li {

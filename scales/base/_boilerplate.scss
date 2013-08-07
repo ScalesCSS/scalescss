@@ -1,18 +1,18 @@
-/* ==========================================================================
-   Styles from HTML5 Boilerplate - h5bp.com
-   ========================================================================== */
-/*
- * Well, except for this first bit.
- */
+// ==========================================================================
+// Styles from HTML5 Boilerplate - h5bp.com
+// ========================================================================== //
+//
+// Well, except for this first bit.
+///
 html {
     font-family: $typeface;
     overflow-y: scroll;
     min-height: 100%;
 }
 
-/*
- * Now the boilerplate stuff.
- */
+//
+// Now the boilerplate stuff.
+///
 html, body, button, input, select, textarea {
     color: $text-color;
 }

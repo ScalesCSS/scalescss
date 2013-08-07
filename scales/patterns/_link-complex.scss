@@ -1,15 +1,15 @@
-/* ==========================================================================
-   Link Complex
-   ========================================================================== */
+// ==========================================================================
+// Link Complex
+// ========================================================================== //
 
-/*
- * Add hover behaviour to only selected items within links.
- *
-    <a href="" class="link-complex">
-        <span class="link-complex__target">Log in</span> to your account.
-    </a>
- *
- */
+//
+// Add hover behaviour to only selected items within links.
+//
+//  <a href="" class="link-complex">
+//      <span class="link-complex__target">Log in</span> to your account.
+//  </a>
+//
+///
 .link-complex,
 .link-complex:hover,
 .link-complex:active,
