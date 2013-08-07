@@ -1,15 +1,15 @@
-/* ==========================================================================
-   Island
-   ========================================================================== */
+// ==========================================================================
+// Island
+// ========================================================================== //
 
-/*
- * Boxed off content
- *
-   <div class="island">
-       I am boxed off.
-   </div>
- *
- */
+//
+// Boxed off content
+//
+// <div class="island">
+//     I am boxed off.
+// </div>
+//
+///
 [class*="island"],
 [class*="islet"] {
     display: block;
@@ -27,9 +27,9 @@
 }
 
 
-/*
- * Just like .island, only smaller.
- */
+//
+// Just like .island, only smaller.
+///
 [class*="islet"] {
     padding: 0 msem(-1);
     @include rhythm(0,.5,.5,0);

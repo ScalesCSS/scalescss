@@ -1,22 +1,22 @@
-/* ==========================================================================
-   Navigation
-   ========================================================================== */
+// ==========================================================================
+// Navigation
+// ========================================================================== //
 
-/**
- * Nav abstraction.
- * On small screens, .nav simply removes list markers and left margin, applies
- * clearfix, and makes the <li> and <a> display block. Style in your nav partial.
- *
- * usage:
- *
-    <ul class="nav">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-    </ul>
- *
- */
+///
+// Nav abstraction.
+// On small screens, .nav simply removes list markers and left margin, applies
+// clearfix, and makes the <li> and <a> display block. Style in your nav partial.
+//
+// usage:
+//
+//  <ul class="nav">
+//     <li><a href=#>Home</a></li>
+//     <li><a href=#>About</a></li>
+//     <li><a href=#>Portfolio</a></li>
+//     <li><a href=#>Contact</a></li>
+//  </ul>
+//
+///
 [class*="nav"] {
     list-style-type: none;
     margin-left: 0;
@@ -32,9 +32,9 @@
 }
 
 
-/*
- * Make nav--keywords horizontal instead of stacking them.
- */
+//
+// Make nav--keywords horizontal instead of stacking them.
+///
 .nav--keywords > li {
 
     &,
@@ -44,14 +44,14 @@
 }
 
 
-/*
- * Makes a list of comma separated keywords. Extends .nav.
- *
- * usage:
- *
-    <ul class="nav--keywords>
- *
- */
+//
+// Makes a list of comma separated keywords. Extends .nav.
+//
+// usage:
+//
+//  <ul class="nav--keywords>
+//
+///
 .nav--keywords {
 
     > li {
@@ -67,13 +67,13 @@
 }
 
 
-/*
- * Nav abstractions on screens larger than $palm-end.
- */
+//
+// Nav abstractions on screens larger than $palm-end.
+///
 @media screen and (min-width: $palm-end) {
-    /*
-     * Makes the .nav horizontal
-     */
+    //
+    // Makes the .nav horizontal
+    ///
     [class*="nav"] {
         > li {
 
@@ -85,14 +85,14 @@
     }
 
 
-    /*
-     * Force nav to occupy 100% of the available width of its parent. Extends .nav.
-     *
-     * usage:
-     *
-        <ul class="nav--fit>
-     *
-     */
+    //
+    // Force nav to occupy 100% of the available width of its parent. Extends .nav.
+    //
+    // usage:
+    //
+    //  <ul class="nav--fit>
+    //
+    ///
     .nav--fit {
         display: table;
         width: 100%;

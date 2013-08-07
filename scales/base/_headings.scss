@@ -1,12 +1,12 @@
-/* ==========================================================================
-   Headings
-   ========================================================================== */
-/**
- * Each heading also has a class so that you can apply the size to a different heading if you need to.
- */
+// ==========================================================================
+// Headings
+// ========================================================================== //
+///
+// Each heading also has a class so that you can apply the size to a different heading if you need to.
+///
 h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {
     font-family: $headline-font;
-	font-weight: $headline-weight;
+    font-weight: $headline-weight;
 }
 
 h1, .alpha{

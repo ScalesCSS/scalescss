@@ -1,14 +1,14 @@
-/* ==========================================================================
-   Reset
-   ========================================================================== */
-/*
- * Most of this is borrowed from csswizardry.com/2011/10/reset-restarted.
- */
+// ==========================================================================
+// Reset
+// ========================================================================== //
+//
+// Most of this is borrowed from csswizardry.com/2011/10/reset-restarted.
+///
 
-/*
- * Set all elements to use "box-sizing: border-box;"
- * Thanks to paulirish.com/2012/box-sizing-border-box-ftw.
- */
+//
+// Set all elements to use "box-sizing: border-box;"
+// Thanks to paulirish.com/2012/box-sizing-border-box-ftw.
+///
 * {
     &,
     &:before,
@@ -17,9 +17,9 @@
     }
 }
 
-/*
- * Remove padding and margins.
- */
+//
+// Remove padding and margins.
+///
 h1,h2,h3,h4,h5,h6,
 p,blockquote,pre,
 dl,dd,ol,ul,
@@ -30,30 +30,30 @@ hr {
     padding: 0;
 }
 
-/*
- * Give a help cursor to elements that give extra info on ":hover".
- */
+//
+// Give a help cursor to elements that give extra info on ":hover".
+///
 abbr[title], dfn[title] {
     cursor: help;
 }
 
-/*
- * Fixing small so it doesn't break vertical rhythm.
- */
+//
+// Fixing small so it doesn't break vertical rhythm.
+///
 small {
     @include adjust-font-size-to($small-text);
 }
 
-/*
- * So that "alt" text is visually offset if images don't load.
- */
+//
+// So that "alt" text is visually offset if images don't load.
+///
 img {
     font-style: italic;
 }
 
-/*
- * Give form elements some cursor interactions.
- */
+//
+// Give form elements some cursor interactions.
+///
 label,
 button,
 select,
@@ -69,9 +69,9 @@ textarea:focus {
     outline: none;
 }
 
-/*
- * Get rid of all the form input styles and set the font size to match the $base-font-size;
- */
+//
+// Get rid of all the form input styles and set the font size to match the $base-font-size;
+///
 .text-input, textarea {
     @include appearance(none);
     @include adjust-font-size-to($base-font-size);
