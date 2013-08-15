@@ -1,6 +1,6 @@
 // ==========================================================================
 // Variables
-// ========================================================================== //
+// ========================================================================== */
 //
 // These variables give you access to change many of the values in Scales.
 // You should also add your own project specific variables to this file.
@@ -13,14 +13,14 @@
 // For accessibility, $base-line-height should be 1.5 times the $base-font-size
 // http://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation
 ///
-$base-font-size: 16px;
-$base-line-height: 24px;
+$base-font-size: 16px !default;
+$base-line-height: 24px !default;
 
 //
 // Set this to true to cut the space between lines in half.
 // Your vertical rhythm will not line up with the pink debug lines if you use this.
 ///
-$round-to-nearest-half-line: false;
+$round-to-nearest-half-line: false !default;
 
 //
 // Modular Scale
@@ -34,7 +34,6 @@ $round-to-nearest-half-line: false;
 ///
 $base-size: $base-font-size $base-line-height;
 $ratio: fourth();
->>>>>>> Change CSS comments to Sass comments
 
 //
 // At 16px $base-font-size your available modular scale values are:
@@ -54,13 +53,12 @@ $ratio: fourth();
 // ms(8)   =  51px
 // ms(9)   =  57px
 // ms(10)  =  67px
-//
 ///
 
 //
-// This will output the modular scale values when you compile. Comment out to hide.
+// This will output the modular scale values when you compile. Uncomment out to use.
 ///
-// @include ms-list();
+@include ms-list();
 
 //
 // A good primer on Compass Vertical Rhythm. Read this before you get lost:
@@ -69,37 +67,7 @@ $ratio: fourth();
 @include establish-baseline;
 
 
-<<<<<<< HEAD
-/**
- * Responsive design breakpoints
- *
- * Scales is a mobile-first framework, so it needs to know when you want
- * to begin applying "non-mobile" styles to the design patterns.
- *
- * It is not advisable to set breakpoints in responsive designs based on specific
- * device widths. Instead, breakpoints should be applied when your content begins
- * to look awkward. If there are other widths that you need to specifically support
- * and a named variable makes sense, feel free to add it here (ex. $desk-start: 64.0625em; // 1025px ).
- *
- * Using ems instead of px allows your breakpoints to be relative to your $base-font-size.
- *
- * Usage:
-    @media screen and (min-width: $palm-end) { [Styles Here] }
- */
-$palm-end: 30.0625em !default; // 481px
-
-
-/*
- * Font-sizes in pixels.
- */
-$h1-size: ms(5) !default; // .alpha
-$h2-size: ms(4) !default; // .beta
-$h3-size: ms(3) !default; // .gamma
-$h4-size: ms(2) !default; // .delta
-$h5-size: ms(1) !default; // .epsilon
-$h6-size: ms(0) !default; // .zeta
-=======
-///
+//
 // Responsive design breakpoints
 //
 // Scales is a mobile-first framework, so it needs to know when you want
@@ -113,44 +81,45 @@ $h6-size: ms(0) !default; // .zeta
 // Using ems instead of px allows your breakpoints to be relative to your $base-font-size.
 //
 // Usage:
-//  @media screen and (min-width: $palm-end) { [Styles Here] }
+// @media screen and (min-width: $palm-end) { [Styles Here] }
 ///
-$palm-end: 30.0625em; // 481px
+$palm-end: 30.0625em !default; // 481px
 
 
 //
-// Font-sizes in pixels.
+// Heading sizes.
 ///
-$h1-size: ms(5); // .alpha
-$h2-size: ms(4); // .beta
-$h3-size: ms(3); // .gamma
-$h4-size: ms(2); // .delta
-$h5-size: ms(1); // .epsilon
-$h6-size: ms(0); // .zeta
->>>>>>> Change CSS comments to Sass comments
+$h1-size: ms(5) !default; // .alpha
+$h2-size: ms(4) !default; // .beta
+$h3-size: ms(3) !default; // .gamma
+$h4-size: ms(2) !default; // .delta
+$h5-size: ms(1) !default; // .epsilon
+$h6-size: ms(0) !default; // .zeta
 
+//
+// Variables for small text sizes
+///
 $small-text: ms(-1) !default;
 $micro-text: ms(-3) !default;
 
 
-<<<<<<< HEAD
-/*
- * Link state colors.
- */
+//
+// Link state colors.
+///
 $link-color: blue !default;
 $link-interaction-color: darkblue !default; // :hover, :active, :focus
 
 
-/*
- * Set your default font stack and headline font options.
- */
+//
+// Set your default font stack and headline font options.
+///
 $typeface: sans-serif !default;
 $headline-font: sans-serif !default;
 $headline-weight: normal !default;
 
-/*
- * Color variables - You should change these!
- */
+//
+// Color variables - You should change these!
+///
 $primary-color: blue !default;
 $secondary-color: purple !default;
 $text-color: #333 !default; //http://ianstormtaylor.com/design-tip-never-use-black/
@@ -159,39 +128,8 @@ $error-color: red !default;
 $success-color: green !default;
 $highlight-color: yellow !default;
 
-/*
- * Highlight colors for when you select text on the page
- */
-$selection-bg-color: azure !default;
-$selection-text-color: $text-color !default;
-=======
-//
-// Link state colors.
-///
-$link-color: blue;
-$link-interaction-color: darkblue; // :hover, :active, :focus
-
-
-//
-// Set your default font stack and headline font options.
-///
-$typeface: sans-serif;
-$headline-font: sans-serif;
-$headline-weight: normal;
-
-//
-// Color variables - You should change these!
-///
-$primary-color: blue;
-$secondary-color: purple;
-$text-color: #333; //http://ianstormtaylor.com/design-tip-never-use-black/
-$warning-color: orange;
-$error-color: red;
-$success-color: green;
-$highlight-color: yellow;
-
 //
 // Highlight colors for when you select text on the page
 ///
-$selection-bg-color: azure;
-$selection-text-color: $text-color;
+$selection-bg-color: azure !default;
+$selection-text-color: $text-color !default;

@@ -54,8 +54,6 @@ The next place you should look is `_vars.scss`. This is where you can change man
 - `$base-font-size`
 - `$base-line-height`
 - `$round-to-nearest-half-line`
-- `$base-size`
-- `$ratio`
 - `$palm-end`
 - `$h1-size`
 - `$h2-size`
