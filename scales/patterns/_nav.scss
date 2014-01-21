@@ -68,41 +68,38 @@
 
 
 //
-// Nav abstractions on screens larger than $palm-end.
+// Makes the .nav horizontal
+// usage:
+//
+//  <ul class="horizontal-nav">
 ///
-@media screen and (min-width: $palm-end) {
-    //
-    // Makes the .nav horizontal
-    ///
-    [class*="nav"] {
-        > li {
-
-            &,
-            > a {
-                display: inline-block;
-            }
-        }
-    }
+.horizontal-nav {
+	> li {
+		&, > a {
+			display: inline-block;
+		}
+	}
+}
 
 
-    //
-    // Force nav to occupy 100% of the available width of its parent. Extends .nav.
-    //
-    // usage:
-    //
-    //  <ul class="nav--fit>
-    //
-    ///
-    .nav--fit {
-        display: table;
-        width: 100%;
+//
+// Force nav to occupy 100% of the available width of its parent. Extends .nav.
+//
+// usage:
+//
+//  <ul class="horizontal-nav--fit">
+//
+///
+.nav--fit {
+	@extend .horizontal-nav
+	display: table;
+	width: 100%;
 
-        > li {
-            display: table-cell;
+	> li {
+			display: table-cell;
 
-            > a {
-                display: block;
-            }
-        }
-    }
+		> a {
+			display: block;
+		}
+	}
 }
