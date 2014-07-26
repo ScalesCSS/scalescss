@@ -19,7 +19,7 @@ img{
 
 /**
  * 1. Google Maps breaks if `max-width: 100%` acts upon it; use their selector
- *    to avoid this to remove the effects.
+ *    to remove the effects.
  * 2. If a `width` and/or `height` attribute have been explicitly defined, let’s
  *    not make the image fluid.
  */
