@@ -23,7 +23,7 @@ img{
  * 2. If a `width` and/or `height` attribute have been explicitly defined, let’s
  *    not make the image fluid.
  */
-.gm-style, /* [1] */
+.gm-style img, /* [1] */
 img[width], /* [2] */
 img[height] {  /* [2] */
     max-width: none;
