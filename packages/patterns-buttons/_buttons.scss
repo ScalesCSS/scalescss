@@ -56,7 +56,7 @@ $btn-disabled-opacity: .6 !default;
 // Disabled button state
 ///
 .#{$scales-namespace}btn:disabled,
-.#{$scales-namespace}btn.disabled {
+.#{$scales-namespace}btn.is-disabled {
     cursor: default;
     opacity: $btn-disabled-opacity;
 }

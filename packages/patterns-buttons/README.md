@@ -9,13 +9,13 @@ Buttons should be used with links, buttons, and submit inputs
 ```
 <a href="#" class="btn">Link Button</a>
 <button class="btn">Button Button</button>
-<input class="btn disabled" type="submit" value="Input Button">
+<input class="btn is-disabled" type="submit" value="Input Button">
 ```
 
 ## Available Classes
 
 * `.btn` - The main button class
-* `.disabled` - Disabled state for buttons
+* `.is-disabled` - Disabled state for buttons
 
 ## Available Variables
 
