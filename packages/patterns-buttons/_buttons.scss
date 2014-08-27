@@ -1,0 +1,70 @@
+// ==========================================================================
+// Button Pattern
+// ==========================================================================
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Available Variables
+///
+$btn-background-color: #d3d3d3 !default;
+$btn-border-width: 0 !default;
+$btn-border-color: #000 !default;
+$btn-border-style: solid !default;
+$btn-text-color: inherit !default;
+$btn-font: inherit !default;
+$btn-padding: .5em .75em !default;
+$btn-disabled-opacity: .6 !default;
+
+//
+// Buttons are meant to be used on links, buttons, and submit inputs
+///
+
+//
+// Main button class
+///
+.#{$scales-namespace}btn {
+    -webkit-appearance: none;
+    background-color: $btn-background-color;
+    border-width: $btn-border-width;
+    border-color: $btn-border-color;
+    border-style: $btn-border-style;
+    color: $btn-text-color;
+    cursor: pointer;
+    display: inline-block;
+    font: $btn-font;
+    line-height: normal;
+    margin: 0;
+    overflow: visible;
+    padding: $btn-padding;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: normal;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+//
+// Disabled button state
+///
+.#{$scales-namespace}btn:disabled,
+.#{$scales-namespace}btn.disabled {
+    cursor: default;
+    opacity: $btn-disabled-opacity;
+}
+
+//
+// Removes extra padding and border in Firefox when using `input type="submit"`
+///
+.#{$scales-namespace}btn::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
