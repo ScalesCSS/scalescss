@@ -1,10 +1,16 @@
-# Button Patterns for Scales
+# Button Pattern for Scales
 
 A simple baseline for creating buttons. The button pattern can easily be extended with modifiers in your project or theme.
 
+## Requirements
+
+Scales patterns use the Sass CSS preprocessor, you'll need either:
+* Sass 3.2 or greater
+* LibSass 2.0 or greater
+
 ## Usage
 
-Buttons should be used with links, buttons, and submit inputs
+Buttons should be used with links, buttons, and submit inputs for best results
 
 ```
 <a href="#" class="btn">Link Button</a>
