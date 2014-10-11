@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Button Pattern - Scales</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<style>
+.media:before, .media:after {
+  content: " ";
+  display: table;
+}
+.media:after {
+  clear: both;
+}
+
+.media {
+  display: block;
+}
+
+.media__fig {
+  float: left;
+  margin-right: 0.5em;
+}
+
+.media__fig--rev {
+  float: right;
+  margin-left: 0.5em;
+}
+
+.media__fig img,
+.media__fig--rev img {
+  display: block;
+}
+
+.media__body {
+  overflow: hidden;
+}
+
+.media__body,
+.media__body > :last-child {
+  margin-bottom: 0;
+}
+</style>
+</head>
+<body>
+    <header role="banner">
+        <h1>Media Object Pattern for Scales</h1>
+    </header>
+    <main role="main">
+        <p>This page includes the default media object pattern styles.</p>
+
+        <h2>Media Object usage</h2>
+        <p>The media object can be used in many situations for positioning any type of image or other media next to some other content. Read <a href="http://twitter.com/stubbornella">Nicole Sullivan's</a> post on the topic <a href="http://stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code">http://stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code</a>.</p>
+
+        <p>Example using &lt;figure&gt; with the media object:</p>
+
+        <h3>Default styles</h3>
+
+        <div class="media">
+            <figure>
+                <a href="http://scalescss.github.io/scales">
+                    <img class="media__fig" src="http://placekitten.com/g/150/150/">
+                </a>
+                <figcaption class="media__body">
+                    <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                </figcaption>
+            </figure>
+        </div>
+
+        <h3>Reversed styles</h3>
+
+        <div class="media">
+            <figure>
+                <a href="http://scalescss.github.io/scales">
+                    <img class="media__fig--rev" src="http://placekitten.com/g/150/150/">
+                </a>
+                <figcaption class="media__body">
+                    <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                </figcaption>
+            </figure>
+        </div>
+    </main>
+</body>
+</html>

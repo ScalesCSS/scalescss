@@ -1,0 +1,50 @@
+// ==========================================================================
+// Media Object Pattern
+// ==========================================================================
+
+// Use the media object any time you have an image or other media and text
+// next to each other.
+///
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Available Variables
+///
+$media-space: .5em !default;
+
+//
+// The media object classes
+///
+.#{$scales-namespace}media {
+    display: block;
+    @extend %clearfix;
+}
+
+.#{$scales-namespace}media__fig {
+    float: left;
+    margin-right: $media-space;
+}
+
+// Reversed image location (right instead of left).
+.#{$scales-namespace}media__fig--rev {
+    float: right;
+    margin-left: $media-space;
+}
+
+.#{$scales-namespace}media__fig img,
+.#{$scales-namespace}media__fig--rev img {
+    display: block;
+}
+
+.#{$scales-namespace}media__body {
+    overflow: hidden;
+}
+
+.#{$scales-namespace}media__body,
+.#{$scales-namespace}media__body > :last-child {
+    margin-bottom: 0;
+}
