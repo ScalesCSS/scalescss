@@ -4,7 +4,7 @@ A super minimal clearfix utility.
 
 ## Requirements
 
-Scales patterns use the Sass CSS preprocessor, you'll need either:
+Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either:
 * Sass 3.2 or greater
 * LibSass 2.0 or greater
 
