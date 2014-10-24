@@ -1,0 +1,74 @@
+// ==========================================================================
+// Box Pattern
+// ==========================================================================
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Available Variables
+///
+$box-padding: 1em !default;
+$box-padding-tiny: $box-padding / 4 !default;
+$box-padding-small: $box-padding / 2 !default;
+$box-padding-large: $box-padding * 2 !default;
+$box-padding-huge: $box-padding * 4 !default;
+
+//
+// Box is used to, well, box off content.
+///
+
+//
+// Default box
+///
+.#{$scales-namespace}box,
+.#{$scales-namespace}box--flush,
+.#{$scales-namespace}box--tiny,
+.#{$scales-namespace}box--small,
+.#{$scales-namespace}box--large,
+.#{$scales-namespace}box--huge {
+    @extend %clearfix;
+    display: block;
+    padding: $box-padding;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+//
+// Flush box (No padding)
+///
+.#{$scales-namespace}box--flush {
+    padding: 0;
+}
+
+//
+// Tiny box
+///
+.#{$scales-namespace}box--tiny {
+    padding: $box-padding-tiny;
+}
+
+//
+// Small box
+///
+.#{$scales-namespace}box--small {
+    padding: $box-padding-small;
+}
+
+//
+// Large box
+///
+.#{$scales-namespace}box--large {
+    padding: $box-padding-large;
+}
+
+//
+// Huge box
+///
+.#{$scales-namespace}box--huge {
+    padding: $box-padding-huge;
+}
