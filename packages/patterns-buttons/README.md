@@ -4,7 +4,7 @@ A simple baseline for creating buttons. The button pattern can easily be extende
 
 ## Requirements
 
-Scales patterns use the Sass CSS preprocessor, you'll need either:
+Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either:
 * Sass 3.2 or greater
 * LibSass 2.0 or greater
 
@@ -42,16 +42,16 @@ All Scales patterns expose the `$scales-namespace` variable.
 To give all Scales classes a namespace, you will need to set this variable in a file that is imported before any scales files. For example:
 
 ```
-@import _settings.scss; // $scales-namespace is set in this file
-@import _scales-base.scss; // Imports the Scales library
-@import _project.scss // The rest of your project imports
+@import your-project/settings; // $scales-namespace is set in this file
+@import your-project/scales-base; // Imports the Scales library
+@import your-project/project // The rest of your project imports
 ```
 ## Extending
 
 The button pattern simply provides a base for buttons. In your project or theme, you can easily extend the button pattern for your own purposes. For example:
 
 ```
-@import scalescss/pattern-buttons/_buttons.scss
+@import scalescss/pattern-buttons/buttons
 
 //
 // Primary buttons
@@ -77,4 +77,9 @@ The button pattern simply provides a base for buttons. In your project or theme,
     font-size: 85%;
     padding: .2em .5em;
 }
+```
+```
+<button class="btn btn--primary">Primary Button</button>
+
+<button class="btn btn--small">Small Button</button>
 ```
