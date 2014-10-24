@@ -6,7 +6,7 @@ The media object is probably the most useful OOCSS abstraction. Read more here: 
 
 ## Requirements
 
-Scales patterns use the Sass CSS preprocessor, you'll need either:
+Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either:
 * Sass 3.2 or greater
 * LibSass 2.0 or greater
 
@@ -52,7 +52,7 @@ All Scales patterns expose the `$scales-namespace` variable.
 To give all Scales classes a namespace, you will need to set this variable in a file that is imported before any scales files. For example:
 
 ```
-@import _settings.scss; // $scales-namespace is set in this file
-@import _scales-base.scss; // Imports the Scales library
-@import _project.scss // The rest of your project imports
+@import your-project/settings; // $scales-namespace is set in this file
+@import your-project/scales-base; // Imports the Scales library
+@import your-project/project // The rest of your project imports
 ```
