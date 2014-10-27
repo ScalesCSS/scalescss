@@ -14,7 +14,13 @@ Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll n
 
 ## Usage
 
-The box pattern can be used on any element that you want
+The box pattern can be used on any element that you want. For example:
+
+```
+<div class="box">
+    <p>The content in here will be boxed off from the surrounding content and will have a default amount of padding (based on the class used) to visually separate it.</p>
+</div>
+```
 
 ## Available Classes
 
@@ -34,6 +40,7 @@ The box pattern can be used on any element that you want
 * `$box-padding-huge`
 
 ### The Scales Namespace Variable
+
 All Scales patterns expose the `$scales-namespace` variable.
 
 `$scales-namespace` accepts a string that will prefix all Scales classes. The default value is `null`.
