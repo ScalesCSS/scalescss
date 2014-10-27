@@ -1,0 +1,50 @@
+// ==========================================================================
+// Horizontal List Pattern
+// ==========================================================================
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Available Variables
+///
+
+$horizontal-list-delimiter: ',\00A0' !default;
+
+//
+// Horizontal List classes
+///
+
+@mixin horizontal-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+        display: inline-block;
+    }
+}
+
+.#{$scales-namespace}horizontal-list,
+%#{$scales-namespace}horizontal-list {
+    @include horizontal-list;
+}
+
+//
+// Character delimited Horizontal List
+///
+
+.#{$scales-namespace}horizontal-list--delimited {
+    > li {
+
+        &:after {
+            content: '#{$horizontal-list-delimiter}';
+        }
+
+        &:last-child:after {
+            content: '';
+        }
+    }
+}
