@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Vertical List Pattern - Scales</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<style>
+    .vertical-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .vertical-list > li {
+      display: block;
+    }
+
+    .vertical-list--delimited > li:after {
+      content: ",";
+    }
+    .vertical-list--delimited > li:last-child:after {
+      content: '';
+    }
+</style>
+</head>
+<body>
+    <header role="banner">
+        <h1>Vertical List Pattern for Scales</h1>
+    </header>
+    <main role="main">
+        <p>This page includes the default vertical list pattern styles</p>
+
+        <h2>Vertical List usage</h2>
+        <p>Vertical List should be used whenever you need to make an ordered or unordered list vertical instead of horizontal. You can extend it with '--delimited' to semantically mark up a character delimited list for things like tags, etc.</p>
+
+        <h3>Default styles</h3>
+
+        <ul class="vertical-list">
+            <li>Sass</li>
+            <li>CSS</li>
+            <li>HTML</li>
+        </ul>
+
+        <h3>Comma delimited styles</h3>
+
+        <ul class="vertical-list vertical-list--delimited">
+            <li>Sass</li>
+            <li>CSS</li>
+            <li>HTML</li>
+        </ul>
+
+    </main>
+</body>
+</html>
