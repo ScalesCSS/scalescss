@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stats Pattern - Scales</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<style>
+.stat-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.stat-group {
+  margin-left: 0;
+}
+
+.stat {
+  float: left;
+}
+.stat + .stat {
+  margin-left: 1em;
+}
+
+.stat > a {
+  display: block;
+}
+
+.stat__value {
+  margin-left: 0;
+  text-align: center;
+}
+
+.stat-group--big .stat {
+  float: none;
+  margin-left: 0;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+    <header role="banner">
+        <h1>Stats Pattern for Scales</h1>
+    </header>
+    <main role="main">
+        <p>This page includes the default stats pattern styles</p>
+
+        <h2>Stats usage</h2>
+        <p>Stats should be used with &lt;dl&gt;s to group the stat title and value. The `--big` variation can be used when the title or values are too long to sit next to each other in a row.</p>
+
+        <h3>Default styles</h3>
+
+        <div class="stat-group">
+            <dl class="stat">
+                <dt class="stat__title">RBI</dt>
+                <dd class="stat__value">127</dd>
+            </dl>
+
+            <dl class="stat">
+                <dt class="stat__title">BA</dt>
+                <dd class="stat__value">.369</dd>
+            </dl>
+
+            <dl class="stat">
+                <dt class="stat__title">HR</dt>
+                <dd class="stat__value">25</dd>
+            </dl>
+        </div>
+
+        <h3>Big styles</h3>
+        <div class="stat-group--big">
+            <dl class="stat">
+                <dt class="stat__title">Total Runs Batted In</dt>
+                <dd class="stat__value">127</dd>
+            </dl>
+
+            <dl class="stat">
+                <dt class="stat__title">Total Batting Average</dt>
+                <dd class="stat__value">.369</dd>
+            </dl>
+
+            <dl class="stat">
+                <dt class="stat__title">Total Home Runs</dt>
+                <dd class="stat__value">25</dd>
+            </dl>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,50 @@
+// ==========================================================================
+// Stats Pattern
+// ==========================================================================
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Available Variables
+///
+$stat-spacing: 1em !default;
+
+//
+// Stats should be used with <dl>s to group the stat title and value. The `--big` variation can be used when the title or values are too long to sit next to each other in a row.
+///
+
+//
+// Stats classes
+///
+
+.stat-group {
+    @extend %clearfix;
+    margin-left: 0;
+}
+
+.stat {
+    float: left;
+    + .stat {
+        margin-left: $stat-spacing;
+    }
+}
+
+.stat > a {
+    display: block;
+}
+
+.stat__value {
+    margin-left: 0;
+    text-align: center;
+}
+
+.stat-group--big {
+    .stat {
+        float: none;
+        margin-left: 0;
+        text-align: center;
+    }
+}
