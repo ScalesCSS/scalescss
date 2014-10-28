@@ -1,0 +1,29 @@
+// ==========================================================================
+// Split Pattern
+// ==========================================================================
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Split can be used on any elements but works best in a <dl> or <ul/ol>
+///
+
+//
+// Split classes
+///
+
+.#{$scales-namespace}split {
+    text-align: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.#{$scales-namespace}split__title {
+    text-align: left;
+    float: left;
+    clear: left;
+}
