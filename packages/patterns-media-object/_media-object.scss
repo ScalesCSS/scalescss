@@ -14,37 +14,202 @@ $scales-namespace: null !default;
 //
 // Available Variables
 ///
-$media-space: .5em !default;
+$media-gutter: 1em !default;
+$media-gutter-tiny: $media-gutter / 4 !default;
+$media-gutter-small: $media-gutter / 2 !default;
+$media-gutter-large: $media-gutter * 2 !default;
+$media-gutter-huge: $media-gutter * 4 !default;
+$media-stacked-breakpoint: 25em !default;
 
 //
-// The media object classes
+// Media object classes
 ///
 .#{$scales-namespace}media {
-    display: block;
     @extend %clearfix;
-}
-
-.#{$scales-namespace}media__fig {
-    float: left;
-    margin-right: $media-space;
-}
-
-// Reversed image location (right instead of left).
-.#{$scales-namespace}media__fig--rev {
-    float: right;
-    margin-left: $media-space;
-}
-
-.#{$scales-namespace}media__fig img,
-.#{$scales-namespace}media__fig--rev img {
     display: block;
+}
+
+.#{$scales-namespace}media__figure {
+    float: left;
+    margin-right: $media-gutter;
+
+    > img {
+        display: block;
+    }
 }
 
 .#{$scales-namespace}media__body {
     overflow: hidden;
+    display: block;
+
+    &,
+    > :last-child {
+        margin-bottom: 0;
+    }
 }
 
-.#{$scales-namespace}media__body,
-.#{$scales-namespace}media__body > :last-child {
-    margin-bottom: 0;
+//
+// Reversed media object
+///
+.#{$scales-namespace}media--rev {
+
+    > .#{$scales-namespace}media__figure {
+        float: right;
+        margin-right: 0;
+        margin-left: $media-gutter;
+    }
+}
+
+//
+// Flush media object
+///
+.#{$scales-namespace}media--flush {
+
+    > .#{$scales-namespace}media__figure {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+//
+// Tiny media object
+///
+.#{$scales-namespace}media--tiny {
+
+    > .#{$scales-namespace}media__figure {
+        margin-right: $media-gutter-tiny;
+    }
+
+    // Reversed
+    &.#{$scales-namespace}media--rev {
+
+        > .#{$scales-namespace}media__figure {
+            margin-right: 0;
+            margin-left: $media-gutter-tiny;
+        }
+    }
+}
+
+//
+// Small media object
+///
+.#{$scales-namespace}media--small {
+
+    > .#{$scales-namespace}media__figure {
+        margin-right: $media-gutter-small;
+    }
+
+    // Reversed
+    &.#{$scales-namespace}media--rev {
+
+        > .#{$scales-namespace}media__figure {
+            margin-right: 0;
+            margin-left: $media-gutter-small;
+        }
+    }
+}
+
+//
+// Large media object
+///
+.#{$scales-namespace}media--large {
+
+    > .#{$scales-namespace}media__figure {
+        margin-right: $media-gutter-large;
+    }
+
+    // Reversed
+    &.#{$scales-namespace}media--rev {
+
+        > .#{$scales-namespace}media__figure {
+            margin-right: 0;
+            margin-left: $media-gutter-large;
+        }
+    }
+}
+
+//
+// Huge media object
+///
+.#{$scales-namespace}media--huge {
+
+    > .#{$scales-namespace}media__figure {
+        margin-right: $media-gutter-huge;
+    }
+
+    // Reversed
+    &.#{$scales-namespace}media--rev {
+
+        > .#{$scales-namespace}media__figure {
+            margin-right: 0;
+            margin-left: $media-gutter-huge;
+        }
+    }
+}
+
+//
+// Stacked media object at smaller screen width
+///
+@media screen and (max-width: $media-stacked-breakpoint) {
+
+    //
+    // Default stacked media object
+    ///
+    .#{$scales-namespace}media--stacked {
+
+        > .#{$scales-namespace}media__figure {
+            float: none;
+            margin-right: 0;
+            margin-left:  0;
+            margin-bottom: $media-gutter;
+        }
+
+        //
+        // Tiny media object
+        ///
+        &.#{$scales-namespace}media--tiny {
+
+            > .#{$scales-namespace}media__figure {
+                margin-right: 0;
+                margin-left:  0;
+                margin-bottom: $media-gutter-tiny;
+            }
+        }
+
+        //
+        // Small media object
+        ///
+        &.#{$scales-namespace}media--small {
+
+            > .#{$scales-namespace}media__figure {
+                margin-right: 0;
+                margin-left:  0;
+                margin-bottom: $media-gutter-small;
+            }
+        }
+
+        //
+        // Large media object
+        ///
+        &.#{$scales-namespace}media--large {
+
+            > .#{$scales-namespace}media__figure {
+                margin-right: 0;
+                margin-left:  0;
+                margin-bottom: $media-gutter-large;
+            }
+        }
+
+        //
+        // Huge media object
+        ///
+        &.#{$scales-namespace}media--huge {
+
+            > .#{$scales-namespace}media__figure {
+                margin-right: 0;
+                margin-left:  0;
+                margin-bottom: $media-gutter-huge;
+            }
+        }
+    }
 }
