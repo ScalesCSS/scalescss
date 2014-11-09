@@ -1,0 +1,98 @@
+// ==========================================================================
+// Multi Column List Pattern
+// ==========================================================================
+
+//
+// The Multi Column List Pattern allows you to make a multi-column list
+// out of a single list.
+///
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Multi Column List classes
+///
+.multi-col-list {
+    @extend %clearfix;
+    list-style: none;
+    margin-left: 0;
+
+    > li {
+      float: left;
+    }
+}
+
+//
+// This mixin allows you to change the number of columns at different
+// breakpoints.
+///
+@mixin columns($columns) {
+
+    @if $columns == 2 {
+
+        > li {
+            width: 50%;
+        }
+    }
+
+    @if $columns == 3 {
+
+        > li {
+            width: 33.333333333%;
+        }
+    }
+
+    @if $columns == 4 {
+
+        > li {
+            width: 25%;
+        }
+    }
+
+    @if $columns == 5 {
+
+        > li {
+            width: 20%;
+        }
+    }
+
+    @if $columns == 6 {
+
+        > li {
+            width: 16.666666667%;
+        }
+    }
+}
+
+//
+// Apply these classes alongside the .multi-col-list class to
+// set the number of columns. Placeholders are available so
+// these widths can be extended instead.
+///
+.two-columns,
+%two-columns {
+    @include columns(2);
+}
+
+.three-columns,
+%three-columns {
+    @include columns(3);
+}
+
+.four-columns,
+%four-columns {
+    @include columns(4);
+}
+
+.five-columns,
+%five-columns {
+    @include columns(5);
+}
+
+.six-columns,
+%six-columns {
+    @include columns(6);
+}
