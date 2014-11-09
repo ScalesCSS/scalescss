@@ -24,12 +24,38 @@ $horizontal-list-delimiter: ',\00A0' !default;
 
     > li {
         display: inline-block;
+
+        > a {
+            display: block;
+        }
     }
 }
 
 .#{$scales-namespace}horizontal-list,
 %#{$scales-namespace}horizontal-list {
     @include horizontal-list;
+}
+
+.horizontal-list--center {
+  text-align: center;
+}
+
+.horizontal-list--right {
+  text-align: right;
+}
+
+.horizontal-list--fill {
+    display: table;
+    width: 100%;
+
+    > li {
+        display: table-cell;
+        text-align: center;
+
+        > a {
+            display: block;
+        }
+    }
 }
 
 //

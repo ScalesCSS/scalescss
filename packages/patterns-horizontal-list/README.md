@@ -10,7 +10,7 @@ Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll n
 
 ## Usage
 
-Horizontal List should be used whenever you need to make an ordered or unordered list horizontal instead of vertical. You can extend it with `--delimited` to semantically mark up a character delimited list for things like tags, etc.
+Horizontal List should be used whenever you need to make an ordered or unordered list horizontal instead of vertical. You can extend it with `--delimited` to semantically mark up a character delimited list for things like tags, etc. You can also center, right align, or hav the list fill the available space.
 
 ### Default
 
@@ -26,6 +26,36 @@ Horizontal List should be used whenever you need to make an ordered or unordered
 
 ```
 <ul class="horizontal-list horizontal-list--delimited">
+    <li>Sass</li>
+    <li>CSS</li>
+    <li>HTML</li>
+</ul>
+```
+
+### Centered
+
+```
+<ul class="horizontal-list horizontal-list--center">
+    <li>Sass</li>
+    <li>CSS</li>
+    <li>HTML</li>
+</ul>
+```
+
+### Right aligned
+
+```
+<ul class="horizontal-list horizontal-list--right">
+    <li>Sass</li>
+    <li>CSS</li>
+    <li>HTML</li>
+</ul>
+```
+
+### Fill
+
+```
+<ul class="horizontal-list horizontal-list--fill">
     <li>Sass</li>
     <li>CSS</li>
     <li>HTML</li>
@@ -48,6 +78,9 @@ _**The mixin is a temporary solution until Sass allows the use of `@extend` in m
 
 * `.horizontal-list`
 * `.horizontal-list--delimited`
+* `.horizontal-list--center`
+* `.horizontal-list--right`
+* `.horizontal-list--fill` - forces the list to take up 100% of it's parent.
 
 ## Available Variables
 

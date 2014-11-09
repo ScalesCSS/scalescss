@@ -5,21 +5,44 @@
 <title>Horizontal List Pattern - Scales</title>
 <meta name="viewport" content="initial-scale=1,width=device-width">
 <style>
-    .horizontal-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .horizontal-list > li {
-      display: inline-block;
-    }
+.horizontal-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.horizontal-list > li {
+  display: inline-block;
+}
+.horizontal-list > li > a {
+  display: block;
+}
 
-    .horizontal-list--delimited > li:after {
-      content: ',\00A0';
-    }
-    .horizontal-list--delimited > li:last-child:after {
-      content: '';
-    }
+.horizontal-list--center {
+  text-align: center;
+}
+
+.horizontal-list--right {
+  text-align: right;
+}
+
+.horizontal-list--fill {
+  display: table;
+  width: 100%;
+}
+.horizontal-list--fill > li {
+  display: table-cell;
+  text-align: center;
+}
+.horizontal-list--fill > li > a {
+  display: block;
+}
+
+.horizontal-list--delimited > li:after {
+  content: ", ";
+}
+.horizontal-list--delimited > li:last-child:after {
+  content: '';
+}
 </style>
 </head>
 <body>
@@ -30,7 +53,7 @@
         <p>This page includes the default horizontal list pattern styles</p>
 
         <h2>Horizontal List usage</h2>
-        <p>Horizontal List should be used whenever you need to make an ordered or unordered list horizontal instead of vertical. You can extend it with '--delimited' to semantically mark up a character delimited list for things like tags, etc.</p>
+        <p>Horizontal List should be used whenever you need to make an ordered or unordered list horizontal instead of vertical. You can extend it with '--delimited' to semantically mark up a character delimited list for things like tags, etc. You can also center, right align, or fill the available space.</p>
 
         <h3>Default styles</h3>
 
@@ -43,6 +66,30 @@
         <h3>Comma delimited styles</h3>
 
         <ul class="horizontal-list horizontal-list--delimited">
+            <li>Sass</li>
+            <li>CSS</li>
+            <li>HTML</li>
+        </ul>
+
+        <h3>Centered styles</h3>
+
+        <ul class="horizontal-list horizontal-list--center">
+            <li>Sass</li>
+            <li>CSS</li>
+            <li>HTML</li>
+        </ul>
+
+        <h3>Right aligned styles</h3>
+
+        <ul class="horizontal-list horizontal-list--right">
+            <li>Sass</li>
+            <li>CSS</li>
+            <li>HTML</li>
+        </ul>
+
+        <h3>Fill styles</h3>
+
+        <ul class="horizontal-list horizontal-list--fill">
             <li>Sass</li>
             <li>CSS</li>
             <li>HTML</li>
