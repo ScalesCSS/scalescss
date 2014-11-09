@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Button Pattern - Scales</title>
+<title>Media Object Pattern - Scales</title>
 <meta name="viewport" content="initial-scale=1,width=device-width">
 <style>
-.clearfix:after,
 .media:after {
   content: "";
   display: table;
@@ -16,28 +15,93 @@
   display: block;
 }
 
-.media__fig {
+.media__figure {
   float: left;
-  margin-right: 0.5em;
+  margin-right: 1em;
 }
-
-.media__fig--rev {
-  float: right;
-  margin-left: 0.5em;
-}
-
-.media__fig img,
-.media__fig--rev img {
+.media__figure > img {
   display: block;
 }
 
 .media__body {
   overflow: hidden;
+  display: block;
 }
-
 .media__body,
 .media__body > :last-child {
   margin-bottom: 0;
+}
+
+.media--rev > .media__figure {
+  float: right;
+  margin-right: 0;
+  margin-left: 1em;
+}
+
+.media--flush > .media__figure {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.media--tiny > .media__figure {
+  margin-right: 0.25em;
+}
+.media--tiny.media--rev > .media__figure {
+  margin-right: 0;
+  margin-left: 0.25em;
+}
+
+.media--small > .media__figure {
+  margin-right: 0.5em;
+}
+.media--small.media--rev > .media__figure {
+  margin-right: 0;
+  margin-left: 0.5em;
+}
+
+.media--large > .media__figure {
+  margin-right: 2em;
+}
+.media--large.media--rev > .media__figure {
+  margin-right: 0;
+  margin-left: 2em;
+}
+
+.media--huge > .media__figure {
+  margin-right: 4em;
+}
+.media--huge.media--rev > .media__figure {
+  margin-right: 0;
+  margin-left: 4em;
+}
+
+@media screen and (max-width: 25em) {
+  .media--stacked > .media__figure {
+    float: none;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 1em;
+  }
+  .media--stacked.media--tiny > .media__figure {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0.25em;
+  }
+  .media--stacked.media--small > .media__figure {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0.5em;
+  }
+  .media--stacked.media--large > .media__figure {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 2em;
+  }
+  .media--stacked.media--huge > .media__figure {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 4em;
+  }
 }
 
 </style>
@@ -52,33 +116,94 @@
         <h2>Media Object usage</h2>
         <p>The media object can be used in many situations for positioning any type of image or other media next to some other content. Read <a href="http://twitter.com/stubbornella">Nicole Sullivan's</a> post on the topic <a href="http://stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code">http://stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code</a>.</p>
 
-        <p>Example using &lt;figure&gt; with the media object:</p>
-
         <h3>Default styles</h3>
 
         <div class="media">
-            <figure>
-                <a href="http://scalescss.github.io/scales">
-                    <img class="media__fig" src="http://placekitten.com/g/150/150/">
-                </a>
-                <figcaption class="media__body">
-                    <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
-                </figcaption>
-            </figure>
+            <a class="media__figure" href="http://scalescss.github.io/scales">
+                <img src="http://placekitten.com/g/150/150/">
+            </a>
+            <div class="media__body">
+                <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+            </div>
         </div>
 
         <h3>Reversed styles</h3>
 
-        <div class="media">
-            <figure>
-                <a href="http://scalescss.github.io/scales">
-                    <img class="media__fig--rev" src="http://placekitten.com/g/150/150/">
-                </a>
-                <figcaption class="media__body">
-                    <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
-                </figcaption>
-            </figure>
+        <div class="media media--rev">
+            <a class="media__figure" href="http://scalescss.github.io/scales">
+                <img src="http://placekitten.com/g/150/150/">
+            </a>
+            <div class="media__body">
+                <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+            </div>
         </div>
+
+        <h3>Stacked styles</h3>
+
+        <div class="media media--stacked">
+            <a class="media__figure" href="http://scalescss.github.io/scales">
+                <img src="http://placekitten.com/g/150/150/">
+            </a>
+            <div class="media__body">
+                <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+            </div>
+        </div>
+
+        <h3>Flush styles</h3>
+
+        <div class="media media--flush">
+            <a class="media__figure" href="http://scalescss.github.io/scales">
+                <img src="http://placekitten.com/g/150/150/">
+            </a>
+            <div class="media__body">
+                <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+            </div>
+        </div>
+
+        <h3>Tiny styles</h3>
+
+        <div class="media media--tiny">
+            <a class="media__figure" href="http://scalescss.github.io/scales">
+                <img src="http://placekitten.com/g/150/150/">
+            </a>
+            <div class="media__body">
+                <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+            </div>
+        </div>
+
+        <h3>Small styles</h3>
+
+        <div class="media media--small">
+            <a class="media__figure" href="http://scalescss.github.io/scales">
+                <img src="http://placekitten.com/g/150/150/">
+            </a>
+            <div class="media__body">
+                <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+            </div>
+        </div>
+
+        <h3>Large styles</h3>
+
+        <div class="media media--large">
+            <a class="media__figure" href="http://scalescss.github.io/scales">
+                <img src="http://placekitten.com/g/150/150/">
+            </a>
+            <div class="media__body">
+                <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+            </div>
+        </div>
+
+        <h3>Huge styles</h3>
+
+        <div class="media media--huge">
+            <a class="media__figure" href="http://scalescss.github.io/scales">
+                <img src="http://placekitten.com/g/150/150/">
+            </a>
+            <div class="media__body">
+                <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+            </div>
+        </div>
+
     </main>
 </body>
 </html>
