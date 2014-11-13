@@ -21,8 +21,8 @@ Scales is a highly _scalable_ CSS architecture, it contains design _patterns_ (s
 Scales uses `box-sizing: border-box;`, and `display: table-cell;`, neither of which are supported in IE7 and under. Thus, Scales is only for IE8+ and any modern browser.
 
 ## Dependencies
-* [SASS](http://sass-lang.com/) and [Compass](http://compass-style.org/install/)
-* [Modular-Scale](https://github.com/scottkellum/modular-scale)
+* [SASS](http://sass-lang.com/) v3.4 and [Compass](http://compass-style.org/install/) v1.0
+* [Modular-Scale](https://github.com/at-import/modular-scale) v2.0
 
 ## Setup
 Make sure you have the dependencies installed on your system and then either clone Scales or download and unpack the [latest version](https://github.com/yodasw16/scales/archive/master.zip) and put it into the root directory of your project.

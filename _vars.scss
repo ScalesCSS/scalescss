@@ -32,8 +32,8 @@ $round-to-nearest-half-line: false !default;
 // Don't be scared. Start here: http://thesassway.com/projects/modular-scale
 //
 ///
-$base-size: $base-font-size $base-line-height;
-$ratio: fourth();
+$ms-base: $base-font-size $base-line-height;
+$ms-ratio: $fourth;
 
 //
 // At 16px $base-font-size your available modular scale values are:
@@ -55,10 +55,6 @@ $ratio: fourth();
 // ms(10)  =  67px
 ///
 
-//
-// This will output the modular scale values when you compile. Uncomment out to use.
-///
-@include ms-list();
 
 //
 // A good primer on Compass Vertical Rhythm. Read this before you get lost:
