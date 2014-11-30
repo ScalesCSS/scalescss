@@ -1,4 +1,4 @@
-# Box Pattern for Scales
+# Base Tables for Scales
 
 These are the base styles for creating tables.
 
