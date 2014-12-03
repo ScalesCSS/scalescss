@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Base Forms - Scales</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<style>
+fieldset {
+    padding: 1em;
+}
+
+.form--list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.input-container {
+    margin-bottom: 1em;
+}
+
+label,
+.label {
+    display: block;
+}
+
+.text-input,
+select,
+textarea {
+    display: block;
+    padding: 0.5em;
+    border: 1px;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 0;
+}
+
+.form--inline .text-input,
+.form--inline select,
+.form--inline textarea,
+.form--inline label,
+.form--inline .label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input.is-disabled,
+select.is-disabled,
+textarea.is-disabled {
+    cursor: not-allowed;
+    border-color: #aaa;
+    background-color: #ccc;
+    color: #aaa;
+}
+
+input[readonly],
+select[readonly],
+textarea[readonly],
+input.is-readonly,
+select.is-readonly,
+textarea.is-readonly {
+    border-color: #aaa;
+    background-color: #ccc;
+    color: #000;
+}
+</style>
+</head>
+<body>
+    <header role="banner">
+        <h1>Base Forms for Scales</h1>
+    </header>
+    <main role="main">
+        <p>This page includes the default base forms styles.</p>
+
+        <h3>Default stacked form</h3>
+        <form>
+            <label for="account">Account #</label>
+            <input class="text-input" id="account" type="num" value="123456789" readonly>
+
+            <label for="email">Email</label>
+            <input class="text-input" id="email" type="email" placeholder="Email">
+
+            <label for="password">Password</label>
+            <input class="text-input" id="password" type="password" placeholder="Password" disabled>
+
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option>Female</option>
+                <option>Male</option>
+                <option>Other</option>
+            </select>
+
+            <lable>Introduce yourself</lable>
+            <textarea></textarea>
+
+            <label for="newsletter">
+                <input id="newsletter" type="checkbox"> Send me the newsletter
+            </label>
+
+            <button type="submit" class="btn">Sign in</button>
+        </form>
+
+        <h3>Using an unordered list</h3>
+        <form>
+            <ul class="form--list">
+                <li class="input-container">
+                    <label for="account">Account #</label>
+                    <input class="text-input" id="account" type="num" value="123456789" readonly>
+                </li>
+                <li class="input-container">
+                    <label for="email">Email</label>
+                    <input class="text-input" id="email" type="email" placeholder="Email">
+                </li>
+                <li class="input-container">
+                    <label for="password">Password</label>
+                    <input class="text-input" id="password" type="password" placeholder="Password" disabled>
+                </li>
+                <li class="input-container">
+                    <label for="gender">Gender</label>
+                    <select id="gender">
+                        <option>Female</option>
+                        <option>Male</option>
+                        <option>Other</option>
+                    </select>
+                </li>
+                <li class="input-container">
+                    <lable>Introduce yourself</lable>
+                    <textarea></textarea>
+                </li>
+                </li>
+                <li class="input-container">
+                    <label for="newsletter">
+                        <input id="newsletter" type="checkbox"> Send me the newsletter
+                    </label>
+                </li>
+            </ul>
+            <button type="submit" class="btn">Sign in</button>
+        </form>
+
+        <h3>Inline form</h3>
+        <form class="form--inline">
+            <label for="account">Account #</label>
+            <input class="text-input" id="account" type="num" value="123456789" readonly>
+
+            <label for="email">Email</label>
+            <input class="text-input" id="email" type="email" placeholder="Email">
+
+            <label for="password">Password</label>
+            <input class="text-input" id="password" type="password" placeholder="Password" disabled>
+
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option>Female</option>
+                <option>Male</option>
+                <option>Other</option>
+            </select>
+
+            <lable>Introduce yourself</lable>
+            <textarea></textarea>
+
+            <label for="newsletter">
+                <input id="newsletter" type="checkbox"> Send me the newsletter
+            </label>
+
+            <button type="submit" class="btn">Sign in</button>
+        </form>
+
+    </main>
+</body>
+</html>

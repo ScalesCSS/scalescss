@@ -1,0 +1,131 @@
+// ==========================================================================
+// Forms
+// ==========================================================================
+//
+// These are base styles for forms as well as some helpful classes to
+// make alignment and state easier.
+///
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Available Variables
+///
+$fieldset-padding: 1em !default;
+$text-input-padding: .5em !default;
+$text-input-border-width: 1px !default;
+$text-input-border-style: solid !default;
+$text-input-border-color: #000 !default;
+$text-input-border-radius: 0 !default;
+$input-container-margin-bottom: 1em !default;
+$input-disabled-border-color: #aaa !default;
+$input-disabled-background-color: #ccc !default;
+$input-disabled-text-color: #aaa !default;
+$input-readonly-border-color: #aaa !default;
+$input-readonly-background-color: #ccc !default;
+$input-readonly-text-color: #000 !default;
+
+//
+// Main form styles
+///
+fieldset {
+    padding: $fieldset-padding;
+}
+
+//
+// Use when marking up a form as an unordered list. e.g. <ul class="form-list">
+///
+.form-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+//
+// If you wrap your label/input groups in a container, use this class to
+// apply a margin on the bottom for better vertical spacing control.
+//
+// This could be a <div> or <span> or an <li> if you are using a list
+///
+.input-container {
+    margin-bottom: $input-container-margin-bottom;
+}
+
+//
+// Labels
+//
+// The ".label" class can be used to make an element look like a
+// label if an actual label isn't suitable.
+//
+///
+label,
+.label {
+    display: block;
+}
+
+//
+// Text inputs
+//
+// Instead of a `[type]` selector for each kind of form input,
+// just use a class to target any/every one, e.g.:
+// <input type="text" class="text-input">
+// <input type="email" class="text-input">
+// <input type="password" class="text-input">
+//
+///
+.text-input,
+select,
+textarea {
+    display: block;
+    padding: $text-input-padding;
+    border: $text-input-border-width;
+    border-style: $text-input-border-style;
+    border-color: $text-input-border-color;
+    border-radius: $text-input-border-radius;
+}
+
+//
+// Force form elements into a single inline row
+///
+.form-inline {
+    .text-input,
+    select,
+    textarea,
+    label,
+    .label {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+//
+// Input states
+///
+
+// Disabled
+input[disabled],
+select[disabled],
+textarea[disabled],
+input.is-disabled,
+select.is-disabled,
+textarea.is-disabled {
+    cursor: not-allowed;
+    border-color: $input-disabled-border-color;
+    background-color: $input-disabled-background-color;
+    color: $input-disabled-text-color;
+}
+
+// Read Only
+input[readonly],
+select[readonly],
+textarea[readonly],
+input.is-readonly,
+select.is-readonly,
+textarea.is-readonly {
+    border-color: $input-readonly-border-color;
+    background-color: $input-readonly-background-color;
+    color: $input-readonly-text-color;
+}
