@@ -66,6 +66,12 @@ label,
     display: block;
 }
 
+// Extra help text in labels
+.label--additional {
+    display: block;
+    font-weight: normal;
+}
+
 //
 // Text inputs
 //
@@ -86,6 +92,10 @@ textarea {
     border-color: $text-input-border-color;
     border-radius: $text-input-border-radius;
 }
+
+//
+// Groups of checkboxes and radios
+///
 
 //
 // Force form elements into a single inline row
@@ -128,4 +138,20 @@ textarea.is-readonly {
     border-color: $input-readonly-border-color;
     background-color: $input-readonly-background-color;
     color: $input-readonly-text-color;
+}
+
+//
+// Extra help text displayed after a field when that field is in focus.
+//
+// Can't be used with .form--inline
+///
+.helper-text {
+    display: none;
+}
+
+.text-input:active + .helper-text,
+.text-input:focus + .helper-text,
+textarea:active + .helper-text,
+textarea:focus + .helper-text {
+    display: block;
 }
