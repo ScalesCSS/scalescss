@@ -24,6 +24,11 @@ label,
     display: block;
 }
 
+.label--additional {
+    display: block;
+    font-weight: normal;
+}
+
 .text-input,
 select,
 textarea {
@@ -66,6 +71,18 @@ textarea.is-readonly {
     background-color: #ccc;
     color: #000;
 }
+
+.helper-text {
+    display: none;
+}
+
+.text-input:active + .helper-text,
+.text-input:focus + .helper-text,
+textarea:active + .helper-text,
+textarea:focus + .helper-text {
+    display: block;
+}
+
 </style>
 </head>
 <body>
