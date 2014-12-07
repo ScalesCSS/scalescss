@@ -62,26 +62,6 @@ $ms-ratio: $fourth;
 ///
 @include establish-baseline;
 
-
-//
-// Responsive design breakpoints
-//
-// Scales is a mobile-first framework, so it needs to know when you want
-// to begin applying "non-mobile" styles to the design patterns.
-//
-// It is not advisable to set breakpoints in responsive designs based on specific
-// device widths. Instead, breakpoints should be applied when your content begins
-// to look awkward. If there are other widths that you need to specifically support
-// and a named variable makes sense, feel free to add it here (ex. $desk-start: 64.0625em; // 1025px ).
-//
-// Using ems instead of px allows your breakpoints to be relative to your $base-font-size.
-//
-// Usage:
-// @media screen and (min-width: $palm-end) { [Styles Here] }
-///
-$palm-end: 30.0625em !default; // 481px
-
-
 //
 // Heading sizes.
 ///
