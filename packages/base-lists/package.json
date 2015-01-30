@@ -1,0 +1,25 @@
+{
+  "name": "inuit-images",
+  "version": "0.3.3",
+  "description": "Base image styles for the inuitcss framework",
+  "main": "_base.images.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inuitcss/base.images.git"
+  },
+  "author": "Harry Roberts <harry@csswizardry.com>",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/inuitcss/base.images/issues"
+  },
+  "homepage": "https://github.com/inuitcss/base.images",
+  "keywords": [
+    "inuitcss",
+    "oocss",
+    "css"
+  ],
+  "dependencies": {
+    "inuit-defaults": "~0.2.0",
+    "inuit-mixins": "~0.2.2"
+  }
+}
