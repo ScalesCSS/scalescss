@@ -1,0 +1,47 @@
+// ==========================================================================
+// Block Quotes
+// ==========================================================================
+//
+// See http://alistapart.com/blog/post/more-thoughts-about-blockquotes-than-are-strictly-required
+// for rational of using <figure>. Not required for these styles to work, but good semantics.
+//
+// <figure>
+//      <blockquote>
+//          <p class="blockquote__quote">It is the unofficial force—the Baker Street irregulars.</p>
+//      </blockquote>
+//      <figcaption class="blockquote__source">Sherlock Holmes, <cite>Sign of Four</cite></figcaption>
+//  </figure>
+//
+///
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Available Variables
+///
+$source-prefix: "—" !default;
+
+//
+// Blockquote
+///
+.#{$scales-namespace}blockquote {
+    margin: 0;
+}
+
+.#{$scales-namespace}blockquote__quote {
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.#{$scales-namespace}blockquote__source {
+    display: block;
+    text-indent: 0;
+
+    &:before {
+        content: $source-prefix;
+    }
+}
