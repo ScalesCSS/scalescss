@@ -1,11 +1,9 @@
-# Images
+# Base Images for Scales
 
-The inuitcss `images` module provides very basic styling for images (`img`).
+These are some simple styles for fixing images so they are a bit more responsive.
 
-Install using Bower:
+## Requirements
 
-    $ bower install --save inuit-images
-
-Install using npm:
-
-    $ npm install --save inuit-images
+Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either:
+* Sass 3.2 or greater
+* LibSass 2.0 or greater
