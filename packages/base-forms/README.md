@@ -15,7 +15,7 @@ Scales provides default stacked forms, inline forms, and forms using an unordere
 ### Default stacked
 ```
 <form>
-    <label for="account">Account #<small class="label--additional">(Cannot Change)</small></label>
+    <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
     <input class="text-input" id="account" type="num" value="123456789" readonly>
 
     <label for="email">Email</label>
@@ -46,7 +46,7 @@ Scales provides default stacked forms, inline forms, and forms using an unordere
 ### Inline
 ```
 <form class="form--inline">
-    <label for="account">Account #<small class="label--additional">(Cannot Change)</small></label>
+    <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
     <input class="text-input" id="account" type="num" value="123456789" readonly>
 
     <label for="email">Email</label>
@@ -79,7 +79,7 @@ Scales provides default stacked forms, inline forms, and forms using an unordere
 <form>
     <ul class="form--list">
         <li class="input-container">
-            <label for="account">Account #<small class="label--additional">(Cannot Change)</small></label>
+            <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
             <input class="text-input" id="account" type="num" value="123456789" readonly>
         </li>
         <li class="input-container">
@@ -116,8 +116,8 @@ Scales provides default stacked forms, inline forms, and forms using an unordere
 
 * `.form--list`
 * `.input-container`
-* `.label`
-* `.label--additional`
+* `.form-label`
+* `.form-label--additional`
 * `.text-input`
 * `.form--inline`
 * `.is-disabled`

@@ -20,11 +20,11 @@ fieldset {
 }
 
 label,
-.label {
+.form-label {
     display: block;
 }
 
-.label--additional {
+.form-label--additional {
     display: block;
     font-weight: normal;
 }
@@ -44,7 +44,7 @@ textarea {
 .form--inline select,
 .form--inline textarea,
 .form--inline label,
-.form--inline .label {
+.form--inline .form-label {
     display: inline-block;
     vertical-align: middle;
 }
@@ -94,7 +94,7 @@ textarea:focus + .helper-text {
 
         <h3>Default stacked form</h3>
         <form>
-            <label for="account">Account #<small class="label--additional">(Cannot Change)</small></label>
+            <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
             <input class="text-input" id="account" type="num" value="123456789" readonly>
 
             <label for="email">Email</label>
@@ -125,7 +125,7 @@ textarea:focus + .helper-text {
         <form>
             <ul class="form--list">
                 <li class="input-container">
-                    <label for="account">Account #<small class="label--additional">(Cannot Change)</small></label>
+                    <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
                     <input class="text-input" id="account" type="num" value="123456789" readonly>
                 </li>
                 <li class="input-container">
@@ -161,7 +161,7 @@ textarea:focus + .helper-text {
 
         <h3>Inline form</h3>
         <form class="form--inline">
-            <label for="account">Account #<small class="label--additional">(Cannot Change)</small></label>
+            <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
             <input class="text-input" id="account" type="num" value="123456789" readonly>
 
             <label for="email">Email</label>

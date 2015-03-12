@@ -38,7 +38,7 @@ fieldset {
 //
 // Use when marking up a form as an unordered list. e.g. <ul class="form-list">
 ///
-.form-list {
+.#{$scales-namespace}form-list {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -50,24 +50,24 @@ fieldset {
 //
 // This could be a <div> or <span> or an <li> if you are using a list
 ///
-.input-container {
+.#{$scales-namespace}input-container {
     margin-bottom: $input-container-margin-bottom;
 }
 
 //
 // Labels
 //
-// The ".label" class can be used to make an element look like a
+// The ".form-label" class can be used to make an element look like a
 // label if an actual label isn't suitable.
 //
 ///
 label,
-.label {
+.#{$scales-namespace}form-label {
     display: block;
 }
 
 // Extra help text in labels
-.label--additional {
+.#{$scales-namespace}form-label--additional {
     display: block;
     font-weight: normal;
 }
@@ -82,7 +82,7 @@ label,
 // <input type="password" class="text-input">
 //
 ///
-.text-input,
+.#{$scales-namespace}text-input,
 select,
 textarea {
     display: block;
@@ -100,12 +100,12 @@ textarea {
 //
 // Force form elements into a single inline row
 ///
-.form-inline {
-    .text-input,
+.#{$scales-namespace}form-inline {
+    .#{$scales-namespace}text-input,
     select,
     textarea,
     label,
-    .label {
+    .#{$scales-namespace}form-label {
         display: inline-block;
         vertical-align: middle;
     }
@@ -145,13 +145,13 @@ textarea.is-readonly {
 //
 // Can't be used with .form--inline
 ///
-.helper-text {
+.#{$scales-namespace}helper-text {
     display: none;
 }
 
-.text-input:active + .helper-text,
-.text-input:focus + .helper-text,
-textarea:active + .helper-text,
-textarea:focus + .helper-text {
+.#{$scales-namespace}text-input:active + .#{$scales-namespace}helper-text,
+.#{$scales-namespace}text-input:focus + .#{$scales-namespace}helper-text,
+textarea:active + .#{$scales-namespace}helper-text,
+textarea:focus + .#{$scales-namespace}helper-text {
     display: block;
 }
