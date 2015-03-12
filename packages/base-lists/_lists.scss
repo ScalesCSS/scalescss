@@ -1,0 +1,31 @@
+// ==========================================================================
+// Lists
+// ==========================================================================
+//
+// Simple list modifier to remove margin and bullets from a list
+//
+///
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Bare List mixin
+///
+@mixin list--bare {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+//
+// Bare list
+//
+// Use as a class or extend the placeholder
+///
+.#{$scales-namespace}list--bare,
+%#{$scales-namespace}list--bare {
+    @include list--bare;
+}
