@@ -24,10 +24,6 @@ $horizontal-list-delimiter: ',\00A0' !default;
 
     > li {
         display: inline-block;
-
-        > a {
-            display: block;
-        }
     }
 }
 
