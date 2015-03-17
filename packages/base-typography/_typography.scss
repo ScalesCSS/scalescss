@@ -1,0 +1,129 @@
+// ==========================================================================
+// Typography
+// ==========================================================================
+//
+// These are base styles for typographic elements
+///
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Available Variables
+///
+$base-text-color: #333333 !default; //http://ianstormtaylor.com/design-tip-never-use-black/
+$code-block-padding: 0 1em 1em !default;
+$code-block-bg-color: #444444 !default;
+$code-block-text-color: #ffffff !default;
+
+// Fonts
+$sans-serif-font-stack: "Helvetica Neue", helvetica, arial, sans-serif !default;
+$serif-font-stack: Times, "Times New Roman", serif !default;
+$monospaced-font-stack: consolas, courier, monospace !default;
+$base-font-stack: $sans-serif-font-stack !default;
+$heading-font-stack: $serif-font-stack !default;
+$heading-font-weight: normal !default;
+
+// Font size and line height
+$base-font-size: 1rem !default;
+//
+// For accessibility, $base-line-height should be 1.5 times the $base-font-size
+// http://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation
+///
+$base-line-height: 1.5 !default;
+$lede-font-size: 1.25rem !default;
+
+// Heading sizes
+$h1-size: 2.25rem !default;
+$h2-size: 2rem !default;
+$h3-size: 1.75rem !default;
+$h4-size: 1.5rem !default;
+$h5-size: 1.25rem !default;
+$h6-size: 1rem !default;
+
+//
+// Base Typography Styles
+///
+body {
+    font-family: $base-font-stack;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $base-text-color;
+}
+
+//
+// Headings
+//
+// Extra class names allow same font-size to be used on other elements
+///
+h1, .h1, .alpha,
+h2, .h2, .beta,
+h3, .h3, .gamma,
+h4, .h4, .delta,
+h5, .h5, .epsilon,
+h6, .h6, .zeta {
+  font-family: $heading-font-stack;
+  font-weight: $heading-font-weight;
+}
+
+h1,
+.h1,
+.alpha {
+    font-size: $h1-size;
+}
+
+h2,
+.h2,
+.beta {
+    font-size: $h2-size;
+}
+
+h3,
+.h3,
+.gamma {
+    font-size: $h3-size;
+}
+
+h4,
+.h4,
+.delta {
+    font-size: $h4-size;
+}
+
+h5,
+.h5,
+.epsilon {
+    font-size: $h5-size;
+}
+
+h6,
+.h6,
+.zeta {
+    font-size: $h6-size;
+}
+
+//
+// Lede/Lead - Used to make the intoductory text slightly larger
+// http://en.wikipedia.org/wiki/Lead_paragraph
+///
+.#{$scales-namespace}lede,
+.#{$scales-namespace}lead {
+    font-size: $lede-font-size;
+}
+
+// Code blocks
+pre,
+code {
+    font-family: $monospaced-font-stack;
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: $code-block-padding;
+    background-color: $code-block-bg-color;
+    color: $code-block-text-color;
+}
