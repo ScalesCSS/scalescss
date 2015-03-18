@@ -1,0 +1,59 @@
+// ==========================================================================
+// Spacing overrides
+// ==========================================================================
+
+//
+// A set of classes for changing the margin and padding on an element.
+///
+
+//
+// Available variables
+///
+$space-s: .5em !default;
+$space-m: 1em !default;
+$space-l: 2em !default;
+$space-h: 3em !default;
+
+//
+// Spacing classes
+///
+.ptn,.pvn,.pan{ padding-top: 0 !important; }
+.pts,.pvs,.pas{ padding-top: $space-s !important; }
+.ptm,.pvm,.pam{ padding-top: $space-m !important; }
+.ptl,.pvl,.pal{ padding-top: $space-l !important; }
+.pth,.pvh,.pah{ padding-top: $space-h !important; }
+.prn,.phn,.pan{ padding-right: 0 !important; }
+.prs,.phs,.pas{ padding-right: $space-s !important; }
+.prm,.phm,.pam{ padding-right: $space-m !important; }
+.prl,.phl,.pal{ padding-right: $space-l !important; }
+.prh,.phh,.pah{ padding-right: $space-h !important; }
+.pbn,.pvn,.pan{ padding-bottom: 0 !important; }
+.pbs,.pvs,.pas{ padding-bottom: $space-s !important; }
+.pbm,.pvm,.pam{ padding-bottom: $space-m !important; }
+.pbl,.pvl,.pal{ padding-bottom: $space-l !important; }
+.pbh,.pvh,.pah{ padding-bottom: $space-h !important; }
+.pln,.phn,.pan{ padding-left: 0 !important; }
+.pls,.phs,.pas{ padding-left: $space-s !important; }
+.plm,.phm,.pam{ padding-left: $space-m !important; }
+.pll,.phl,.pal{ padding-left: $space-l !important; }
+.plh,.phh,.pah{ padding-left: $space-h !important; }
+.mtn,.mvn,.man{ margin-top: 0 !important; }
+.mts,.mvs,.mas{ margin-top: $space-s !important; }
+.mtm,.mvm,.mam{ margin-top: $space-m !important; }
+.mtl,.mvl,.mal{ margin-top: $space-l !important; }
+.mth,.mvh,.mah{ margin-top: $space-h !important; }
+.mrn,.mhn,.man{ margin-right: 0 !important; }
+.mrs,.mhs,.mas{ margin-right: $space-s !important; }
+.mrm,.mhm,.mam{ margin-right: $space-m !important; }
+.mrl,.mhl,.mal{ margin-right: $space-l !important; }
+.mrh,.mhh,.mah{ margin-right: $space-h !important; }
+.mbn,.mvn,.man{ margin-bottom: 0 !important; }
+.mbs,.mvs,.mas{ margin-bottom: $space-s !important; }
+.mbm,.mvm,.mam{ margin-bottom: $space-m !important; }
+.mbl,.mvl,.mal{ margin-bottom: $space-l !important; }
+.mbh,.mvh,.mah{ margin-bottom: $space-h !important; }
+.mln,.mhn,.man{ margin-left: 0 !important; }
+.mls,.mhs,.mas{ margin-left: $space-s !important; }
+.mlm,.mhm,.mam{ margin-left: $space-m !important; }
+.mll,.mhl,.mal{ margin-left: $space-l !important; }
+.mlh,.mhh,.mah{ margin-left: $space-h !important; }
