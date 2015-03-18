@@ -4,7 +4,7 @@
   "homepage": "https://github.com/ScalesCSS/patterns-buttons",
   "author": "Dave Gillhespy",
   "description": "Button pattern for Scales CSS",
-  "main": "_box.scss",
+  "main": "_buttons.scss",
   "keywords": [
     "[css",
     "scalescss",
