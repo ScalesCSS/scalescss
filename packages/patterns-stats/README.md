@@ -8,7 +8,7 @@ Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll n
 
 ## Dependencies
 
-* `utilities-clearfix.scss`
+* `utilities-clearfix`
 
 ## Usage
 
