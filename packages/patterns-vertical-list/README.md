@@ -4,9 +4,7 @@ A pattern for making a list vertical after it's been made horizontal.
 
 ## Requirements
 
-Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either:
-* Sass 3.2 or greater
-* LibSass 2.0 or greater
+Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
 ## Usage
 
@@ -35,8 +33,6 @@ Vertical List should be used whenever you need to make an ordered or unordered l
 ### Other uses
 
 Since there are times when you want a list to be vertical at some media queries and horizontal at others, the vertical list pattern is also able to be used as a mixin or extended as a placeholder.
-
-_**The mixin is a temporary solution until Sass allows the use of `@extend` in media queries.**_
 
 ```
 @include vertical-list;
