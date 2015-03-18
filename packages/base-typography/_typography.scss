@@ -58,49 +58,49 @@ body {
 //
 // Extra class names allow same font-size to be used on other elements
 ///
-h1, .h1, .alpha,
-h2, .h2, .beta,
-h3, .h3, .gamma,
-h4, .h4, .delta,
-h5, .h5, .epsilon,
-h6, .h6, .zeta {
+h1, .#{$scales-namespace}h1, .#{$scales-namespace}alpha,
+h2, .#{$scales-namespace}h2, .#{$scales-namespace}beta,
+h3, .#{$scales-namespace}h3, .#{$scales-namespace}gamma,
+h4, .#{$scales-namespace}h4, .#{$scales-namespace}delta,
+h5, .#{$scales-namespace}h5, .#{$scales-namespace}epsilon,
+h6, .#{$scales-namespace}h6, .#{$scales-namespace}zeta {
   font-family: $heading-font-stack;
   font-weight: $heading-font-weight;
 }
 
 h1,
-.h1,
-.alpha {
+.#{$scales-namespace}h1,
+.#{$scales-namespace}alpha {
     font-size: $h1-size;
 }
 
 h2,
-.h2,
-.beta {
+.#{$scales-namespace}h2,
+.#{$scales-namespace}beta {
     font-size: $h2-size;
 }
 
 h3,
-.h3,
-.gamma {
+.#{$scales-namespace}h3,
+.#{$scales-namespace}gamma {
     font-size: $h3-size;
 }
 
 h4,
-.h4,
-.delta {
+.#{$scales-namespace}h4,
+.#{$scales-namespace}delta {
     font-size: $h4-size;
 }
 
 h5,
-.h5,
-.epsilon {
+.#{$scales-namespace}h5,
+.#{$scales-namespace}epsilon {
     font-size: $h5-size;
 }
 
 h6,
-.h6,
-.zeta {
+.#{$scales-namespace}h6,
+.#{$scales-namespace}zeta {
     font-size: $h6-size;
 }
 

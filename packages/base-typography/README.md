@@ -4,9 +4,7 @@ These are the base styles for typographic elements.
 
 ## Requirements
 
-Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either:
-* Sass 3.2 or greater
-* LibSass 2.0 or greater
+Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
 ## Usage
 
@@ -32,6 +30,20 @@ Scales provides default typography for headings, text elements, lede paragraphs,
 ## Available Classes
 
 * `.lede` or `.lead`
+
+### Heading Utility Classes
+* `.h1`
+* `.h2`
+* `.h3`
+* `.h4`
+* `.h5`
+* `.h6`
+* `.alpha`
+* `.beta`
+* `.gamma`
+* `.delta`
+* `.epsilon`
+* `.zeta`
 
 ## Available Variables
 
