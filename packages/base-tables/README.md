@@ -4,9 +4,7 @@ These are the base styles for creating tables.
 
 ## Requirements
 
-Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either:
-* Sass 3.2 or greater
-* LibSass 2.0 or greater
+Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
 ## Usage
 
@@ -119,43 +117,43 @@ $table-border-style: dashed;
 }
 ```
 ```
-    <table class="table--primary table--bordered-rows">
-        <thead>
-            <tr>
-                <th>Lorem</th>
-                <th>Ipsum</th>
-                <th>Dolor</th>
-                <th>Sit</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th rowspan="3">Sit</th>
-                <td>Dolor</td>
-                <td class="numerical">03.788</td>
-                <td>Lorem</td>
-            </tr>
-            <tr>
-                <td>Dolor</td>
-                <td class="numerical">32.210</td>
-                <td>Lorem</td>
-            </tr>
-            <tr>
-                <td>Dolor</td>
-                <td class="numerical">47.797</td>
-                <td>Lorem</td>
-            </tr>
-            <tr>
-                <th rowspan="2">Sit</th>
-                <td>Dolor</td>
-                <td class="numerical">09.640</td>
-                <td>Lorem</td>
-            </tr>
-            <tr>
-                <td>Dolor</td>
-                <td class="numerical">12.117</td>
-                <td>Lorem</td>
-            </tr>
-        </tbody>
-    </table>
+<table class="table--primary table--bordered-rows">
+    <thead>
+        <tr>
+            <th>Lorem</th>
+            <th>Ipsum</th>
+            <th>Dolor</th>
+            <th>Sit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th rowspan="3">Sit</th>
+            <td>Dolor</td>
+            <td class="numerical">03.788</td>
+            <td>Lorem</td>
+        </tr>
+        <tr>
+            <td>Dolor</td>
+            <td class="numerical">32.210</td>
+            <td>Lorem</td>
+        </tr>
+        <tr>
+            <td>Dolor</td>
+            <td class="numerical">47.797</td>
+            <td>Lorem</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Sit</th>
+            <td>Dolor</td>
+            <td class="numerical">09.640</td>
+            <td>Lorem</td>
+        </tr>
+        <tr>
+            <td>Dolor</td>
+            <td class="numerical">12.117</td>
+            <td>Lorem</td>
+        </tr>
+    </tbody>
+</table>
 ```
