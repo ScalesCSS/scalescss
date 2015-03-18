@@ -1,0 +1,21 @@
+{
+  "name": "scales-base-blockquotes",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ScalesCSS/base-blockquotes",
+  "author": "Dave Gillhespy",
+  "description": "Base block quote styles for Scales CSS",
+  "main": "_blockquotes.scss",
+  "keywords": [
+    "[css",
+    "scalescss",
+    "scales",
+    "sass",
+    "scss",
+    "blockqoutes",
+    "framework]"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*"
+  ]
+}
