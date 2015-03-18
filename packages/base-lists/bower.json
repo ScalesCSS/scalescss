@@ -1,0 +1,21 @@
+{
+  "name": "scales-base-lists",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ScalesCSS/base-lists",
+  "author": "Dave Gillhespy",
+  "description": "Base list styles for Scales CSS",
+  "main": "_lists.scss",
+  "keywords": [
+    "[css",
+    "scalescss",
+    "scales",
+    "sass",
+    "scss",
+    "lists",
+    "framework]"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*"
+  ]
+}
