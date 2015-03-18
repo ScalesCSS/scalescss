@@ -27,7 +27,7 @@ $size-step-value: 5;
 $size: $size-range-start;
 
 @while $size <= $size-range-end {
-    .size-#{$size} {
+    .#{$scales-namespace}size-#{$size} {
         width: unquote('#{$size}%') !important;
     }
     $size: $size + $size-step-value;
