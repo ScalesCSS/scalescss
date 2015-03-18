@@ -1,0 +1,21 @@
+{
+  "name": "scales-patterns-buttons",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ScalesCSS/patterns-buttons",
+  "author": "Dave Gillhespy",
+  "description": "Button pattern for Scales CSS",
+  "main": "_box.scss",
+  "keywords": [
+    "[css",
+    "scalescss",
+    "scales",
+    "sass",
+    "scss",
+    "buttons",
+    "framework]"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*"
+  ]
+}
