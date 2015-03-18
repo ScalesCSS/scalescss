@@ -1,0 +1,21 @@
+{
+  "name": "scales-base-typography",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ScalesCSS/base-typography",
+  "author": "Dave Gillhespy",
+  "description": "Base typographic styles for Scales CSS",
+  "main": "_typography.scss",
+  "keywords": [
+    "[css",
+    "scalescss",
+    "scales",
+    "sass",
+    "scss",
+    "typography",
+    "framework]"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*"
+  ]
+}
