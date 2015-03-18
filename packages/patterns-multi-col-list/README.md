@@ -4,9 +4,7 @@ A pattern that makes a multi-column list out of a single list.
 
 ## Requirements
 
-Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either:
-* Sass 3.2 or greater
-* LibSass 2.0 or greater
+Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
 ## Usage
 
@@ -82,8 +80,6 @@ Multi column lists can be used when you have a single list that you want to spli
 ### Other uses
 
 Since there are situations where you want a list have a different number of columns at different media queries, the multi column list pattern is also able to be used as a mixin or extended as a placeholder.
-
-_**The mixin is a temporary solution until Sass allows the use of `@extend` in media queries.**_
 
 ```
 @include columns(2);
