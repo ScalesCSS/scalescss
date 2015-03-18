@@ -1,0 +1,21 @@
+{
+  "name": "scales-overrides-size",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ScalesCSS/overrides-size",
+  "author": "Dave Gillhespy",
+  "description": "Size classes to force an element to a specific size for Scales CSS",
+  "main": "_size.scss",
+  "keywords": [
+    "[css",
+    "scalescss",
+    "scales",
+    "sass",
+    "scss",
+    "size",
+    "framework]"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*"
+  ]
+}
