@@ -10,7 +10,7 @@ Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll n
 
 ## Dependencies
 
-* `utilities-clearfix.scss`
+* `utilities-clearfix`
 
 ## Usage
 The media object can be used in many situations for positioning any type of image or other media next to some other content. Read [Nicole Sullivan's](http://twitter.com/stubbornella) post on the topic http://stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code.
