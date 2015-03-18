@@ -1,0 +1,21 @@
+{
+  "name": "scales-base-forms",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ScalesCSS/base-forms",
+  "author": "Dave Gillhespy",
+  "description": "Base form styles for Scales CSS",
+  "main": "_forms.scss",
+  "keywords": [
+    "[css",
+    "scalescss",
+    "scales",
+    "sass",
+    "scss",
+    "forms",
+    "framework]"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*"
+  ]
+}
