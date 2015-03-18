@@ -4,13 +4,11 @@ A pattern for making a list horizontal instead of vertical.
 
 ## Requirements
 
-Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either:
-* Sass 3.2 or greater
-* LibSass 2.0 or greater
+Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
 ## Usage
 
-Horizontal List should be used whenever you need to make an ordered or unordered list horizontal instead of vertical. You can extend it with `--delimited` to semantically mark up a character delimited list for things like tags, etc. You can also center, right align, or hav the list fill the available space.
+Horizontal List should be used whenever you need to make an ordered or unordered list horizontal instead of vertical. You can extend it with `--delimited` to semantically mark up a character delimited list for things like tags, etc. You can also center, right align, or have the list fill the available space.
 
 ### Default
 
@@ -65,8 +63,6 @@ Horizontal List should be used whenever you need to make an ordered or unordered
 ### Other uses
 
 Since there are times when you want a list to be horizontal at some media queries and vertical at others, the horizontal list pattern is also able to be used as a mixin or extended as a placeholder.
-
-_**The mixin is a temporary solution until Sass allows the use of `@extend` in media queries.**_
 
 ```
 @include horizontal-list;
