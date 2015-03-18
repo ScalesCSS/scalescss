@@ -22,6 +22,14 @@ The box pattern can be used on any element that you want. For example:
 </div>
 ```
 
+### Other uses
+
+Since there are times when you want any element to be boxed off, possibly with different amounts of padding at different breakpoints, the box pattern is also able to be used as a mixin.
+
+```
+@include box($padding);
+```
+
 ## Available Classes
 
 * `.box`

@@ -21,6 +21,19 @@ $box-padding-huge: $box-padding * 4 !default;
 ///
 
 //
+// Box Mixin
+///
+@mixin box($padding) {
+    @extend %clearfix;
+    display: block;
+    padding: $padding;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+//
 // Default box
 ///
 .#{$scales-namespace}box,
@@ -29,13 +42,7 @@ $box-padding-huge: $box-padding * 4 !default;
 .#{$scales-namespace}box--small,
 .#{$scales-namespace}box--large,
 .#{$scales-namespace}box--huge {
-    @extend %clearfix;
-    display: block;
-    padding: $box-padding;
-
-    > :last-child {
-        margin-bottom: 0;
-    }
+    @include box($box-padding);
 }
 
 //
