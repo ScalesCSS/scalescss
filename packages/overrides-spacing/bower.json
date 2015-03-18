@@ -1,0 +1,21 @@
+{
+  "name": "scales-overrides-spacing",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ScalesCSS/overrides-spacing",
+  "author": "Dave Gillhespy",
+  "description": "Spacing overrides for Scales CSS",
+  "main": "_spacing.scss",
+  "keywords": [
+    "[css",
+    "scalescss",
+    "scales",
+    "sass",
+    "scss",
+    "spacing",
+    "framework]"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*"
+  ]
+}
