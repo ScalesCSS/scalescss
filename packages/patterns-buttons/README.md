@@ -4,9 +4,7 @@ A simple baseline for creating buttons. The button pattern can easily be extende
 
 ## Requirements
 
-Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either:
-* Sass 3.2 or greater
-* LibSass 2.0 or greater
+Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
 ## Usage
 
