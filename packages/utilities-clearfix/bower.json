@@ -1,0 +1,21 @@
+{
+  "name": "scales-utilities-clearfix",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ScalesCSS/utilities-clearfix",
+  "author": "Dave Gillhespy",
+  "description": "A super minimal clearfix utility for Scales CSS",
+  "main": "_clearfix.scss",
+  "keywords": [
+    "[css",
+    "scalescss",
+    "scales",
+    "sass",
+    "scss",
+    "clearfix",
+    "framework]"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*"
+  ]
+}
