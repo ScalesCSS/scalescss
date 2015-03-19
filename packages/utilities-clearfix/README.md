@@ -6,6 +6,10 @@ A super minimal clearfix utility.
 
 Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-utilities-clearfix`
+
 ## Usage
 
 Clearfix is used to force an element to self-clear its floated children.
