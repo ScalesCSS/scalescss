@@ -6,6 +6,10 @@ A pattern for aligning two elements away from each other.
 
 Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-patterns-split`
+
 ## Usage
 
 The Split pattern can be used on any elements but works best in a `<dl>` or `<ul/ol>`. For example:
