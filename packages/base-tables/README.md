@@ -6,6 +6,10 @@ These are the base styles for creating tables.
 
 Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-base-tables`
+
 ## Usage
 
 Tables can get pretty crazy. Take a look at this example with some of the classes that Scales provides and how to use them:
