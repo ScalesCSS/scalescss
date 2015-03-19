@@ -10,6 +10,10 @@ Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll n
 
 * `utilities-clearfix`
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-patterns-stats`
+
 ## Usage
 
 Stats should be used with `<dl>`s to group the stat title and value. The `--big` variation can be used when the title or values are too long to sit next to each other in a row. For example:
