@@ -6,6 +6,10 @@ These are the base styles for block quotes.
 
 Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-base-blockquotes`
+
 ## Usage
 
 A nice semantic way to markup a blockquote is using the `figure` element. See http://alistapart.com/blog/post/more-thoughts-about-blockquotes-than-are-strictly-required for the rationale behind this approach.
