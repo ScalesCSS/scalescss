@@ -2,6 +2,10 @@
 
 A companion to [Normalize.css](http://necolas.github.io/normalize.css/) that resets a few things that are still useful from a traditional reset. Borrows from [HTML5 Boilerplate](http://h5bp.com) and [Reset Restarted](http://csswizardry.com/2011/10/reset-restarted).
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-utilities-reset`
+
 ## Usage
 
 Should be loaded immediately after Normalize.css.
