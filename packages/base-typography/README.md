@@ -6,6 +6,10 @@ These are the base styles for typographic elements.
 
 Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-base-typography`
+
 ## Usage
 
 Scales provides default typography for headings, text elements, lede paragraphs, and code blocks.
