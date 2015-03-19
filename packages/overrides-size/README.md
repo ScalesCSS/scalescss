@@ -6,6 +6,10 @@ A set of classes for changing the width of an element.
 
 Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-overrides-size`
+
 ## Usage
 
 By default there is a class for every 5% step from 5 to 100 in the format `.size-[percent]`. Simply put a class in your HTML and the width will change by that percentage.
