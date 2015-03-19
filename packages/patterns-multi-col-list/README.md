@@ -6,6 +6,10 @@ A pattern that makes a multi-column list out of a single list.
 
 Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-patterns-multi-col-list`
+
 ## Usage
 
 Multi column lists can be used when you have a single list that you want to split into multiple columns.
