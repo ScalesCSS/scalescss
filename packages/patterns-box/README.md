@@ -10,6 +10,10 @@ Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll n
 
 * `utilities-clearfix`
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-patterns-box`
+
 ## Usage
 
 The box pattern can be used on any element that you want. For example:
