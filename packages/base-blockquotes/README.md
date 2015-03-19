@@ -44,6 +44,6 @@ To give all Scales classes a namespace, you will need to set this variable in a 
 
 ```
 @import your-project/settings; // $scales-namespace is set in this file
-@import your-project/scales-base; // Imports the Scales library
+@import your-project/scales; // Imports the Scales library
 @import your-project/project // The rest of your project imports
 ```
