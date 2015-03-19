@@ -6,6 +6,10 @@ A pattern for making a list vertical after it's been made horizontal.
 
 Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-patterns-vertical-list`
+
 ## Usage
 
 Vertical List should be used whenever you need to make an ordered or unordered list vertical instead of horizontal. You can extend it with `--delimited` to semantically mark up a character delimited list for things like tags, etc.
