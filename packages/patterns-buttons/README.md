@@ -6,6 +6,10 @@ A simple baseline for creating buttons. The button pattern can easily be extende
 
 Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-patterns-buttons`
+
 ## Usage
 
 Buttons should be used with links, buttons, and submit inputs for best results
