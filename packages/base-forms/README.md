@@ -6,6 +6,10 @@ These are the base styles for creating forms.
 
 Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-base-forms`
+
 ## Usage
 
 Scales provides default stacked forms, inline forms, and forms using an unordered/ordered list:
