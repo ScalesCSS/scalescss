@@ -6,6 +6,10 @@ Simple list modifier to remove margin and bullets from a list.
 
 Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-base-lists`
+
 ## Usage
 
 Sometimes you need a list without any margin or padding and no bullets.
