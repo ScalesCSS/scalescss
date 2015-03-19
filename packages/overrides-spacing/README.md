@@ -6,6 +6,10 @@ A set of classes for changing the margin and padding on an element.
 
 Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-overrides-spacing`
+
 ## Usage
 
 Spacing classes can be used to modify the default padding and margins on elements These should be used sparingly. You should be using your project defaults most of the time, these are exceptions!
