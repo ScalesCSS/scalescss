@@ -8,6 +8,10 @@ Based on [The Flag Object](http://csswizardry.com/2013/05/the-flag-object/), by 
 
 Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
+## Installation
+
+* [Bower](http://bower.io/): `bower install --save scales-patterns-flag`
+
 ## Usage
 The flag object can be used in many situations for positioning any type of image or other media next to some other content.
 
