@@ -34,7 +34,7 @@ Scales provides default stacked forms, inline forms, and forms using an unordere
         <option>Other</option>
     </select>
 
-    <lable>Introduce yourself</lable>
+    <label>Introduce yourself</label>
     <textarea></textarea>
 
     <label for="newsletter">
@@ -65,7 +65,7 @@ Scales provides default stacked forms, inline forms, and forms using an unordere
         <option>Other</option>
     </select>
 
-    <lable>Introduce yourself</lable>
+    <label>Introduce yourself</label>
     <textarea></textarea>
 
     <label for="newsletter">
@@ -101,7 +101,7 @@ Scales provides default stacked forms, inline forms, and forms using an unordere
             </select>
         </li>
         <li class="input-container">
-            <lable>Introduce yourself</lable>
+            <label>Introduce yourself</label>
             <textarea></textarea>
         </li>
         <li class="input-container">
@@ -114,7 +114,7 @@ Scales provides default stacked forms, inline forms, and forms using an unordere
 </form>
 ```
 
-## Available Classes
+## Availabel Classes
 
 * `.form--list`
 * `.input-container`
@@ -126,7 +126,7 @@ Scales provides default stacked forms, inline forms, and forms using an unordere
 * `.is-readonly`
 * `.helper-text`
 
-## Available Variables
+## Availabel Variables
 
 * `$fieldset-padding`
 * `$text-input-padding`
