@@ -31,9 +31,12 @@ Buttons should be used with links, buttons, and submit inputs for best results
 * `$btn-border-width`
 * `$btn-border-color`
 * `$btn-border-style`
+* `$btn-border-radius`
 * `$btn-text-color`
 * `$btn-font`
 * `$btn-padding`
+* `$btn-hover-background-color`
+* `$btn-hover-text-color`
 * `$btn-disabled-opacity`
 
 ### The Scales Namespace Variable

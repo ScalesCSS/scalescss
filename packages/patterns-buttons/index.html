@@ -5,39 +5,45 @@
 <title>Button Pattern - Scales</title>
 <meta name="viewport" content="initial-scale=1,width=device-width">
 <style>
-    .btn {
-        -webkit-appearance: none;
-        background-color: #d3d3d3;
-        border-width: 0;
-        border-color: #000;
-        border-style: solid;
-        color: inherit;
-        cursor: pointer;
-        display: inline-block;
-        font: inherit;
-        line-height: normal;
-        margin: 0;
-        overflow: visible;
-        padding: 0.5em 0.75em;
-        text-align: center;
-        text-decoration: none;
-        vertical-align: middle;
-        white-space: normal;
-    }
-    .btn:hover, .btn:active, .btn:focus {
-        text-decoration: none;
-    }
+.btn {
+  -webkit-appearance: none;
+  background-color: #d3d3d3;
+  border-width: 0;
+  border-color: #000;
+  border-style: solid;
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  line-height: normal;
+  margin: 0;
+  overflow: visible;
+  padding: 0.5em 0.75em;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: normal;
+}
+.btn:hover, .btn:active, .btn:focus {
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: #c6c6c6;
+  color: inherit;
+}
 
-    .btn:disabled,
-    .btn.is-disabled {
-        cursor: default;
-        opacity: 0.5;
-    }
+.btn:disabled,
+.btn.is-disabled {
+  cursor: default;
+  opacity: 0.5;
+}
 
-    .btn::-moz-focus-inner {
-        border: 0;
-        padding: 0;
-    }
+.btn::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
 </style>
 </head>
 <body>

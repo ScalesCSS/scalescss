@@ -14,9 +14,12 @@ $btn-background-color: #d3d3d3 !default;
 $btn-border-width: 0 !default;
 $btn-border-color: #000 !default;
 $btn-border-style: solid !default;
+$btn-border-radius: 0 !default;
 $btn-text-color: inherit !default;
 $btn-font: inherit !default;
 $btn-padding: .5em .75em !default;
+$btn-hover-background-color: #c6c6c6 !default;
+$btn-hover-text-color: inherit !default;
 $btn-disabled-opacity: .5 !default;
 
 //
@@ -32,6 +35,7 @@ $btn-disabled-opacity: .5 !default;
     border-width: $btn-border-width;
     border-color: $btn-border-color;
     border-style: $btn-border-style;
+    border-radius: $btn-border-radius;
     color: $btn-text-color;
     cursor: pointer;
     display: inline-block;
@@ -49,6 +53,11 @@ $btn-disabled-opacity: .5 !default;
     &:active,
     &:focus {
         text-decoration: none;
+    }
+
+    &:hover {
+        background-color: $btn-hover-background-color;
+        color: $btn-hover-text-color;
     }
 }
 
