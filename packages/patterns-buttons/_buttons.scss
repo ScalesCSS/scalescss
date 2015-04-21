@@ -68,6 +68,9 @@ $btn-disabled-opacity: .5 !default;
 .#{$scales-namespace}btn.is-disabled {
     opacity: $btn-disabled-opacity;
     pointer-events: none;
+    // Avoiding conflict with disabled form inputs
+    background-color: $btn-background-color;
+    color: $btn-text-color;
 }
 
 //
