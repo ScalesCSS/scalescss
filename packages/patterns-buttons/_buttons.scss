@@ -66,8 +66,8 @@ $btn-disabled-opacity: .5 !default;
 ///
 .#{$scales-namespace}btn:disabled,
 .#{$scales-namespace}btn.is-disabled {
-    cursor: default;
     opacity: $btn-disabled-opacity;
+    pointer-events: none;
 }
 
 //
