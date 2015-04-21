@@ -158,6 +158,7 @@ $media-stacked-breakpoint: 25em !default;
     .#{$scales-namespace}media--stacked {
 
         > .#{$scales-namespace}media__figure {
+            display: block;
             float: none;
             margin-right: 0;
             margin-left:  0;
