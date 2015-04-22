@@ -70,6 +70,7 @@ $btn-disabled-opacity: .5 !default;
     pointer-events: none;
     // Avoiding conflict with disabled form inputs
     background-color: $btn-background-color;
+    border-color: $btn-border-color;
     color: $btn-text-color;
 }
 
