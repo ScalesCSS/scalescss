@@ -1,6 +1,6 @@
 {
   "name": "scales",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "homepage": "https://github.com/ScalesCSS/scales",
   "author": "Dave Gillhespy",
   "description": "Scales is a design-free collection of OOCSS patterns, framework settings, & utilities to quickly build mobile-first, responsive web projects",
@@ -15,7 +15,7 @@
     "scales-overrides-size": "~1.0.0",
     "scales-overrides-spacing": "~1.0.0",
     "scales-patterns-box": "~1.0.0",
-    "scales-patterns-buttons": "~1.1.2",
+    "scales-patterns-buttons": "~1.1.3",
     "scales-patterns-flag": "~1.0.0",
     "scales-patterns-horizontal-list": "~1.0.0",
     "scales-patterns-media-object": "~1.0.1",
