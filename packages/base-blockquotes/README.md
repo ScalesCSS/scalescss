@@ -8,6 +8,7 @@ Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll n
 
 ## Installation
 
+* [NPM](http://npmjs.com): `npm install --save scales-base-blockquotes`
 * [Bower](http://bower.io/): `bower install --save scales-base-blockquotes`
 
 ## Usage
