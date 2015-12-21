@@ -1,5 +1,5 @@
 {
-  "name": "scales",
+  "name": "scalescss",
   "version": "2.2.0",
   "description": "Scales is a design-free collection of OOCSS patterns, framework settings, & utilities to quickly build mobile-first, responsive web projects",
   "main": "_scales.scss",
