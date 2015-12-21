@@ -1,8 +1,8 @@
 {
   "name": "scales-patterns-media-object",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A pattern for the Media Object for Scales CSS",
-  "main": "_horizontal-list.scss",
+  "main": "_media-object.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
