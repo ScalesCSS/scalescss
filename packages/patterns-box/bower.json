@@ -1,12 +1,12 @@
 {
   "name": "scales-patterns-box",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/ScalesCSS/patterns-box",
   "author": "Dave Gillhespy",
   "description": "A simple pattern for boxing off content for Scales CSS",
   "main": "_box.scss",
   "dependencies": {
-    "scales-utilities-clearfix": "~1.0.0"
+    "scales-utilities-clearfix": "^1.0.0"
   },
   "keywords": [
     "[css",
