@@ -24,11 +24,15 @@ Scales uses `box-sizing: border-box;`, and `display: table-cell;`, neither of wh
 
 ## Dependencies
 * [Sass](http://sass-lang.com/) - Either Ruby Sass or Libsass.
-* [Bower](http://bower.io/) - To pull all of the scales repositories together. Not technically required as you could manually install each repo.
+* [NPM](http://npmjs.com) or [Bower](http://bower.io/) - To pull all of the scales repositories together. Not technically required as you could manually install each repo.
 
 ## Setup
 Make sure you have the dependencies installed on your system and then, from the root directory of your project, run:
 
+```
+npm install --save scales
+```
+or
 ```
 bower install --save scales
 ```

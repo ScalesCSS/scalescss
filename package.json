@@ -1,10 +1,21 @@
 {
   "name": "scales",
   "version": "2.2.0",
-  "homepage": "https://github.com/ScalesCSS/scales",
-  "author": "Dave Gillhespy",
   "description": "Scales is a design-free collection of OOCSS patterns, framework settings, & utilities to quickly build mobile-first, responsive web projects",
   "main": "_scales.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScalesCSS/scales"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/scales/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/scales#readme",
   "dependencies": {
     "scales-base-blockquotes": "^1.0.0",
     "scales-base-forms": "^1.0.0",
@@ -26,9 +37,5 @@
     "scales-utilities-clearfix": "^1.0.0",
     "scales-utilities-normalize": "^3.0.0",
     "scales-utilities-reset": "^1.0.0"
-  },
-  "license": "MIT",
-  "ignore": [
-    "**/.*"
-  ]
+  }
 }
