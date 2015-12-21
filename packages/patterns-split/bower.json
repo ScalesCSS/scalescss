@@ -1,6 +1,6 @@
 {
   "name": "scales-patterns-split",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/ScalesCSS/patterns-split",
   "author": "Dave Gillhespy",
   "description": "A pattern for aligning two elements away from one another for Scales CSS",
