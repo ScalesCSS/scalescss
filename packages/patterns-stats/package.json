@@ -1,0 +1,22 @@
+{
+  "name": "scales-patterns-stats",
+  "version": "1.1.0",
+  "description": "A pattern to display statistic-like information for Scales CSS",
+  "main": "_stats.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScalesCSS/patterns-stats"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/patterns-stats/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/patterns-stats#readme",
+  "dependencies": {
+    "scales-utilities-clearfix": "^1.0.0"
+  }
+}

@@ -1,12 +1,12 @@
 {
   "name": "scales-patterns-stats",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/ScalesCSS/patterns-stats",
   "author": "Dave Gillhespy",
   "description": "A pattern to display statistic-like information for Scales CSS",
   "main": "_stats.scss",
   "dependencies": {
-    "scales-utilities-clearfix": "~1.0.0"
+    "scales-utilities-clearfix": "^1.0.0"
   },
   "keywords": [
     "[css",
