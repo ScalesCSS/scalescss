@@ -6,8 +6,13 @@ A pattern that makes a multi-column list out of a single list.
 
 Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
+## Dependencies
+
+* `utilities-clearfix`
+
 ## Installation
 
+* [NPM](http://npmjs.com): `npm install --save scales-patterns-multi-col-list`
 * [Bower](http://bower.io/): `bower install --save scales-patterns-multi-col-list`
 
 ## Usage

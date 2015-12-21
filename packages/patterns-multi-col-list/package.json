@@ -1,0 +1,22 @@
+{
+  "name": "scales-patterns-multi-col-list",
+  "version": "1.1.0",
+  "description": "A pattern that makes a multi-column list out of a single list for Scales CSS",
+  "main": "_multi-col-list.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScalesCSS/patterns-multi-col-list"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/patterns-multi-col-list/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/patterns-multi-col-list#readme",
+  "dependencies": {
+    "scales-utilities-clearfix": "^1.0.0"
+  }
+}
