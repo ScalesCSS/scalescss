@@ -1,0 +1,19 @@
+{
+  "name": "scales-patterns-horizontal-list",
+  "version": "1.1.0",
+  "description": "A pattern for making a list horizontal for Scales CSS",
+  "main": "_horizontal-list.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScalesCSS/patterns-horizontal-list"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/patterns-horizontal-list/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/patterns-horizontal-list#readme"
+}
