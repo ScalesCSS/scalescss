@@ -1,6 +1,6 @@
 {
   "name": "scales-patterns-vertical-list",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/ScalesCSS/patterns-vertical-list",
   "author": "Dave Gillhespy",
   "description": "A pattern for making a list vertical after it has been made horizontal for Scales CSS",
