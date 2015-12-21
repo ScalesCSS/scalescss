@@ -30,11 +30,11 @@ Scales uses `box-sizing: border-box;`, and `display: table-cell;`, neither of wh
 Make sure you have the dependencies installed on your system and then, from the root directory of your project, run:
 
 ```
-npm install --save scales
+npm install --save scalescss
 ```
 or
 ```
-bower install --save scales
+bower install --save scalescss
 ```
 
 Next you will want to create 3 files (name them whatever you want):
