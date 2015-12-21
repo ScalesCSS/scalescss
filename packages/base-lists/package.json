@@ -1,8 +1,8 @@
 {
   "name": "scales-base-lists",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Base list styles for Scales CSS",
-  "main": "_forms.scss",
+  "main": "_lists.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
