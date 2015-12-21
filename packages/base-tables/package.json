@@ -1,8 +1,8 @@
 {
   "name": "scales-base-tables",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Base table styles for Scales CSS",
-  "main": "_forms.scss",
+  "main": "_tables.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
