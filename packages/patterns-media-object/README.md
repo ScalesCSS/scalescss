@@ -14,6 +14,7 @@ Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll n
 
 ## Installation
 
+* [NPM](http://npmjs.com): `npm install --save scales-patterns-media-object`
 * [Bower](http://bower.io/): `bower install --save scales-patterns-media-object`
 
 ## Usage
