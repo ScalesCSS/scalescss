@@ -4,6 +4,7 @@ A companion to [Normalize.css](http://necolas.github.io/normalize.css/) that res
 
 ## Installation
 
+* [NPM](http://npmjs.com): `npm install --save scales-utilities-reset`
 * [Bower](http://bower.io/): `bower install --save scales-utilities-reset`
 
 ## Usage
