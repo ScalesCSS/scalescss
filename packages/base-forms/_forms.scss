@@ -21,6 +21,7 @@ $text-input-border-style: solid !default;
 $text-input-border-color: #000 !default;
 $text-input-border-radius: 0 !default;
 $input-container-margin-bottom: 1em !default;
+$input-container-inline-valign: top !default;
 $input-disabled-border-color: #aaa !default;
 $input-disabled-background-color: #ccc !default;
 $input-disabled-text-color: #aaa !default;
@@ -52,6 +53,15 @@ fieldset {
 ///
 .#{$scales-namespace}input-container {
     margin-bottom: $input-container-margin-bottom;
+}
+
+//
+// Use this class to force the input containers into a single row and
+// control the vertical alignment of the fields.
+///
+.#{$scales-namespace}input-container--inline {
+    display: inline-block;
+    vertical-align: $input-container-inline-valign;
 }
 
 //
@@ -94,10 +104,6 @@ textarea {
 }
 
 //
-// Groups of checkboxes and radios
-///
-
-//
 // Force form elements into a single inline row
 ///
 .#{$scales-namespace}form-inline {
@@ -110,6 +116,7 @@ textarea {
         vertical-align: middle;
     }
 }
+
 
 //
 // Input states
@@ -143,7 +150,7 @@ textarea.is-readonly {
 //
 // Extra help text displayed after a field when that field is in focus.
 //
-// Can't be used with .form--inline
+// Can't be used with .form-inline
 ///
 .#{$scales-namespace}helper-text {
     display: none;

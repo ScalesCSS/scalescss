@@ -6,47 +6,52 @@
 <meta name="viewport" content="initial-scale=1,width=device-width">
 <style>
 fieldset {
-    padding: 1em;
+  padding: 1em;
 }
 
-.form--list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.form-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .input-container {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.input-container--inline {
+  display: inline-block;
+  vertical-align: top;
 }
 
 label,
 .form-label {
-    display: block;
+  display: block;
 }
 
 .form-label--additional {
-    display: block;
-    font-weight: normal;
+  display: block;
+  font-weight: normal;
 }
 
 .text-input,
 select,
 textarea {
-    display: block;
-    padding: 0.5em;
-    border: 1px;
-    border-style: solid;
-    border-color: #000;
-    border-radius: 0;
+  display: block;
+  padding: 0.5em;
+  border: 1px;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 0;
 }
 
-.form--inline .text-input,
-.form--inline select,
-.form--inline textarea,
-.form--inline label,
-.form--inline .form-label {
-    display: inline-block;
-    vertical-align: middle;
+.form-inline .text-input,
+.form-inline select,
+.form-inline textarea,
+.form-inline label,
+.form-inline .form-label {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 input[disabled],
@@ -55,10 +60,10 @@ textarea[disabled],
 input.is-disabled,
 select.is-disabled,
 textarea.is-disabled {
-    cursor: not-allowed;
-    border-color: #aaa;
-    background-color: #ccc;
-    color: #aaa;
+  cursor: not-allowed;
+  border-color: #aaa;
+  background-color: #ccc;
+  color: #aaa;
 }
 
 input[readonly],
@@ -67,20 +72,20 @@ textarea[readonly],
 input.is-readonly,
 select.is-readonly,
 textarea.is-readonly {
-    border-color: #aaa;
-    background-color: #ccc;
-    color: #000;
+  border-color: #aaa;
+  background-color: #ccc;
+  color: #000;
 }
 
 .helper-text {
-    display: none;
+  display: none;
 }
 
 .text-input:active + .helper-text,
 .text-input:focus + .helper-text,
 textarea:active + .helper-text,
 textarea:focus + .helper-text {
-    display: block;
+  display: block;
 }
 
 </style>
@@ -123,7 +128,7 @@ textarea:focus + .helper-text {
 
         <h3>Using an unordered list</h3>
         <form>
-            <ul class="form--list">
+            <ul class="form-list">
                 <li class="input-container">
                     <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
                     <input class="text-input" id="account" type="num" value="123456789" readonly>
@@ -160,7 +165,7 @@ textarea:focus + .helper-text {
         </form>
 
         <h3>Inline form</h3>
-        <form class="form--inline">
+        <form class="form-inline">
             <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
             <input class="text-input" id="account" type="num" value="123456789" readonly>
 
@@ -185,6 +190,46 @@ textarea:focus + .helper-text {
             </label>
 
             <button type="submit" class="btn">Sign in</button>
+        </form>
+
+        <h3>Inline input containers with stacked label/input</h3>
+        <form>
+            <ul class="form-list">
+                <li class="input-container input-container--inline">
+                    <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
+                    <input class="text-input" id="account" type="num" value="123456789" readonly>
+                </li>
+                <li class="input-container input-container--inline">
+                    <label for="email">Email</label>
+                    <input class="text-input" id="email" type="email" placeholder="Email">
+                    <span class="helper-text">Enter your email address</span>
+                </li>
+                <li class="input-container input-container--inline">
+                    <label for="password">Password</label>
+                    <input class="text-input" id="password" type="password" placeholder="Password" disabled>
+                </li>
+                <li class="input-container input-container--inline">
+                    <label for="gender">Gender</label>
+                    <select id="gender">
+                        <option>Female</option>
+                        <option>Male</option>
+                        <option>Other</option>
+                    </select>
+                </li>
+                <li class="input-container input-container--inline">
+                    <label>Introduce yourself</label>
+                    <textarea></textarea>
+                </li>
+                </li>
+                <li class="input-container input-container--inline">
+                    <label for="newsletter">
+                        <input id="newsletter" type="checkbox"> Send me the newsletter
+                    </label>
+                </li>
+                <li class="input-container input-container--inline">
+                    <button type="submit" class="btn">Sign in</button>
+                </li>
+            </ul>
         </form>
 
     </main>
