@@ -1,0 +1,19 @@
+{
+  "name": "scales-patterns-buttons",
+  "version": "1.2.0",
+  "description": "Button pattern for Scales CSS",
+  "main": "_buttons.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScalesCSS/patterns-buttons"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/patterns-buttons/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/patterns-buttons#readme"
+}
