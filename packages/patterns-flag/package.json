@@ -1,0 +1,19 @@
+{
+  "name": "scales-patterns-flag",
+  "version": "1.1.0",
+  "description": "A slightly more advanced versin of the Media Object for Scales CSS",
+  "main": "_flag.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScalesCSS/patterns-flag"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/patterns-flag/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/patterns-flag#readme"
+}
