@@ -1,0 +1,19 @@
+{
+  "name": "scales-utilities-clearfix",
+  "version": "1.1.0",
+  "description": "A super minimal clearfix utility for Scales CSS",
+  "main": "_clearfix.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScalesCSS/utilities-clearfix"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/utilities-clearfix/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/utilities-clearfix#readme"
+}
