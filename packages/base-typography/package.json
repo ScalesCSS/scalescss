@@ -1,0 +1,19 @@
+{
+  "name": "scales-base-typography",
+  "version": "1.1.0",
+  "description": "Base typographic styles for Scales CSS",
+  "main": "_forms.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScalesCSS/base-typography.git"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/base-typography/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/base-typography#readme"
+}
