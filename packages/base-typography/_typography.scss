@@ -15,7 +15,8 @@ $scales-namespace: null !default;
 ///
 $base-text-color: #333333 !default; //http://ianstormtaylor.com/design-tip-never-use-black/
 $base-text-spacing: 0 !default;
-$base-header-spacing: 0 !default;
+$heading-spacing: 0 !default;
+$heading-color: $base-text-color !default;
 $code-block-padding: 0 1em 1em !default;
 $code-block-bg-color: #444444 !default;
 $code-block-text-color: #ffffff !default;
@@ -72,7 +73,8 @@ h5, .#{$scales-namespace}h5, .#{$scales-namespace}epsilon,
 h6, .#{$scales-namespace}h6, .#{$scales-namespace}zeta {
     font-family: $heading-font-stack;
     font-weight: $heading-font-weight;
-    margin: $base-header-spacing;
+    margin: $heading-spacing;
+    color: $heading-color;
 }
 
 h1,
