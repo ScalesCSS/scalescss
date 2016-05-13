@@ -17,13 +17,12 @@ $base-text-color: #333333 !default; //http://ianstormtaylor.com/design-tip-never
 $code-block-padding: 0 1em 1em !default;
 $code-block-bg-color: #444444 !default;
 $code-block-text-color: #ffffff !default;
+$pre-wordwrap: false !default;
 
 // Fonts
-$sans-serif-font-stack: "Helvetica Neue", helvetica, arial, sans-serif !default;
-$serif-font-stack: Times, "Times New Roman", serif !default;
 $monospaced-font-stack: consolas, courier, monospace !default;
-$base-font-stack: $sans-serif-font-stack !default;
-$heading-font-stack: $serif-font-stack !default;
+$base-font-stack: "Helvetica Neue", helvetica, arial, sans-serif !default;
+$heading-font-stack: Times, "Times New Roman", serif !default;
 $heading-font-weight: normal !default;
 
 // Font size and line height
@@ -117,12 +116,15 @@ h6,
 pre,
 code {
     font-family: $monospaced-font-stack;
+    font-size: $base-font-size;
 }
 
 pre {
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+    @if $pre-wordwrap {
+        white-space: pre;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
     padding: $code-block-padding;
     background-color: $code-block-bg-color;
     color: $code-block-text-color;
