@@ -14,10 +14,13 @@ $scales-namespace: null !default;
 // Available Variables
 ///
 $base-text-color: #333333 !default; //http://ianstormtaylor.com/design-tip-never-use-black/
-$base-text-spacing: 0 !default;
-$heading-spacing: 0 !default;
 $heading-color: $base-text-color !default;
+$text-margins: 0 !default;
+$heading-margins: 0 !default;
+$measure: 30em !default;
+$narrow-measure: 20em !default;
 $code-block-padding: 0 1em 1em !default;
+$code-block-margins: 0 !default;
 $code-block-bg-color: #444444 !default;
 $code-block-text-color: #ffffff !default;
 $pre-wordwrap: false !default;
@@ -56,8 +59,10 @@ body {
     color: $base-text-color;
 }
 
-p {
-    margin: $base-text-spacing;
+p,
+.#{$scales-namespace}lede,
+.#{$scales-namespace}lead {
+    margin: $text-margins;
 }
 
 //
@@ -73,7 +78,7 @@ h5, .#{$scales-namespace}h5, .#{$scales-namespace}epsilon,
 h6, .#{$scales-namespace}h6, .#{$scales-namespace}zeta {
     font-family: $heading-font-stack;
     font-weight: $heading-font-weight;
-    margin: $heading-spacing;
+    margin: $heading-margins;
     color: $heading-color;
 }
 
@@ -136,6 +141,23 @@ pre {
         word-wrap: break-word;
     }
     padding: $code-block-padding;
+    margin: $code-block-margins;
     background-color: $code-block-bg-color;
     color: $code-block-text-color;
+}
+
+// Measure
+.measure {
+    max-width: $measure;
+}
+
+.measure--narrow {
+    max-width: $narrow-measure
+}
+
+// Truncation
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

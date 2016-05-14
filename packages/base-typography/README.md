@@ -13,7 +13,7 @@ Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll n
 
 ## Usage
 
-Scales provides default typography for headings, text elements, lede paragraphs, and code blocks.
+Scales provides default typography for headings, text elements, lede paragraphs, and code blocks. It also has utility classes for headings and to control measure and truncation.
 
 ### Lede Paragraph
 ```
@@ -32,11 +32,31 @@ Scales provides default typography for headings, text elements, lede paragraphs,
 </code></pre>
 ```
 
+### Measure
+Measure is the length of a line of text. For maximum readability, this should optimally be set between 45 and 75 characters. With multiple columns of text the measure should be narrower, between 40 and 50 characters.
+
+```
+<p class="measure">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus augue cursus.</p>
+
+<p class="measure--narrow">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus augue cursus.</p>
+```
+
+### Truncation
+This allows you to cut text off if it exceeds the width of the viewport and adds an ellipsis. This works even better when combined with [overrides-size](https://github.com/ScalesCSS/overrides-size) to control where it cuts off by applying a width to the container.
+
+```
+<p class="truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus augue cursus.</p>
+```
+
 ## Available Classes
 
 * `.lede` or `.lead`
+* `.measure`
+* `.measure--narrow`
+* `.truncate`
 
 ### Heading Utility Classes
+
 * `.h1`
 * `.h2`
 * `.h3`
@@ -53,7 +73,13 @@ Scales provides default typography for headings, text elements, lede paragraphs,
 ## Available Variables
 
 * `$base-text-color`
+* `$heading-color`
+* `$text-margins`
+* `$heading-margins`
+* `$measure`
+* `$narrow-measure`
 * `$code-block-padding`
+* `$code-block-margins`
 * `$code-block-bg-color`
 * `$code-block-text-color`
 * `$pre-wordwrap` - Set to true to make text in a code block wrap to new lines when it reaches the bounds of the container.
