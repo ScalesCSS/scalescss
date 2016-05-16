@@ -15,11 +15,16 @@ All Scales patterns expose the `$scales-namespace` variable.
 
 ### _typography.scss
 * `$base-text-color`
+* `$heading-color`
+* `$text-margins`
+* `$heading-margins`
+* `$measure`
+* `$narrow-measure`
 * `$code-block-padding`
+* `$code-block-margins`
 * `$code-block-bg-color`
 * `$code-block-text-color`
-* `$sans-serif-font-stack` - available as option for $base-font-stack and $heading-font-stack
-* `$serif-font-stack` - available as option for $base-font-stack and $heading-font-stack
+* `$pre-wordwrap` - Set to true to make text in a code block wrap to new lines when it reaches the bounds of the container.
 * `$monospaced-font-stack`
 * `$base-font-stack`
 * `$heading-font-stack`
