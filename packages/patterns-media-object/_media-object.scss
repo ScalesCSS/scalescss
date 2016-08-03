@@ -150,7 +150,7 @@ $media-stacked-breakpoint: 25em !default;
 //
 // Stacked media object at smaller screen width
 ///
-@media screen and (max-width: $media-stacked-breakpoint) {
+@media all and (max-width: $media-stacked-breakpoint) {
 
     //
     // Default stacked media object
