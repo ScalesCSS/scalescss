@@ -184,6 +184,7 @@ Scales provides default stacked forms, forms using an unordered/ordered list, in
 * `$input-readonly-border-color`
 * `$input-readonly-background-color`
 * `$input-readonly-text-color`
+* `$helper-text-hidden` - change from `true` to be visible by default
 
 ### The Scales Namespace Variable
 

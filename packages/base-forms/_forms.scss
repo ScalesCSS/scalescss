@@ -28,6 +28,7 @@ $input-disabled-text-color: #aaa !default;
 $input-readonly-border-color: #aaa !default;
 $input-readonly-background-color: #ccc !default;
 $input-readonly-text-color: #000 !default;
+$helper-text-hidden: true !default;
 
 //
 // Main form styles
@@ -148,23 +149,39 @@ textarea.is-readonly {
 
 //
 // Extra help text displayed after a field when that field is in focus.
+//
+// Change `$helper-text-hidden` to something other than `true`
+// and the helper text will be visible by default.
 ///
-.#{$scales-namespace}helper-text {
-    display: none;
-}
 
-.#{$scales-namespace}text-input:active + .#{$scales-namespace}helper-text,
-.#{$scales-namespace}text-input:focus + .#{$scales-namespace}helper-text,
-textarea:active + .#{$scales-namespace}helper-text,
-textarea:focus + .#{$scales-namespace}helper-text {
-    display: block;
-}
+@if ($helper-text-hidden == true) {
+    .#{$scales-namespace}helper-text {
+        display: none;
+    }
 
-.#{$scales-namespace}form-inline {
-  .#{$scales-namespace}text-input:active + .#{$scales-namespace}helper-text,
-  .#{$scales-namespace}text-input:focus + .#{$scales-namespace}helper-text,
-  textarea:active + .#{$scales-namespace}helper-text,
-  textarea:focus + .#{$scales-namespace}helper-text {
-      display: inline-block;
-  }
+    .#{$scales-namespace}text-input:active + .#{$scales-namespace}helper-text,
+    .#{$scales-namespace}text-input:focus + .#{$scales-namespace}helper-text,
+    textarea:active + .#{$scales-namespace}helper-text,
+    textarea:focus + .#{$scales-namespace}helper-text {
+        display: block;
+    }
+
+    .#{$scales-namespace}form-inline {
+      .#{$scales-namespace}text-input:active + .#{$scales-namespace}helper-text,
+      .#{$scales-namespace}text-input:focus + .#{$scales-namespace}helper-text,
+      textarea:active + .#{$scales-namespace}helper-text,
+      textarea:focus + .#{$scales-namespace}helper-text {
+          display: inline-block;
+      }
+    }
+} @else {
+    .#{$scales-namespace}helper-text {
+        display: block;
+    }
+
+    .#{$scales-namespace}form-inline {
+        .#{$scales-namespace}helper-text {
+            display: inline-block;
+        }
+    }
 }
