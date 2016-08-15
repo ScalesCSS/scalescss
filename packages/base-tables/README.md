@@ -65,8 +65,11 @@ Tables can get pretty crazy. Take a look at this example with some of the classe
 * `.table--spacing-medium`
 * `.table--spacing-small`
 * `.table--bordered`
+* `.table--bordered-inside`
 * `.table--bordered-rows`
+* `.table--bordered-rows-inside`
 * `.table--bordered-columns`
+* `.table--bordered-columns-inside`
 * `.table--striped-odd`
 * `.table--striped-even`
 * `.table-highlight`

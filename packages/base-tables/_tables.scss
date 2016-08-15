@@ -85,44 +85,75 @@ table,
 
 // Borders around all sides
 .#{$scales-namespace}table--bordered {
+    border-top: $table-border-width $table-border-style $table-border-color;
+    border-right: $table-border-width $table-border-style $table-border-color;
+
+    tr {
+        border-bottom: $table-border-width $table-border-style $table-border-color;
+    }
+
     th,
     td {
-        border: $table-border-width $table-border-style $table-border-color;
+        border-left: $table-border-width $table-border-style $table-border-color;
+    }
+}
+
+// Remove outside table borders
+.#{$scales-namespace}table--bordered-inside {
+    border-top-width: 0;
+    border-right-width: 0;
+
+    tbody tr:last-child {
+        border-bottom-width: 0;
+    }
+
+    th,
+    td {
+        &:first-child {
+            border-left-width: 0;
+        }
     }
 }
 
 // Borders on just the bottom of rows
 .#{$scales-namespace}table--bordered-rows {
-    &,
     th,
     td {
-        border: 0 $table-border-style $table-border-color;
+        border-bottom: $table-border-width $table-border-style $table-border-color;
     }
 
 }
 
-.#{$scales-namespace}table--bordered-rows {
-    th,
-    td {
-        border-bottom-width: $table-border-width;
+// Remove outside row borders
+.#{$scales-namespace}table--bordered-rows-inside {
+    tbody tr:last-child {
+        th,
+        td {
+            border-bottom-width: 0;
+        }
     }
 }
 
 // Borders on just the columns
 .#{$scales-namespace}table--bordered-columns {
-    &,
+    border-left: $table-border-width $table-border-style $table-border-color;
+
     th,
     td {
-        border: 0 $table-border-style $table-border-color;
+        border-right: $table-border-width $table-border-style $table-border-color;
     }
 }
 
-.#{$scales-namespace}table--bordered-columns {
-    border-left-width: $table-border-width;
+// Remove outside column borders
+.#{$scales-namespace}table--bordered-columns-inside {
+    border-left-width: 0;
 
     th,
     td {
-        border-right-width: $table-border-width;
+
+        &:last-child {
+            border-right-width: 0;
+        }
     }
 }
 
