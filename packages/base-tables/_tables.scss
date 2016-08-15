@@ -22,6 +22,7 @@ $table-border-style: solid !default;
 $table-border-color: #000 !default;
 $table-stripe-color: #ccc !default;
 
+
 //
 // Main table styles
 ///
@@ -127,8 +128,18 @@ table,
 //
 // Striped tables
 ///
-.#{$scales-namespace}table--striped {
-    tbody tr:nth-of-type(odd) {
+
+// Odd rows
+.#{$scales-namespace}table--striped,
+.#{$scales-namespace}table--striped-odd {
+    tbody tr:nth-child(odd) {
+        background-color: $table-stripe-color;
+    }
+}
+
+// Even rows
+.#{$scales-namespace}table--striped-even {
+    tbody tr:nth-child(even) {
         background-color: $table-stripe-color;
     }
 }

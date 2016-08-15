@@ -16,7 +16,7 @@ Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll n
 Tables can get pretty crazy. Take a look at this example with some of the classes that Scales provides and how to use them:
 
 ```
-<table class="table--bordered table--striped table--fixed">
+<table class="table--bordered table--striped-odd table--fixed">
     <thead>
         <tr>
             <th>Lorem</th>
@@ -67,7 +67,8 @@ Tables can get pretty crazy. Take a look at this example with some of the classe
 * `.table--bordered`
 * `.table--bordered-rows`
 * `.table--bordered-columns`
-* `.table--striped`
+* `.table--striped-odd`
+* `.table--striped-even`
 * `.table--fixed`
 
 ## Available Variables
