@@ -8,7 +8,21 @@
 // the .clearfix class appearing in your markup. I mostly include the
 // class for easier debugging in your browser dev tools.
 ///
-.clearfix,
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Available Variables
+///
+$clearfix-class: clearfix !default;
+
+//
+// Clearfix
+///
+.#{$scales-namespace}#{$clearfix-class},
 %clearfix {
 
     &:after {
