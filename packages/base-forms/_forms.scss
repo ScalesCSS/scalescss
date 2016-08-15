@@ -117,7 +117,6 @@ textarea {
     }
 }
 
-
 //
 // Input states
 ///
@@ -149,8 +148,6 @@ textarea.is-readonly {
 
 //
 // Extra help text displayed after a field when that field is in focus.
-//
-// Can't be used with .form-inline
 ///
 .#{$scales-namespace}helper-text {
     display: none;
@@ -161,4 +158,13 @@ textarea.is-readonly {
 textarea:active + .#{$scales-namespace}helper-text,
 textarea:focus + .#{$scales-namespace}helper-text {
     display: block;
+}
+
+.#{$scales-namespace}form-inline {
+  .#{$scales-namespace}text-input:active + .#{$scales-namespace}helper-text,
+  .#{$scales-namespace}text-input:focus + .#{$scales-namespace}helper-text,
+  textarea:active + .#{$scales-namespace}helper-text,
+  textarea:focus + .#{$scales-namespace}helper-text {
+      display: inline-block;
+  }
 }

@@ -155,7 +155,7 @@ Scales provides default stacked forms, forms using an unordered/ordered list, in
 </form>
 ```
 
-## Availabel Classes
+## Available Classes
 
 * `.form-list`
 * `.input-container`
@@ -168,7 +168,7 @@ Scales provides default stacked forms, forms using an unordered/ordered list, in
 * `.is-readonly`
 * `.helper-text`
 
-## Availabel Variables
+## Available Variables
 
 * `$fieldset-padding`
 * `$text-input-padding`
