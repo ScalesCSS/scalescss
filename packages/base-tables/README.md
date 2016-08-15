@@ -33,7 +33,7 @@ Tables can get pretty crazy. Take a look at this example with some of the classe
             <td>Lorem</td>
         </tr>
         <tr>
-            <td>Dolor</td>
+            <td class="table-highlight">Dolor</td>
             <td class="numerical">32.210</td>
             <td>Lorem</td>
         </tr>
@@ -69,6 +69,7 @@ Tables can get pretty crazy. Take a look at this example with some of the classe
 * `.table--bordered-columns`
 * `.table--striped-odd`
 * `.table--striped-even`
+* `.table-highlight`
 * `.table--fixed`
 
 ## Available Variables
@@ -80,6 +81,8 @@ Tables can get pretty crazy. Take a look at this example with some of the classe
 * `$table-border-style`
 * `$table-border-color`
 * `$table-stripe-color`
+* `$table-highlight-color`
+* `$table-highlight-text-color`
 
 ### The Scales Namespace Variable
 

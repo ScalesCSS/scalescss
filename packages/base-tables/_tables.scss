@@ -21,7 +21,8 @@ $table-border-width: 1px !default;
 $table-border-style: solid !default;
 $table-border-color: #000 !default;
 $table-stripe-color: #ccc !default;
-
+$table-highlight-color: #ffd700 !default;
+$table-highlight-text-color: #000 !default;
 
 //
 // Main table styles
@@ -142,6 +143,14 @@ table,
     tbody tr:nth-child(even) {
         background-color: $table-stripe-color;
     }
+}
+
+//
+// Highlight specific row or cell
+///
+.#{$scales-namespace}table-highlight {
+    background-color: $table-highlight-color !important;
+    color: $table-highlight-text-color !important;
 }
 
 //
