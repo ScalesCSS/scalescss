@@ -7,82 +7,111 @@
 <style>
 table,
 .table {
-    width: 100%;
+  width: 100%;
 }
 
 [colspan] {
-    text-align: center;
+  text-align: center;
 }
 
 [colspan="1"] {
-    text-align: left;
+  text-align: left;
 }
 
 [rowspan] {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 [rowspan="1"] {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 .numerical {
-    text-align: right;
+  text-align: right;
 }
 
 .table--spacing-large th,
 .table--spacing-large td {
-    padding: 1em;
+  padding: 1em;
 }
 
 .table--spacing-medium th,
 .table--spacing-medium td {
-    padding: 0.5em;
+  padding: 0.5em;
 }
 
 .table--spacing-small th,
 .table--spacing-small td {
-    padding: 0.25em;
+  padding: 0.25em;
 }
 
+.table--bordered {
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+}
+.table--bordered tr {
+  border-bottom: 1px solid #000;
+}
 .table--bordered th,
 .table--bordered td {
-    border: 1px solid #000;
+  border-left: 1px solid #000;
 }
 
-.table--bordered-rows,
+.table--bordered-inside {
+  border-top-width: 0;
+  border-right-width: 0;
+}
+.table--bordered-inside tbody tr:last-child {
+  border-bottom-width: 0;
+}
+.table--bordered-inside th:first-child,
+.table--bordered-inside td:first-child {
+  border-left-width: 0;
+}
+
 .table--bordered-rows th,
 .table--bordered-rows td {
-    border: 0 solid #000;
+  border-bottom: 1px solid #000;
 }
 
-.table--bordered-rows th,
-.table--bordered-rows td {
-    border-bottom-width: 1px;
-}
-
-.table--bordered-columns,
-.table--bordered-columns th,
-.table--bordered-columns td {
-    border: 0 solid #000;
+.table--bordered-rows-inside tbody tr:last-child th,
+.table--bordered-rows-inside tbody tr:last-child td {
+  border-bottom-width: 0;
 }
 
 .table--bordered-columns {
-    border-left-width: 1px;
+  border-left: 1px solid #000;
 }
 .table--bordered-columns th,
 .table--bordered-columns td {
-    border-right-width: 1px;
+  border-right: 1px solid #000;
 }
 
-.table--striped tbody tr:nth-of-type(odd) {
-    background-color: #ccc;
+.table--bordered-columns-inside {
+  border-left-width: 0;
+}
+.table--bordered-columns-inside th:last-child,
+.table--bordered-columns-inside td:last-child {
+  border-right-width: 0;
+}
+
+.table--striped tbody tr:nth-child(odd),
+.table--striped-odd tbody tr:nth-child(odd) {
+  background-color: #ccc;
+}
+
+.table--striped-even tbody tr:nth-child(even) {
+  background-color: #ccc;
+}
+
+.table-highlight {
+  background-color: #ffd700 !important;
+  color: #000 !important;
 }
 
 .table--fixed {
-    table-layout: fixed;
+  table-layout: fixed;
 }
-
 </style>
 </head>
 <body>
@@ -300,8 +329,90 @@ table,
             </tbody>
         </table>
 
+        <h3>Bordered inside styles</h3>
+        <table class="table--bordered table--bordered-inside">
+            <thead>
+                <tr>
+                    <th>Lorem</th>
+                    <th>Ipsum</th>
+                    <th>Dolor</th>
+                    <th>Sit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="3">Sit</th>
+                    <td>Dolor</td>
+                    <td class="numerical">03.788</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <td>Dolor</td>
+                    <td class="numerical">32.210</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <td>Dolor</td>
+                    <td class="numerical">47.797</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Sit</th>
+                    <td>Dolor</td>
+                    <td class="numerical">09.640</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <td>Dolor</td>
+                    <td class="numerical">12.117</td>
+                    <td>Lorem</td>
+                </tr>
+            </tbody>
+        </table>
+
         <h3>Bordered row styles</h3>
         <table class="table--bordered-rows">
+            <thead>
+                <tr>
+                    <th>Lorem</th>
+                    <th>Ipsum</th>
+                    <th>Dolor</th>
+                    <th>Sit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="3">Sit</th>
+                    <td>Dolor</td>
+                    <td class="numerical">03.788</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <td>Dolor</td>
+                    <td class="numerical">32.210</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <td>Dolor</td>
+                    <td class="numerical">47.797</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Sit</th>
+                    <td>Dolor</td>
+                    <td class="numerical">09.640</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <td>Dolor</td>
+                    <td class="numerical">12.117</td>
+                    <td>Lorem</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Bordered inside row styles</h3>
+        <table class="table--bordered-rows table--bordered-rows-inside">
             <thead>
                 <tr>
                     <th>Lorem</th>
@@ -382,8 +493,8 @@ table,
             </tbody>
         </table>
 
-        <h3>Striped styles</h3>
-        <table class="table--striped">
+        <h3>Bordered inside column styles</h3>
+        <table class="table--bordered-columns table--bordered-columns-inside">
             <thead>
                 <tr>
                     <th>Lorem</th>
@@ -416,6 +527,129 @@ table,
                     <td>Lorem</td>
                 </tr>
                 <tr>
+                    <td>Dolor</td>
+                    <td class="numerical">12.117</td>
+                    <td>Lorem</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Striped styles, odd</h3>
+        <table class="table--striped-odd">
+            <thead>
+                <tr>
+                    <th>Lorem</th>
+                    <th>Ipsum</th>
+                    <th>Dolor</th>
+                    <th>Sit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="3">Sit</th>
+                    <td>Dolor</td>
+                    <td class="numerical">03.788</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <td>Dolor</td>
+                    <td class="numerical">32.210</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <td>Dolor</td>
+                    <td class="numerical">47.797</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Sit</th>
+                    <td>Dolor</td>
+                    <td class="numerical">09.640</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <td>Dolor</td>
+                    <td class="numerical">12.117</td>
+                    <td>Lorem</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Striped styles, even</h3>
+        <table class="table--striped-even">
+            <thead>
+                <tr>
+                    <th>Lorem</th>
+                    <th>Ipsum</th>
+                    <th>Dolor</th>
+                    <th>Sit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="3">Sit</th>
+                    <td>Dolor</td>
+                    <td class="numerical">03.788</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <td>Dolor</td>
+                    <td class="numerical">32.210</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <td>Dolor</td>
+                    <td class="numerical">47.797</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Sit</th>
+                    <td>Dolor</td>
+                    <td class="numerical">09.640</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <td>Dolor</td>
+                    <td class="numerical">12.117</td>
+                    <td>Lorem</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Table highlight</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Lorem</th>
+                    <th>Ipsum</th>
+                    <th>Dolor</th>
+                    <th>Sit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="3">Sit</th>
+                    <td>Dolor</td>
+                    <td class="numerical">03.788</td>
+                    <td class="table-highlight">Lorem</td>
+                </tr>
+                <tr>
+                    <td>Dolor</td>
+                    <td class="numerical">32.210</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <td>Dolor</td>
+                    <td class="numerical">47.797</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Sit</th>
+                    <td>Dolor</td>
+                    <td class="numerical">09.640</td>
+                    <td>Lorem</td>
+                </tr>
+                <tr class="table-highlight">
                     <td>Dolor</td>
                     <td class="numerical">12.117</td>
                     <td>Lorem</td>
