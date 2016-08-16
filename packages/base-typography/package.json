@@ -1,6 +1,6 @@
 {
   "name": "scales-base-typography",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Base typographic styles for Scales CSS",
   "main": "_typography.scss",
   "scripts": {
