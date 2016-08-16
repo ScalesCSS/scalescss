@@ -40,6 +40,10 @@ $horizontal-list-delimiter: ',\00A0' !default;
   text-align: right;
 }
 
+.horizontal-list--left {
+  text-align: left;
+}
+
 .horizontal-list--fill {
     display: table;
     width: 100%;

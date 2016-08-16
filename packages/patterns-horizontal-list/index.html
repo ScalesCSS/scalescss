@@ -13,9 +13,6 @@
 .horizontal-list > li {
   display: inline-block;
 }
-.horizontal-list > li > a {
-  display: block;
-}
 
 .horizontal-list--center {
   text-align: center;
@@ -25,6 +22,10 @@
   text-align: right;
 }
 
+.horizontal-list--left {
+  text-align: left;
+}
+
 .horizontal-list--fill {
   display: table;
   width: 100%;
@@ -32,9 +33,6 @@
 .horizontal-list--fill > li {
   display: table-cell;
   text-align: center;
-}
-.horizontal-list--fill > li > a {
-  display: block;
 }
 
 .horizontal-list--delimited > li:after {
@@ -82,6 +80,14 @@
         <h3>Right aligned styles</h3>
 
         <ul class="horizontal-list horizontal-list--right">
+            <li>Sass</li>
+            <li>CSS</li>
+            <li>HTML</li>
+        </ul>
+
+        <h3>Left aligned styles</h3>
+
+        <ul class="horizontal-list horizontal-list--left">
             <li>Sass</li>
             <li>CSS</li>
             <li>HTML</li>
