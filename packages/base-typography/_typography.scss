@@ -25,6 +25,14 @@ $code-block-bg-color: #444444 !default;
 $code-block-text-color: #ffffff !default;
 $pre-wordwrap: false !default;
 
+// Custom heading utility name variables
+$custom-h1-utility-class: alpha !default;
+$custom-h2-utility-class: beta !default;
+$custom-h3-utility-class: gamma !default;
+$custom-h4-utility-class: delta !default;
+$custom-h5-utility-class: epsilon !default;
+$custom-h6-utility-class: zeta !default;
+
 // Fonts
 $monospaced-font-stack: consolas, courier, monospace !default;
 $base-font-stack: "Helvetica Neue", helvetica, arial, sans-serif !default;
@@ -70,12 +78,24 @@ p,
 //
 // Extra class names allow same font-size to be used on other elements
 ///
-h1, .#{$scales-namespace}h1, .#{$scales-namespace}alpha,
-h2, .#{$scales-namespace}h2, .#{$scales-namespace}beta,
-h3, .#{$scales-namespace}h3, .#{$scales-namespace}gamma,
-h4, .#{$scales-namespace}h4, .#{$scales-namespace}delta,
-h5, .#{$scales-namespace}h5, .#{$scales-namespace}epsilon,
-h6, .#{$scales-namespace}h6, .#{$scales-namespace}zeta {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.#{$scales-namespace}h1,
+.#{$scales-namespace}h2,
+.#{$scales-namespace}h3,
+.#{$scales-namespace}h4,
+.#{$scales-namespace}h5,
+.#{$scales-namespace}h6,
+.#{$scales-namespace}#{$custom-h1-utility-class},
+.#{$scales-namespace}#{$custom-h2-utility-class},
+.#{$scales-namespace}#{$custom-h3-utility-class},
+.#{$scales-namespace}#{$custom-h4-utility-class},
+.#{$scales-namespace}#{$custom-h5-utility-class},
+.#{$scales-namespace}#{$custom-h6-utility-class} {
     font-family: $heading-font-stack;
     font-weight: $heading-font-weight;
     margin: $heading-margins;
@@ -84,37 +104,37 @@ h6, .#{$scales-namespace}h6, .#{$scales-namespace}zeta {
 
 h1,
 .#{$scales-namespace}h1,
-.#{$scales-namespace}alpha {
+.#{$scales-namespace}#{$custom-h1-utility-class} {
     font-size: $h1-size;
 }
 
 h2,
 .#{$scales-namespace}h2,
-.#{$scales-namespace}beta {
+.#{$scales-namespace}#{$custom-h2-utility-class} {
     font-size: $h2-size;
 }
 
 h3,
 .#{$scales-namespace}h3,
-.#{$scales-namespace}gamma {
+.#{$scales-namespace}#{$custom-h3-utility-class} {
     font-size: $h3-size;
 }
 
 h4,
 .#{$scales-namespace}h4,
-.#{$scales-namespace}delta {
+.#{$scales-namespace}#{$custom-h4-utility-class} {
     font-size: $h4-size;
 }
 
 h5,
 .#{$scales-namespace}h5,
-.#{$scales-namespace}epsilon {
+.#{$scales-namespace}#{$custom-h5-utility-class} {
     font-size: $h5-size;
 }
 
 h6,
 .#{$scales-namespace}h6,
-.#{$scales-namespace}zeta {
+.#{$scales-namespace}#{$custom-h6-utility-class} {
     font-size: $h6-size;
 }
 

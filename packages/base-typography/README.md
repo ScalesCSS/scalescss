@@ -97,6 +97,14 @@ This allows you to cut text off if it exceeds the width of the viewport and adds
 * `$h5-size`
 * `$h6-size`
 
+## Custom heading utility class variables (overrides Greek alphabet classes)
+* `$custom-h1-utility-class`
+* `$custom-h2-utility-class`
+* `$custom-h3-utility-class`
+* `$custom-h4-utility-class`
+* `$custom-h5-utility-class`
+* `$custom-h6-utility-class`
+
 ### The Scales Namespace Variable
 
 All Scales patterns expose the `$scales-namespace` variable.
