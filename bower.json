@@ -1,6 +1,6 @@
 {
   "name": "scalescss",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "homepage": "https://github.com/ScalesCSS/scales",
   "author": "Dave Gillhespy",
   "description": "Scales is a design-free collection of OOCSS patterns, framework settings, & utilities to quickly build mobile-first, responsive web projects",
@@ -24,7 +24,7 @@
     "scales-patterns-stats": "^1.0.0",
     "scales-patterns-vertical-list": "^1.0.0",
     "scales-utilities-clearfix": "^1.0.0",
-    "scales-utilities-normalize": "^3.0.0",
+    "scales-utilities-normalize": "^4.0.0",
     "scales-utilities-reset": "^1.0.0"
   },
   "license": "MIT",
