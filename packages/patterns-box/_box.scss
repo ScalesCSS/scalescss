@@ -36,12 +36,7 @@ $box-padding-huge: $box-padding * 4 !default;
 //
 // Default box
 ///
-.#{$scales-namespace}box,
-.#{$scales-namespace}box--flush,
-.#{$scales-namespace}box--tiny,
-.#{$scales-namespace}box--small,
-.#{$scales-namespace}box--large,
-.#{$scales-namespace}box--huge {
+.#{$scales-namespace}box {
     @include box($box-padding);
 }
 
