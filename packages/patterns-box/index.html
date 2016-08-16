@@ -5,53 +5,39 @@
 <title>Box Pattern - Scales</title>
 <meta name="viewport" content="initial-scale=1,width=device-width">
 <style>
-    .box:after,
-    .box--flush:after,
-    .box--tiny:after,
-    .box--small:after,
-    .box--large:after,
-    .box--huge:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+.clearfix:after,
+.box:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-    .box,
-    .box--flush,
-    .box--tiny,
-    .box--small,
-    .box--large,
-    .box--huge {
-      display: block;
-      padding: 1em;
-    }
-    .box > :last-child,
-    .box--flush > :last-child,
-    .box--tiny > :last-child,
-    .box--small > :last-child,
-    .box--large > :last-child,
-    .box--huge > :last-child {
-      margin-bottom: 0;
-    }
+.box {
+  display: block;
+  padding: 1em;
+}
+.box > :last-child {
+  margin-bottom: 0;
+}
 
-    .box--flush {
-      padding: 0;
-    }
+.box--flush {
+  padding: 0;
+}
 
-    .box--tiny {
-      padding: 0.25em;
-    }
+.box--tiny {
+  padding: 0.25em;
+}
 
-    .box--small {
-      padding: 0.5em;
-    }
+.box--small {
+  padding: 0.5em;
+}
 
-    .box--large {
-      padding: 2em;
-    }
+.box--large {
+  padding: 2em;
+}
 
-    .box--huge {
-      padding: 4em;
+.box--huge {
+  padding: 4em;
 }
 </style>
 </head>
@@ -73,31 +59,31 @@
 
         <h3>Flush</h3>
 
-        <div class="box--flush">
+        <div class="box box--flush">
             The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
         </div>
 
         <h3>Tiny</h3>
 
-        <div class="box--tiny">
+        <div class="box box--tiny">
             The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
         </div>
 
         <h3>Small</h3>
 
-        <div class="box--small">
+        <div class="box box--small">
             The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
         </div>
 
         <h3>Large</h3>
 
-        <div class="box--large">
+        <div class="box box--large">
             The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
         </div>
 
         <h3>Huge</h3>
 
-        <div class="box--huge">
+        <div class="box box--huge">
             The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
         </div>
     </main>
