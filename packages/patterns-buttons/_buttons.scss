@@ -21,6 +21,11 @@ $btn-padding: .5em .75em !default;
 $btn-hover-background-color: #c6c6c6 !default;
 $btn-hover-text-color: inherit !default;
 $btn-disabled-opacity: .5 !default;
+$btn-disabled-background-color: $btn-background-color !default;
+$btn-disabled-border-width: $btn-border-width !default;
+$btn-disabled-border-color: $btn-border-color !default;
+$btn-disabled-border-style: $btn-border-style !default;
+$btn-disabled-text-color: $btn-text-color !default;
 
 //
 // Buttons are meant to be used on links, buttons, and submit inputs
@@ -64,14 +69,16 @@ $btn-disabled-opacity: .5 !default;
 //
 // Disabled button state
 ///
-.#{$scales-namespace}btn:disabled,
-.#{$scales-namespace}btn.is-disabled {
+.#{$scales-namespace}btn.is-disabled,
+.#{$scales-namespace}btn[disabled] {
     opacity: $btn-disabled-opacity;
     pointer-events: none;
     // Avoiding conflict with disabled form inputs
-    background-color: $btn-background-color;
-    border-color: $btn-border-color;
-    color: $btn-text-color;
+    background-color: $btn-disabled-background-color;
+    border-width: $btn-disabled-border-width;
+    border-color: $btn-disabled-border-color;
+    border-style: $btn-disabled-border-style;
+    color: $btn-disabled-text-color;
 }
 
 //

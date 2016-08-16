@@ -24,7 +24,7 @@ Buttons should be used with links, buttons, and submit inputs for best results
 ## Available Classes
 
 * `.btn` - The main button class
-* `.is-disabled` - Disabled state for buttons
+* `.is-disabled` - Disabled state for buttons (`disabled` attribute is preferred)
 
 ## Available Variables
 
@@ -39,6 +39,11 @@ Buttons should be used with links, buttons, and submit inputs for best results
 * `$btn-hover-background-color`
 * `$btn-hover-text-color`
 * `$btn-disabled-opacity`
+* `$btn-disabled-background-color:`
+* `$btn-disabled-border-width:`
+* `$btn-disabled-border-color:`
+* `$btn-disabled-border-style:`
+* `$btn-disabled-text-color:`
 
 ### The Scales Namespace Variable
 All Scales patterns expose the `$scales-namespace` variable.

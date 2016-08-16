@@ -33,12 +33,14 @@
   color: inherit;
 }
 
-.btn:disabled,
-.btn.is-disabled {
+.btn.is-disabled,
+.btn[disabled] {
   opacity: 0.5;
   pointer-events: none;
   background-color: #d3d3d3;
+  border-width: 0;
   border-color: #000;
+  border-style: solid;
   color: inherit;
 }
 
@@ -46,7 +48,6 @@
   border: 0;
   padding: 0;
 }
-
 </style>
 </head>
 <body>
@@ -65,7 +66,13 @@
         <button class="btn">Button Button</button>
         <input class="btn" type="submit" value="Input Button">
 
-        <h3>Disabled styles</h3>
+        <h3>Disabled styles (disabled attribute)</h3>
+
+        <a href="" class="btn" disabled>Link Button</a>
+        <button class="btn" disabled>Button Button</button>
+        <input class="btn" disabled type="submit" value="Input Button">
+
+        <h3>Disabled styles (.is-disabled class)</h3>
 
         <a href="" class="btn is-disabled">Link Button</a>
         <button class="btn is-disabled">Button Button</button>
