@@ -1,6 +1,6 @@
 {
   "name": "scales-utilities-reset",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "homepage": "https://github.com/ScalesCSS/utilities-reset",
   "author": "Dave Gillhespy",
   "description": "A companion to Normalize.css. Borrows from HTML5 Boilerplate and Reset Restarted. For Scales CSS",

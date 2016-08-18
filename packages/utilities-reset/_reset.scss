@@ -17,8 +17,10 @@ $scales-namespace: null !default;
 //
 // Available Variables
 ///
-$selection-bg-color: #c00 !default;
+$selection-bg-color: #79bd9a !default;
 $selection-text-color: #fff !default;
+$table-border-collapse: collapse !default;
+$pre-overflow: auto !default;
 
 //
 // Inheriting box-sizing Probably Slightly Better Best-Practice
@@ -159,4 +161,27 @@ fieldset {
 // Allow only vertical resizing of textareas.
 textarea {
     resize: vertical;
+}
+
+//
+// Change some things from Normalize
+///
+
+// Add border collapse to tables.
+table {
+    border-collapse: $table-border-collapse;
+}
+
+// Contain overflow in all browsers
+pre {
+    overflow: $pre-overflow;
+}
+
+// Less opinionated form font
+button,
+input,
+optgroup,
+select,
+textarea {
+    font: inherit;
 }
