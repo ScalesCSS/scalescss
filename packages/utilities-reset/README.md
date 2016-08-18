@@ -2,6 +2,10 @@
 
 A companion to [Normalize.css](http://necolas.github.io/normalize.css/) that resets a few things that are still useful from a traditional reset. Borrows from [HTML5 Boilerplate](http://h5bp.com) and [Reset Restarted](http://csswizardry.com/2011/10/reset-restarted).
 
+## Requirements
+
+Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
+
 ## Installation
 
 * [NPM](http://npmjs.com): `npm install --save scales-utilities-reset`
@@ -11,13 +15,12 @@ A companion to [Normalize.css](http://necolas.github.io/normalize.css/) that res
 
 Should be loaded immediately after Normalize.css.
 
-It is recommended that you include the `scales.scss` file as untouched
-library code.
-
 ## Available Variables
 
 * `$selection-bg-color`
 * `$selection-text-color`
+* `$table-border-collapse`
+* `$pre-overflow`
 
 ### The Scales Namespace Variable
 
