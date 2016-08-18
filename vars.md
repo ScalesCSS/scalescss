@@ -12,6 +12,8 @@ All Scales patterns expose the `$scales-namespace` variable.
 ### _reset.scss
 * `$selection-bg-color`
 * `$selection-text-color`
+* `$table-border-collapse`
+* `$pre-overflow`
 
 ### _typography.scss
 * `$base-text-color`
@@ -24,7 +26,7 @@ All Scales patterns expose the `$scales-namespace` variable.
 * `$code-block-margins`
 * `$code-block-bg-color`
 * `$code-block-text-color`
-* `$pre-wordwrap` - Set to true to make text in a code block wrap to new lines when it reaches the bounds of the container.
+* `$pre-wordwrap`
 * `$monospaced-font-stack`
 * `$base-font-stack`
 * `$heading-font-stack`
@@ -38,9 +40,15 @@ All Scales patterns expose the `$scales-namespace` variable.
 * `$h4-size`
 * `$h5-size`
 * `$h6-size`
+* `$custom-h1-utility-class`
+* `$custom-h2-utility-class`
+* `$custom-h3-utility-class`
+* `$custom-h4-utility-class`
+* `$custom-h5-utility-class`
+* `$custom-h6-utility-class`
 
 ### _blockquotes.scss
-* `$source-prefix` - Character prefixing the source of a quote
+* `$source-prefix`
 
 ### _forms.scss
 * `$fieldset-padding`
@@ -50,12 +58,14 @@ All Scales patterns expose the `$scales-namespace` variable.
 * `$text-input-border-color`
 * `$text-input-border-radius`
 * `$input-container-margin-bottom`
+* `$input-container-inline-valign`
 * `$input-disabled-border-color`
 * `$input-disabled-background-color`
 * `$input-disabled-text-color`
 * `$input-readonly-border-color`
 * `$input-readonly-background-color`
 * `$input-readonly-text-color`
+* `$helper-text-hidden`
 
 ### _tables.scss
 * `$table-padding-large`
@@ -65,6 +75,8 @@ All Scales patterns expose the `$scales-namespace` variable.
 * `$table-border-style`
 * `$table-border-color`
 * `$table-stripe-color`
+* `$table-highlight-color`
+* `$table-highlight-text-color`
 
 ### _box.scss
 * `$box-padding`
@@ -100,18 +112,26 @@ All Scales patterns expose the `$scales-namespace` variable.
 * `$btn-border-width`
 * `$btn-border-color`
 * `$btn-border-style`
+* `$btn-border-radius`
 * `$btn-text-color`
 * `$btn-font`
 * `$btn-padding`
+* `$btn-hover-background-color`
+* `$btn-hover-text-color`
 * `$btn-disabled-opacity`
+* `$btn-disabled-background-color`
+* `$btn-disabled-border-width`
+* `$btn-disabled-border-color`
+* `$btn-disabled-border-style`
+* `$btn-disabled-text-color`
 
 ### _stats.scss
-* `$stat-spacing` - space to the right of each stat
+* `$stat-spacing`
 
 ### _size.scss
-* `$size-range-start` - Value of the first class
-* `$size-range-end` - Value of the last class
-* `$size-step-value` - Increment between values
+* `$size-range-start`
+* `$size-range-end`
+* `$size-step-value`
 
 ### _spacing.scss
 * `$space-s`

@@ -95,11 +95,10 @@ A special note of thanks also goes out to [Vince Speelman](https://github.com/Vi
 ### v2
 * [myql.com](https://www.myql.com/)
 * [grandcircus.co](http://www.grandcircus.co/)
+* [davidgillhespy.com](http://davidgillhespy.com/)
 * [rockframework.org](http://www.rockframework.org/)
 
-
 ### v1
-* [davidgillhespy.com](http://davidgillhespy.com/)
 * [rocket.quickenloans.com](https://rocket.quickenloans.com/)
 * [realestateagent.quickenloans.com](https://realestateagent.quickenloans.com/#!/)
 * [toflexornottoflex.com](http://toflexornottoflex.com/#/)
