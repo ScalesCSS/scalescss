@@ -13,7 +13,7 @@ Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll n
 
 ## Usage
 
-Should be loaded immediately after Normalize.css.
+Should be loaded immediately after Normalize.css. View the .scss file to see what the reset is doing.
 
 ## Available Variables
 
