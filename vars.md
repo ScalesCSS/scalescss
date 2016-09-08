@@ -57,6 +57,7 @@ All Scales patterns expose the `$scales-namespace` variable.
 * `$text-input-border-style`
 * `$text-input-border-color`
 * `$text-input-border-radius`
+* `$select-background-color`
 * `$input-container-margin-bottom`
 * `$input-container-inline-valign`
 * `$input-disabled-border-color`
