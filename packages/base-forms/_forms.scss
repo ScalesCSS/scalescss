@@ -20,6 +20,7 @@ $text-input-border-width: 1px !default;
 $text-input-border-style: solid !default;
 $text-input-border-color: #000 !default;
 $text-input-border-radius: 0 !default;
+$select-bg-color: #fff !default;
 $input-container-margin-bottom: 1em !default;
 $input-container-inline-valign: top !default;
 $input-disabled-border-color: #aaa !default;
@@ -102,6 +103,13 @@ textarea {
     border-style: $text-input-border-style;
     border-color: $text-input-border-color;
     border-radius: $text-input-border-radius;
+}
+
+//
+// Selects
+///
+select {
+    background: $select-bg-color;
 }
 
 //
