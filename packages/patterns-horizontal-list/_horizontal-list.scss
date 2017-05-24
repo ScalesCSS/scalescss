@@ -70,3 +70,9 @@ $horizontal-list-delimiter: ',\00A0' !default;
         }
     }
 }
+
+.#{$scales-namespace}horizontal-list {
+    > [data-delimiter]:after {
+        content: attr(data-delimiter);
+    }
+}
