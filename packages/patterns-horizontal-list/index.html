@@ -41,6 +41,9 @@
 .horizontal-list--delimited > li:last-child:after {
   content: '';
 }
+.horizontal-list > [data-delimiter]:after {
+  content: attr(data-delimiter);
+}
 </style>
 </head>
 <body>
@@ -66,6 +69,14 @@
         <ul class="horizontal-list horizontal-list--delimited">
             <li>Sass</li>
             <li>CSS</li>
+            <li>HTML</li>
+        </ul>
+
+        <h3>Character delimited override</h3>
+
+        <ul class="horizontal-list">
+            <li data-delimiter=" | ">Sass</li>
+            <li data-delimiter=" | ">CSS</li>
             <li>HTML</li>
         </ul>
 

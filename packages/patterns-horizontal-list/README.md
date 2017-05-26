@@ -35,6 +35,16 @@ Horizontal List should be used whenever you need to make an ordered or unordered
 </ul>
 ```
 
+### Character delimited override
+
+```
+<ul class="horizontal-list horizontal-list--delimited">
+    <li data-delimiter=" | ">Sass</li>
+    <li data-delimiter=" | ">CSS</li>
+    <li>HTML</li>
+</ul>
+```
+
 ### Centered
 
 ```
@@ -93,6 +103,10 @@ Since there are times when you want a list to be horizontal at some media querie
 * `.horizontal-list--right`
 * `.horizontal-list--left`
 * `.horizontal-list--fill` - forces the list to take up 100% of it's parent.
+
+## Available Data Attributes
+
+* `data-delimiter`
 
 ## Available Variables
 
