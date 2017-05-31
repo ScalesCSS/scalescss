@@ -37,5 +37,8 @@
     "scales-utilities-clearfix": "^1.0.0",
     "scales-utilities-normalize": "^4.0.0",
     "scales-utilities-reset": "^1.0.0"
+  },
+  "devDependencies": {
+    "lerna": "^2.0.0-rc.5"
   }
 }
