@@ -9,3 +9,4 @@ CVS
 .sass-cache/
 css/
 .idea/
+node_modules/
