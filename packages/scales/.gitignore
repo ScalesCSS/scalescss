@@ -1,0 +1,10 @@
+.*.swo
+.*.swp
+nbproject
+CVS
+.cvsignore
+.#*
+.DS_Store
+.sublime-workspace
+.sass-cache/
+css/

@@ -1,43 +1,11 @@
 {
   "name": "scalescss",
-  "version": "2.6.1",
   "description": "Scales is a design-free collection of OOCSS patterns, framework settings, & utilities to quickly build mobile-first, responsive web projects",
-  "main": "_scales.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ScalesCSS/scales"
-  },
   "author": "Dave Gillhespy",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ScalesCSS/scales/issues"
-  },
-  "homepage": "https://github.com/ScalesCSS/scales#readme",
-  "dependencies": {
-    "scales-base-blockquotes": "^1.0.0",
-    "scales-base-forms": "^1.0.0",
-    "scales-base-images": "^1.0.0",
-    "scales-base-lists": "^1.0.0",
-    "scales-base-tables": "^1.0.0",
-    "scales-base-typography": "^1.0.0",
-    "scales-overrides-size": "^1.0.0",
-    "scales-overrides-spacing": "^1.0.0",
-    "scales-patterns-box": "^1.0.0",
-    "scales-patterns-buttons": "^1.0.0",
-    "scales-patterns-flag": "^1.0.0",
-    "scales-patterns-horizontal-list": "^1.0.0",
-    "scales-patterns-media-object": "^1.0.0",
-    "scales-patterns-multi-col-list": "^1.0.0",
-    "scales-patterns-split": "^1.0.0",
-    "scales-patterns-stats": "^1.0.0",
-    "scales-patterns-vertical-list": "^1.0.0",
-    "scales-utilities-clearfix": "^1.0.0",
-    "scales-utilities-normalize": "^4.0.0",
-    "scales-utilities-reset": "^1.0.0"
-  },
   "devDependencies": {
     "lerna": "^2.0.0-rc.5"
   }
