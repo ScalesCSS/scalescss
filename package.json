@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/scalescss",
-  "version": "3.0.0-alpha.5",
+  "version": "3.0.0-alpha.6",
   "description": "Scales is a design-free collection of OOCSS patterns, framework settings, & utilities to quickly build mobile-first, responsive web projects",
   "main": "_scales.scss",
   "scripts": {
