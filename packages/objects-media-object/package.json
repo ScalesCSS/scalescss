@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/objects-media-object",
-  "version": "3.0.0-alpha.2",
+  "version": "3.0.0-alpha.3",
   "description": "A pattern for the Media Object for Scales CSS",
   "main": "_media-object.scss",
   "scripts": {
