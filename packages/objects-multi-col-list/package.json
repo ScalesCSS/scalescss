@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-multi-col-list#readme",
   "dependencies": {
-    "@scalescss/utilities-clearfix": "^3.0.0"
+    "@scalescss/utilities-clearfix": ">3.0.0-alpha"
   }
 }
