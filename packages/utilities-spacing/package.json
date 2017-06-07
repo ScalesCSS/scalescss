@@ -1,0 +1,19 @@
+{
+  "name": "@scalescss/utilities-spacing",
+  "version": "3.0.0-alpha.1",
+  "description": "Size classes to force an element to a specific size for Scales CSS",
+  "main": "_spacing.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScalesCSS/scalescss/tree/master/packages/utilities-spacing"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/scalescss/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/utilities-spacing#readme"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@scalescss/objects-vertical-list",
+  "version": "3.0.0-alpha.1",
+  "description": "A pattern for making a list vertical after it has been made horizontal for Scales CSS",
+  "main": "_vertical-list.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-vertical-list"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/scalescss/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-vertical-list#readme"
+}

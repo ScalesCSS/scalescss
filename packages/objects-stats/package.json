@@ -1,0 +1,22 @@
+{
+  "name": "@scalescss/objects-stats",
+  "version": "3.0.0-alpha.1",
+  "description": "A pattern to display statistic-like information for Scales CSS",
+  "main": "_stats.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-stats"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/scalescss/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-stats#readme",
+  "dependencies": {
+    "@scalescss/utilities-clearfix": "^3.0.0"
+  }
+}

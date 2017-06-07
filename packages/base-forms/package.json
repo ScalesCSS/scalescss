@@ -1,6 +1,6 @@
 {
-  "name": "scales-base-forms",
-  "version": "1.3.1",
+  "name": "@scalescss/base-forms",
+  "version": "3.0.0-alpha.1",
   "description": "Base form styles for Scales CSS",
   "main": "_forms.scss",
   "scripts": {
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ScalesCSS/base-forms.git"
+    "url": "https://github.com/ScalesCSS/scalescss/tree/master/packages/base-forms"
   },
   "author": "Dave Gillhespy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ScalesCSS/base-forms/issues"
+    "url": "https://github.com/ScalesCSS/scalescss/issues"
   },
-  "homepage": "https://github.com/ScalesCSS/base-forms#readme"
+  "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/base-forms#readme"
 }

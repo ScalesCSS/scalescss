@@ -4,12 +4,11 @@ These are some simple styles for fixing images so they are a bit more responsive
 
 ## Requirements
 
-Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
+Scales uses the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
 ## Installation
 
-* [NPM](http://npmjs.com): `npm install --save scales-base-images`
-* [Bower](http://bower.io/): `bower install --save scales-base-images`
+* [NPM](http://npmjs.com): `npm install --save @scales/base-images`
 
 ## Usage
 

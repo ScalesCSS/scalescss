@@ -4,12 +4,11 @@ These are the base styles for block quotes.
 
 ## Requirements
 
-Scales patterns use the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
+Scales uses the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
 ## Installation
 
-* [NPM](http://npmjs.com): `npm install --save scales-base-blockquotes`
-* [Bower](http://bower.io/): `bower install --save scales-base-blockquotes`
+* [NPM](http://npmjs.com): `npm install --save @scales/base-blockquotes`
 
 ## Usage
 

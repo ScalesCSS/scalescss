@@ -1,0 +1,19 @@
+{
+  "name": "@scalescss/generic-reset",
+  "version": "3.0.0-alpha.1",
+  "description": "A companion to Normalize.css. Borrows from HTML5 Boilerplate and Reset Restarted. For Scales CSS",
+  "main": "_reset.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScalesCSS/scalescss/tree/master/packages/generic-reset"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/scalescss/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/generic-reset#readme"
+}

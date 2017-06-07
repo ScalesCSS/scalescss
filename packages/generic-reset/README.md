@@ -1,6 +1,6 @@
-# Clearfix Utility for Scales
+# Reset Styles for Scales
 
-A super minimal clearfix utility.
+A companion to [Normalize.css](http://necolas.github.io/normalize.css/) that resets a few things that are still useful from a traditional reset. Borrows from [HTML5 Boilerplate](http://h5bp.com) and [Reset Restarted](http://csswizardry.com/2011/10/reset-restarted).
 
 ## Requirements
 
@@ -8,37 +8,21 @@ Scales uses the [Sass CSS preprocessor](http://sass-lang.com/), you'll need eith
 
 ## Installation
 
-* [NPM](http://npmjs.com): `npm install --save @scales/utilities-clearfix`
+* [NPM](http://npmjs.com): `npm install --save @scales/generic-reset`
 
 ## Usage
 
-Clearfix is used to force an element to self-clear its floated children.
-
-It should be extended in your sass files, but can be used as a class. I recommend only using it this way for debugging purposes in you browser dev tools.
-
-```
-.parent-class {
-    @extend %clearfix
-}
-```
-
-For debugging:
-```
-<div class="clearfix">
-    <some floated elements>
-</div>
-```
-
-## Available Classes
-
-* `%clearfix` - extend in your sass files
-* `.clearfix` - For debugging, change with the `$clearfix-class` variable.
+Should be loaded immediately after Normalize.css. View the .scss file to see what the reset is doing.
 
 ## Available Variables
 
-* `$clearfix-class`
+* `$selection-bg-color`
+* `$selection-text-color`
+* `$table-border-collapse`
+* `$pre-overflow`
 
 ### The Scales Namespace Variable
+
 All Scales patterns expose the `$scales-namespace` variable.
 
 `$scales-namespace` accepts a string that will prefix all Scales classes. The default value is `null`.

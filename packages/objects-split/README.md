@@ -1,6 +1,6 @@
-# Clearfix Utility for Scales
+# Split Object for Scales
 
-A super minimal clearfix utility.
+An object for aligning two elements away from each other.
 
 ## Requirements
 
@@ -8,37 +8,39 @@ Scales uses the [Sass CSS preprocessor](http://sass-lang.com/), you'll need eith
 
 ## Installation
 
-* [NPM](http://npmjs.com): `npm install --save @scales/utilities-clearfix`
+* [NPM](http://npmjs.com): `npm install --save @scales/objects-split`
 
 ## Usage
 
-Clearfix is used to force an element to self-clear its floated children.
-
-It should be extended in your sass files, but can be used as a class. I recommend only using it this way for debugging purposes in you browser dev tools.
+The Split object can be used on any elements but works best in a `<dl>` or `<ul/ol>`. For example:
 
 ```
-.parent-class {
-    @extend %clearfix
-}
+<dl class="split">
+    <dt class="split__title">Google</dt>
+    <dd>google.com</dd>
+    <dt class="split__title">Wikipedia</dt>
+    <dd>wikipedia.org</dd>
+    <dt class="split__title">CNN</dt>
+    <dd>cnn.com</dd>
+</dl>
 ```
-
-For debugging:
 ```
-<div class="clearfix">
-    <some floated elements>
-</div>
+<ul class="split">
+    <li><span class="split__title">Google</span> google.com</li>
+    <li><span class="split__title">Wikipedia</span> wikipedia.org</li>
+    <li><span class="split__title">CNN</span> cnn.com</li>
+</ul>​
 ```
 
 ## Available Classes
 
-* `%clearfix` - extend in your sass files
-* `.clearfix` - For debugging, change with the `$clearfix-class` variable.
+* `.split`
+* `.split__title`
 
 ## Available Variables
 
-* `$clearfix-class`
-
 ### The Scales Namespace Variable
+
 All Scales patterns expose the `$scales-namespace` variable.
 
 `$scales-namespace` accepts a string that will prefix all Scales classes. The default value is `null`.

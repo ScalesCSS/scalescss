@@ -1,6 +1,6 @@
 {
-  "name": "scales-base-tables",
-  "version": "1.2.0",
+  "name": "@scalescss/base-tables",
+  "version": "3.0.0-alpha.1",
   "description": "Base table styles for Scales CSS",
   "main": "_tables.scss",
   "scripts": {
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ScalesCSS/base-tables.git"
+    "url": "https://github.com/ScalesCSS/scalescss/tree/master/packages/base-tables"
   },
   "author": "Dave Gillhespy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ScalesCSS/base-tables/issues"
+    "url": "https://github.com/ScalesCSS/scalescss/issues"
   },
-  "homepage": "https://github.com/ScalesCSS/base-tables#readme"
+  "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/base-tables#readme"
 }

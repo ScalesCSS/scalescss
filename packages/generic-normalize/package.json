@@ -1,0 +1,19 @@
+{
+  "name": "@scalescss/generic-normalize",
+  "version": "3.0.0-alpha.1",
+  "description": "A collection of HTML element and attribute style-normalizations for Scales CSS",
+  "main": "_normalize.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScalesCSS/scalescss/tree/master/packages/generic-normalize"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/scalescss/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/generic-normalize#readme"
+}
