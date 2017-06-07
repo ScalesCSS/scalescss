@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/objects-box",
-  "version": "3.0.0-alpha.5",
+  "version": "3.0.0-alpha-7",
   "description": "A simple pattern for boxing off content for Scales CSS",
   "main": "_box.scss",
   "scripts": {
