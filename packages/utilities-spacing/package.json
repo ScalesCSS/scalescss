@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/utilities-spacing",
-  "version": "3.0.0-alpha.1",
+  "version": "3.0.0-alpha.2",
   "description": "Size classes to force an element to a specific size for Scales CSS",
   "main": "_spacing.scss",
   "scripts": {
