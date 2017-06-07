@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/objects-flag",
-  "version": "3.0.0-alpha.5",
+  "version": "3.0.0-alpha.8",
   "description": "A slightly more advanced versin of the Media Object for Scales CSS",
   "main": "_flag.scss",
   "scripts": {
