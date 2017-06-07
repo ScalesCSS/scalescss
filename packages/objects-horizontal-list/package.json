@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/objects-horizontal-list",
-  "version": "3.0.0-alpha.3",
+  "version": "3.0.0-alpha.4",
   "description": "A pattern for making a list horizontal for Scales CSS",
   "main": "_horizontal-list.scss",
   "scripts": {
