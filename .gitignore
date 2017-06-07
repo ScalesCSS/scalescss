@@ -10,3 +10,4 @@ CVS
 css/
 .idea/
 node_modules/
+lerna-debug.log
