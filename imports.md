@@ -1,6 +1,6 @@
 # Scales Imports
 
-This is an example file that imports Scales. The files are required to be imported in this order.
+This is an example file that imports Scales. The files are required to be imported in this order. It follows the [ITCSS architecture](http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528).
 
 I recommend creating a file called `_scalescss.scss` and copying these imports into that.
 
