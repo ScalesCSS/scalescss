@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/objects-multi-col-list",
-  "version": "3.0.0-alpha.10",
+  "version": "3.0.0",
   "description": "A pattern that makes a multi-column list out of a single list for Scales CSS",
   "main": "_multi-col-list.scss",
   "scripts": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-multi-col-list#readme",
   "dependencies": {
-    "@scalescss/utilities-clearfix": "^3.0.0-alpha.10"
+    "@scalescss/utilities-clearfix": "^3.0.0"
   }
 }
