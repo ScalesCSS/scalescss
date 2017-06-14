@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/generic-reset",
-  "version": "3.0.0-alpha.9",
+  "version": "3.0.0-alpha.10",
   "description": "A companion to Normalize.css. Borrows from HTML5 Boilerplate and Reset Restarted. For Scales CSS",
   "main": "_reset.scss",
   "scripts": {

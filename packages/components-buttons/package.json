@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/components-buttons",
-  "version": "3.0.0-alpha.9",
+  "version": "3.0.0-alpha.10",
   "description": "Button pattern for Scales CSS",
   "main": "_buttons.scss",
   "scripts": {
