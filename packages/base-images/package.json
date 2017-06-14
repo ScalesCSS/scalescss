@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/base-images",
-  "version": "3.0.0-alpha.8",
+  "version": "3.0.0-alpha.9",
   "description": "Base image styles for Scales CSS",
   "main": "_images.scss",
   "scripts": {

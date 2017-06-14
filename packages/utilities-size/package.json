@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/utilities-size",
-  "version": "3.0.0-alpha.8",
+  "version": "3.0.0-alpha.9",
   "description": "Size classes to force an element to a specific size for Scales CSS",
   "main": "_size.scss",
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/base-lists",
-  "version": "3.0.0-alpha.8",
+  "version": "3.0.0-alpha.9",
   "description": "Base list styles for Scales CSS",
   "main": "_lists.scss",
   "scripts": {

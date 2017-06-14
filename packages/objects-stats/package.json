@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/objects-stats",
-  "version": "3.0.0-alpha.8",
+  "version": "3.0.0-alpha.9",
   "description": "A pattern to display statistic-like information for Scales CSS",
   "main": "_stats.scss",
   "scripts": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-stats#readme",
   "dependencies": {
-    "@scalescss/utilities-clearfix": "^3.0.0-alpha.8"
+    "@scalescss/utilities-clearfix": "^3.0.0-alpha.9"
   }
 }
