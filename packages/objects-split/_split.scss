@@ -1,11 +1,16 @@
 // ==========================================================================
-// Split Pattern
+// Split Object
 // ==========================================================================
 
 //
 // Scales namespace variable
 ///
 $scales-namespace: null !default;
+
+//
+// Class level namespacing variable
+///
+$scales-objects-class-namespace: null !default;
 
 //
 // Split can be used on any elements but works best in a <dl> or <ul/ol>
@@ -15,15 +20,15 @@ $scales-namespace: null !default;
 // Split classes
 ///
 
-.#{$scales-namespace}split {
-    text-align: right;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.#{$scales-namespace}#{$scales-objects-class-namespace}Split {
+  text-align: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.#{$scales-namespace}split__title {
-    text-align: left;
-    float: left;
-    clear: left;
+.#{$scales-namespace}#{$scales-objects-class-namespace}Split__title {
+  text-align: left;
+  float: left;
+  clear: left;
 }

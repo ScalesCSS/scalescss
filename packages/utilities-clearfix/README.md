@@ -18,35 +18,48 @@ It should be extended in your sass files, but can be used as a class. I recommen
 
 ```
 .parent-class {
-    @extend %clearfix
+  @extend %clearfix
 }
 ```
 
 For debugging:
 ```
-<div class="clearfix">
-    <some floated elements>
+<div class="ClearFix">
+  <some floated elements>
 </div>
 ```
 
 ## Available Classes
 
 * `%clearfix` - extend in your sass files
-* `.clearfix` - For debugging, change with the `$clearfix-class` variable.
+* `.ClearFix` - For debugging, change with the `$clearfix-class` variable.
 
 ## Available Variables
 
 * `$clearfix-class`
 
-### The Scales Namespace Variable
+### Namespace Variables
+
+#### The Scales Namespace Variable
+
 All Scales patterns expose the `$scales-namespace` variable.
 
 `$scales-namespace` accepts a string that will prefix all Scales classes. The default value is `null`.
 
-To give all Scales classes a namespace, you will need to set this variable in a file that is imported before any scales files. For example:
+#### Class Level Namespace Variable
+
+Class level namespace variables allow you to namespace a selector based on the type e.g. `b-` for "base", `o-` for "objects", `u-` for utilities, and `c-` for "components".
+
+This pattern exposes the `$scales-utilities-class-namespace` variable.
+
+`$scales-utilities-class-namespace` accepts a string that will prefix any classes in this pattern and follow the Scales Namespace Variable if it is not null. The default value is `null`.
+
+#### Namespace Variable Usage
+
+To set either of these namespaces, you will need to set the variables in a file that is imported before any scales files. For example:
 
 ```
-@import your-project/settings; // $scales-namespace is set in this file
-@import your-project/scales; // Imports the Scales library
+@import your-project/settings; // Namespace variables are set in this file
+@import your-project/scalescss; // Imports all of the Scales packages
 @import your-project/project // The rest of your project imports
 ```

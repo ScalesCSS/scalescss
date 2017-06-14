@@ -12,12 +12,17 @@
 $scales-namespace: null !default;
 
 //
+// Class level namespacing variable
+///
+$scales-base-class-namespace: null !default;
+
+//
 // Bare List mixin
 ///
-@mixin list--bare {
-    margin-left: 0;
-    padding-left: 0;
-    list-style-type: none;
+@mixin List--bare {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 //
@@ -25,7 +30,7 @@ $scales-namespace: null !default;
 //
 // Use as a class or extend the placeholder
 ///
-.#{$scales-namespace}list--bare,
-%#{$scales-namespace}list--bare {
-    @include list--bare;
+.#{$scales-namespace}#{$scales-base-class-namespace}List--bare,
+%List--bare {
+  @include List--bare;
 }

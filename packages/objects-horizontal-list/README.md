@@ -1,4 +1,4 @@
-object# Horizontal List Object for Scales
+# Horizontal List Object for Scales
 
 An object for making a list horizontal instead of vertical.
 
@@ -8,7 +8,7 @@ Scales uses the [Sass CSS preprocessor](http://sass-lang.com/), you'll need eith
 
 ## Installation
 
-* [NPM](http://npmjs.com): `npm install --save @scales/objects-horizontal-list`
+* [NPM](http://npmjs.com): `npm install --save @scales/objects-HorizontalList`
 
 ## Usage
 
@@ -17,70 +17,70 @@ Horizontal List should be used whenever you need to make an ordered or unordered
 ### Default
 
 ```
-<ul class="horizontal-list">
-    <li>Sass</li>
-    <li>CSS</li>
-    <li>HTML</li>
+<ul class="HorizontalList">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
 </ul>
 ```
 
 ### Character delimited
 
 ```
-<ul class="horizontal-list horizontal-list--delimited">
-    <li>Sass</li>
-    <li>CSS</li>
-    <li>HTML</li>
+<ul class="HorizontalList HorizontalList--delimited">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
 </ul>
 ```
 
 ### Character delimited override
 
 ```
-<ul class="horizontal-list horizontal-list--delimited">
-    <li data-delimiter=" | ">Sass</li>
-    <li data-delimiter=" | ">CSS</li>
-    <li>HTML</li>
+<ul class="HorizontalList HorizontalList--delimited">
+  <li data-delimiter=" | ">Sass</li>
+  <li data-delimiter=" | ">CSS</li>
+  <li>HTML</li>
 </ul>
 ```
 
 ### Centered
 
 ```
-<ul class="horizontal-list horizontal-list--center">
-    <li>Sass</li>
-    <li>CSS</li>
-    <li>HTML</li>
+<ul class="HorizontalList HorizontalList--center">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
 </ul>
 ```
 
 ### Right aligned
 
 ```
-<ul class="horizontal-list horizontal-list--right">
-    <li>Sass</li>
-    <li>CSS</li>
-    <li>HTML</li>
+<ul class="HorizontalList HorizontalList--right">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
 </ul>
 ```
 
 ### Left aligned
 
 ```
-<ul class="horizontal-list horizontal-list--left">
-    <li>Sass</li>
-    <li>CSS</li>
-    <li>HTML</li>
+<ul class="HorizontalList HorizontalList--left">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
 </ul>
 ```
 
 ### Fill
 
 ```
-<ul class="horizontal-list horizontal-list--fill">
-    <li>Sass</li>
-    <li>CSS</li>
-    <li>HTML</li>
+<ul class="HorizontalList HorizontalList--fill">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
 </ul>
 ```
 
@@ -89,19 +89,19 @@ Horizontal List should be used whenever you need to make an ordered or unordered
 Since there are times when you want a list to be horizontal at some media queries and vertical at others, the horizontal list object is also able to be used as a mixin or extended as a placeholder.
 
 ```
-@include horizontal-list;
+@include HorizontalList;
 
-@extend %horizontal-list;
+@extend %HorizontalList;
 ```
 
 ## Available Classes
 
-* `.horizontal-list`
-* `.horizontal-list--delimited`
-* `.horizontal-list--center`
-* `.horizontal-list--right`
-* `.horizontal-list--left`
-* `.horizontal-list--fill` - forces the list to take up 100% of it's parent.
+* `.HorizontalList`
+* `.HorizontalList--delimited`
+* `.HorizontalList--center`
+* `.HorizontalList--right`
+* `.HorizontalList--left`
+* `.HorizontalList--fill` - forces the list to take up 100% of it's parent.
 
 ## Available Data Attributes
 
@@ -111,16 +111,28 @@ Since there are times when you want a list to be horizontal at some media querie
 
 * `$horizontal-list-delimiter`
 
-### The Scales Namespace Variable
+### Namespace Variables
+
+#### The Scales Namespace Variable
 
 All Scales patterns expose the `$scales-namespace` variable.
 
 `$scales-namespace` accepts a string that will prefix all Scales classes. The default value is `null`.
 
-To give all Scales classes a namespace, you will need to set this variable in a file that is imported before any scales files. For example:
+#### Class Level Namespace Variable
+
+Class level namespace variables allow you to namespace a selector based on the type e.g. `b-` for "base", `o-` for "objects", `u-` for utilities, and `c-` for "components".
+
+This pattern exposes the `$scales-objects-class-namespace` variable.
+
+`$scales-objects-class-namespace` accepts a string that will prefix any classes in this pattern and follow the Scales Namespace Variable if it is not null. The default value is `null`.
+
+#### Namespace Variable Usage
+
+To set either of these namespaces, you will need to set the variables in a file that is imported before any scales files. For example:
 
 ```
-@import your-project/settings; // $scales-namespace is set in this file
-@import your-project/scales; // Imports the Scales library
+@import your-project/settings; // Namespace variables are set in this file
+@import your-project/scalescss; // Imports all of the Scales packages
 @import your-project/project // The rest of your project imports
 ```

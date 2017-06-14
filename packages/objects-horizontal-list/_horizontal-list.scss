@@ -1,11 +1,16 @@
 // ==========================================================================
-// Horizontal List Pattern
+// Horizontal List Object
 // ==========================================================================
 
 //
 // Scales namespace variable
 ///
 $scales-namespace: null !default;
+
+//
+// Class level namespacing variable
+///
+$scales-objects-class-namespace: null !default;
 
 //
 // Available Variables
@@ -16,63 +21,61 @@ $horizontal-list-delimiter: ',\00A0' !default;
 //
 // Horizontal List classes
 ///
+@mixin HorizontalList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
-@mixin horizontal-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    > li {
-        display: inline-block;
-    }
+  > li {
+    display: inline-block;
+  }
 }
 
-.#{$scales-namespace}horizontal-list,
-%#{$scales-namespace}horizontal-list {
-    @include horizontal-list;
+%#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList,
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList {
+  @include HorizontalList;
 }
 
-.horizontal-list--center {
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--center {
   text-align: center;
 }
 
-.horizontal-list--right {
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--right {
   text-align: right;
 }
 
-.horizontal-list--left {
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--left {
   text-align: left;
 }
 
-.horizontal-list--fill {
-    display: table;
-    width: 100%;
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--fill {
+  display: table;
+  width: 100%;
 
-    > li {
-        display: table-cell;
-        text-align: center;
-    }
+  > li {
+    display: table-cell;
+    text-align: center;
+  }
 }
 
 //
 // Character delimited Horizontal List
 ///
-
-.#{$scales-namespace}horizontal-list--delimited {
-    > li {
-
-        &:after {
-            content: '#{$horizontal-list-delimiter}';
-        }
-
-        &:last-child:after {
-            content: '';
-        }
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited {
+  > li {
+    &:after {
+      content: '#{$horizontal-list-delimiter}';
     }
+
+    &:last-child:after {
+      content: '';
+    }
+  }
 }
 
-.#{$scales-namespace}horizontal-list {
-    > [data-delimiter]:after {
-        content: attr(data-delimiter);
-    }
+// Pass in a delimiter through a data attribute
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList {
+  > [data-delimiter]:after {
+    content: attr(data-delimiter);
+  }
 }

@@ -15,6 +15,11 @@
 $scales-namespace: null !default;
 
 //
+// Class level namespacing variable
+///
+$scales-base-class-namespace: null !default;
+
+//
 // Available Variables
 ///
 $selection-bg-color: #79bd9a !default;
@@ -27,26 +32,41 @@ $pre-overflow: auto !default;
 // http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
 ///
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
-*:before,
-*:after {
-    box-sizing: inherit;
+*:after,
+*:before {
+  box-sizing: inherit;
 }
 
 //
 // Remove padding and margins from elements.
 ///
-h1,h2,h3,h4,h5,h6,
-p,blockquote,pre,
-dl,dd,ol,ul,
-form,fieldset,legend,
-table,th,td,caption,
-hr {
-    margin: 0;
-    padding: 0;
+blockquote,
+caption,
+dd,
+dl,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+legend,
+ol,
+p,
+pre,
+table,
+td,
+th,
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 //
@@ -54,89 +74,89 @@ hr {
 ///
 abbr[title],
 dfn[title] {
-    cursor: help;
+  cursor: help;
 }
 
 //
 // So that "alt" text is visually offset if images don't load.
 ///
 img {
-    font-style: italic;
+  font-style: italic;
 }
 
 //
 // Give form elements some cursor interactions.
 ///
-label,
 button,
-select,
-option {
-    cursor: pointer;
+label,
+option,
+select {
+  cursor: pointer;
 }
 
-.text-input:active,
-.text-input:focus,
+.#{$scales-namespace}#{$scales-base-class-namespace}TextInput:active,
+.#{$scales-namespace}#{$scales-base-class-namespace}TextInput:focus,
 textarea:active,
 textarea:focus {
-    cursor: text;
+  cursor: text;
 }
 
 //
 // Get rid of all the form input styles for text fields and form buttons.
 // Hard to keep up with each input type, but they are listed here.
-// Better to use .text-input class instead of keeping these up to date.
+// Better to use .TextInput class instead of keeping these up to date.
 ///
-.text-input,
-textarea,
+.#{$scales-namespace}#{$scales-base-class-namespace}TextInput,
+[type=date],
+[type=datetime],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
 [type=text],
+[type=time],
 [type=url],
 [type=week],
-[type=time],
-[type=tel],
-[type=search],
-[type=password],
-[type=number],
-[type=month],
-[type=email],
-[type=datetime],
-[type=date] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    font-size: 100%;
-    line-height: inherit;
-    padding: 0;
-    margin: 0;
-    background: none;
-    border: 0;
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 100%;
+  line-height: inherit;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: 0;
 }
 
 select {
-    background: none;
-    font-size: 100%
+  background: none;
+  font-size: 100%;
 }
 
 // Fancy color for when you select stuff! Change the color for your app.
 ::-moz-selection {
-    background: $selection-bg-color;
-    color: $selection-text-color;
-    text-shadow: none;
+  background: $selection-bg-color;
+  color: $selection-text-color;
+  text-shadow: none;
 }
 
 ::selection {
-    background: $selection-bg-color;
-    color: $selection-text-color;
-    text-shadow: none;
+  background: $selection-bg-color;
+  color: $selection-text-color;
+  text-shadow: none;
 }
 
 // A better looking default hr.
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    padding: 0;
-    margin: 1em 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  padding: 0;
+  margin: 1em 0;
 }
 
 // Remove the gap between audio, canvas, iframes,
@@ -148,19 +168,19 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 // Remove default fieldset styles.
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 // Allow only vertical resizing of textareas.
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 //
@@ -169,12 +189,12 @@ textarea {
 
 // Add border collapse to tables.
 table {
-    border-collapse: $table-border-collapse;
+  border-collapse: $table-border-collapse;
 }
 
 // Contain overflow in all browsers
 pre {
-    overflow: $pre-overflow;
+  overflow: $pre-overflow;
 }
 
 // Less opinionated form font
@@ -183,5 +203,5 @@ input,
 optgroup,
 select,
 textarea {
-    font: inherit;
+  font: inherit;
 }

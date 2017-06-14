@@ -1,5 +1,5 @@
 // ==========================================================================
-// Stats Pattern
+// Stats Object
 // ==========================================================================
 
 //
@@ -8,43 +8,51 @@
 $scales-namespace: null !default;
 
 //
+// Class level namespacing variable
+///
+$scales-objects-class-namespace: null !default;
+
+//
 // Available Variables
 ///
 $stat-spacing: 1em !default;
 
 //
-// Stats should be used with <dl>s to group the stat title and value. The `--big` variation can be used when the title or values are too long to sit next to each other in a row.
+// Stats should be used with a <dl> and individual <div>s to group the
+// stat title and value. The `--big` variation can be used when the title
+// or values are too long to sit next to each other in a row.
 ///
 
 //
 // Stats classes
 ///
 
-.stat-group {
-    @extend %clearfix;
-    margin-left: 0;
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stats {
+  @extend %ClearFix;
+  margin-left: 0;
 }
 
-.stat {
-    float: left;
-    + .stat {
-        margin-left: $stat-spacing;
-    }
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stat {
+  float: left;
+
+  + .#{$scales-namespace}#{$scales-objects-class-namespace}Stat {
+    margin-left: $stat-spacing;
+  }
 }
 
-.stat > a {
-    display: block;
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stat > a {
+  display: block;
 }
 
-.stat__value {
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stat__value {
+  margin-left: 0;
+  text-align: center;
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stats--big {
+  .#{$scales-namespace}#{$scales-objects-class-namespace}Stat {
+    float: none;
     margin-left: 0;
     text-align: center;
-}
-
-.stat-group--big {
-    .stat {
-        float: none;
-        margin-left: 0;
-        text-align: center;
-    }
+  }
 }

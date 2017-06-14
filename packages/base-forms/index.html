@@ -9,32 +9,32 @@ fieldset {
   padding: 1em;
 }
 
-.form-list {
+.FormList {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.input-container {
+.InputContainer {
   margin-bottom: 1em;
 }
 
-.input-container--inline {
+.InputContainer--inline {
   display: inline-block;
   vertical-align: top;
 }
 
 label,
-.form-label {
+.FormLabel {
   display: block;
 }
 
-.form-label--additional {
+.FormLabel--additional {
   display: block;
   font-weight: normal;
 }
 
-.text-input,
+.TextInput,
 select,
 textarea {
   display: block;
@@ -49,11 +49,11 @@ select {
   background: #fff;
 }
 
-.form-inline .text-input,
-.form-inline select,
-.form-inline textarea,
-.form-inline label,
-.form-inline .form-label {
+.FormInline .TextInput,
+.FormInline select,
+.FormInline textarea,
+.FormInline label,
+.FormInline .FormLabel {
   display: inline-block;
   vertical-align: middle;
 }
@@ -61,9 +61,9 @@ select {
 input[disabled],
 select[disabled],
 textarea[disabled],
-input.is-disabled,
-select.is-disabled,
-textarea.is-disabled {
+input.is-Disabled,
+select.is-Disabled,
+textarea.is-Disabled {
   cursor: not-allowed;
   border-color: #aaa;
   background-color: #ccc;
@@ -73,176 +73,180 @@ textarea.is-disabled {
 input[readonly],
 select[readonly],
 textarea[readonly],
-input.is-readonly,
-select.is-readonly,
-textarea.is-readonly {
+input.is-ReadOnly,
+select.is-ReadOnly,
+textarea.is-ReadOnly {
   border-color: #aaa;
   background-color: #ccc;
   color: #000;
 }
 
-.helper-text {
+.HelperText {
   display: none;
 }
 
-.text-input:active + .helper-text,
-.text-input:focus + .helper-text,
-textarea:active + .helper-text,
-textarea:focus + .helper-text {
+.TextInput:active + .HelperText,
+.TextInput:focus + .HelperText,
+textarea:active + .HelperText,
+textarea:focus + .HelperText {
   display: block;
 }
 
-.form-inline .text-input:active + .helper-text,
-.form-inline .text-input:focus + .helper-text,
-.form-inline textarea:active + .helper-text,
-.form-inline textarea:focus + .helper-text {
+.FormInline .TextInput:active + .HelperText,
+.FormInline .TextInput:focus + .HelperText,
+.FormInline textarea:active + .HelperText,
+.FormInline textarea:focus + .HelperText {
   display: inline-block;
 }
 
 </style>
 </head>
 <body>
-    <header role="banner">
-        <h1>Base Forms for Scales</h1>
-    </header>
-    <main role="main">
-        <p>This page includes the default base forms styles.</p>
+  <header role="banner">
+    <h1>Base Forms for Scales</h1>
+  </header>
+  <main role="main">
+    <p>This page includes the default base forms styles.</p>
 
-        <h3>Default stacked form</h3>
-        <form>
-            <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
-            <input class="text-input" id="account" type="num" value="123456789" readonly>
+    <h3>Default stacked form</h3>
+    <form>
+      <label for="account">Account #<small class="FormLabel--additional">(Cannot Change)</small></label>
+      <input class="TextInput" id="account" type="num" value="123456789" readonly>
 
-            <label for="email">Email</label>
-            <input class="text-input" id="email" type="email" placeholder="Email">
-            <span class="helper-text">Enter your email address</span>
+      <label for="email">Email</label>
+      <input class="TextInput" id="email" type="email" placeholder="Email">
+      <span class="HelperText">Enter your email address</span>
 
-            <label for="password">Password</label>
-            <input class="text-input" id="password" type="password" placeholder="Password" disabled>
+      <label for="password">Password</label>
+      <input class="TextInput" id="password" type="password" placeholder="Password" disabled>
 
-            <label for="gender">Gender</label>
-            <select id="gender">
-                <option>Female</option>
-                <option>Male</option>
-                <option>Other</option>
-            </select>
+      <label for="age">Age</label>
+      <select id="age">
+        <option>18-40</option>
+        <option>41-60</option>
+        <option>61-80</option>
+        <option>81+</option>
+      </select>
 
-            <label>Introduce yourself</label>
-            <textarea></textarea>
+      <label>Introduce yourself</label>
+      <textarea></textarea>
 
-            <label for="newsletter">
-                <input id="newsletter" type="checkbox"> Send me the newsletter
-            </label>
+      <label for="newsletter">
+        <input id="newsletter" type="checkbox"> Send me the newsletter
+      </label>
 
-            <button type="submit" class="btn">Sign in</button>
-        </form>
+      <button type="submit" class="Button">Sign in</button>
+    </form>
 
-        <h3>Using an unordered list</h3>
-        <form>
-            <ul class="form-list">
-                <li class="input-container">
-                    <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
-                    <input class="text-input" id="account" type="num" value="123456789" readonly>
-                </li>
-                <li class="input-container">
-                    <label for="email">Email</label>
-                    <input class="text-input" id="email" type="email" placeholder="Email">
-                    <span class="helper-text">Enter your email address</span>
-                </li>
-                <li class="input-container">
-                    <label for="password">Password</label>
-                    <input class="text-input" id="password" type="password" placeholder="Password" disabled>
-                </li>
-                <li class="input-container">
-                    <label for="gender">Gender</label>
-                    <select id="gender">
-                        <option>Female</option>
-                        <option>Male</option>
-                        <option>Other</option>
-                    </select>
-                </li>
-                <li class="input-container">
-                    <label>Introduce yourself</label>
-                    <textarea></textarea>
-                </li>
-                </li>
-                <li class="input-container">
-                    <label for="newsletter">
-                        <input id="newsletter" type="checkbox"> Send me the newsletter
-                    </label>
-                </li>
-            </ul>
-            <button type="submit" class="btn">Sign in</button>
-        </form>
+    <h3>Using an unordered list</h3>
+    <form>
+      <ul class="FormList">
+        <li class="InputContainer">
+          <label for="account">Account #<small class="FormLabel--additional">(Cannot Change)</small></label>
+          <input class="TextInput" id="account" type="num" value="123456789" readonly>
+        </li>
+        <li class="InputContainer">
+          <label for="email">Email</label>
+          <input class="TextInput" id="email" type="email" placeholder="Email">
+          <span class="HelperText">Enter your email address</span>
+        </li>
+        <li class="InputContainer">
+          <label for="password">Password</label>
+          <input class="TextInput" id="password" type="password" placeholder="Password" disabled>
+        </li>
+        <li class="InputContainer">
+          <label for="age">Age</label>
+          <select id="age">
+            <option>18-40</option>
+            <option>41-60</option>
+            <option>61-80</option>
+            <option>81+</option>
+          </select>
+        </li>
+        <li class="InputContainer">
+          <label>Introduce yourself</label>
+          <textarea></textarea>
+        </li>
+        </li>
+        <li class="InputContainer">
+          <label for="newsletter">
+            <input id="newsletter" type="checkbox"> Send me the newsletter
+          </label>
+        </li>
+      </ul>
+      <button type="submit" class="Button">Sign in</button>
+    </form>
 
-        <h3>Inline form</h3>
-        <form class="form-inline">
-            <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
-            <input class="text-input" id="account" type="num" value="123456789" readonly>
+    <h3>Inline form</h3>
+    <form class="FormInline">
+      <label for="account">Account #<small class="FormLabel--additional">(Cannot Change)</small></label>
+      <input class="TextInput" id="account" type="num" value="123456789" readonly>
 
-            <label for="email">Email</label>
-            <input class="text-input" id="email" type="email" placeholder="Email">
+      <label for="email">Email</label>
+      <input class="TextInput" id="email" type="email" placeholder="Email">
 
-            <label for="password">Password</label>
-            <input class="text-input" id="password" type="password" placeholder="Password" disabled>
+      <label for="password">Password</label>
+      <input class="TextInput" id="password" type="password" placeholder="Password" disabled>
 
-            <label for="gender">Gender</label>
-            <select id="gender">
-                <option>Female</option>
-                <option>Male</option>
-                <option>Other</option>
-            </select>
+      <label for="age">Age</label>
+      <select id="age">
+        <option>18-40</option>
+        <option>41-60</option>
+        <option>61-80</option>
+        <option>81+</option>
+      </select>
 
-            <label>Introduce yourself</label>
-            <textarea></textarea>
+      <label>Introduce yourself</label>
+      <textarea></textarea>
 
-            <label for="newsletter">
-                <input id="newsletter" type="checkbox"> Send me the newsletter
-            </label>
+      <label for="newsletter">
+        <input id="newsletter" type="checkbox"> Send me the newsletter
+      </label>
 
-            <button type="submit" class="btn">Sign in</button>
-        </form>
+      <button type="submit" class="Button">Sign in</button>
+    </form>
 
-        <h3>Inline input containers with stacked label/input</h3>
-        <form>
-            <ul class="form-list">
-                <li class="input-container input-container--inline">
-                    <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
-                    <input class="text-input" id="account" type="num" value="123456789" readonly>
-                </li>
-                <li class="input-container input-container--inline">
-                    <label for="email">Email</label>
-                    <input class="text-input" id="email" type="email" placeholder="Email">
-                    <span class="helper-text">Enter your email address</span>
-                </li>
-                <li class="input-container input-container--inline">
-                    <label for="password">Password</label>
-                    <input class="text-input" id="password" type="password" placeholder="Password" disabled>
-                </li>
-                <li class="input-container input-container--inline">
-                    <label for="gender">Gender</label>
-                    <select id="gender">
-                        <option>Female</option>
-                        <option>Male</option>
-                        <option>Other</option>
-                    </select>
-                </li>
-                <li class="input-container input-container--inline">
-                    <label>Introduce yourself</label>
-                    <textarea></textarea>
-                </li>
-                </li>
-                <li class="input-container input-container--inline">
-                    <label for="newsletter">
-                        <input id="newsletter" type="checkbox"> Send me the newsletter
-                    </label>
-                </li>
-                <li class="input-container input-container--inline">
-                    <button type="submit" class="btn">Sign in</button>
-                </li>
-            </ul>
-        </form>
+    <h3>Inline input containers with stacked label/input</h3>
+    <form>
+      <ul class="FormList">
+        <li class="InputContainer InputContainer--inline">
+          <label for="account">Account #<small class="FormLabel--additional">(Cannot Change)</small></label>
+          <input class="TextInput" id="account" type="num" value="123456789" readonly>
+        </li>
+        <li class="InputContainer InputContainer--inline">
+          <label for="email">Email</label>
+          <input class="TextInput" id="email" type="email" placeholder="Email">
+          <span class="HelperText">Enter your email address</span>
+        </li>
+        <li class="InputContainer InputContainer--inline">
+          <label for="password">Password</label>
+          <input class="TextInput" id="password" type="password" placeholder="Password" disabled>
+        </li>
+        <li class="InputContainer InputContainer--inline">
+          <label for="age">Age</label>
+          <select id="age">
+            <option>18-40</option>
+            <option>41-60</option>
+            <option>61-80</option>
+            <option>81+</option>
+          </select>
+        </li>
+        <li class="InputContainer InputContainer--inline">
+          <label>Introduce yourself</label>
+          <textarea></textarea>
+        </li>
+        </li>
+        <li class="InputContainer InputContainer--inline">
+          <label for="newsletter">
+            <input id="newsletter" type="checkbox"> Send me the newsletter
+          </label>
+        </li>
+        <li class="InputContainer InputContainer--inline">
+          <button type="submit" class="Button">Sign in</button>
+        </li>
+      </ul>
+    </form>
 
-    </main>
+  </main>
 </body>
 </html>

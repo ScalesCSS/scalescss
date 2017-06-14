@@ -12,6 +12,11 @@
 $scales-namespace: null !default;
 
 //
+// Class level namespacing variable
+///
+$scales-base-class-namespace: null !default;
+
+//
 // Available Variables
 ///
 $table-padding-large: 1em !default;
@@ -28,55 +33,55 @@ $table-highlight-text-color: #000 !default;
 // Main table styles
 ///
 
-// You can use a .table class, but you don't have to. Tables will all
+// You can use a .Table class, but you don't have to. Tables will all
 // be 100% width.
 table,
-.#{$scales-namespace}table {
-    width: 100%;
+.#{$scales-namespace}#{$scales-base-class-namespace}Table {
+  width: 100%;
 }
 
 //
 // Cell alignments
 ///
 [colspan] {
-    text-align: center;
+  text-align: center;
 }
 [colspan="1"] {
-    text-align: left;
+  text-align: left;
 }
 [rowspan] {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 [rowspan="1"] {
-    vertical-align: top;
+  vertical-align: top;
 }
 // Align numbers to the right. Especially useful for money.
-.numerical {
-    text-align: right;
+.#{$scales-namespace}#{$scales-base-class-namespace}Numerical {
+  text-align: right;
 }
 
 //
 // Cell padding options
 ///
-.#{$scales-namespace}table--spacing-large {
-    th,
-    td {
-        padding: $table-padding-large;
-    }
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--spacing-large {
+  th,
+  td {
+    padding: $table-padding-large;
+  }
 }
 
-.#{$scales-namespace}table--spacing-medium {
-    th,
-    td {
-        padding: $table-padding-medium;
-    }
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--spacing-medium {
+  th,
+  td {
+    padding: $table-padding-medium;
+  }
 }
 
-.#{$scales-namespace}table--spacing-small {
-    th,
-    td {
-        padding: $table-padding-small;
-    }
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--spacing-small {
+  th,
+  td {
+    padding: $table-padding-small;
+  }
 }
 
 //
@@ -84,77 +89,76 @@ table,
 ///
 
 // Borders around all sides
-.#{$scales-namespace}table--bordered {
-    border-top: $table-border-width $table-border-style $table-border-color;
-    border-right: $table-border-width $table-border-style $table-border-color;
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--bordered {
+  border-top: $table-border-width $table-border-style $table-border-color;
+  border-right: $table-border-width $table-border-style $table-border-color;
 
-    tr {
-        border-bottom: $table-border-width $table-border-style $table-border-color;
-    }
+  tr {
+    border-bottom: $table-border-width $table-border-style $table-border-color;
+  }
 
-    th,
-    td {
-        border-left: $table-border-width $table-border-style $table-border-color;
-    }
+  th,
+  td {
+    border-left: $table-border-width $table-border-style $table-border-color;
+  }
 }
 
 // Remove outside table borders
-.#{$scales-namespace}table--bordered-inside {
-    border-top-width: 0;
-    border-right-width: 0;
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--bordered-inside {
+  border-top-width: 0;
+  border-right-width: 0;
 
-    tbody tr:last-child {
-        border-bottom-width: 0;
-    }
+  tbody tr:last-child {
+    border-bottom-width: 0;
+  }
 
-    th,
-    td {
-        &:first-child {
-            border-left-width: 0;
-        }
+  th,
+  td {
+    &:first-child {
+      border-left-width: 0;
     }
+  }
 }
 
 // Borders on just the bottom of rows
-.#{$scales-namespace}table--bordered-rows {
-    th,
-    td {
-        border-bottom: $table-border-width $table-border-style $table-border-color;
-    }
-
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--bordered-rows {
+  th,
+  td {
+    border-bottom: $table-border-width $table-border-style $table-border-color;
+  }
 }
 
 // Remove outside row borders
-.#{$scales-namespace}table--bordered-rows-inside {
-    tbody tr:last-child {
-        th,
-        td {
-            border-bottom-width: 0;
-        }
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--bordered-rows-inside {
+  tbody tr:last-child {
+    th,
+    td {
+      border-bottom-width: 0;
     }
+  }
 }
 
 // Borders on just the columns
-.#{$scales-namespace}table--bordered-columns {
-    border-left: $table-border-width $table-border-style $table-border-color;
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--bordered-columns {
+  border-left: $table-border-width $table-border-style $table-border-color;
 
-    th,
-    td {
-        border-right: $table-border-width $table-border-style $table-border-color;
-    }
+  th,
+  td {
+    border-right: $table-border-width $table-border-style $table-border-color;
+  }
 }
 
 // Remove outside column borders
-.#{$scales-namespace}table--bordered-columns-inside {
-    border-left-width: 0;
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--bordered-columns-inside {
+  border-left-width: 0;
 
-    th,
-    td {
+  th,
+  td {
 
-        &:last-child {
-            border-right-width: 0;
-        }
-    }
+    &:last-child {
+      border-right-width: 0;
+  }
+  }
 }
 
 //
@@ -162,31 +166,31 @@ table,
 ///
 
 // Odd rows
-.#{$scales-namespace}table--striped,
-.#{$scales-namespace}table--striped-odd {
-    tbody tr:nth-child(odd) {
-        background-color: $table-stripe-color;
-    }
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--striped,
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--striped-odd {
+  tbody tr:nth-child(odd) {
+    background-color: $table-stripe-color;
+  }
 }
 
 // Even rows
-.#{$scales-namespace}table--striped-even {
-    tbody tr:nth-child(even) {
-        background-color: $table-stripe-color;
-    }
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--striped-even {
+  tbody tr:nth-child(even) {
+    background-color: $table-stripe-color;
+  }
 }
 
 //
 // Highlight specific row or cell
 ///
-.#{$scales-namespace}table-highlight {
-    background-color: $table-highlight-color !important;
-    color: $table-highlight-text-color !important;
+.#{$scales-namespace}#{$scales-base-class-namespace}TableHighlight {
+  background-color: $table-highlight-color !important;
+  color: $table-highlight-text-color !important;
 }
 
 //
 // Force table cells to be equal width
 ///
-.#{$scales-namespace}table--fixed {
-    table-layout: fixed;
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--fixed {
+  table-layout: fixed;
 }

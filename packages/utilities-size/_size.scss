@@ -12,6 +12,11 @@
 $scales-namespace: null !default;
 
 //
+// Class level namespacing variable
+///
+$scales-utilities-class-namespace: null !default;
+
+//
 // Available variables
 ///
 $size-range-start: 5;
@@ -21,14 +26,14 @@ $size-step-value: 5;
 //
 // Size classes
 //
-// This will generate a list of classes in the format `.size-[percent]`.
+// This will generate a list of classes in the format `.Size-[percent]`.
 // By default it will generate a class for every 5% step from 5 to 100.
 ///
 $size: $size-range-start;
 
 @while $size <= $size-range-end {
-    .#{$scales-namespace}size-#{$size} {
-        width: unquote('#{$size}%') !important;
-    }
-    $size: $size + $size-step-value;
+  .#{$scales-namespace}#{$scales-utilities-class-namespace}Size-#{$size} {
+    width: unquote('#{$size}%') !important;
+  }
+  $size: $size + $size-step-value;
 }

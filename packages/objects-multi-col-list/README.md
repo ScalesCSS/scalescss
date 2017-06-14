@@ -21,100 +21,110 @@ Multi column lists can be used when you have a single list that you want to spli
 ### Two Columns
 
 ```
-<ul class="multi-col-list two-columns">
-    <li>Sass</li>
-    <li>CSS</li>
-    <li>HTML</li>
-    <li>Javascript</li>
-    <li>PHP</li>
-    <li>Python</li>
+<ul class="MultiColList MultiColList--two-columns">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+  <li>Javascript</li>
+  <li>PHP</li>
+  <li>Python</li>
 </ul>
 ```
 
 ### Three Columns
 
 ```
-<ul class="multi-col-list three-columns">
-    <li>Sass</li>
-    <li>CSS</li>
-    <li>HTML</li>
-    <li>Javascript</li>
-    <li>PHP</li>
-    <li>Python</li>
+<ul class="MultiColList MultiColList--three-columns">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+  <li>Javascript</li>
+  <li>PHP</li>
+  <li>Python</li>
 </ul>
 ```
 
 ### Four Columns
 
 ```
-<ul class="multi-col-list four-columns">
-    <li>Sass</li>
-    <li>CSS</li>
-    <li>HTML</li>
-    <li>Javascript</li>
-    <li>PHP</li>
-    <li>Python</li>
+<ul class="MultiColList MultiColList--four-columns">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+  <li>Javascript</li>
+  <li>PHP</li>
+  <li>Python</li>
 </ul>
 ```
 
 ### Five Columns
 
 ```
-<ul class="multi-col-list five-columns">
-    <li>Sass</li>
-    <li>CSS</li>
-    <li>HTML</li>
-    <li>Javascript</li>
-    <li>PHP</li>
-    <li>Python</li>
+<ul class="MultiColList MultiColList--five-columns">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+  <li>Javascript</li>
+  <li>PHP</li>
+  <li>Python</li>
 </ul>
 ```
 
 ### Six Columns
 
 ```
-<ul class="multi-col-list six-columns">
-    <li>Sass</li>
-    <li>CSS</li>
-    <li>HTML</li>
-    <li>Javascript</li>
-    <li>PHP</li>
-    <li>Python</li>
+<ul class="MultiColList MultiColList--six-columns">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+  <li>Javascript</li>
+  <li>PHP</li>
+  <li>Python</li>
 </ul>
 ```
-
-
 
 ### Other uses
 
 Since there are situations where you want a list have a different number of columns at different media queries, the multi column list object is also able to be used as a mixin or extended as a placeholder.
 
 ```
-@include columns(2);
+@include MultiColList(2);
 
-@extend %two-columns;
+@extend %MultiColList--two-columns;
 ```
 
 ## Available Classes
 
-* `.multi-col-list`
-* `.two-columns`
-* `.three-columns`
-* `.four-columns`
-* `.five-columns`
-* `.six-columns`
+* `.MultiColList`
+* `.MultiColList--two-columns`
+* `.MultiColList--three-columns`
+* `.MultiColList--four-columns`
+* `.MultiColList--five-columns`
+* `.MultiColList--six-columns`
 
-### The Scales Namespace Variable
+### Namespace Variables
+
+#### The Scales Namespace Variable
 
 All Scales patterns expose the `$scales-namespace` variable.
 
 `$scales-namespace` accepts a string that will prefix all Scales classes. The default value is `null`.
 
-To give all Scales classes a namespace, you will need to set this variable in a file that is imported before any scales files. For example:
+#### Class Level Namespace Variable
+
+Class level namespace variables allow you to namespace a selector based on the type e.g. `b-` for "base", `o-` for "objects", `u-` for utilities, and `c-` for "components".
+
+This pattern exposes the `$scales-objects-class-namespace` variable.
+
+`$scales-objects-class-namespace` accepts a string that will prefix any classes in this pattern and follow the Scales Namespace Variable if it is not null. The default value is `null`.
+
+#### Namespace Variable Usage
+
+To set either of these namespaces, you will need to set the variables in a file that is imported before any scales files. For example:
 
 ```
-@import your-project/settings; // $scales-namespace is set in this file
-@import your-project/scales; // Imports the Scales library
+@import your-project/settings; // Namespace variables are set in this file
+@import your-project/scalescss; // Imports all of the Scales packages
 @import your-project/project // The rest of your project imports
 ```
 
@@ -123,30 +133,27 @@ To give all Scales classes a namespace, you will need to set this variable in a 
 In your project or theme, you can easily extend the multi column list object to add more columns. For example:
 
 ```
-@import scalescss/objects-multi-col-list/multi-col-list
+@import your-project/scalescss/objects-multi-col-list/multi-col-list
 
 //
 // 12 columns
 ///
-.twelve-columns {
+.MultiColList--twelve-columns {
 
-    > li {
-        width: 8.333333333%
-    }
+  > li {
+    width: 8.333333333%
+  }
 }
 ```
 
 You may also want to change the number of columns depending on the screen width. For example:
 
 ```
-.my-list {
-    @extend %two-columns;
+.MyList {
+  @include MultiColList(2);
 
-    @media all and (min-width: 35em) {
-        // use the columns mixin here because @extend
-        // isn't supported in media queries
-        ///
-        @include columns(5);
-    }
+  @media all and (min-width: 35em) {
+    @include MultiColList(5);
+  }
 }
 ```

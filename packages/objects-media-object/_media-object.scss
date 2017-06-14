@@ -1,5 +1,5 @@
 // ==========================================================================
-// Media Object Pattern
+// Media Object
 // ==========================================================================
 
 // Use the media object any time you have an image or other media and text
@@ -10,6 +10,11 @@
 // Scales namespace variable
 ///
 $scales-namespace: null !default;
+
+//
+// Class level namespacing variable
+///
+$scales-objects-class-namespace: null !default;
 
 //
 // Available Variables
@@ -24,127 +29,117 @@ $media-stacked-breakpoint: 25em !default;
 //
 // Media object classes
 ///
-.#{$scales-namespace}media {
-    @extend %clearfix;
-    display: block;
+.#{$scales-namespace}#{$scales-objects-class-namespace}Media {
+  @extend %ClearFix;
+  display: block;
 }
 
-.#{$scales-namespace}media__figure {
-    float: left;
-    margin-right: $media-gutter;
+.#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+  float: left;
+  margin-right: $media-gutter;
 
-    > img {
-        display: block;
-    }
+  > img {
+    display: block;
+  }
 }
 
-.#{$scales-namespace}media__body {
-    overflow: hidden;
-    display: block;
+.#{$scales-namespace}#{$scales-objects-class-namespace}Media__body {
+  overflow: hidden;
+  display: block;
 
-    &,
-    > :last-child {
-        margin-bottom: 0;
-    }
+   > :last-child,
+  & {
+    margin-bottom: 0;
+  }
 }
 
 //
 // Reversed media object
 ///
-.#{$scales-namespace}media--rev {
-
-    > .#{$scales-namespace}media__figure {
-        float: right;
-        margin-right: 0;
-        margin-left: $media-gutter;
-    }
+.#{$scales-namespace}#{$scales-objects-class-namespace}Media--rev {
+  > .#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+    float: right;
+    margin-right: 0;
+    margin-left: $media-gutter;
+  }
 }
 
 //
 // Flush media object
 ///
-.#{$scales-namespace}media--flush {
-
-    > .#{$scales-namespace}media__figure {
-        margin-right: 0;
-        margin-left: 0;
-    }
+.#{$scales-namespace}#{$scales-objects-class-namespace}Media--flush {
+  > .#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 //
 // Tiny media object
 ///
-.#{$scales-namespace}media--tiny {
+.#{$scales-namespace}#{$scales-objects-class-namespace}Media--tiny {
+  > .#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+    margin-right: $media-gutter-tiny;
+  }
 
-    > .#{$scales-namespace}media__figure {
-        margin-right: $media-gutter-tiny;
+  // Reversed
+  &.#{$scales-namespace}#{$scales-objects-class-namespace}Media--rev {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+      margin-right: 0;
+      margin-left: $media-gutter-tiny;
     }
-
-    // Reversed
-    &.#{$scales-namespace}media--rev {
-
-        > .#{$scales-namespace}media__figure {
-            margin-right: 0;
-            margin-left: $media-gutter-tiny;
-        }
-    }
+  }
 }
 
 //
 // Small media object
 ///
-.#{$scales-namespace}media--small {
+.#{$scales-namespace}#{$scales-objects-class-namespace}Media--small {
+  > .#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+    margin-right: $media-gutter-small;
+  }
 
-    > .#{$scales-namespace}media__figure {
-        margin-right: $media-gutter-small;
+  // Reversed
+  &.#{$scales-namespace}#{$scales-objects-class-namespace}Media--rev {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+      margin-right: 0;
+      margin-left: $media-gutter-small;
     }
-
-    // Reversed
-    &.#{$scales-namespace}media--rev {
-
-        > .#{$scales-namespace}media__figure {
-            margin-right: 0;
-            margin-left: $media-gutter-small;
-        }
-    }
+  }
 }
 
 //
 // Large media object
 ///
-.#{$scales-namespace}media--large {
+.#{$scales-namespace}#{$scales-objects-class-namespace}Media--large {
+  > .#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+    margin-right: $media-gutter-large;
+  }
 
-    > .#{$scales-namespace}media__figure {
-        margin-right: $media-gutter-large;
+  // Reversed
+  &.#{$scales-namespace}#{$scales-objects-class-namespace}Media--rev {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+      margin-right: 0;
+      margin-left: $media-gutter-large;
     }
-
-    // Reversed
-    &.#{$scales-namespace}media--rev {
-
-        > .#{$scales-namespace}media__figure {
-            margin-right: 0;
-            margin-left: $media-gutter-large;
-        }
-    }
+  }
 }
 
 //
 // Huge media object
 ///
-.#{$scales-namespace}media--huge {
+.#{$scales-namespace}#{$scales-objects-class-namespace}Media--huge {
+  > .#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+    margin-right: $media-gutter-huge;
+  }
 
-    > .#{$scales-namespace}media__figure {
-        margin-right: $media-gutter-huge;
+  // Reversed
+  &.#{$scales-namespace}#{$scales-objects-class-namespace}Media--rev {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+      margin-right: 0;
+      margin-left: $media-gutter-huge;
     }
-
-    // Reversed
-    &.#{$scales-namespace}media--rev {
-
-        > .#{$scales-namespace}media__figure {
-            margin-right: 0;
-            margin-left: $media-gutter-huge;
-        }
-    }
+  }
 }
 
 //
@@ -152,65 +147,60 @@ $media-stacked-breakpoint: 25em !default;
 ///
 @media all and (max-width: $media-stacked-breakpoint) {
 
-    //
-    // Default stacked media object
-    ///
-    .#{$scales-namespace}media--stacked {
-
-        > .#{$scales-namespace}media__figure {
-            display: block;
-            float: none;
-            margin-right: 0;
-            margin-left:  0;
-            margin-bottom: $media-gutter;
-        }
-
-        //
-        // Tiny media object
-        ///
-        &.#{$scales-namespace}media--tiny {
-
-            > .#{$scales-namespace}media__figure {
-                margin-right: 0;
-                margin-left:  0;
-                margin-bottom: $media-gutter-tiny;
-            }
-        }
-
-        //
-        // Small media object
-        ///
-        &.#{$scales-namespace}media--small {
-
-            > .#{$scales-namespace}media__figure {
-                margin-right: 0;
-                margin-left:  0;
-                margin-bottom: $media-gutter-small;
-            }
-        }
-
-        //
-        // Large media object
-        ///
-        &.#{$scales-namespace}media--large {
-
-            > .#{$scales-namespace}media__figure {
-                margin-right: 0;
-                margin-left:  0;
-                margin-bottom: $media-gutter-large;
-            }
-        }
-
-        //
-        // Huge media object
-        ///
-        &.#{$scales-namespace}media--huge {
-
-            > .#{$scales-namespace}media__figure {
-                margin-right: 0;
-                margin-left:  0;
-                margin-bottom: $media-gutter-huge;
-            }
-        }
+  //
+  // Default stacked media object
+  ///
+  .#{$scales-namespace}#{$scales-objects-class-namespace}Media--stacked {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+      display: block;
+      float: none;
+      margin-right: 0;
+      margin-left: 0;
+      margin-bottom: $media-gutter;
     }
+
+    //
+    // Tiny media object
+    ///
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Media--tiny {
+      > .#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: $media-gutter-tiny;
+      }
+    }
+
+    //
+    // Small media object
+    ///
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Media--small {
+      > .#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: $media-gutter-small;
+      }
+    }
+
+    //
+    // Large media object
+    ///
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Media--large {
+      > .#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: $media-gutter-large;
+      }
+    }
+
+    //
+    // Huge media object
+    ///
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Media--huge {
+      > .#{$scales-namespace}#{$scales-objects-class-namespace}Media__figure {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: $media-gutter-huge;
+      }
+    }
+  }
 }

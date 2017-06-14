@@ -12,34 +12,34 @@ Scales uses the [Sass CSS preprocessor](http://sass-lang.com/), you'll need eith
 
 ## Usage
 
-By default there is a class for every 5% step from 5 to 100 in the format `.size-[percent]`. Simply put a class in your HTML and the width will change by that percentage.
+By default there is a class for every 5% step from 5 to 100 in the format `.Size-[percent]`. Simply put a class in your HTML and the width will change by that percentage.
 
 ```
-<p class="size-50">This changes the width of the element to 50%</p>
+<p class="Size-50">This changes the width of the element to 50%</p>
 ```
 
 ## Available Classes
 
-* `.size-5`
-* `.size-10`
-* `.size-15`
-* `.size-20`
-* `.size-25`
-* `.size-30`
-* `.size-35`
-* `.size-40`
-* `.size-45`
-* `.size-50`
-* `.size-55`
-* `.size-60`
-* `.size-65`
-* `.size-70`
-* `.size-75`
-* `.size-80`
-* `.size-85`
-* `.size-90`
-* `.size-95`
-* `.size-100`
+* `.Size-5`
+* `.Size-10`
+* `.Size-15`
+* `.Size-20`
+* `.Size-25`
+* `.Size-30`
+* `.Size-35`
+* `.Size-40`
+* `.Size-45`
+* `.Size-50`
+* `.Size-55`
+* `.Size-60`
+* `.Size-65`
+* `.Size-70`
+* `.Size-75`
+* `.Size-80`
+* `.Size-85`
+* `.Size-90`
+* `.Size-95`
+* `.Size-100`
 
 ## Available variables
 
@@ -53,16 +53,28 @@ By default there is a class for every 5% step from 5 to 100 in the format `.size
     * Increment between values
     * Default: 5
 
-### The Scales Namespace Variable
+### Namespace Variables
+
+#### The Scales Namespace Variable
 
 All Scales patterns expose the `$scales-namespace` variable.
 
 `$scales-namespace` accepts a string that will prefix all Scales classes. The default value is `null`.
 
-To give all Scales classes a namespace, you will need to set this variable in a file that is imported before any scales files. For example:
+#### Class Level Namespace Variable
+
+Class level namespace variables allow you to namespace a selector based on the type e.g. `b-` for "base", `o-` for "objects", `u-` for utilities, and `c-` for "components".
+
+This pattern exposes the `$scales-utilities-class-namespace` variable.
+
+`$scales-utilities-class-namespace` accepts a string that will prefix any classes in this pattern and follow the Scales Namespace Variable if it is not null. The default value is `null`.
+
+#### Namespace Variable Usage
+
+To set either of these namespaces, you will need to set the variables in a file that is imported before any scales files. For example:
 
 ```
-@import your-project/settings; // $scales-namespace is set in this file
-@import your-project/scales; // Imports the Scales library
+@import your-project/settings; // Namespace variables are set in this file
+@import your-project/scalescss; // Imports all of the Scales packages
 @import your-project/project // The rest of your project imports
 ```

@@ -1,11 +1,16 @@
 // ==========================================================================
-// Box Pattern
+// Box Object
 // ==========================================================================
 
 //
 // Scales namespace variable
 ///
 $scales-namespace: null !default;
+
+//
+// Class level namespacing variable
+///
+$scales-objects-class-namespace: null !default;
 
 //
 // Available Variables
@@ -23,54 +28,54 @@ $box-padding-huge: $box-padding * 4 !default;
 //
 // Box Mixin
 ///
-@mixin box($padding) {
-    @extend %clearfix;
-    display: block;
-    padding: $padding;
+@mixin Box($padding) {
+  @extend %ClearFix;
+  display: block;
+  padding: $padding;
 
-    > :last-child {
-        margin-bottom: 0;
-    }
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 //
 // Default box
 ///
-.#{$scales-namespace}box {
-    @include box($box-padding);
+.#{$scales-namespace}#{$scales-objects-class-namespace}Box {
+  @include Box($box-padding);
 }
 
 //
 // Flush box (No padding)
 ///
-.#{$scales-namespace}box--flush {
-    padding: 0;
+.#{$scales-namespace}#{$scales-objects-class-namespace}Box--flush {
+  padding: 0;
 }
 
 //
 // Tiny box
 ///
-.#{$scales-namespace}box--tiny {
-    padding: $box-padding-tiny;
+.#{$scales-namespace}#{$scales-objects-class-namespace}Box--tiny {
+  padding: $box-padding-tiny;
 }
 
 //
 // Small box
 ///
-.#{$scales-namespace}box--small {
-    padding: $box-padding-small;
+.#{$scales-namespace}#{$scales-objects-class-namespace}Box--small {
+  padding: $box-padding-small;
 }
 
 //
 // Large box
 ///
-.#{$scales-namespace}box--large {
-    padding: $box-padding-large;
+.#{$scales-namespace}#{$scales-objects-class-namespace}Box--large {
+  padding: $box-padding-large;
 }
 
 //
 // Huge box
 ///
-.#{$scales-namespace}box--huge {
-    padding: $box-padding-huge;
+.#{$scales-namespace}#{$scales-objects-class-namespace}Box--huge {
+  padding: $box-padding-huge;
 }

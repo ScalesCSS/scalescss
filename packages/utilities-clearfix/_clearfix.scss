@@ -15,19 +15,23 @@
 $scales-namespace: null !default;
 
 //
+// Class level namespacing variable
+///
+$scales-utilities-class-namespace: null !default;
+
+//
 // Available Variables
 ///
-$clearfix-class: clearfix !default;
+$clearfix-class: ClearFix !default;
 
 //
 // Clearfix
 ///
-.#{$scales-namespace}#{$clearfix-class},
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+%ClearFix,
+.#{$scales-namespace}#{$scales-utilities-class-namespace}#{$clearfix-class} {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }

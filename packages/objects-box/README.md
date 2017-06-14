@@ -19,8 +19,8 @@ Scales uses the [Sass CSS preprocessor](http://sass-lang.com/), you'll need eith
 The box object can be used on any element that you want. For example:
 
 ```
-<div class="box">
-    <p>The content in here will be boxed off from the surrounding content and will have a default amount of padding (based on the class used) to visually separate it.</p>
+<div class="Box">
+  <p>The content in here will be boxed off from the surrounding content and will have a default amount of padding (based on the class used) to visually separate it.</p>
 </div>
 ```
 
@@ -29,17 +29,17 @@ The box object can be used on any element that you want. For example:
 Since there are times when you want any element to be boxed off, possibly with different amounts of padding at different breakpoints, the box object is also able to be used as a mixin.
 
 ```
-@include box($padding);
+@include Box($padding);
 ```
 
 ## Available Classes
 
-* `.box`
-* `.box--flush`
-* `.box--tiny`
-* `.box--small`
-* `.box--large`
-* `.box--huge`
+* `.Box`
+* `.Box--flush`
+* `.Box--tiny`
+* `.Box--small`
+* `.Box--large`
+* `.Box--huge`
 
 ## Available Variables
 
@@ -49,17 +49,29 @@ Since there are times when you want any element to be boxed off, possibly with d
 * `$box-padding-large`
 * `$box-padding-huge`
 
-### The Scales Namespace Variable
+### Namespace Variables
+
+#### The Scales Namespace Variable
 
 All Scales patterns expose the `$scales-namespace` variable.
 
 `$scales-namespace` accepts a string that will prefix all Scales classes. The default value is `null`.
 
-To give all Scales classes a namespace, you will need to set this variable in a file that is imported before any scales files. For example:
+#### Class Level Namespace Variable
+
+Class level namespace variables allow you to namespace a selector based on the type e.g. `b-` for "base", `o-` for "objects", `u-` for utilities, and `c-` for "components".
+
+This pattern exposes the `$scales-objects-class-namespace` variable.
+
+`$scales-objects-class-namespace` accepts a string that will prefix any classes in this pattern and follow the Scales Namespace Variable if it is not null. The default value is `null`.
+
+#### Namespace Variable Usage
+
+To set either of these namespaces, you will need to set the variables in a file that is imported before any scales files. For example:
 
 ```
-@import your-project/settings; // $scales-namespace is set in this file
-@import your-project/scales; // Imports the Scales library
+@import your-project/settings; // Namespace variables are set in this file
+@import your-project/scalescss; // Imports all of the Scales packages
 @import your-project/project // The rest of your project imports
 ```
 
@@ -68,19 +80,19 @@ To give all Scales classes a namespace, you will need to set this variable in a 
 In your project or theme, you can easily extend the box object for your own purposes. The size variations are already an example of extending this class. Another is an error box:
 
 ```
-@import scalescss/pattern-box/box
+@import your-project/scalescss/objects-box/box
 
 //
 // Error Box (extends box)
 ///
-.box--error {
-    background-color: pink;
-    border: 2px dashed red;
-    color: red;
+.Box--error {
+  background-color: pink;
+  border: 2px dashed red;
+  color: red;
 }
 ```
 ```
-<div class="box box--error">
-    <p>This is a really ugly error message in an alert box!!!!!</p>
+<div class="Box Box--error">
+  <p>This is a really ugly error message in an alert box!!!!!</p>
 </div>
 ```
