@@ -2,20 +2,20 @@
   "name": "@scalescss/scalescss",
   "version": "3.0.1",
   "description": "Scales is a design-free collection of OOCSS patterns, framework settings, & utilities to quickly build mobile-first, responsive web projects",
-  "main": "_scales.scss",
+  "main": "_scalescss.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ScalesCSS/scales"
+    "url": "git+https://github.com/ScalesCSS/scalescss"
   },
   "author": "Dave Gillhespy",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ScalesCSS/scalescss/issues"
   },
-  "homepage": "https://github.com/ScalesCSS/scales#readme",
+  "homepage": "https://github.com/ScalesCSS/scalescss#readme",
   "dependencies": {
     "@scalescss/base-blockquotes": "^3.0.1",
     "@scalescss/base-forms": "^3.0.1",
