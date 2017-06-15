@@ -18,7 +18,7 @@ It should be extended in your sass files, but can be used as a class. I recommen
 
 ```
 .parent-class {
-  @extend %clearfix
+  @extend %ClearFix
 }
 ```
 
@@ -31,7 +31,7 @@ For debugging:
 
 ## Available Classes
 
-* `%clearfix` - extend in your sass files
+* `%ClearFix` - extend in your sass files
 * `.ClearFix` - For debugging, change with the `$clearfix-class` variable.
 
 ## Available Variables
