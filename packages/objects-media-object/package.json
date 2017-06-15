@@ -1,0 +1,22 @@
+{
+  "name": "@scalescss/objects-media-object",
+  "version": "3.0.0",
+  "description": "A pattern for the Media Object for Scales CSS",
+  "main": "_media-object.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-media-object"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/scalescss/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-media-object#readme",
+  "dependencies": {
+    "@scalescss/utilities-clearfix": "^3.0.0"
+  }
+}

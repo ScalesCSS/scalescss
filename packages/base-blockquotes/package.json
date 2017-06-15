@@ -1,0 +1,19 @@
+{
+  "name": "@scalescss/base-blockquotes",
+  "version": "3.0.0",
+  "description": "Base block quote styles for Scales CSS",
+  "main": "_blockquotes.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScalesCSS/scalescss/tree/master/packages/base-blockquotes"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/scalescss/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/base-blockquotes#readme"
+}

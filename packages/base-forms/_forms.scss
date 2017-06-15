@@ -1,0 +1,200 @@
+// ==========================================================================
+// Forms
+// ==========================================================================
+//
+// These are base styles for forms as well as some helpful classes to
+// make alignment and state easier.
+///
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Class level namespacing variable
+///
+$scales-base-class-namespace: null !default;
+
+//
+// Available Variables
+///
+$fieldset-padding: 1em !default;
+$text-input-padding: .5em !default;
+$text-input-border-width: 1px !default;
+$text-input-border-style: solid !default;
+$text-input-border-color: #000 !default;
+$text-input-border-radius: 0 !default;
+$select-background-color: #fff !default;
+$input-container-margin-bottom: 1em !default;
+$input-container-inline-valign: top !default;
+$input-disabled-border-color: #aaa !default;
+$input-disabled-background-color: #ccc !default;
+$input-disabled-text-color: #aaa !default;
+$input-readonly-border-color: #aaa !default;
+$input-readonly-background-color: #ccc !default;
+$input-readonly-text-color: #000 !default;
+$helper-text-hidden: true !default;
+
+//
+// Main form styles
+///
+fieldset {
+    padding: $fieldset-padding;
+}
+
+//
+// Use when marking up a form as an unordered list. e.g. <ul class="FormList">
+///
+.#{$scales-namespace}#{$scales-base-class-namespace}FormList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+//
+// If you wrap your label/input groups in a container, use this class to
+// apply a margin on the bottom for better vertical spacing control.
+//
+// This could be a <div> or <span> or an <li> if you are using a list
+///
+.#{$scales-namespace}#{$scales-base-class-namespace}InputContainer {
+  margin-bottom: $input-container-margin-bottom;
+}
+
+//
+// Use this class to force the input containers into a single row and
+// control the vertical alignment of the fields.
+///
+.#{$scales-namespace}#{$scales-base-class-namespace}InputContainer--inline {
+  display: inline-block;
+  vertical-align: $input-container-inline-valign;
+}
+
+//
+// Labels
+//
+// The ".FormLabel" class can be used to make an element look like a
+// label if an actual label isn't suitable.
+//
+///
+label,
+.#{$scales-namespace}#{$scales-base-class-namespace}FormLabel {
+  display: block;
+}
+
+// Extra help text in labels
+.#{$scales-namespace}#{$scales-base-class-namespace}FormLabel--additional {
+  display: block;
+  font-weight: normal;
+}
+
+//
+// Text inputs
+//
+// Instead of a `[type]` selector for each kind of form input,
+// just use a class to target any/every one, e.g.:
+// <input type="text" class="TextInput">
+// <input type="email" class="TextInput">
+// <input type="password" class="TextInput">
+//
+///
+.#{$scales-namespace}#{$scales-base-class-namespace}TextInput,
+select,
+textarea {
+  display: block;
+  padding: $text-input-padding;
+  border: $text-input-border-width;
+  border-style: $text-input-border-style;
+  border-color: $text-input-border-color;
+  border-radius: $text-input-border-radius;
+}
+
+//
+// Selects
+///
+select {
+  background: $select-background-color;
+}
+
+//
+// Force form elements into a single inline row
+///
+.#{$scales-namespace}#{$scales-base-class-namespace}FormInline {
+  .#{$scales-namespace}#{$scales-base-class-namespace}TextInput,
+  select,
+  textarea,
+  label,
+  .#{$scales-namespace}#{$scales-base-class-namespace}FormLabel {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+//
+// Input states
+///
+
+// Disabled
+input[disabled],
+select[disabled],
+textarea[disabled],
+input.is-Disabled,
+select.is-Disabled,
+textarea.is-Disabled {
+  cursor: not-allowed;
+  border-color: $input-disabled-border-color;
+  background-color: $input-disabled-background-color;
+  color: $input-disabled-text-color;
+}
+
+// Read Only
+input[readonly],
+select[readonly],
+textarea[readonly],
+input.is-ReadOnly,
+select.is-ReadOnly,
+textarea.is-ReadOnly {
+  border-color: $input-readonly-border-color;
+  background-color: $input-readonly-background-color;
+  color: $input-readonly-text-color;
+}
+
+//
+// Extra help text displayed after a field when that field is in focus.
+//
+// Change `$helper-text-hidden` to something other than `true`
+// and the helper text will be visible by default.
+///
+
+@if ($helper-text-hidden == true) {
+  .#{$scales-namespace}#{$scales-base-class-namespace}HelperText {
+    display: none;
+  }
+
+  .#{$scales-namespace}#{$scales-base-class-namespace}TextInput:active + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
+  .#{$scales-namespace}#{$scales-base-class-namespace}TextInput:focus + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
+  textarea:active + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
+  textarea:focus + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText {
+    display: block;
+  }
+
+  .#{$scales-namespace}#{$scales-base-class-namespace}FormInline {
+    .#{$scales-namespace}#{$scales-base-class-namespace}TextInput:active + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
+    .#{$scales-namespace}#{$scales-base-class-namespace}TextInput:focus + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
+    textarea:active + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
+    textarea:focus + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText {
+      display: inline-block;
+    }
+  }
+} @else {
+  .#{$scales-namespace}#{$scales-base-class-namespace}HelperText {
+    display: block;
+  }
+
+  .#{$scales-namespace}#{$scales-base-class-namespace}FormInline {
+    .#{$scales-namespace}#{$scales-base-class-namespace}HelperText {
+      display: inline-block;
+    }
+  }
+}

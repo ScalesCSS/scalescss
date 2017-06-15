@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stats Object - Scales</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<style>
+.Stats:after,
+.ClearFix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.Stats {
+  margin-left: 0;
+}
+
+.Stat {
+  float: left;
+}
+.Stat + .Stat {
+  margin-left: 1em;
+}
+
+.Stat > a {
+  display: block;
+}
+
+.Stat__value {
+  margin-left: 0;
+  text-align: center;
+}
+
+.Stats--big .Stat {
+  float: none;
+  margin-left: 0;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+  <header role="banner">
+    <h1>Stats Object for Scales</h1>
+  </header>
+  <main role="main">
+    <p>This page includes the default stats object styles</p>
+
+    <h2>Stats usage</h2>
+    <p>Stats should be used with a &lt;dl&gt; and individual &lt;div&gt;s to group the stat title and value. The `--big` variation can be used when the title or values are too long to sit next to each other in a row.</p>
+
+    <h3>Default styles</h3>
+
+    <dl class="Stats">
+      <div class="Stat">
+        <dt class="Stat__title">RBI</dt>
+        <dd class="Stat__value">127</dd>
+      </div>
+
+      <div class="Stat">
+        <dt class="Stat__title">BA</dt>
+        <dd class="Stat__value">.369</dd>
+      </div>
+
+      <div class="Stat">
+        <dt class="Stat__title">HR</dt>
+        <dd class="Stat__value">25</dd>
+      </div>
+    </dl>
+
+    <h3>Big styles</h3>
+    <dl class="Stats--big">
+      <div class="Stat">
+        <dt class="Stat__title">Total Runs Batted In</dt>
+        <dd class="Stat__value">127</dd>
+      </div>
+
+      <div class="Stat">
+        <dt class="Stat__title">Total Batting Average</dt>
+        <dd class="Stat__value">.369</dd>
+      </div>
+
+      <div class="Stat">
+        <dt class="Stat__title">Total Home Runs</dt>
+        <dd class="Stat__value">25</dd>
+      </div>
+    </dl>
+  </main>
+</body>
+</html>

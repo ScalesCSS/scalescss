@@ -1,0 +1,241 @@
+// ==========================================================================
+// Flag Object
+// ==========================================================================
+
+//
+// The flag object is similar to the media object. Use it any
+// time you have an image or other media and text next to each other and
+// you need to vertically align the text.
+///
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Class level namespacing variable
+///
+$scales-objects-class-namespace: null !default;
+
+//
+// Available Variables
+///
+$flag-gutter: 1em !default;
+$flag-gutter-tiny: $flag-gutter / 4 !default;
+$flag-gutter-small: $flag-gutter / 2 !default;
+$flag-gutter-large: $flag-gutter * 2 !default;
+$flag-gutter-huge: $flag-gutter * 4 !default;
+$flag-stacked-breakpoint: 25em !default;
+
+//
+// Flag classes
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Flag {
+  display: table;
+  width: 100%;
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}Flag__body,
+.#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+  padding-right: $flag-gutter;
+
+  > img {
+    display: block;
+    max-width: none;
+  }
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}Flag__body {
+  width: 100%;
+
+   > :last-child,
+  & {
+    margin-bottom: 0;
+  }
+}
+
+//
+// Reversed flag
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--rev {
+  direction: rtl;
+
+   > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__body,
+  > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+    direction: ltr;
+  }
+
+  > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+    padding-right: 0;
+    padding-left: $flag-gutter;
+  }
+}
+
+//
+// Flush flag (no gutter)
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--flush {
+  > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+//
+// Tiny flag
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--tiny {
+  > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+    padding-right: $flag-gutter-tiny;
+  }
+
+  &.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--rev {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+      padding-right: 0;
+      padding-left: $flag-gutter-tiny;
+    }
+  }
+}
+
+//
+// Small flag
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--small {
+  > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+    padding-right: $flag-gutter-small;
+  }
+
+  &.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--rev {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+      padding-right: 0;
+      padding-left: $flag-gutter-small;
+    }
+  }
+}
+
+//
+// Large flag
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--large {
+  > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+    padding-right: $flag-gutter-large;
+  }
+
+  &.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--rev {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+      padding-right: 0;
+      padding-left: $flag-gutter-large;
+    }
+  }
+}
+
+//
+// Huge flag
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--huge {
+  > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+    padding-right: $flag-gutter-huge;
+  }
+
+  &.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--rev {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+      padding-right: 0;
+      padding-left: $flag-gutter-huge;
+    }
+  }
+}
+
+//
+// Vertically Align content to the middle
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--middle {
+   > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__body,
+  > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+    vertical-align: middle;
+  }
+}
+
+//
+// Vertically align content to the bottom
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--bottom {
+   > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__body,
+  > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+    vertical-align: bottom;
+  }
+}
+
+//
+// Stacked flag at smaller screen width
+///
+@media all and (max-width: $flag-stacked-breakpoint) {
+
+  //
+  // Default stacked flag
+  ///
+  .#{$scales-namespace}#{$scales-objects-class-namespace}Flag--stacked {
+    direction: ltr;
+
+     > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__body,
+     > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure,
+    & {
+      display: block;
+    }
+
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+      padding-right: 0;
+      padding-left: 0;
+      margin-bottom: $flag-gutter;
+    }
+
+    //
+    // Tiny stacked flag
+    ///
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--tiny {
+      > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: $flag-gutter-tiny;
+      }
+    }
+
+    //
+    // Small stacked flag
+    ///
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--small {
+      > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: $flag-gutter-small;
+      }
+    }
+
+    //
+    // Large stacked flag
+    ///
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--large {
+      > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: $flag-gutter-large;
+      }
+    }
+
+    //
+    // Huge stacked flag
+    ///
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Flag--huge {
+      > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: $flag-gutter-huge;
+      }
+    }
+  }
+}

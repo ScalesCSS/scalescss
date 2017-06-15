@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Base Typography - Scales</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333333;
+}
+
+p,
+.Lede,
+.Lead {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.H1,
+.H2,
+.H3,
+.H4,
+.H5,
+.H6,
+.Alpha,
+.Beta,
+.Gamma,
+.Delta,
+.Epsilon,
+.Zeta {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  margin: 0;
+  color: #333333;
+}
+
+h1,
+.H1,
+.Alpha {
+  font-size: 2.25rem;
+}
+
+h2,
+.H2,
+.Beta {
+  font-size: 2rem;
+}
+
+h3,
+.H3,
+.Gamma {
+  font-size: 1.75rem;
+}
+
+h4,
+.H4,
+.Delta {
+  font-size: 1.5rem;
+}
+
+h5,
+.H5,
+.Epsilon {
+  font-size: 1.25rem;
+}
+
+h6,
+.H6,
+.Zeta {
+  font-size: 1rem;
+}
+
+.Lede,
+.Lead {
+  font-size: 1.25rem;
+}
+
+pre,
+code {
+  font-family: consolas, monaco, courier, monospace;
+  font-size: 1rem;
+}
+
+pre {
+  padding: 0 1em 1em;
+  margin: 0;
+  background-color: #444444;
+  color: #ffffff;
+}
+
+.Measure {
+  max-width: 30em;
+}
+
+.Measure--narrow {
+  max-width: 20em;
+}
+
+.Truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+</style>
+</head>
+<body>
+  <header role="banner">
+    <h1>Base Typography for Scales</h1>
+  </header>
+  <main role="main">
+    <p>This page includes the default base typographic styles.</p>
+
+    <h3>Headings</h3>
+
+    <h1>This is an H1</h1>
+    <h2>This is an H2</h2>
+    <h3>This is an H3</h3>
+    <h4>This is an H4</h4>
+    <h5>This is an H5</h5>
+    <h6>This is an H6</h6>
+
+    <h3>Paragraphs</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.</p>
+
+    <h3>Lede Paragraphs</h3>
+    <p class="Lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.</p>
+
+    <h3>Measure</h3>
+    <p class="Measure">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.</p>
+
+    <h4> Narrow Measure</h4>
+    <p class="Measure--narrow">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.</p>
+
+    <h3>Truncation</h3>
+    <p class="Truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.</p>
+
+    <h3>Code Blocks</h3>
+    <pre><code>
+function padZeros(num, totalLen) {
+  var numStr = num.toString();
+  var numZeros = totalLen - numStr.length;
+  for (var i = 1; i <= numZeros; i++) {
+    numStr = "0" + numStr;
+  }
+  return numStr;
+}
+    </code></pre>
+
+  </main>
+</body>
+</html>

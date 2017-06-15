@@ -1,0 +1,41 @@
+// ==========================================================================
+// Block Quotes
+// ==========================================================================
+///
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Class level namespacing variable
+///
+$scales-base-class-namespace: null !default;
+
+//
+// Available Variables
+///
+$source-prefix: "—" !default;
+
+//
+// Blockquote
+///
+.#{$scales-namespace}#{$scales-base-class-namespace}Blockquote {
+  margin: 0;
+}
+
+.#{$scales-namespace}Blockquote__quote {
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.#{$scales-namespace}Blockquote__source {
+  display: block;
+  text-indent: 0;
+
+  &:before {
+    content: $source-prefix;
+  }
+}

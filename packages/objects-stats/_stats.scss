@@ -1,0 +1,58 @@
+// ==========================================================================
+// Stats Object
+// ==========================================================================
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Class level namespacing variable
+///
+$scales-objects-class-namespace: null !default;
+
+//
+// Available Variables
+///
+$stat-spacing: 1em !default;
+
+//
+// Stats should be used with a <dl> and individual <div>s to group the
+// stat title and value. The `--big` variation can be used when the title
+// or values are too long to sit next to each other in a row.
+///
+
+//
+// Stats classes
+///
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stats {
+  @extend %ClearFix;
+  margin-left: 0;
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stat {
+  float: left;
+
+  + .#{$scales-namespace}#{$scales-objects-class-namespace}Stat {
+    margin-left: $stat-spacing;
+  }
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stat > a {
+  display: block;
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stat__value {
+  margin-left: 0;
+  text-align: center;
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stats--big {
+  .#{$scales-namespace}#{$scales-objects-class-namespace}Stat {
+    float: none;
+    margin-left: 0;
+    text-align: center;
+  }
+}

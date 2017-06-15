@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Flag Object - Scales</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<style>
+.Flag {
+  display: table;
+  width: 100%;
+}
+
+.Flag__body,
+.Flag__figure {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.Flag__figure {
+  padding-right: 1em;
+}
+.Flag__figure > img {
+  display: block;
+  max-width: none;
+}
+
+.Flag__body {
+  width: 100%;
+}
+.Flag__body > :last-child, .Flag__body {
+  margin-bottom: 0;
+}
+
+.Flag--rev {
+  direction: rtl;
+}
+.Flag--rev > .Flag__body,
+.Flag--rev > .Flag__figure {
+  direction: ltr;
+}
+.Flag--rev > .Flag__figure {
+  padding-right: 0;
+  padding-left: 1em;
+}
+
+.Flag--flush > .Flag__figure {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.Flag--tiny > .Flag__figure {
+  padding-right: 0.25em;
+}
+.Flag--tiny.Flag--rev > .Flag__figure {
+  padding-right: 0;
+  padding-left: 0.25em;
+}
+
+.Flag--small > .Flag__figure {
+  padding-right: 0.5em;
+}
+.Flag--small.Flag--rev > .Flag__figure {
+  padding-right: 0;
+  padding-left: 0.5em;
+}
+
+.Flag--large > .Flag__figure {
+  padding-right: 2em;
+}
+.Flag--large.Flag--rev > .Flag__figure {
+  padding-right: 0;
+  padding-left: 2em;
+}
+
+.Flag--huge > .Flag__figure {
+  padding-right: 4em;
+}
+.Flag--huge.Flag--rev > .Flag__figure {
+  padding-right: 0;
+  padding-left: 4em;
+}
+
+.Flag--middle > .Flag__body,
+.Flag--middle > .Flag__figure {
+  vertical-align: middle;
+}
+
+.Flag--bottom > .Flag__body,
+.Flag--bottom > .Flag__figure {
+  vertical-align: bottom;
+}
+
+@media all and (max-width: 25em) {
+  .Flag--stacked {
+    direction: ltr;
+  }
+  .Flag--stacked > .Flag__body,
+  .Flag--stacked > .Flag__figure, .Flag--stacked {
+    display: block;
+  }
+  .Flag--stacked > .Flag__figure {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 1em;
+  }
+  .Flag--stacked.Flag--tiny > .Flag__figure {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 0.25em;
+  }
+  .Flag--stacked.Flag--small > .Flag__figure {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 0.5em;
+  }
+  .Flag--stacked.Flag--large > .Flag__figure {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 2em;
+  }
+  .Flag--stacked.Flag--huge > .Flag__figure {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 4em;
+  }
+}
+
+</style>
+</head>
+<body>
+  <header role="banner">
+    <h1>Flag Object for Scales</h1>
+  </header>
+  <main role="main">
+    <p>This page includes the default flag object styles.</p>
+
+    <h2>Flag usage</h2>
+    <p>The flag object is similar to the media object. Use it any time you have an image or other media and text next to each other and you need to vertically align the text.</p>
+
+    <h3>Default styles</h3>
+
+    <div class="Flag">
+      <div class="Flag__figure">
+        <img src="http://placekitten.com/g/150/150" alt="Kitten">
+      </div>
+      <div class="Flag__body">
+        <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+    </div>
+
+    <h3>Reversed styles</h3>
+    <div class="Flag Flag--rev">
+      <div class="Flag__figure">
+        <img src="http://placekitten.com/g/150/150" alt="Kitten">
+      </div>
+      <div class="Flag__body">
+        <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+    </div>
+
+    <h3>Flush styles</h3>
+    <div class="Flag Flag--flush">
+      <div class="Flag__figure">
+        <img src="http://placekitten.com/g/150/150" alt="Kitten">
+      </div>
+      <div class="Flag__body">
+        <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+    </div>
+
+    <h3>Tiny styles</h3>
+    <div class="Flag Flag--tiny">
+      <div class="Flag__figure">
+        <img src="http://placekitten.com/g/150/150" alt="Kitten">
+      </div>
+      <div class="Flag__body">
+        <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+    </div>
+
+    <h3>Small styles</h3>
+    <div class="Flag Flag--small">
+      <div class="Flag__figure">
+        <img src="http://placekitten.com/g/150/150" alt="Kitten">
+      </div>
+      <div class="Flag__body">
+        <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+    </div>
+
+    <h3>Large styles</h3>
+    <div class="Flag Flag--large">
+      <div class="Flag__figure">
+        <img src="http://placekitten.com/g/150/150" alt="Kitten">
+      </div>
+      <div class="Flag__body">
+        <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+    </div>
+
+    <h3>Huge styles</h3>
+    <div class="Flag Flag--huge">
+      <div class="Flag__figure">
+        <img src="http://placekitten.com/g/150/150" alt="Kitten">
+      </div>
+      <div class="Flag__body">
+        <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+    </div>
+
+    <h3>Middle aligned styles</h3>
+    <div class="Flag Flag--middle">
+      <div class="Flag__figure">
+        <img src="http://placekitten.com/g/150/150" alt="Kitten">
+      </div>
+      <div class="Flag__body">
+        <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+    </div>
+
+    <h3>Bottom aligned styles</h3>
+    <div class="Flag Flag--bottom">
+      <div class="Flag__figure">
+        <img src="http://placekitten.com/g/150/150" alt="Kitten">
+      </div>
+      <div class="Flag__body">
+        <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+    </div>
+
+    <h3>Stacked styles</h3>
+    <p>Stacked simply puts the text under the image at small screen sizes</p>
+    <div class="Flag Flag--stacked">
+      <div class="Flag__figure">
+        <img src="http://placekitten.com/g/150/150" alt="Kitten">
+      </div>
+      <div class="Flag__body">
+        <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,196 @@
+// ==========================================================================
+// Tables
+// ==========================================================================
+//
+// These are base styles for tables and some helpful classes to make
+// borders and padding easier.
+///
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Class level namespacing variable
+///
+$scales-base-class-namespace: null !default;
+
+//
+// Available Variables
+///
+$table-padding-large: 1em !default;
+$table-padding-medium: $table-padding-large / 2 !default;
+$table-padding-small: $table-padding-large / 4 !default;
+$table-border-width: 1px !default;
+$table-border-style: solid !default;
+$table-border-color: #000 !default;
+$table-stripe-color: #ccc !default;
+$table-highlight-color: #ffd700 !default;
+$table-highlight-text-color: #000 !default;
+
+//
+// Main table styles
+///
+
+// You can use a .Table class, but you don't have to. Tables will all
+// be 100% width.
+table,
+.#{$scales-namespace}#{$scales-base-class-namespace}Table {
+  width: 100%;
+}
+
+//
+// Cell alignments
+///
+[colspan] {
+  text-align: center;
+}
+[colspan="1"] {
+  text-align: left;
+}
+[rowspan] {
+  vertical-align: middle;
+}
+[rowspan="1"] {
+  vertical-align: top;
+}
+// Align numbers to the right. Especially useful for money.
+.#{$scales-namespace}#{$scales-base-class-namespace}Numerical {
+  text-align: right;
+}
+
+//
+// Cell padding options
+///
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--spacing-large {
+  th,
+  td {
+    padding: $table-padding-large;
+  }
+}
+
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--spacing-medium {
+  th,
+  td {
+    padding: $table-padding-medium;
+  }
+}
+
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--spacing-small {
+  th,
+  td {
+    padding: $table-padding-small;
+  }
+}
+
+//
+// Bordered tables
+///
+
+// Borders around all sides
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--bordered {
+  border-top: $table-border-width $table-border-style $table-border-color;
+  border-right: $table-border-width $table-border-style $table-border-color;
+
+  tr {
+    border-bottom: $table-border-width $table-border-style $table-border-color;
+  }
+
+  th,
+  td {
+    border-left: $table-border-width $table-border-style $table-border-color;
+  }
+}
+
+// Remove outside table borders
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--bordered-inside {
+  border-top-width: 0;
+  border-right-width: 0;
+
+  tbody tr:last-child {
+    border-bottom-width: 0;
+  }
+
+  th,
+  td {
+    &:first-child {
+      border-left-width: 0;
+    }
+  }
+}
+
+// Borders on just the bottom of rows
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--bordered-rows {
+  th,
+  td {
+    border-bottom: $table-border-width $table-border-style $table-border-color;
+  }
+}
+
+// Remove outside row borders
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--bordered-rows-inside {
+  tbody tr:last-child {
+    th,
+    td {
+      border-bottom-width: 0;
+    }
+  }
+}
+
+// Borders on just the columns
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--bordered-columns {
+  border-left: $table-border-width $table-border-style $table-border-color;
+
+  th,
+  td {
+    border-right: $table-border-width $table-border-style $table-border-color;
+  }
+}
+
+// Remove outside column borders
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--bordered-columns-inside {
+  border-left-width: 0;
+
+  th,
+  td {
+
+    &:last-child {
+      border-right-width: 0;
+  }
+  }
+}
+
+//
+// Striped tables
+///
+
+// Odd rows
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--striped,
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--striped-odd {
+  tbody tr:nth-child(odd) {
+    background-color: $table-stripe-color;
+  }
+}
+
+// Even rows
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--striped-even {
+  tbody tr:nth-child(even) {
+    background-color: $table-stripe-color;
+  }
+}
+
+//
+// Highlight specific row or cell
+///
+.#{$scales-namespace}#{$scales-base-class-namespace}TableHighlight {
+  background-color: $table-highlight-color !important;
+  color: $table-highlight-text-color !important;
+}
+
+//
+// Force table cells to be equal width
+///
+.#{$scales-namespace}#{$scales-base-class-namespace}Table--fixed {
+  table-layout: fixed;
+}

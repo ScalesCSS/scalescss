@@ -1,0 +1,69 @@
+// ==========================================================================
+// Spacing overrides
+// ==========================================================================
+
+//
+// A set of classes for changing the margin and padding on an element.
+///
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Class level namespacing variable
+///
+$scales-utilities-class-namespace: null !default;
+
+//
+// Available variables
+///
+$space-s: .5em !default;
+$space-m: 1em !default;
+$space-l: 2em !default;
+$space-h: 3em !default;
+
+//
+// Spacing classes
+///
+.#{$scales-namespace}#{$scales-utilities-class-namespace}ptn,.#{$scales-namespace}#{$scales-utilities-class-namespace}pvn,.#{$scales-namespace}#{$scales-utilities-class-namespace}pan{ padding-top: 0 !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}pts,.#{$scales-namespace}#{$scales-utilities-class-namespace}pvs,.#{$scales-namespace}#{$scales-utilities-class-namespace}pas{ padding-top: $space-s !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}ptm,.#{$scales-namespace}#{$scales-utilities-class-namespace}pvm,.#{$scales-namespace}#{$scales-utilities-class-namespace}pam{ padding-top: $space-m !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}ptl,.#{$scales-namespace}#{$scales-utilities-class-namespace}pvl,.#{$scales-namespace}#{$scales-utilities-class-namespace}pal{ padding-top: $space-l !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}pth,.#{$scales-namespace}#{$scales-utilities-class-namespace}pvh,.#{$scales-namespace}#{$scales-utilities-class-namespace}pah{ padding-top: $space-h !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}prn,.#{$scales-namespace}#{$scales-utilities-class-namespace}phn,.#{$scales-namespace}#{$scales-utilities-class-namespace}pan{ padding-right: 0 !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}prs,.#{$scales-namespace}#{$scales-utilities-class-namespace}phs,.#{$scales-namespace}#{$scales-utilities-class-namespace}pas{ padding-right: $space-s !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}prm,.#{$scales-namespace}#{$scales-utilities-class-namespace}phm,.#{$scales-namespace}#{$scales-utilities-class-namespace}pam{ padding-right: $space-m !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}prl,.#{$scales-namespace}#{$scales-utilities-class-namespace}phl,.#{$scales-namespace}#{$scales-utilities-class-namespace}pal{ padding-right: $space-l !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}prh,.#{$scales-namespace}#{$scales-utilities-class-namespace}phh,.#{$scales-namespace}#{$scales-utilities-class-namespace}pah{ padding-right: $space-h !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}pbn,.#{$scales-namespace}#{$scales-utilities-class-namespace}pvn,.#{$scales-namespace}#{$scales-utilities-class-namespace}pan{ padding-bottom: 0 !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}pbs,.#{$scales-namespace}#{$scales-utilities-class-namespace}pvs,.#{$scales-namespace}#{$scales-utilities-class-namespace}pas{ padding-bottom: $space-s !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}pbm,.#{$scales-namespace}#{$scales-utilities-class-namespace}pvm,.#{$scales-namespace}#{$scales-utilities-class-namespace}pam{ padding-bottom: $space-m !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}pbl,.#{$scales-namespace}#{$scales-utilities-class-namespace}pvl,.#{$scales-namespace}#{$scales-utilities-class-namespace}pal{ padding-bottom: $space-l !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}pbh,.#{$scales-namespace}#{$scales-utilities-class-namespace}pvh,.#{$scales-namespace}#{$scales-utilities-class-namespace}pah{ padding-bottom: $space-h !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}pln,.#{$scales-namespace}#{$scales-utilities-class-namespace}phn,.#{$scales-namespace}#{$scales-utilities-class-namespace}pan{ padding-left: 0 !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}pls,.#{$scales-namespace}#{$scales-utilities-class-namespace}phs,.#{$scales-namespace}#{$scales-utilities-class-namespace}pas{ padding-left: $space-s !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}plm,.#{$scales-namespace}#{$scales-utilities-class-namespace}phm,.#{$scales-namespace}#{$scales-utilities-class-namespace}pam{ padding-left: $space-m !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}pll,.#{$scales-namespace}#{$scales-utilities-class-namespace}phl,.#{$scales-namespace}#{$scales-utilities-class-namespace}pal{ padding-left: $space-l !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}plh,.#{$scales-namespace}#{$scales-utilities-class-namespace}phh,.#{$scales-namespace}#{$scales-utilities-class-namespace}pah{ padding-left: $space-h !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mtn,.#{$scales-namespace}#{$scales-utilities-class-namespace}mvn,.#{$scales-namespace}#{$scales-utilities-class-namespace}man{ margin-top: 0 !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mts,.#{$scales-namespace}#{$scales-utilities-class-namespace}mvs,.#{$scales-namespace}#{$scales-utilities-class-namespace}mas{ margin-top: $space-s !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mtm,.#{$scales-namespace}#{$scales-utilities-class-namespace}mvm,.#{$scales-namespace}#{$scales-utilities-class-namespace}mam{ margin-top: $space-m !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mtl,.#{$scales-namespace}#{$scales-utilities-class-namespace}mvl,.#{$scales-namespace}#{$scales-utilities-class-namespace}mal{ margin-top: $space-l !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mth,.#{$scales-namespace}#{$scales-utilities-class-namespace}mvh,.#{$scales-namespace}#{$scales-utilities-class-namespace}mah{ margin-top: $space-h !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mrn,.#{$scales-namespace}#{$scales-utilities-class-namespace}mhn,.#{$scales-namespace}#{$scales-utilities-class-namespace}man{ margin-right: 0 !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mrs,.#{$scales-namespace}#{$scales-utilities-class-namespace}mhs,.#{$scales-namespace}#{$scales-utilities-class-namespace}mas{ margin-right: $space-s !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mrm,.#{$scales-namespace}#{$scales-utilities-class-namespace}mhm,.#{$scales-namespace}#{$scales-utilities-class-namespace}mam{ margin-right: $space-m !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mrl,.#{$scales-namespace}#{$scales-utilities-class-namespace}mhl,.#{$scales-namespace}#{$scales-utilities-class-namespace}mal{ margin-right: $space-l !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mrh,.#{$scales-namespace}#{$scales-utilities-class-namespace}mhh,.#{$scales-namespace}#{$scales-utilities-class-namespace}mah{ margin-right: $space-h !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mbn,.#{$scales-namespace}#{$scales-utilities-class-namespace}mvn,.#{$scales-namespace}#{$scales-utilities-class-namespace}man{ margin-bottom: 0 !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mbs,.#{$scales-namespace}#{$scales-utilities-class-namespace}mvs,.#{$scales-namespace}#{$scales-utilities-class-namespace}mas{ margin-bottom: $space-s !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mbm,.#{$scales-namespace}#{$scales-utilities-class-namespace}mvm,.#{$scales-namespace}#{$scales-utilities-class-namespace}mam{ margin-bottom: $space-m !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mbl,.#{$scales-namespace}#{$scales-utilities-class-namespace}mvl,.#{$scales-namespace}#{$scales-utilities-class-namespace}mal{ margin-bottom: $space-l !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mbh,.#{$scales-namespace}#{$scales-utilities-class-namespace}mvh,.#{$scales-namespace}#{$scales-utilities-class-namespace}mah{ margin-bottom: $space-h !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mln,.#{$scales-namespace}#{$scales-utilities-class-namespace}mhn,.#{$scales-namespace}#{$scales-utilities-class-namespace}man{ margin-left: 0 !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mls,.#{$scales-namespace}#{$scales-utilities-class-namespace}mhs,.#{$scales-namespace}#{$scales-utilities-class-namespace}mas{ margin-left: $space-s !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mlm,.#{$scales-namespace}#{$scales-utilities-class-namespace}mhm,.#{$scales-namespace}#{$scales-utilities-class-namespace}mam{ margin-left: $space-m !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mll,.#{$scales-namespace}#{$scales-utilities-class-namespace}mhl,.#{$scales-namespace}#{$scales-utilities-class-namespace}mal{ margin-left: $space-l !important; }
+.#{$scales-namespace}#{$scales-utilities-class-namespace}mlh,.#{$scales-namespace}#{$scales-utilities-class-namespace}mhh,.#{$scales-namespace}#{$scales-utilities-class-namespace}mah{ margin-left: $space-h !important; }

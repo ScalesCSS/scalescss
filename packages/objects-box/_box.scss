@@ -1,0 +1,81 @@
+// ==========================================================================
+// Box Object
+// ==========================================================================
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Class level namespacing variable
+///
+$scales-objects-class-namespace: null !default;
+
+//
+// Available Variables
+///
+$box-padding: 1em !default;
+$box-padding-tiny: $box-padding / 4 !default;
+$box-padding-small: $box-padding / 2 !default;
+$box-padding-large: $box-padding * 2 !default;
+$box-padding-huge: $box-padding * 4 !default;
+
+//
+// Box is used to, well, box off content.
+///
+
+//
+// Box Mixin
+///
+@mixin Box($padding) {
+  @extend %ClearFix;
+  display: block;
+  padding: $padding;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+//
+// Default box
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Box {
+  @include Box($box-padding);
+}
+
+//
+// Flush box (No padding)
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Box--flush {
+  padding: 0;
+}
+
+//
+// Tiny box
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Box--tiny {
+  padding: $box-padding-tiny;
+}
+
+//
+// Small box
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Box--small {
+  padding: $box-padding-small;
+}
+
+//
+// Large box
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Box--large {
+  padding: $box-padding-large;
+}
+
+//
+// Huge box
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Box--huge {
+  padding: $box-padding-huge;
+}

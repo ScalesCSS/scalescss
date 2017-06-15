@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Vertical List Object - Scales</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<style>
+.VerticalList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.VerticalList > li {
+  display: block;
+}
+
+.VerticalList--delimited > li:after {
+  content: ", ";
+}
+.VerticalList--delimited > li:last-child:after {
+  content: '';
+}
+
+.VerticalList > [data-delimiter]:after {
+  content: attr(data-delimiter);
+}
+
+</style>
+</head>
+<body>
+  <header role="banner">
+    <h1>Vertical List Object for Scales</h1>
+  </header>
+  <main role="main">
+    <p>This page includes the default vertical list object styles</p>
+
+    <h2>Vertical List usage</h2>
+    <p>Vertical List should be used whenever you need to make an ordered or unordered list vertical instead of horizontal. You can extend it with '--delimited' to semantically mark up a character delimited list for things like tags, etc.</p>
+
+    <h3>Default styles</h3>
+
+    <ul class="VerticalList">
+      <li>Sass</li>
+      <li>CSS</li>
+      <li>HTML</li>
+    </ul>
+
+    <h3>Character delimited styles</h3>
+
+    <ul class="VerticalList VerticalList--delimited">
+      <li>Sass</li>
+      <li>CSS</li>
+      <li>HTML</li>
+    </ul>
+
+    <h3>Character delimited override</h3>
+
+    <ul class="VerticalList VerticalList--delimited">
+      <li data-delimiter=" | ">Sass</li>
+      <li data-delimiter=" | ">CSS</li>
+      <li>HTML</li>
+    </ul>
+
+  </main>
+</body>
+</html>

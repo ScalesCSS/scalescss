@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Base Tables - Scales</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<style>
+table,
+table,
+.Table {
+  width: 100%;
+}
+
+[colspan] {
+  text-align: center;
+}
+
+[colspan="1"] {
+  text-align: left;
+}
+
+[rowspan] {
+  vertical-align: middle;
+}
+
+[rowspan="1"] {
+  vertical-align: top;
+}
+
+.Numerical {
+  text-align: right;
+}
+
+.Table--spacing-large th,
+.Table--spacing-large td {
+  padding: 1em;
+}
+
+.Table--spacing-medium th,
+.Table--spacing-medium td {
+  padding: 0.5em;
+}
+
+.Table--spacing-small th,
+.Table--spacing-small td {
+  padding: 0.25em;
+}
+
+.Table--bordered {
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+}
+.Table--bordered tr {
+  border-bottom: 1px solid #000;
+}
+.Table--bordered th,
+.Table--bordered td {
+  border-left: 1px solid #000;
+}
+
+.Table--bordered-inside {
+  border-top-width: 0;
+  border-right-width: 0;
+}
+.Table--bordered-inside tbody tr:last-child {
+  border-bottom-width: 0;
+}
+.Table--bordered-inside th:first-child,
+.Table--bordered-inside td:first-child {
+  border-left-width: 0;
+}
+
+.Table--bordered-rows th,
+.Table--bordered-rows td {
+  border-bottom: 1px solid #000;
+}
+
+.Table--bordered-rows-inside tbody tr:last-child th,
+.Table--bordered-rows-inside tbody tr:last-child td {
+  border-bottom-width: 0;
+}
+
+.Table--bordered-columns {
+  border-left: 1px solid #000;
+}
+.Table--bordered-columns th,
+.Table--bordered-columns td {
+  border-right: 1px solid #000;
+}
+
+.Table--bordered-columns-inside {
+  border-left-width: 0;
+}
+.Table--bordered-columns-inside th:last-child,
+.Table--bordered-columns-inside td:last-child {
+  border-right-width: 0;
+}
+
+.Table--striped tbody tr:nth-child(odd),
+.Table--striped-odd tbody tr:nth-child(odd) {
+  background-color: #ccc;
+}
+
+.Table--striped-even tbody tr:nth-child(even) {
+  background-color: #ccc;
+}
+
+.TableHighlight {
+  background-color: #ffd700 !important;
+  color: #000 !important;
+}
+
+.Table--fixed {
+  table-layout: fixed;
+}
+
+</style>
+</head>
+<body>
+  <header role="banner">
+    <h1>Base Tables for Scales</h1>
+  </header>
+  <main role="main">
+    <p>This page includes the default base table styles</p>
+
+    <h2>Table usage</h2>
+    <p>Use tables exactly how you normally would for tabular data.</p>
+
+    <h3>Default styles</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th>Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Large padding styles</h3>
+    <table class="Table--spacing-large">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th>Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Medium padding styles</h3>
+    <table class="Table--spacing-medium">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th>Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Small padding styles</h3>
+    <table class="Table--spacing-small">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th>Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Bordered styles</h3>
+    <table class="Table--bordered">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th>Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Bordered inside styles</h3>
+    <table class="Table--bordered Table--bordered-inside">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th>Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Bordered row styles</h3>
+    <table class="Table--bordered-rows">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th>Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Bordered inside row styles</h3>
+    <table class="Table--bordered-rows Table--bordered-rows-inside">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th>Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Bordered column styles</h3>
+    <table class="Table--bordered-columns">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th>Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Bordered inside column styles</h3>
+    <table class="Table--bordered-columns Table--bordered-columns-inside">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th>Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Striped styles, odd</h3>
+    <table class="Table--striped-odd">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th>Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Striped styles, even</h3>
+    <table class="Table--striped-even">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th>Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Table highlight</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th>Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">03.788</td>
+          <td class="TableHighlight">Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr class="TableHighlight">
+          <td>Dolor</td>
+          <td class="Numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Fixed cell width styles</h3>
+    <table class="Table--fixed">
+      <thead>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th>Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="3">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Sit</th>
+          <td>Dolor</td>
+          <td class="Numerical">09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class="Numerical">12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </main>
+</body>
+</html>
