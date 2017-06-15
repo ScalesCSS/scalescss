@@ -45,14 +45,14 @@ Next you will want to create 3 files (name them whatever you want):
 ### Settings/Variables
 Scales exposes a large number of variables that allow you to customize nearly everything.
 
-Have a look at all of the [available variables](https://github.com/ScalesCSS/scalescss/tree/master/packages/scalescss/blob/master/vars.md).
+Have a look at all of the [available variables](https://github.com/ScalesCSS/scalescss/blob/master/packages/scalescss/vars.md).
 
 ### The Scales Packages
 Each piece of Scales is its own package on npm. Once you have all of the packages in your project, you will need to import them into your project. I recommend creating a `_scalescss.scss` file that imports everything.
 
 **The order of the imports is very important!**
 
-See an example of the [correct import order](https://github.com/ScalesCSS/scalescss/tree/master/packages/scalescss/blob/master/imports.md).
+See an example of the [correct import order](https://github.com/ScalesCSS/scalescss/blob/master/packages/scalescss/imports.md).
 
 ### Main Sass File
 
