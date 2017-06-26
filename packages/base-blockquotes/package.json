@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/base-blockquotes",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Base block quote styles for Scales CSS",
   "main": "_blockquotes.scss",
   "scripts": {
