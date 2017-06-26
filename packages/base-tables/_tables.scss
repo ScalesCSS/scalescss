@@ -46,15 +46,19 @@ table,
 [colspan] {
   text-align: center;
 }
-[colspan="1"] {
+
+[colspan='1'] {
   text-align: left;
 }
+
 [rowspan] {
   vertical-align: middle;
 }
-[rowspan="1"] {
+
+[rowspan='1'] {
   vertical-align: top;
 }
+
 // Align numbers to the right. Especially useful for money.
 .#{$scales-namespace}#{$scales-base-class-namespace}Numerical {
   text-align: right;

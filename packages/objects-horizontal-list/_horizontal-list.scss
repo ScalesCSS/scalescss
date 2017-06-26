@@ -63,11 +63,11 @@ $horizontal-list-delimiter: ',\00A0' !default;
 ///
 .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited {
   > li {
-    &:after {
+    &::after {
       content: '#{$horizontal-list-delimiter}';
     }
 
-    &:last-child:after {
+    &:last-child::after {
       content: '';
     }
   }
@@ -75,7 +75,7 @@ $horizontal-list-delimiter: ',\00A0' !default;
 
 // Pass in a delimiter through a data attribute
 .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList {
-  > [data-delimiter]:after {
+  > [data-delimiter]::after {
     content: attr(data-delimiter);
   }
 }

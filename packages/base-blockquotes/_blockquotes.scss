@@ -16,7 +16,7 @@ $scales-base-class-namespace: null !default;
 //
 // Available Variables
 ///
-$source-prefix: "—" !default;
+$source-prefix: '—' !default;
 
 //
 // Blockquote
@@ -35,7 +35,7 @@ $source-prefix: "—" !default;
   display: block;
   text-indent: 0;
 
-  &:before {
+  &::before {
     content: $source-prefix;
   }
 }

@@ -40,7 +40,7 @@ $helper-text-hidden: true !default;
 // Main form styles
 ///
 fieldset {
-    padding: $fieldset-padding;
+  padding: $fieldset-padding;
 }
 
 //
@@ -133,6 +133,8 @@ select {
 
 //
 // Input states
+//
+// sass-lint:disable no-qualifying-elements
 ///
 
 // Disabled
@@ -159,12 +161,15 @@ textarea.is-ReadOnly {
   background-color: $input-readonly-background-color;
   color: $input-readonly-text-color;
 }
+// sass-lint:enable no-qualifying-elements
 
 //
 // Extra help text displayed after a field when that field is in focus.
 //
 // Change `$helper-text-hidden` to something other than `true`
 // and the helper text will be visible by default.
+//
+// sass-lint:disable force-pseudo-nesting
 ///
 
 @if ($helper-text-hidden == true) {

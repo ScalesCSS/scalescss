@@ -44,6 +44,7 @@ Class level namespace variables allow you to namespace a selector based on the t
 * `$scales-base-class-namespace
 * `$selection-bg-color`
 * `$selection-text-color`
+* `$horizontal-rule-color`
 * `$table-border-collapse`
 * `$pre-overflow`
 

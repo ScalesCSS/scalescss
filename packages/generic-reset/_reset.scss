@@ -24,6 +24,7 @@ $scales-base-class-namespace: null !default;
 ///
 $selection-bg-color: #79bd9a !default;
 $selection-text-color: #fff !default;
+$horizontal-rule-color: #ccc !default;
 $table-border-collapse: collapse !default;
 $pre-overflow: auto !default;
 
@@ -36,8 +37,8 @@ html {
 }
 
 *,
-*:after,
-*:before {
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
@@ -107,18 +108,18 @@ textarea:focus {
 // Better to use .TextInput class instead of keeping these up to date.
 ///
 .#{$scales-namespace}#{$scales-base-class-namespace}TextInput,
-[type=date],
-[type=datetime],
-[type=email],
-[type=month],
-[type=number],
-[type=password],
-[type=search],
-[type=tel],
-[type=text],
-[type=time],
-[type=url],
-[type=week],
+[type='date'],
+[type='datetime'],
+[type='email'],
+[type='month'],
+[type='number'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='text'],
+[type='time'],
+[type='url'],
+[type='week'],
 textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -154,7 +155,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid $horizontal-rule-color;
   padding: 0;
   margin: 1em 0;
 }

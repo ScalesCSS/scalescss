@@ -14,14 +14,14 @@
   display: block;
 }
 
-.VerticalList--delimited > li:after {
+.VerticalList--delimited > li::after {
   content: ", ";
 }
-.VerticalList--delimited > li:last-child:after {
+.VerticalList--delimited > li:last-child::after {
   content: '';
 }
 
-.VerticalList > [data-delimiter]:after {
+.VerticalList > [data-delimiter]::after {
   content: attr(data-delimiter);
 }
 

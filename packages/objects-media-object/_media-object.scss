@@ -47,7 +47,7 @@ $media-stacked-breakpoint: 25em !default;
   overflow: hidden;
   display: block;
 
-   > :last-child,
+  > :last-child,
   & {
     margin-bottom: 0;
   }

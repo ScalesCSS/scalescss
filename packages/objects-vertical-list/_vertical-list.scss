@@ -42,11 +42,11 @@ $vertical-list-delimiter: ',\00A0' !default;
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}VerticalList--delimited {
   > li {
-    &:after {
+    &::after {
       content: '#{$vertical-list-delimiter}';
     }
 
-    &:last-child:after {
+    &:last-child::after {
       content: '';
     }
   }
@@ -54,7 +54,7 @@ $vertical-list-delimiter: ',\00A0' !default;
 
 // Pass in a delimiter through a data attribute
 .#{$scales-namespace}#{$scales-objects-class-namespace}VerticalList {
-  > [data-delimiter]:after {
+  > [data-delimiter]::after {
     content: attr(data-delimiter);
   }
 }

@@ -18,7 +18,7 @@ $scales-base-class-namespace: null !default;
 //
 // Available Variables
 ///
-$base-text-color: #333333 !default; //http://ianstormtaylor.com/design-tip-never-use-black/
+$base-text-color: #333 !default; //http://ianstormtaylor.com/design-tip-never-use-black/
 $heading-color: $base-text-color !default;
 $text-margins: 0 !default;
 $heading-margins: 0 !default;
@@ -26,8 +26,8 @@ $measure: 30em !default;
 $narrow-measure: 20em !default;
 $code-block-padding: 0 1em 1em !default;
 $code-block-margins: 0 !default;
-$code-block-bg-color: #444444 !default;
-$code-block-text-color: #ffffff !default;
+$code-block-bg-color: #444 !default;
+$code-block-text-color: #fff !default;
 $pre-wordwrap: false !default;
 $reset-heading-sizes: false !default;
 
@@ -42,10 +42,10 @@ $custom-h6-utility-class: Zeta !default;
 // Fonts
 $system-body-fonts: true !default;
 $system-heading-fonts: true !default;
-$system-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !default;
+$system-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !default;
 $monospaced-font-stack: consolas, monaco, courier, monospace !default;
-$body-font-stack: Garamond, "Hoefler Text", "Times New Roman", Times, serif !default;
-$heading-font-stack: Helvetica, "Helvetica Neue", Arial, sans-serif !default;
+$body-font-stack: Garamond, 'Hoefler Text', 'Times New Roman', Times, serif !default;
+$heading-font-stack: Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $heading-font-weight: normal !default;
 $font-size-unit: rem !default;
 
@@ -160,7 +160,12 @@ h6,
 
 // Reset the headings sizes if you want to require a class to give them size
 @if $reset-heading-sizes {
-  h1,h2,h3,h4,h5,h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: $base-font-size;
   }
 }
@@ -184,7 +189,7 @@ code {
 pre {
   @if $pre-wordwrap {
     white-space: pre;
-    white-space: pre-wrap;
+    white-space: pre-wrap; // sass-lint:disable-line no-duplicate-properties
     word-wrap: break-word;
   }
   padding: $code-block-padding;
@@ -199,7 +204,7 @@ pre {
 }
 
 .#{$scales-namespace}#{$scales-base-class-namespace}Measure--narrow {
-  max-width: $narrow-measure
+  max-width: $narrow-measure;
 }
 
 // Truncation

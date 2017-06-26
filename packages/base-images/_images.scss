@@ -20,6 +20,6 @@ img {
 ///
 img[width],
 img[height],
-.gm-style img {
+.gm-style img { // sass-lint:disable-line class-name-format
   max-width: none;
 }

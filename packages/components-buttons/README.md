@@ -17,13 +17,13 @@ Buttons should be used with links, buttons, and submit inputs for best results.
 ```
 <a href="#" class="Button">Link Button</a>
 <button class="Button">Button Button</button>
-<input class="Button is-disabled" type="submit" value="Input Button">
+<input class="Button is-Disabled" type="submit" value="Input Button">
 ```
 
 ## Available Classes
 
 * `.Button` - The main button class
-* `.is-disabled` - Disabled state for buttons (`disabled` attribute is preferred)
+* `.is-Disabled` - Disabled state for buttons (`disabled` attribute is preferred)
 
 ## Available Variables
 

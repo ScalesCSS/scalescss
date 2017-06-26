@@ -35,14 +35,14 @@
   text-align: center;
 }
 
-.HorizontalList--delimited > li:after {
+.HorizontalList--delimited > li::after {
   content: ", ";
 }
-.HorizontalList--delimited > li:last-child:after {
+.HorizontalList--delimited > li:last-child::after {
   content: '';
 }
 
-.HorizontalList > [data-delimiter]:after {
+.HorizontalList > [data-delimiter]::after {
   content: attr(data-delimiter);
 }
 

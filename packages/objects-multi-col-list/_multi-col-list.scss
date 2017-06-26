@@ -35,7 +35,7 @@ $scales-objects-class-namespace: null !default;
 // breakpoints.
 ///
 @mixin MultiColList($columns) {
-   @if $columns == 2{
+  @if $columns == 2 {
     > li {
       width: 50%;
     }

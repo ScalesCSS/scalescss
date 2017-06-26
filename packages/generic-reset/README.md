@@ -18,6 +18,7 @@ Should be loaded immediately after Normalize.css. View the .scss file to see wha
 
 * `$selection-bg-color`
 * `$selection-text-color`
+* `$horizontal-rule-color`
 * `$table-border-collapse`
 * `$pre-overflow`
 
