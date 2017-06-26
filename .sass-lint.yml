@@ -63,17 +63,17 @@ rules:
   class-name-format:
     - 1
     -
-      convention: ^(nsp-)?((c|o|b|is|js|has)-)?([A-Z0-9][a-z0-9]+)+(__([a-z0-9]+-?)*[a-z0-9])?(--([a-z0-9]+-?)*[a-z0-9])?(:{1,2}([a-z]+-?)*[a-z])*$
+      convention: ^([a-z]+-)?((c|o|b|u|is|js|has)-)?([A-Z0-9][a-z0-9]+)+(__([a-z0-9]+-?)*[a-z0-9])?(--([a-z0-9]+-?)*[a-z0-9])?(:{1,2}([a-z]+-?)*[a-z])*$
   function-name-format: 0
   id-name-format: 0
   mixin-name-format:
     - 1
     -
-      convention: ^(nsp-)?((c|o|b|is|js|has)-)?([A-Z0-9][a-z0-9]+)+(__([a-z0-9]+-?)*[a-z0-9])?(--([a-z0-9]+-?)*[a-z0-9])?(:{1,2}([a-z]+-?)*[a-z])*$
+      convention: ^([a-z]+-)?((c|o|b|u|is|js|has)-)?([A-Z0-9][a-z0-9]+)+(__([a-z0-9]+-?)*[a-z0-9])?(--([a-z0-9]+-?)*[a-z0-9])?(:{1,2}([a-z]+-?)*[a-z])*$
   placeholder-name-format:
     - 1
     -
-      convention: ^(nsp-)?((c|o|b|is|js|has)-)?([A-Z0-9][a-z0-9]+)+(__([a-z0-9]+-?)*[a-z0-9])?(--([a-z0-9]+-?)*[a-z0-9])?(:{1,2}([a-z]+-?)*[a-z])*$
+      convention: ^([a-z]+-)?((c|o|b|u|is|js|has)-)?([A-Z0-9][a-z0-9]+)+(__([a-z0-9]+-?)*[a-z0-9])?(--([a-z0-9]+-?)*[a-z0-9])?(:{1,2}([a-z]+-?)*[a-z])*$
   variable-name-format:
     - 1
     -
