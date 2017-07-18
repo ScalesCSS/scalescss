@@ -43,7 +43,7 @@ Measure is the length of a line of text. For maximum readability, this should op
 ```
 
 ### Truncation
-This allows you to cut text off if it exceeds the width of the viewport and adds an ellipsis. This works even better when combined with [overrides-size](https://github.com/ScalesCSS/scalescss/tree/master/packages/utilities-size) to control where it cuts off by applying a width to the container.
+This allows you to cut text off if it exceeds the width of the viewport and adds an ellipsis. This works even better when combined with [utilities-size](https://github.com/ScalesCSS/scalescss/tree/master/packages/utilities-size) to control where it cuts off by applying a width to the container.
 
 ```
 <p class="Truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus augue cursus.</p>

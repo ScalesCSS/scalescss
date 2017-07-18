@@ -8,7 +8,7 @@ Scales uses the [Sass CSS preprocessor](http://sass-lang.com/), you'll need eith
 
 ## Installation
 
-* [NPM](http://npmjs.com): `npm install --save @scales/overrides-spacing`
+* [NPM](http://npmjs.com): `npm install --save @scales/utilities-spacing`
 
 ## Usage
 

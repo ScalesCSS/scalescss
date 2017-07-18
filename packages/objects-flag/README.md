@@ -34,14 +34,14 @@ To move the image to the opposite side:
 
 To change the vertical alignment of the text to middle or bottom:
 ```
-<div class="flag Flag--middle">
+<div class="Flag Flag--middle">
 
-<div class="flag Flag--bottom">
+<div class="Flag Flag--bottom">
 ```
 
 To stack image above the text on small screens:
 ```
-<div class="flag Flag--stacked">
+<div class="Flag Flag--stacked">
 ```
 
 ## Available Classes
