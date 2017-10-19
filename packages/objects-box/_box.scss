@@ -28,7 +28,7 @@ $box-padding-huge: $box-padding * 4 !default;
 //
 // Box Mixin
 ///
-@mixin Box($padding) {
+@mixin Box($padding: $box-padding) {
   @extend %ClearFix;
   display: block;
   padding: $padding;
@@ -42,7 +42,7 @@ $box-padding-huge: $box-padding * 4 !default;
 // Default box
 ///
 .#{$scales-namespace}#{$scales-objects-class-namespace}Box {
-  @include Box($box-padding);
+  @include Box;
 }
 
 //
