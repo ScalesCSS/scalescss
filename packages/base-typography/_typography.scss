@@ -56,6 +56,7 @@ $base-font-size: 1#{$font-size-unit} !default;
 // http://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation
 ///
 $base-line-height: 1.5 !default;
+$heading-line-height: 1.5 !default;
 $lede-font-size: 1.25#{$font-size-unit} !default;
 
 // Heading sizes
@@ -126,36 +127,42 @@ h1,
 .#{$scales-namespace}#{$scales-base-class-namespace}H1,
 .#{$scales-namespace}#{$scales-base-class-namespace}#{$custom-h1-utility-class} {
   font-size: $h1-size;
+  line-height: $heading-line-height;
 }
 
 h2,
 .#{$scales-namespace}#{$scales-base-class-namespace}H2,
 .#{$scales-namespace}#{$scales-base-class-namespace}#{$custom-h2-utility-class} {
   font-size: $h2-size;
+  line-height: $heading-line-height;
 }
 
 h3,
 .#{$scales-namespace}#{$scales-base-class-namespace}H3,
 .#{$scales-namespace}#{$scales-base-class-namespace}#{$custom-h3-utility-class} {
   font-size: $h3-size;
+  line-height: $heading-line-height;
 }
 
 h4,
 .#{$scales-namespace}#{$scales-base-class-namespace}H4,
 .#{$scales-namespace}#{$scales-base-class-namespace}#{$custom-h4-utility-class} {
   font-size: $h4-size;
+  line-height: $heading-line-height;
 }
 
 h5,
 .#{$scales-namespace}#{$scales-base-class-namespace}H5,
 .#{$scales-namespace}#{$scales-base-class-namespace}#{$custom-h5-utility-class} {
   font-size: $h5-size;
+  line-height: $heading-line-height;
 }
 
 h6,
 .#{$scales-namespace}#{$scales-base-class-namespace}H6,
 .#{$scales-namespace}#{$scales-base-class-namespace}#{$custom-h6-utility-class} {
   font-size: $h6-size;
+  line-height: $heading-line-height;
 }
 
 // Reset the headings sizes if you want to require a class to give them size
