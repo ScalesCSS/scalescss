@@ -31,7 +31,11 @@ rules:
   no-css-comments: 1
   no-debug: 1
   no-disallowed-properties: 0
-  no-duplicate-properties: 1
+  no-duplicate-properties:
+    - 1
+    -
+      exclude:
+        - display
   no-empty-rulesets: 1
   no-extends: 0
   no-ids: 1
