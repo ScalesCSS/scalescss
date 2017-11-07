@@ -95,6 +95,7 @@ This allows you to cut text off if it exceeds the width of the viewport and adds
 * `$font-size-unit`
 * `$base-font-size`
 * `$base-line-height`
+* `$heading-line-height`
 * `$lede-font-size`
 * `$h1-size`
 * `$h2-size`
@@ -102,6 +103,12 @@ This allows you to cut text off if it exceeds the width of the viewport and adds
 * `$h4-size`
 * `$h5-size`
 * `$h6-size`
+* `$h1-line-height`
+* `$h2-line-height`
+* `$h3-line-height`
+* `$h4-line-height`
+* `$h5-line-height`
+* `$h6-line-height`
 * `$anchor-link-color`
 * `$anchor-visited-color`
 * `$anchor-hover-color`
