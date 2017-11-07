@@ -66,14 +66,13 @@ $h4-size: 1.5#{$font-size-unit} !default;
 $h5-size: 1.25#{$font-size-unit} !default;
 $h6-size: 1#{$font-size-unit} !default;
 
-// Link states
-$anchor-link-color: #00E !default; // blue
-$anchor-visited-color: #551A8B !default; // purple
-$anchor-hover-color: #E00 !default; // red
-$anchor-active-color: #E00 !default; // red
-$anchor-link-decoration: underline !default;
-$anchor-hover-decoration: underline !default;
-
+// Link states and decoration
+$anchor-link-color: null !default;
+$anchor-visited-color: null !default;
+$anchor-hover-color: null !default;
+$anchor-active-color: null !default;
+$anchor-link-decoration: null !default;
+$anchor-hover-decoration: null !default;
 
 //
 // Base Typography Styles
@@ -94,26 +93,20 @@ a {
   &:link {
     color: $anchor-link-color;
     text-decoration: $anchor-link-decoration;
-    word-break: break-word;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    cursor: pointer;
-    // touch-action: manipulation; // disable the delay of click events caused by support for the double-tap to zoom gesture
   }
+
   &:visited {
     color: $anchor-visited-color;
   }
-  &[href] {
-    &:hover {
-      color: $anchor-hover-color;
-      text-decoration: $anchor-hover-decoration;
-    }
-    &:active {
-      color: $anchor-active-color;
-    }
+
+  &:hover {
+    color: $anchor-hover-color;
+    text-decoration: $anchor-hover-decoration;
   }
-  // &:focus {}
+
+  &:active {
+    color: $anchor-active-color;
+  }
 }
 
 p,
