@@ -66,6 +66,13 @@ $h4-size: 1.5#{$font-size-unit} !default;
 $h5-size: 1.25#{$font-size-unit} !default;
 $h6-size: 1#{$font-size-unit} !default;
 
+// Link states and decoration
+$anchor-link-color: null !default;
+$anchor-visited-color: null !default;
+$anchor-hover-color: null !default;
+$anchor-active-color: null !default;
+$anchor-link-decoration: null !default;
+$anchor-hover-decoration: null !default;
 
 //
 // Base Typography Styles
@@ -80,6 +87,26 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
   color: $base-text-color;
+}
+
+a {
+  &:link {
+    color: $anchor-link-color;
+    text-decoration: $anchor-link-decoration;
+  }
+
+  &:visited {
+    color: $anchor-visited-color;
+  }
+
+  &:hover {
+    color: $anchor-hover-color;
+    text-decoration: $anchor-hover-decoration;
+  }
+
+  &:active {
+    color: $anchor-active-color;
+  }
 }
 
 p,

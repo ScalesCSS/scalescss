@@ -102,6 +102,12 @@ This allows you to cut text off if it exceeds the width of the viewport and adds
 * `$h4-size`
 * `$h5-size`
 * `$h6-size`
+* `$anchor-link-color`
+* `$anchor-visited-color`
+* `$anchor-hover-color`
+* `$anchor-active-color`
+* `$anchor-link-decoration`
+* `$anchor-hover-decoration`
 
 ## Custom heading utility class variables (overrides Greek alphabet classes)
 * `$custom-h1-utility-class`
