@@ -72,6 +72,7 @@ Class level namespace variables allow you to namespace a selector based on the t
 * `$font-size-unit`
 * `$base-font-size`
 * `$base-line-height`
+* `$heading-line-height`
 * `$lede-font-size`
 * `$h1-size`
 * `$h2-size`
@@ -79,6 +80,18 @@ Class level namespace variables allow you to namespace a selector based on the t
 * `$h4-size`
 * `$h5-size`
 * `$h6-size`
+* `$h1-line-height`
+* `$h2-line-height`
+* `$h3-line-height`
+* `$h4-line-height`
+* `$h5-line-height`
+* `$h6-line-height`
+* `$anchor-link-color`
+* `$anchor-visited-color`
+* `$anchor-hover-color`
+* `$anchor-active-color`
+* `$anchor-link-decoration`
+* `$anchor-hover-decoration`
 * `$custom-h1-utility-class`
 * `$custom-h2-utility-class`
 * `$custom-h3-utility-class`
