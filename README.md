@@ -1,6 +1,6 @@
 # Scales
 
-Scales is a modular CSS framework for quickly building responsive web projects. It clocks in at only 3.7kb when minified and gzipped.
+Scales is a modular CSS framework for quickly building responsive web projects. It clocks in at only 3.8kb when minified and gzipped.
 
 It is purposely "design-free" so that there is nothing you will have to change. Instead, you will build your design on top of the foundation that Scales provides.
 
