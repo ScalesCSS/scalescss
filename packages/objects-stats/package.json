@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/objects-stats",
-  "version": "3.1.1",
+  "version": "3.3.0",
   "description": "A pattern to display statistic-like information for Scales CSS",
   "main": "_stats.scss",
   "scripts": {
