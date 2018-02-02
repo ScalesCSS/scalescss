@@ -32,8 +32,9 @@ $size-step-value: 5;
 $size: $size-range-start;
 
 @while $size <= $size-range-end {
-  .#{$scales-namespace}#{$scales-utilities-class-namespace}Size-#{$size} { // sass-lint:disable-line class-name-format
-    width: unquote('#{$size}%') !important;
+  .#{$scales-namespace}#{$scales-utilities-class-namespace}Size-#{$size} {
+    width: unquote($string:'#{$size}%') !important;
   }
+
   $size: $size + $size-step-value;
 }

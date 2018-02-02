@@ -71,6 +71,29 @@ ul {
 }
 
 //
+// Change some things from Normalize
+///
+
+// Add border collapse to tables.
+table {
+  border-collapse: $table-border-collapse;
+}
+
+// Contain overflow in all browsers
+pre {
+  overflow: $pre-overflow;
+}
+
+// Less opinionated form font
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+}
+
+//
 // Give a help cursor to elements that give extra info on ":hover".
 ///
 abbr[title],
@@ -83,23 +106,6 @@ dfn[title] {
 ///
 img {
   font-style: italic;
-}
-
-//
-// Give form elements some cursor interactions.
-///
-button,
-label,
-option,
-select {
-  cursor: pointer;
-}
-
-.#{$scales-namespace}#{$scales-base-class-namespace}TextInput:active,
-.#{$scales-namespace}#{$scales-base-class-namespace}TextInput:focus,
-textarea:active,
-textarea:focus {
-  cursor: text;
 }
 
 //
@@ -135,6 +141,28 @@ textarea {
 select {
   background: none;
   font-size: 100%;
+}
+
+// Allow only vertical resizing of textareas.
+textarea {
+  resize: vertical;
+}
+
+//
+// Give form elements some cursor interactions.
+///
+button,
+label,
+option,
+select {
+  cursor: pointer;
+}
+
+.#{$scales-namespace}#{$scales-base-class-namespace}TextInput:active,
+.#{$scales-namespace}#{$scales-base-class-namespace}TextInput:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
 }
 
 // Fancy color for when you select stuff! Change the color for your app.
@@ -177,32 +205,4 @@ fieldset {
   border: 0;
   margin: 0;
   padding: 0;
-}
-
-// Allow only vertical resizing of textareas.
-textarea {
-  resize: vertical;
-}
-
-//
-// Change some things from Normalize
-///
-
-// Add border collapse to tables.
-table {
-  border-collapse: $table-border-collapse;
-}
-
-// Contain overflow in all browsers
-pre {
-  overflow: $pre-overflow;
-}
-
-// Less opinionated form font
-button,
-input,
-optgroup,
-select,
-textarea {
-  font: inherit;
 }

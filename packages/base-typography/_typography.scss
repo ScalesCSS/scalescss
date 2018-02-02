@@ -42,9 +42,12 @@ $custom-h6-utility-class: Zeta !default;
 // Fonts
 $system-body-fonts: true !default;
 $system-heading-fonts: true !default;
-$system-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !default;
+$system-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+  'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif !default;
 $monospaced-font-stack: consolas, monaco, courier, monospace !default;
-$body-font-stack: Garamond, 'Hoefler Text', 'Times New Roman', Times, serif !default;
+$body-font-stack: Garamond, 'Hoefler Text', 'Times New Roman', Times,
+  serif !default;
 $heading-font-stack: Helvetica, 'Helvetica Neue', Arial, sans-serif !default;
 $heading-font-weight: normal !default;
 $font-size-unit: rem !default;
@@ -89,7 +92,9 @@ $anchor-hover-decoration: null !default;
 body {
   @if $system-body-fonts {
     font-family: $system-font-stack;
-  } @else {
+  }
+
+  @else {
     font-family: $body-font-stack;
   }
 
@@ -149,7 +154,9 @@ h6,
 .#{$scales-namespace}#{$scales-base-class-namespace}#{$custom-h6-utility-class} {
   @if $system-heading-fonts {
     font-family: $system-font-stack;
-  } @else {
+  }
+
+  @else {
     font-family: $heading-font-stack;
   }
 
@@ -201,6 +208,7 @@ h6,
 }
 
 // Reset the headings sizes if you want to require a class to give them size
+
 @if $reset-heading-sizes {
   h1,
   h2,
@@ -231,9 +239,10 @@ code {
 pre {
   @if $pre-wordwrap {
     white-space: pre;
-    white-space: pre-wrap; // sass-lint:disable-line no-duplicate-properties
+    white-space: pre-wrap;
     word-wrap: break-word;
   }
+
   padding: $code-block-padding;
   margin: $code-block-margins;
   background-color: $code-block-bg-color;

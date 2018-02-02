@@ -28,8 +28,10 @@ $box-padding-huge: $box-padding * 4 !default;
 //
 // Box Mixin
 ///
+
 @mixin Box($padding: $box-padding) {
   @extend %ClearFix;
+
   display: block;
   padding: $padding;
 

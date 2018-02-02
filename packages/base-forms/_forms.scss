@@ -20,7 +20,7 @@ $scales-base-class-namespace: null !default;
 // Available Variables
 ///
 $fieldset-padding: 1em !default;
-$text-input-padding: .5em !default;
+$text-input-padding: 0.5em !default;
 $text-input-border-width: 1px !default;
 $text-input-border-style: solid !default;
 $text-input-border-color: #000 !default;
@@ -47,9 +47,9 @@ fieldset {
 // Use when marking up a form as an unordered list. e.g. <ul class="FormList">
 ///
 .#{$scales-namespace}#{$scales-base-class-namespace}FormList {
-  list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 //
@@ -105,9 +105,9 @@ textarea {
   display: block;
   padding: $text-input-padding;
   border: $text-input-border-width;
-  border-style: $text-input-border-style;
   border-color: $text-input-border-color;
   border-radius: $text-input-border-radius;
+  border-style: $text-input-border-style;
 }
 
 //
@@ -134,7 +134,7 @@ select {
 //
 // Input states
 //
-// sass-lint:disable no-qualifying-elements
+// stylelint-disable selector-no-qualifying-type
 ///
 
 // Disabled
@@ -144,10 +144,10 @@ textarea[disabled],
 input.is-Disabled,
 select.is-Disabled,
 textarea.is-Disabled {
-  cursor: not-allowed;
-  border-color: $input-disabled-border-color;
   background-color: $input-disabled-background-color;
+  border-color: $input-disabled-border-color;
   color: $input-disabled-text-color;
+  cursor: not-allowed;
 }
 
 // Read Only
@@ -157,19 +157,18 @@ textarea[readonly],
 input.is-ReadOnly,
 select.is-ReadOnly,
 textarea.is-ReadOnly {
-  border-color: $input-readonly-border-color;
   background-color: $input-readonly-background-color;
+  border-color: $input-readonly-border-color;
   color: $input-readonly-text-color;
 }
-// sass-lint:enable no-qualifying-elements
+
+// stylelint-enable
 
 //
 // Extra help text displayed after a field when that field is in focus.
 //
 // Change `$helper-text-hidden` to something other than `true`
 // and the helper text will be visible by default.
-//
-// sass-lint:disable force-pseudo-nesting
 ///
 
 @if ($helper-text-hidden == true) {
@@ -177,22 +176,35 @@ textarea.is-ReadOnly {
     display: none;
   }
 
-  .#{$scales-namespace}#{$scales-base-class-namespace}TextInput:active + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
-  .#{$scales-namespace}#{$scales-base-class-namespace}TextInput:focus + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
-  textarea:active + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
-  textarea:focus + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText {
-    display: block;
-  }
-
+  // stylelint-disable selector-combinator-space-before
   .#{$scales-namespace}#{$scales-base-class-namespace}FormInline {
-    .#{$scales-namespace}#{$scales-base-class-namespace}TextInput:active + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
-    .#{$scales-namespace}#{$scales-base-class-namespace}TextInput:focus + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
-    textarea:active + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
-    textarea:focus + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText {
+    .#{$scales-namespace}#{$scales-base-class-namespace}TextInput:active
+    + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
+    .#{$scales-namespace}#{$scales-base-class-namespace}TextInput:focus
+    + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
+    textarea:active
+    + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
+    textarea:focus
+    + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText {
       display: inline-block;
     }
   }
-} @else {
+
+  .#{$scales-namespace}#{$scales-base-class-namespace}TextInput:active
+  + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
+  .#{$scales-namespace}#{$scales-base-class-namespace}TextInput:focus
+  + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
+  textarea:active
+  + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText,
+  textarea:focus
+  + .#{$scales-namespace}#{$scales-base-class-namespace}HelperText {
+    display: block;
+  }
+
+  // stylelint-enable
+}
+
+@else {
   .#{$scales-namespace}#{$scales-base-class-namespace}HelperText {
     display: block;
   }

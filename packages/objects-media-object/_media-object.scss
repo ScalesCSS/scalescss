@@ -31,6 +31,7 @@ $media-stacked-breakpoint: 25em !default;
 ///
 .#{$scales-namespace}#{$scales-objects-class-namespace}Media {
   @extend %ClearFix;
+
   display: block;
 }
 
@@ -145,8 +146,8 @@ $media-stacked-breakpoint: 25em !default;
 //
 // Stacked media object at smaller screen width
 ///
-@media all and (max-width: $media-stacked-breakpoint) {
 
+@media all and (max-width: $media-stacked-breakpoint) {
   //
   // Default stacked media object
   ///

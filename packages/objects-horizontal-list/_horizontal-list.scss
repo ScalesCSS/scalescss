@@ -15,12 +15,12 @@ $scales-objects-class-namespace: null !default;
 //
 // Available Variables
 ///
-
 $horizontal-list-delimiter: ',\00A0' !default;
 
 //
 // Horizontal List classes
 ///
+
 @mixin HorizontalList {
   list-style: none;
   margin: 0;

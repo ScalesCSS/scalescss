@@ -13,7 +13,7 @@ Once you've fork and cloned the repo locally, create a feature branch and start 
 The 3 important files in a Scales package are the `.scss` file, index.html, and the README.
 
 ### .scss
-This is the main file for each package and the one that actually gets referenced in a project that uses Scales. Be sure to have [Sass Lint](https://www.npmjs.com/package/sass-lint#ide-integration) set up in your editor so you don't have code convention issues in your PR.
+This is the main file for each package and the one that actually gets referenced in a project that uses Scales. Be sure to have [Stylelint Lint](https://stylelint.io/user-guide/complementary-tools/#editor-plugins) set up in your editor so you don't have code convention issues in your PR.
 
 Please follow the commenting convention in the files to add usage notes when appropriate.
 

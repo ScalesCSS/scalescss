@@ -15,12 +15,12 @@ $scales-objects-class-namespace: null !default;
 //
 // Available Variables
 ///
-
 $vertical-list-delimiter: ',\00A0' !default;
 
 //
 // Horizontal List classes
 ///
+
 @mixin VerticalList {
   list-style: none;
   margin: 0;
@@ -39,7 +39,6 @@ $vertical-list-delimiter: ',\00A0' !default;
 //
 // Character delimited Vertical List
 ///
-
 .#{$scales-namespace}#{$scales-objects-class-namespace}VerticalList--delimited {
   > li {
     &::after {

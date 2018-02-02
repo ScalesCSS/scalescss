@@ -4,8 +4,6 @@
 
 //
 // A set of classes for changing the margin and padding on an element.
-//
-// sass-lint:disable class-name-format
 ///
 
 //
@@ -21,7 +19,7 @@ $scales-utilities-class-namespace: null !default;
 //
 // Available variables
 ///
-$space-s: .5em !default;
+$space-s: 0.5em !default;
 $space-m: 1em !default;
 $space-l: 2em !default;
 $space-h: 3em !default;

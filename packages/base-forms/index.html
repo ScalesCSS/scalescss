@@ -10,9 +10,9 @@ fieldset {
 }
 
 .FormList {
-  list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .InputContainer {
@@ -40,9 +40,9 @@ textarea {
   display: block;
   padding: 0.5em;
   border: 1px;
-  border-style: solid;
   border-color: #000;
   border-radius: 0;
+  border-style: solid;
 }
 
 select {
@@ -64,10 +64,10 @@ textarea[disabled],
 input.is-Disabled,
 select.is-Disabled,
 textarea.is-Disabled {
-  cursor: not-allowed;
-  border-color: #aaa;
   background-color: #ccc;
+  border-color: #aaa;
   color: #aaa;
+  cursor: not-allowed;
 }
 
 input[readonly],
@@ -76,8 +76,8 @@ textarea[readonly],
 input.is-ReadOnly,
 select.is-ReadOnly,
 textarea.is-ReadOnly {
-  border-color: #aaa;
   background-color: #ccc;
+  border-color: #aaa;
   color: #000;
 }
 
@@ -85,18 +85,26 @@ textarea.is-ReadOnly {
   display: none;
 }
 
-.TextInput:active + .HelperText,
-.TextInput:focus + .HelperText,
-textarea:active + .HelperText,
-textarea:focus + .HelperText {
-  display: block;
+.FormInline .TextInput:active
++ .HelperText,
+.FormInline .TextInput:focus
++ .HelperText,
+.FormInline textarea:active
++ .HelperText,
+.FormInline textarea:focus
++ .HelperText {
+  display: inline-block;
 }
 
-.FormInline .TextInput:active + .HelperText,
-.FormInline .TextInput:focus + .HelperText,
-.FormInline textarea:active + .HelperText,
-.FormInline textarea:focus + .HelperText {
-  display: inline-block;
+.TextInput:active
++ .HelperText,
+.TextInput:focus
++ .HelperText,
+textarea:active
++ .HelperText,
+textarea:focus
++ .HelperText {
+  display: block;
 }
 
 </style>

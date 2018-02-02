@@ -26,9 +26,9 @@ $stat-spacing: 1em !default;
 //
 // Stats classes
 ///
-
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stats {
   @extend %ClearFix;
+
   margin-left: 0;
 }
 

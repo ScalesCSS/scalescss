@@ -17,9 +17,12 @@ img {
 
 //
 // Remove max-width when explicitely set and a fix for Google Maps
+//
+// stylelint-disable selector-class-pattern
 ///
 img[width],
 img[height],
-.gm-style img { // sass-lint:disable-line class-name-format
+.gm-style img {
   max-width: none;
 }
+// stylelint-enable

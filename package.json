@@ -3,12 +3,21 @@
   "description": "Scales is a design-free collection of OOCSS patterns, framework settings, & utilities to quickly build mobile-first, responsive web projects",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gh-pages": "./gh-pages.sh"
+    "gh-pages": "./gh-pages.sh",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "packages/**/*.scss": ["prettier-stylelint --write", "git add"]
   },
   "author": "Dave Gillhespy",
   "license": "MIT",
   "devDependencies": {
+    "husky": "^0.14.3",
     "lerna": "^2.0.0-rc.5",
-    "sass-lint": "^1.10.2"
-  }
+    "lint-staged": "^6.1.0",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^8.4.0",
+    "stylelint-scss": "^2.2.0"
+  },
+  "dependencies": {}
 }

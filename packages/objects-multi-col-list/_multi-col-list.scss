@@ -22,6 +22,7 @@ $scales-objects-class-namespace: null !default;
 ///
 .#{$scales-namespace}#{$scales-objects-class-namespace}MultiColList {
   @extend %ClearFix;
+
   list-style: none;
   margin-left: 0;
 
@@ -34,6 +35,7 @@ $scales-objects-class-namespace: null !default;
 // This mixin allows you to change the number of columns at different
 // breakpoints.
 ///
+
 @mixin MultiColList($columns) {
   @if $columns == 2 {
     > li {
@@ -69,25 +71,25 @@ $scales-objects-class-namespace: null !default;
 ///
 %#{$scales-namespace}#{$scales-objects-class-namespace}MultiColList--two-columns,
 .#{$scales-namespace}#{$scales-objects-class-namespace}MultiColList--two-columns {
-  @include MultiColList(2);
+  @include MultiColList($columns: 2);
 }
 
 %#{$scales-namespace}#{$scales-objects-class-namespace}MultiColList--three-columns,
 .#{$scales-namespace}#{$scales-objects-class-namespace}MultiColList--three-columns {
-  @include MultiColList(3);
+  @include MultiColList($columns: 3);
 }
 
 %#{$scales-namespace}#{$scales-objects-class-namespace}MultiColList--four-columns,
 .#{$scales-namespace}#{$scales-objects-class-namespace}MultiColList--four-columns {
-  @include MultiColList(4);
+  @include MultiColList($columns: 4);
 }
 
 %#{$scales-namespace}#{$scales-objects-class-namespace}MultiColList--five-columns,
 .#{$scales-namespace}#{$scales-objects-class-namespace}MultiColList--five-columns {
-  @include MultiColList(5);
+  @include MultiColList($columns: 5);
 }
 
 %#{$scales-namespace}#{$scales-objects-class-namespace}MultiColList--six-columns,
 .#{$scales-namespace}#{$scales-objects-class-namespace}MultiColList--six-columns {
-  @include MultiColList(6);
+  @include MultiColList($columns: 6);
 }
