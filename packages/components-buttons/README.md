@@ -33,7 +33,10 @@ Buttons should be used with links, buttons, and submit inputs for best results.
 * `$btn-border-style`
 * `$btn-border-radius`
 * `$btn-text-color`
-* `$btn-font`
+* `$btn-font-size`
+* `$btn-font-family`
+* `$btn-font-weight`
+* `$btn-line-height`
 * `$btn-padding`
 * `$btn-hover-background-color`
 * `$btn-hover-text-color`
