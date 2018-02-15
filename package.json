@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/scalescss",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "Scales is a design-free collection of OOCSS patterns, framework settings, & utilities to quickly build mobile-first, responsive web projects",
   "main": "_scalescss.scss",
   "scripts": {
@@ -22,7 +22,7 @@
     "@scalescss/base-images": "^3.3.0",
     "@scalescss/base-lists": "^3.3.0",
     "@scalescss/base-tables": "^3.3.0",
-    "@scalescss/base-typography": "^3.3.0",
+    "@scalescss/base-typography": "^3.4.0",
     "@scalescss/components-buttons": "^3.3.0",
     "@scalescss/generic-normalize": "^3.3.0",
     "@scalescss/generic-reset": "^3.3.0",
