@@ -70,6 +70,14 @@ $h4-size: 1.5#{$font-size-unit} !default;
 $h5-size: 1.25#{$font-size-unit} !default;
 $h6-size: 1#{$font-size-unit} !default;
 
+// Heading color
+$h1-color: $heading-color !default;
+$h2-color: $heading-color !default;
+$h3-color: $heading-color !default;
+$h4-color: $heading-color !default;
+$h5-color: $heading-color !default;
+$h6-color: $heading-color !default;
+
 // Heading line heights
 $h1-line-height: $heading-line-height !default;
 $h2-line-height: $heading-line-height !default;
@@ -77,6 +85,14 @@ $h3-line-height: $heading-line-height !default;
 $h4-line-height: $heading-line-height !default;
 $h5-line-height: $heading-line-height !default;
 $h6-line-height: $heading-line-height !default;
+
+// Heading weight
+$h1-weight: $heading-font-weight !default;
+$h2-weight: $heading-font-weight !default;
+$h3-weight: $heading-font-weight !default;
+$h4-weight: $heading-font-weight !default;
+$h5-weight: $heading-font-weight !default;
+$h6-weight: $heading-font-weight !default;
 
 // Link states and decoration
 $anchor-link-color: null !default;
@@ -168,42 +184,54 @@ h6,
 h1,
 .#{$scales-namespace}#{$scales-base-class-namespace}H1,
 .#{$scales-namespace}#{$scales-base-class-namespace}#{$custom-h1-utility-class} {
+  color: $h1-color;
   font-size: $h1-size;
+  font-weight: $h1-weight;
   line-height: $h1-line-height;
 }
 
 h2,
 .#{$scales-namespace}#{$scales-base-class-namespace}H2,
 .#{$scales-namespace}#{$scales-base-class-namespace}#{$custom-h2-utility-class} {
+  color: $h2-color;
   font-size: $h2-size;
+  font-weight: $h2-weight;
   line-height: $h2-line-height;
 }
 
 h3,
 .#{$scales-namespace}#{$scales-base-class-namespace}H3,
 .#{$scales-namespace}#{$scales-base-class-namespace}#{$custom-h3-utility-class} {
+  color: $h3-color;
   font-size: $h3-size;
+  font-weight: $h3-weight;
   line-height: $h3-line-height;
 }
 
 h4,
 .#{$scales-namespace}#{$scales-base-class-namespace}H4,
 .#{$scales-namespace}#{$scales-base-class-namespace}#{$custom-h4-utility-class} {
+  color: $h4-color;
   font-size: $h4-size;
+  font-weight: $h4-weight;
   line-height: $h4-line-height;
 }
 
 h5,
 .#{$scales-namespace}#{$scales-base-class-namespace}H5,
 .#{$scales-namespace}#{$scales-base-class-namespace}#{$custom-h5-utility-class} {
+  color: $h5-color;
   font-size: $h5-size;
+  font-weight: $h5-weight;
   line-height: $h5-line-height;
 }
 
 h6,
 .#{$scales-namespace}#{$scales-base-class-namespace}H6,
 .#{$scales-namespace}#{$scales-base-class-namespace}#{$custom-h6-utility-class} {
+  color: $h6-color;
   font-size: $h6-size;
+  font-weight: $h6-weight;
   line-height: $h6-line-height;
 }
 
