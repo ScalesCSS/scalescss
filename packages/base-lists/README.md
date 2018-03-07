@@ -1,6 +1,6 @@
 # Base Lists for Scales
 
-Simple list modifier to remove margin and bullets from a list.
+These are the base styles for lists.
 
 ## Requirements
 
@@ -12,7 +12,20 @@ Scales uses the [Sass CSS preprocessor](http://sass-lang.com/), you'll need eith
 
 ## Usage
 
-Sometimes you need a list without any margin or padding and no bullets.
+Indent a list from the left by setting the $list-margin-left variable in your settings file.
+
+### Base List
+```
+<ul class="List">
+   <li>Scales</li>
+   <li>Patterns</li>
+   <li>Lists</li>
+</ul>
+```
+
+## Usage
+
+Simple list modifier to remove margin, padding and bullets from a list.
 
 ### Bare List
 ```
@@ -35,7 +48,12 @@ Since there are times when you might want to make a list bare without using a cl
 
 ## Available Classes
 
+* `.List`
 * `.List--bare`
+
+## Available Variables
+
+* `$list-margin-left`
 
 ### Namespace Variables
 
