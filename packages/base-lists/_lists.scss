@@ -17,6 +17,11 @@ $scales-namespace: null !default;
 $scales-base-class-namespace: null !default;
 
 //
+// Available Variables
+///
+$list-margin-left: 0 !default;
+
+//
 // Bare List mixin
 ///
 
@@ -24,6 +29,14 @@ $scales-base-class-namespace: null !default;
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
+}
+
+//
+//  List
+//
+///
+.#{$scales-namespace}#{$scales-base-class-namespace}List {
+  margin-left: $list-margin-left;
 }
 
 //

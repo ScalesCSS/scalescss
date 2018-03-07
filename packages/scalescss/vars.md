@@ -134,6 +134,10 @@ Class level namespace variables allow you to namespace a selector based on the t
 * `$input-readonly-text-color`
 * `$helper-text-hidden`
 
+### _lists.scss
+* `$scales-base-class-namespace
+* `$list-margin-left`
+
 ### _tables.scss
 * `$scales-base-class-namespace
 * `$table-padding-large`
