@@ -28,6 +28,7 @@ $table-border-color: #000 !default;
 $table-stripe-color: #ccc !default;
 $table-highlight-color: #ffd700 !default;
 $table-highlight-text-color: #000 !default;
+$table-text-align: center !default;
 
 //
 // Main table styles
@@ -37,6 +38,7 @@ $table-highlight-text-color: #000 !default;
 // be 100% width.
 table,
 .#{$scales-namespace}#{$scales-base-class-namespace}Table {
+  text-align: $table-text-align;
   width: 100%;
 }
 
