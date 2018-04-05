@@ -28,6 +28,8 @@ $table-border-color: #000 !default;
 $table-stripe-color: #ccc !default;
 $table-highlight-color: #ffd700 !default;
 $table-highlight-text-color: #000 !default;
+$table-heading-alignment: center !default;
+$table-cell-alignment: left !default;
 
 //
 // Main table styles
@@ -43,20 +45,20 @@ table,
 //
 // Cell alignments
 ///
-[colspan] {
-  text-align: center;
-}
-
-[colspan='1'] {
-  text-align: left;
-}
-
 [rowspan] {
   vertical-align: middle;
 }
 
 [rowspan='1'] {
   vertical-align: top;
+}
+
+th {
+  text-align: $table-heading-alignment;
+}
+
+td {
+  text-align: $table-cell-alignment;
 }
 
 // Align numbers to the right. Especially useful for money.
