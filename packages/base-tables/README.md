@@ -85,6 +85,8 @@ Tables can get pretty crazy. Take a look at this example with some of the classe
 * `$table-stripe-color`
 * `$table-highlight-color`
 * `$table-highlight-text-color`
+* `$table-heading-alignment`
+* `$table-cell-alignment`
 
 ### Namespace Variables
 

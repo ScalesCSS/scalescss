@@ -149,6 +149,8 @@ Class level namespace variables allow you to namespace a selector based on the t
 * `$table-stripe-color`
 * `$table-highlight-color`
 * `$table-highlight-text-color`
+* `$table-heading-alignment`
+* `$table-cell-alignment`
 
 ### _box.scss
 * `$scales-objects-class-namespace`
