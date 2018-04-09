@@ -1,4 +1,4 @@
-# Box Object for Scales
+# Centered Layout Object for Scales
 
 A simple pattern for establishing a centered column layout.
 
