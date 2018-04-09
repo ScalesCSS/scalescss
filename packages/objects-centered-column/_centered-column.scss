@@ -1,0 +1,26 @@
+// ==========================================================================
+// Centered Column Object
+// ==========================================================================
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Class level namespacing variable
+///
+$scales-objects-class-namespace: null !default;
+
+//
+// Available Variables
+///
+$centered-column-width: 64rem !default;
+
+//
+// Default box
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}CenteredColumn {
+  margin: 0 auto;
+  max-width: $centered-column-width;
+}
