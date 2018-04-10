@@ -1,0 +1,19 @@
+{
+  "name": "@scalescss/objects-stack-split",
+  "version": "1.0",
+  "description": "A simple pattern for keeping items stacked until theres enough room for them to be side by side for Scales CSS",
+  "main": "_stack-split.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-stack-split"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/scalescss/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-stack-split#readme"
+}

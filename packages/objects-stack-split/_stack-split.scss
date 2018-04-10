@@ -1,0 +1,34 @@
+// ==========================================================================
+// Stack Split Object
+// ==========================================================================
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Class level namespacing variable
+///
+$scales-objects-class-namespace: null !default;
+
+//
+// Available Variables
+///
+$stack-split-gutter: 1rem !default;
+
+//
+// Default box
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}StackSplit__item {
+  display: inline-block;
+  margin: $stack-split-gutter;
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}StackSplit__item:first-child {
+  margin-left: 0;
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}StackSplit__item:last-child {
+  margin-right: 0;
+}
