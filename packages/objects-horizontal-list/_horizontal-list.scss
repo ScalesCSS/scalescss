@@ -16,6 +16,7 @@ $scales-objects-class-namespace: null !default;
 // Available Variables
 ///
 $horizontal-list-delimiter: ',\00A0' !default;
+$horizontal-list-spacing: 1rem !default;
 
 //
 // Horizontal List classes
@@ -28,6 +29,11 @@ $horizontal-list-delimiter: ',\00A0' !default;
 
   > li {
     display: inline-block;
+    margin-right: $horizontal-list-spacing;
+  }
+
+  > li:last-child {
+    margin-right: 0;
   }
 }
 
@@ -63,7 +69,11 @@ $horizontal-list-delimiter: ',\00A0' !default;
 ///
 .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited {
   > li {
+    margin-right: 0;
+
     &::after {
+      margin-left: $horizontal-list-spacing / 2;
+      margin-right: $horizontal-list-spacing / 2;
       content: '#{$horizontal-list-delimiter}';
     }
 

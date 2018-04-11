@@ -5,47 +5,55 @@
 <title>Horizontal List Object - Scales</title>
 <meta name="viewport" content="initial-scale=1,width=device-width">
 <style>
-.HorizontalList {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.HorizontalList > li {
-  display: inline-block;
-}
+  .HorizontalList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .HorizontalList > li {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  .HorizontalList > li:last-child {
+    margin-right: 0;
+  }
 
-.HorizontalList--center {
-  text-align: center;
-}
+  .HorizontalList--center {
+    text-align: center;
+  }
 
-.HorizontalList--right {
-  text-align: right;
-}
+  .HorizontalList--right {
+    text-align: right;
+  }
 
-.HorizontalList--left {
-  text-align: left;
-}
+  .HorizontalList--left {
+    text-align: left;
+  }
 
-.HorizontalList--fill {
-  display: table;
-  width: 100%;
-}
-.HorizontalList--fill > li {
-  display: table-cell;
-  text-align: center;
-}
+  .HorizontalList--fill {
+    display: table;
+    width: 100%;
+  }
+  .HorizontalList--fill > li {
+    display: table-cell;
+    text-align: center;
+  }
 
-.HorizontalList--delimited > li::after {
-  content: ", ";
-}
-.HorizontalList--delimited > li:last-child::after {
-  content: '';
-}
+  .HorizontalList--delimited > li {
+    margin-right: 0;
+  }
+  .HorizontalList--delimited > li::after {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    content: ", ";
+  }
+  .HorizontalList--delimited > li:last-child::after {
+    content: '';
+  }
 
-.HorizontalList > [data-delimiter]::after {
-  content: attr(data-delimiter);
-}
-
+  .HorizontalList > [data-delimiter]::after {
+    content: attr(data-delimiter);
+  }
 </style>
 </head>
 <body>
