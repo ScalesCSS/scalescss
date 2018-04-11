@@ -29,7 +29,12 @@ $side-by-side-gutter: 1rem !default;
 ///
 .#{$scales-namespace}#{$scales-objects-class-namespace}SideBySide__item {
   flex: 1;
+  margin: auto;
   margin-right: $side-by-side-gutter;
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}SideBySide__item:last-child {
+  margin-right: 0;
 }
 
 //
