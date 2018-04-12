@@ -12,7 +12,8 @@ Scales uses the [Sass CSS preprocessor](http://sass-lang.com/), you'll need eith
 
 ## Usage
 
-Horizontal List should be used whenever you need to make an ordered or unordered list horizontal instead of vertical. You can extend it with `--delimited` to semantically mark up a character delimited list for things like tags, etc. You can also center, right align, or have the list fill the available space.
+Horizontal List should be used whenever you need to make an ordered or unordered list horizontal instead of vertical. You can extend it with `--delimited` to semantically mark up a character delimited list for things like tags, etc. You can also center, right align, or have the list fill the available space. The spacing between elements can also be adjusted
+with tiny, small, medium, large, and huge modifiers.
 
 ### Default
 
@@ -23,6 +24,58 @@ Horizontal List should be used whenever you need to make an ordered or unordered
   <li>HTML</li>
 </ul>
 ```
+
+### Tiny Spacing
+
+```
+<ul class="HorizontalList HorizontalList--spacing-tiny">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Small Spacing
+
+```
+<ul class="HorizontalList HorizontalList--spacing-small">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Medium Spacing
+
+```
+<ul class="HorizontalList HorizontalList--spacing-medium">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Large Spacing
+
+```
+<ul class="HorizontalList HorizontalList--spacing-large">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Huge Spacing
+
+```
+<ul class="HorizontalList HorizontalList--spacing-huge">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+
 
 ### Character delimited
 

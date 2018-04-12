@@ -12,9 +12,74 @@
   }
   .HorizontalList > li {
     display: inline-block;
-    margin-right: 1rem;
+    margin-right: 0;
   }
   .HorizontalList > li:last-child {
+    margin-right: 0;
+  }
+
+  .HorizontalList--spacing-tiny {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .HorizontalList--spacing-tiny > li {
+    display: inline-block;
+    margin-right: 0.3rem;
+  }
+  .HorizontalList--spacing-tiny > li:last-child {
+    margin-right: 0;
+  }
+
+  .HorizontalList--spacing-small {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .HorizontalList--spacing-small > li {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+  .HorizontalList--spacing-small > li:last-child {
+    margin-right: 0;
+  }
+
+  .HorizontalList--spacing-medium {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .HorizontalList--spacing-medium > li {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  .HorizontalList--spacing-medium > li:last-child {
+    margin-right: 0;
+  }
+
+  .HorizontalList--spacing-large {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .HorizontalList--spacing-large > li {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+  .HorizontalList--spacing-large > li:last-child {
+    margin-right: 0;
+  }
+
+  .HorizontalList--spacing-huge {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .HorizontalList--spacing-huge > li {
+    display: inline-block;
+    margin-right: 3rem;
+  }
+  .HorizontalList--spacing-huge > li:last-child {
     margin-right: 0;
   }
 
@@ -43,8 +108,8 @@
     margin-right: 0;
   }
   .HorizontalList--delimited > li::after {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: 0;
+    margin-right: 0;
     content: ", ";
   }
   .HorizontalList--delimited > li:last-child::after {
@@ -73,6 +138,48 @@
       <li>CSS</li>
       <li>HTML</li>
     </ul>
+
+    <h3>Tiny Spacing</h3>
+
+    <ul class="HorizontalList HorizontalList--spacing-tiny">
+      <li>Sass</li>
+      <li>CSS</li>
+      <li>HTML</li>
+    </ul>
+
+    <h3>Small Spacing</h3>
+
+    <ul class="HorizontalList HorizontalList--spacing-small">
+      <li>Sass</li>
+      <li>CSS</li>
+      <li>HTML</li>
+    </ul>
+
+    <h3>Medium Spacing</h3>
+
+    <ul class="HorizontalList HorizontalList--spacing-medium">
+      <li>Sass</li>
+      <li>CSS</li>
+      <li>HTML</li>
+    </ul>
+
+    <h3>Large Spacing</h3>
+
+    <ul class="HorizontalList HorizontalList--spacing-large">
+      <li>Sass</li>
+      <li>CSS</li>
+      <li>HTML</li>
+    </ul>
+
+    <h3>Huge Spacing</h3>
+
+    <ul class="HorizontalList HorizontalList--spacing-huge">
+      <li>Sass</li>
+      <li>CSS</li>
+      <li>HTML</li>
+    </ul>
+
+
 
     <h3>Character delimited styles</h3>
 

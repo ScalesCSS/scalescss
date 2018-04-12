@@ -15,21 +15,27 @@ $scales-objects-class-namespace: null !default;
 //
 // Available Variables
 ///
+$horizontal-list-spacing: 0 !default;
+$horizontal-list-spacing-tiny: 0.3rem !default;
+$horizontal-list-spacing-small: 0.5rem !default;
+$horizontal-list-spacing-medium: 1rem !default;
+$horizontal-list-spacing-large: 2rem !default;
+$horizontal-list-spacing-huge: 3rem !default;
 $horizontal-list-delimiter: ',\00A0' !default;
-$horizontal-list-spacing: 1rem !default;
+$horizontal-list-delimiter-spacing: $horizontal-list-spacing !default;
 
 //
 // Horizontal List classes
 ///
 
-@mixin HorizontalList {
+@mixin HorizontalList($spacing) {
   list-style: none;
   margin: 0;
   padding: 0;
 
   > li {
     display: inline-block;
-    margin-right: $horizontal-list-spacing;
+    margin-right: $spacing;
   }
 
   > li:last-child {
@@ -39,7 +45,27 @@ $horizontal-list-spacing: 1rem !default;
 
 %#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList,
 .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList {
-  @include HorizontalList;
+  @include HorizontalList($spacing: $horizontal-list-spacing);
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--spacing-tiny {
+  @include HorizontalList($spacing: $horizontal-list-spacing-tiny);
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--spacing-small {
+  @include HorizontalList($spacing: $horizontal-list-spacing-small);
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--spacing-medium {
+  @include HorizontalList($spacing: $horizontal-list-spacing-medium);
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--spacing-large {
+  @include HorizontalList($spacing: $horizontal-list-spacing-large);
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--spacing-huge {
+  @include HorizontalList($spacing: $horizontal-list-spacing-huge);
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--center {
@@ -72,8 +98,8 @@ $horizontal-list-spacing: 1rem !default;
     margin-right: 0;
 
     &::after {
-      margin-left: $horizontal-list-spacing / 2;
-      margin-right: $horizontal-list-spacing / 2;
+      margin-left: $horizontal-list-delimiter-spacing / 2;
+      margin-right: $horizontal-list-delimiter-spacing / 2;
       content: '#{$horizontal-list-delimiter}';
     }
 
