@@ -54,3 +54,10 @@ To set either of these namespaces, you will need to set the variables in a file 
 @import your-project/project // The rest of your project imports
 ```
 
+## Extending
+
+In your project or theme, you can easily extend the stack-split object for your own purposes.
+
+```
+@import your-project/scalescss/objects-stack-split/stack-split
+
