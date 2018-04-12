@@ -1,4 +1,4 @@
-# Side By Side Object for Scales
+# Side-by-Side Object for Scales
 
 A simple pattern for displaying content side by side.
 
@@ -69,7 +69,7 @@ To set either of these namespaces, you will need to set the variables in a file 
 
 ## Extending
 
-In your project or theme, you can easily extend the side-by-side object for your own purposes.
+In your project or theme, you can easily extend the Side-by-Side object for your own purposes.
 
 ```
 @import your-project/scalescss/objects-side-by-side/side-by-side
