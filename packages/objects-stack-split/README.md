@@ -1,53 +1,32 @@
-# Box Object for Scales
+# Stack Split Object for Scales
 
-A simple object for boxing off content and separating it visually from the surrounding content.
+A simple pattern for keeping items stacked until theres enough room for them to be side by side.
 
 ## Requirements
 
 Scales uses the [Sass CSS preprocessor](http://sass-lang.com/), you'll need either Ruby Sass or LibSass.
 
-## Dependencies
-
-* `utilities-clearfix`
-
 ## Installation
 
-* [NPM](http://npmjs.com): `npm install --save @scales/objects-box`
+* [NPM](http://npmjs.com): `npm install --save @scales/objects-stack-split`
 
 ## Usage
 
-The box object can be used on any element that you want. For example:
-
 ```
-<div class="Box">
-  <p>The content in here will be boxed off from the surrounding content and will have a default amount of padding (based on the class used) to visually separate it.</p>
+<div class="StackSplit">
+  <div class="StackSplit__item"><button>Button</button></div>
+  <div class="StackSplit__item"><a href="">Link</a></div>
 </div>
-```
-
-### Other uses
-
-Since there are times when you want any element to be boxed off, possibly with different amounts of padding at different breakpoints, the box object is also able to be used as a mixin.
-
-```
-@include Box($padding);
 ```
 
 ## Available Classes
 
-* `.Box`
-* `.Box--flush`
-* `.Box--tiny`
-* `.Box--small`
-* `.Box--large`
-* `.Box--huge`
+* `.StackSplit`
+* `.StackSplit__item`
 
 ## Available Variables
 
-* `$box-padding`
-* `$box-padding-tiny`
-* `$box-padding-small`
-* `$box-padding-large`
-* `$box-padding-huge`
+* `$stack-split-gutter`
 
 ### Namespace Variables
 
@@ -75,24 +54,3 @@ To set either of these namespaces, you will need to set the variables in a file 
 @import your-project/project // The rest of your project imports
 ```
 
-## Extending
-
-In your project or theme, you can easily extend the box object for your own purposes. The size variations are already an example of extending this class. Another is an error box:
-
-```
-@import your-project/scalescss/objects-box/box
-
-//
-// Error Box (extends box)
-///
-.Box--error {
-  background-color: pink;
-  border: 2px dashed red;
-  color: red;
-}
-```
-```
-<div class="Box Box--error">
-  <p>This is a really ugly error message in an alert box!!!!!</p>
-</div>
-```
