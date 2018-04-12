@@ -13,7 +13,7 @@ Scales uses the [Sass CSS preprocessor](http://sass-lang.com/), you'll need eith
 ## Usage
 
 The Centered Column layout object is intended to wrap main content when the desired effect is one column that
-centers itself on large displays. The current max-width is 1024px / 64rem;
+centers itself on large displays. The default max-width is 64rem, which converts to 1024px.
 
 ```
 <div class="CenteredColumn">
