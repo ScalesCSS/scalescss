@@ -32,6 +32,7 @@
     "@scalescss/objects-media-object": "^3.3.0",
     "@scalescss/objects-multi-col-list": "^3.3.0",
     "@scalescss/objects-split": "^3.3.0",
+    "@scalescss/objects-stack-split": "^1.0",
     "@scalescss/objects-stats": "^3.3.0",
     "@scalescss/objects-vertical-list": "^3.3.0",
     "@scalescss/utilities-clearfix": "^3.1.1",
