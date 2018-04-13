@@ -87,6 +87,26 @@ with tiny, small, medium, large, and huge modifiers.
 </ul>
 ```
 
+### Space added to the left of the delimiter
+
+```
+<ul class="HorizontalList HorizontalList--delimited-left-distribution">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Space added to the right of the delimiter
+
+```
+<ul class="HorizontalList HorizontalList--delimited-right-distribution">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
 ### Character delimited override
 
 ```
