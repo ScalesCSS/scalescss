@@ -1,0 +1,52 @@
+// ==========================================================================
+// SideBySide Object
+// ==========================================================================
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Class level namespacing variable
+///
+$scales-objects-class-namespace: null !default;
+
+//
+// Available Variables
+///
+$side-by-side-gutter: 1rem !default;
+
+//
+// Default SideBySide
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}SideBySide {
+  display: flex;
+}
+
+//
+// Default SideBySide Item
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}SideBySide__item {
+  flex: 1;
+  margin: auto;
+  margin-right: $side-by-side-gutter;
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}SideBySide__item:last-child {
+  margin-right: 0;
+}
+
+//
+// One Quarter SideBySide Item
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}SideBySide__item--one-quarter {
+  flex: 25%;
+}
+
+//
+// Three Quarters SideBySide Item
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}SideBySide__item--three-quarters {
+  flex: 75%;
+}
