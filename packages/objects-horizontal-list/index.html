@@ -110,15 +110,39 @@
   .HorizontalList--delimited > li::after {
     margin-left: 0;
     margin-right: 0;
-    content: ", ";
+    content: ",";
   }
   .HorizontalList--delimited > li:last-child::after {
+    content: '';
+  }
+
+  .HorizontalList--delimited-left-distribution > li {
+    margin-right: 0;
+  }
+  .HorizontalList--delimited-left-distribution > li::after {
+    margin-left: 0;
+    content: ",";
+  }
+  .HorizontalList--delimited-left-distribution > li:last-child::after {
+    content: '';
+  }
+
+  .HorizontalList--delimited-right-distribution > li {
+    margin-right: 0;
+  }
+  .HorizontalList--delimited-right-distribution > li::after {
+    margin-right: 0;
+    content: ",";
+  }
+  .HorizontalList--delimited-right-distribution > li:last-child::after {
     content: '';
   }
 
   .HorizontalList > [data-delimiter]::after {
     content: attr(data-delimiter);
   }
+
+
 </style>
 </head>
 <body>
@@ -184,6 +208,22 @@
     <h3>Character delimited styles</h3>
 
     <ul class="HorizontalList HorizontalList--delimited">
+      <li>Sass</li>
+      <li>CSS</li>
+      <li>HTML</li>
+    </ul>
+
+    <h3>Delimited Left Distributed Spacing</h3>
+
+    <ul class="HorizontalList HorizontalList--delimited-left-distribution">
+      <li>Sass</li>
+      <li>CSS</li>
+      <li>HTML</li>
+    </ul>
+
+    <h3>Delimited Right Distributed Spacing</h3>
+
+    <ul class="HorizontalList HorizontalList--delimited-right-distribution">
       <li>Sass</li>
       <li>CSS</li>
       <li>HTML</li>

@@ -21,8 +21,9 @@ $horizontal-list-spacing-small: 0.5rem !default;
 $horizontal-list-spacing-medium: 1rem !default;
 $horizontal-list-spacing-large: 2rem !default;
 $horizontal-list-spacing-huge: 3rem !default;
-$horizontal-list-delimiter: ',\00A0' !default;
+$horizontal-list-delimiter: ',' !default;
 $horizontal-list-delimiter-spacing: $horizontal-list-spacing !default;
+$horizontal-list-delimiter-spacing-distribution: 'split' !default;
 
 //
 // Horizontal List classes
@@ -100,6 +101,36 @@ $horizontal-list-delimiter-spacing: $horizontal-list-spacing !default;
     &::after {
       margin-left: $horizontal-list-delimiter-spacing / 2;
       margin-right: $horizontal-list-delimiter-spacing / 2;
+      content: '#{$horizontal-list-delimiter}';
+    }
+
+    &:last-child::after {
+      content: '';
+    }
+  }
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited-left-distribution {
+  > li {
+    margin-right: 0;
+
+    &::after {
+      margin-left: $horizontal-list-delimiter-spacing;
+      content: '#{$horizontal-list-delimiter}';
+    }
+
+    &:last-child::after {
+      content: '';
+    }
+  }
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited-right-distribution {
+  > li {
+    margin-right: 0;
+
+    &::after {
+      margin-right: $horizontal-list-delimiter-spacing;
       content: '#{$horizontal-list-delimiter}';
     }
 
