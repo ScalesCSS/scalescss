@@ -125,7 +125,7 @@ $space-values: (
   }
 }
 
-.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited {
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited-split-distribution {
   @include DelimitedHorizonalList($spacing: $horizontal-list-spacing, $distribution: 'split');
 }
 

@@ -109,15 +109,15 @@
     flex: 1;
   }
 
-  .HorizontalList--delimited > li {
+  .HorizontalList--delimited-split-distribution > li {
     margin-right: 0;
   }
-  .HorizontalList--delimited > li::after {
+  .HorizontalList--delimited-split-distribution > li::after {
     margin-left: 0;
     margin-right: 0;
     content: ",";
   }
-  .HorizontalList--delimited > li:last-child::after {
+  .HorizontalList--delimited-split-distribution > li:last-child::after {
     content: '';
   }
 
@@ -377,19 +377,11 @@
       <li>HTML</li>
     </ul>
 
-    <h3>Character delimited styles</h3>
+    <h3>Character delimited styles split distribution</h3>
 
-    <ul class="HorizontalList HorizontalList--delimited">
+    <ul class="HorizontalList HorizontalList--delimited-split-distribution">
       <li>Sass</li>
       <li>CSS</li>
-      <li>HTML</li>
-    </ul>
-
-    <h3>Character delimited styles spacing override</h3>
-
-    <ul class="HorizontalList HorizontalList--delimited HorizontalList--spacing-huge">
-      <li data-delimiter="|">Sass</li>
-      <li data-delimiter="|">CSS</li>
       <li>HTML</li>
     </ul>
 
@@ -409,9 +401,17 @@
       <li>HTML</li>
     </ul>
 
+    <h3>Character delimited styles spacing override</h3>
+
+    <ul class="HorizontalList HorizontalList--delimited-split-distribution HorizontalList--spacing-huge">
+      <li data-delimiter="|">Sass</li>
+      <li data-delimiter="|">CSS</li>
+      <li>HTML</li>
+    </ul>
+
     <h3>Character delimited override</h3>
 
-    <ul class="HorizontalList HorizontalList--delimited HorizontalList--spacing-medium">
+    <ul class="HorizontalList HorizontalList--delimited-split-distribution HorizontalList--spacing-medium">
       <li data-delimiter="|">Sass</li>
       <li data-delimiter="|">CSS</li>
       <li>HTML</li>
