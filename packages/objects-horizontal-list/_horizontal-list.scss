@@ -147,7 +147,7 @@ $space-values: (
 @each $space-name in tiny, small, medium, large, huge {
   $space-value: map-get($map: $space-values, $key: $space-name);
 
-  .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--spacing-#{$space-name}.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited {
+  .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--spacing-#{$space-name}.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited-split-distribution {
     @include DelimitedHorizonalList($spacing: $space-value, $distribution: 'split');
   }
 

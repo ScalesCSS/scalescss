@@ -78,7 +78,7 @@ with tiny, small, medium, large, and huge modifiers.
 ### Character delimited styles split distribution
 
 ```
-<ul class="HorizontalList HorizontalList--delimited">
+<ul class="HorizontalList HorizontalList--delimited-split-distribution">
   <li>Sass</li>
   <li>CSS</li>
   <li>HTML</li>
@@ -119,7 +119,7 @@ with tiny, small, medium, large, and huge modifiers.
 ### Character delimited override
 
 ```
-<ul class="HorizontalList HorizontalList--delimited">
+<ul class="HorizontalList HorizontalList--delimited-split-distribution">
   <li data-delimiter=" | ">Sass</li>
   <li data-delimiter=" | ">CSS</li>
   <li>HTML</li>
