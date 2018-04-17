@@ -77,12 +77,23 @@ with tiny, small, medium, large, and huge modifiers.
 
 
 
-### Character delimited
+### Character delimited styles
 
 ```
 <ul class="HorizontalList HorizontalList--delimited">
   <li>Sass</li>
   <li>CSS</li>
+  <li>HTML</li>
+</ul>
+
+```
+
+<h3>Character delimited styles spacing override</h3>
+
+```
+<ul class="HorizontalList HorizontalList--delimited HorizontalList--spacing-huge">
+  <li data-delimiter="|">Sass</li>
+  <li data-delimiter="|">CSS</li>
   <li>HTML</li>
 </ul>
 ```
