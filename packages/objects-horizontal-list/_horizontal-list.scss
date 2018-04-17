@@ -16,26 +16,32 @@ $scales-objects-class-namespace: null !default;
 // Available Variables
 ///
 $horizontal-list-spacing: 0 !default;
-$horizontal-list-spacing-tiny: 0.3rem !default;
-$horizontal-list-spacing-small: 0.5rem !default;
-$horizontal-list-spacing-medium: 1rem !default;
-$horizontal-list-spacing-large: 2rem !default;
-$horizontal-list-spacing-huge: 3rem !default;
+$horizontal-list-spacing-tiny: 0.25em !default;
+$horizontal-list-spacing-small: 0.5em !default;
+$horizontal-list-spacing-medium: 1em !default;
+$horizontal-list-spacing-large: 2em !default;
+$horizontal-list-spacing-huge: 4em !default;
 $horizontal-list-delimiter: ',' !default;
-$horizontal-list-delimiter-spacing: $horizontal-list-spacing !default;
-$horizontal-list-delimiter-spacing-distribution: 'split' !default;
+$space-values: (
+  tiny: $horizontal-list-spacing-tiny,
+  small: $horizontal-list-spacing-small,
+  medium: $horizontal-list-spacing-medium,
+  large: $horizontal-list-spacing-large,
+  huge: $horizontal-list-spacing-huge
+);
 
 //
 // Horizontal List classes
 ///
 
 @mixin HorizontalList($spacing) {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
 
   > li {
-    display: inline-block;
     margin-right: $spacing;
   }
 
@@ -70,37 +76,46 @@ $horizontal-list-delimiter-spacing-distribution: 'split' !default;
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--center {
-  text-align: center;
+  justify-content: center;
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--right {
-  text-align: right;
+  justify-content: flex-end;
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--left {
-  text-align: left;
+  justify-content: flex-start;
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--fill {
-  display: table;
-  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
 
   > li {
-    display: table-cell;
-    text-align: center;
+    flex: 1;
   }
 }
 
 //
 // Character delimited Horizontal List
 ///
-.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited {
+
+@mixin DelimitedHorizonalList($spacing, $distribution) {
   > li {
     margin-right: 0;
 
     &::after {
-      margin-left: $horizontal-list-delimiter-spacing / 2;
-      margin-right: $horizontal-list-delimiter-spacing / 2;
+      @if ($distribution == 'split') {
+        margin-left: $spacing / 2;
+        margin-right: $spacing / 2;
+      }
+
+      @else if ($distribution == 'left') {
+        margin-left: $spacing;
+      } @else if ($distribution == 'right') {
+        margin-right: $spacing;
+      }
+
       content: '#{$horizontal-list-delimiter}';
     }
 
@@ -108,41 +123,39 @@ $horizontal-list-delimiter-spacing-distribution: 'split' !default;
       content: '';
     }
   }
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited-split-distribution {
+  @include DelimitedHorizonalList($spacing: $horizontal-list-spacing, $distribution: 'split');
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited-left-distribution {
-  > li {
-    margin-right: 0;
-
-    &::after {
-      margin-left: $horizontal-list-delimiter-spacing;
-      content: '#{$horizontal-list-delimiter}';
-    }
-
-    &:last-child::after {
-      content: '';
-    }
-  }
+  @include DelimitedHorizonalList($spacing: $horizontal-list-spacing, $distribution: 'left');
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited-right-distribution {
-  > li {
-    margin-right: 0;
-
-    &::after {
-      margin-right: $horizontal-list-delimiter-spacing;
-      content: '#{$horizontal-list-delimiter}';
-    }
-
-    &:last-child::after {
-      content: '';
-    }
-  }
+  @include DelimitedHorizonalList($spacing: $horizontal-list-spacing, $distribution: 'right');
 }
 
 // Pass in a delimiter through a data attribute
 .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList {
   > [data-delimiter]::after {
-    content: attr(data-delimiter);
+    content: attr(data-delimiter) !important;
+  }
+}
+
+@each $space-name in tiny, small, medium, large, huge {
+  $space-value: map-get($map: $space-values, $key: $space-name);
+
+  .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--spacing-#{$space-name}.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited-split-distribution {
+    @include DelimitedHorizonalList($spacing: $space-value, $distribution: 'split');
+  }
+
+  .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--spacing-#{$space-name}.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited-left-distribution {
+    @include DelimitedHorizonalList($spacing: $space-value, $distribution: 'left');
+  }
+
+  .#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--spacing-#{$space-name}.#{$scales-namespace}#{$scales-objects-class-namespace}HorizontalList--delimited-right-distribution {
+    @include DelimitedHorizonalList($spacing: $space-value, $distribution: 'right');
   }
 }

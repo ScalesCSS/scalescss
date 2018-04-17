@@ -75,16 +75,15 @@ with tiny, small, medium, large, and huge modifiers.
 </ul>
 ```
 
-
-
-### Character delimited
+### Character delimited styles split distribution
 
 ```
-<ul class="HorizontalList HorizontalList--delimited">
+<ul class="HorizontalList HorizontalList--delimited-split-distribution">
   <li>Sass</li>
   <li>CSS</li>
   <li>HTML</li>
 </ul>
+
 ```
 
 ### Space added to the left of the delimiter
@@ -107,10 +106,20 @@ with tiny, small, medium, large, and huge modifiers.
 </ul>
 ```
 
+<h3>Character delimited styles spacing override</h3>
+
+```
+<ul class="HorizontalList HorizontalList--delimited HorizontalList--spacing-huge">
+  <li data-delimiter="|">Sass</li>
+  <li data-delimiter="|">CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
 ### Character delimited override
 
 ```
-<ul class="HorizontalList HorizontalList--delimited">
+<ul class="HorizontalList HorizontalList--delimited-split-distribution">
   <li data-delimiter=" | ">Sass</li>
   <li data-delimiter=" | ">CSS</li>
   <li>HTML</li>
