@@ -27,6 +27,7 @@
     "@scalescss/generic-normalize": "^3.3.0",
     "@scalescss/generic-reset": "^3.3.0",
     "@scalescss/objects-box": "^3.3.0",
+    "@scalescss/objects-centered-column": "^1.0",
     "@scalescss/objects-flag": "^3.3.0",
     "@scalescss/objects-horizontal-list": "^3.3.0",
     "@scalescss/objects-media-object": "^3.3.0",
