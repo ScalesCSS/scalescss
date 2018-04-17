@@ -75,7 +75,7 @@ with tiny, small, medium, large, and huge modifiers.
 </ul>
 ```
 
-### Character delimited styles split distribution
+### Character delimited - Split spacing distribution
 
 ```
 <ul class="HorizontalList HorizontalList--delimited-split-distribution">
@@ -83,10 +83,9 @@ with tiny, small, medium, large, and huge modifiers.
   <li>CSS</li>
   <li>HTML</li>
 </ul>
-
 ```
 
-### Space added to the left of the delimiter
+### Character delimited - Left spacing distribution
 
 ```
 <ul class="HorizontalList HorizontalList--delimited-left-distribution">
@@ -96,7 +95,7 @@ with tiny, small, medium, large, and huge modifiers.
 </ul>
 ```
 
-### Space added to the right of the delimiter
+### Character delimited - Right spacing distribution
 
 ```
 <ul class="HorizontalList HorizontalList--delimited-right-distribution">
@@ -106,27 +105,17 @@ with tiny, small, medium, large, and huge modifiers.
 </ul>
 ```
 
-<h3>Character delimited styles spacing override</h3>
+### Character delimiter override
 
 ```
-<ul class="HorizontalList HorizontalList--delimited HorizontalList--spacing-huge">
+<ul class="HorizontalList HorizontalList--delimited-split-distribution HorizontalList--spacing-medium">
   <li data-delimiter="|">Sass</li>
   <li data-delimiter="|">CSS</li>
   <li>HTML</li>
 </ul>
 ```
 
-### Character delimited override
-
-```
-<ul class="HorizontalList HorizontalList--delimited-split-distribution">
-  <li data-delimiter=" | ">Sass</li>
-  <li data-delimiter=" | ">CSS</li>
-  <li>HTML</li>
-</ul>
-```
-
-### Centered
+### Centered horizontal list
 
 ```
 <ul class="HorizontalList HorizontalList--center">
@@ -136,7 +125,7 @@ with tiny, small, medium, large, and huge modifiers.
 </ul>
 ```
 
-### Right aligned
+### Right aligned horizontal list
 
 ```
 <ul class="HorizontalList HorizontalList--right">
@@ -146,7 +135,7 @@ with tiny, small, medium, large, and huge modifiers.
 </ul>
 ```
 
-### Left aligned
+### Left aligned horizontal list
 
 ```
 <ul class="HorizontalList HorizontalList--left">
@@ -156,7 +145,7 @@ with tiny, small, medium, large, and huge modifiers.
 </ul>
 ```
 
-### Fill
+### Fill style horizontal list
 
 ```
 <ul class="HorizontalList HorizontalList--fill">
@@ -179,11 +168,18 @@ Since there are times when you want a list to be horizontal at some media querie
 ## Available Classes
 
 * `.HorizontalList`
-* `.HorizontalList--delimited`
+* `.HorizontalList--spacing-tiny`
+* `.HorizontalList--spacing-small`
+* `.HorizontalList--spacing-medium`
+* `.HorizontalList--spacing-large`
+* `.HorizontalList--spacing-huge`
+* `.HorizontalList--delimited-split-distribution` - Combined with a spacing class, splits the space on either side of the delimiter.
+* `.HorizontalList--delimited-left-distribution` - Combined with a spacing class, adds space on the left of the delimiter.
+* `.HorizontalList--delimited-right-distribution` - Combined with a spacing class, adds space on the right of the delimiter.
 * `.HorizontalList--center`
 * `.HorizontalList--right`
 * `.HorizontalList--left`
-* `.HorizontalList--fill` - forces the list to take up 100% of it's parent.
+* `.HorizontalList--fill` - forces the list to take up 100% of the available space.
 
 ## Available Data Attributes
 
@@ -191,6 +187,12 @@ Since there are times when you want a list to be horizontal at some media querie
 
 ## Available Variables
 
+* `$horizontal-list-spacing`
+* `$horizontal-list-spacing-tiny`
+* `$horizontal-list-spacing-small`
+* `$horizontal-list-spacing-medium`
+* `$horizontal-list-spacing-large`
+* `$horizontal-list-spacing-huge`
 * `$horizontal-list-delimiter`
 
 ### Namespace Variables

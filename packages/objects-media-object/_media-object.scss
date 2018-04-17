@@ -20,10 +20,10 @@ $scales-objects-class-namespace: null !default;
 // Available Variables
 ///
 $media-gutter: 1em !default;
-$media-gutter-tiny: $media-gutter / 4 !default;
-$media-gutter-small: $media-gutter / 2 !default;
-$media-gutter-large: $media-gutter * 2 !default;
-$media-gutter-huge: $media-gutter * 4 !default;
+$media-gutter-tiny: 0.25em !default;
+$media-gutter-small: 0.5em !default;
+$media-gutter-large: 2em !default;
+$media-gutter-huge: 4em !default;
 $media-stacked-breakpoint: 25em !default;
 
 //

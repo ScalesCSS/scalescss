@@ -22,13 +22,15 @@ $horizontal-list-spacing-medium: 1em !default;
 $horizontal-list-spacing-large: 2em !default;
 $horizontal-list-spacing-huge: 4em !default;
 $horizontal-list-delimiter: ',' !default;
+
+// prettier-ignore
 $space-values: (
   tiny: $horizontal-list-spacing-tiny,
   small: $horizontal-list-spacing-small,
   medium: $horizontal-list-spacing-medium,
   large: $horizontal-list-spacing-large,
   huge: $horizontal-list-spacing-huge
-);
+) !default;
 
 //
 // Horizontal List classes
@@ -93,6 +95,7 @@ $space-values: (
 
   > li {
     flex: 1;
+    text-align: center;
   }
 }
 
