@@ -177,6 +177,12 @@ Class level namespace variables allow you to namespace a selector based on the t
 ### \_horizontal-list.scss
 
 * `$scales-objects-class-namespace`
+* `$horizontal-list-spacing`
+* `$horizontal-list-spacing-tiny`
+* `$horizontal-list-spacing-small`
+* `$horizontal-list-spacing-medium`
+* `$horizontal-list-spacing-large`
+* `$horizontal-list-spacing-huge`
 * `$horizontal-list-delimiter`
 
 ### \_vertical-list.scss
