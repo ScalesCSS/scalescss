@@ -1,4 +1,5 @@
 # Scales Variables
+
 Scales comes with _a lot_ of variables so you can customize the defaults easily. I have organized them into groups below in the order that the files are imported in Scales. For more details, see the README file in the particular Scales repo.
 
 ## The Scales Namespace Variable
@@ -14,9 +15,11 @@ Class level namespace variables allow you to namespace a selector based on the t
 ## The Variables
 
 ### All Files
+
 * `$scales-namespace`
 
 ### Class Level Namespace Variables
+
 * `$scales-base-class-namespace`
   * Reset
   * Blockquotes
@@ -40,7 +43,8 @@ Class level namespace variables allow you to namespace a selector based on the t
   * Size
   * Spacing
 
-### _reset.scss
+### \_reset.scss
+
 * `$scales-base-class-namespace
 * `$selection-bg-color`
 * `$selection-text-color`
@@ -48,7 +52,8 @@ Class level namespace variables allow you to namespace a selector based on the t
 * `$table-border-collapse`
 * `$pre-overflow`
 
-### _typography.scss
+### \_typography.scss
+
 * `$scales-base-class-namespace
 * `$base-text-color`
 * `$heading-color`
@@ -111,11 +116,18 @@ Class level namespace variables allow you to namespace a selector based on the t
 * `$custom-h5-utility-class`
 * `$custom-h6-utility-class`
 
-### _blockquotes.scss
+### \_lists.scss
+
+* `$scales-base-class-namespace
+* `$list-margin-left`
+
+### \_blockquotes.scss
+
 * `$scales-base-class-namespace
 * `$source-prefix`
 
-### _forms.scss
+### \_forms.scss
+
 * `$scales-base-class-namespace
 * `$fieldset-padding`
 * `$text-input-padding`
@@ -134,11 +146,8 @@ Class level namespace variables allow you to namespace a selector based on the t
 * `$input-readonly-text-color`
 * `$helper-text-hidden`
 
-### _lists.scss
-* `$scales-base-class-namespace
-* `$list-margin-left`
+### \_tables.scss
 
-### _tables.scss
 * `$scales-base-class-namespace
 * `$table-padding-large`
 * `$table-padding-medium`
@@ -152,7 +161,8 @@ Class level namespace variables allow you to namespace a selector based on the t
 * `$table-heading-alignment`
 * `$table-cell-alignment`
 
-### _box.scss
+### \_box.scss
+
 * `$scales-objects-class-namespace`
 * `$box-padding`
 * `$box-padding-tiny`
@@ -160,15 +170,22 @@ Class level namespace variables allow you to namespace a selector based on the t
 * `$box-padding-large`
 * `$box-padding-huge`
 
-### _horizontal-list.scss
+### \_centered-column.scss
+
+* `$centered-column-width`
+
+### \_horizontal-list.scss
+
 * `$scales-objects-class-namespace`
 * `$horizontal-list-delimiter`
 
-### _vertical-list.scss
+### \_vertical-list.scss
+
 * `$scales-objects-class-namespace`
 * `$vertical-list-delimiter`
 
-### _media-object.scss
+### \_media-object.scss
+
 * `$scales-objects-class-namespace`
 * `$media-gutter`
 * `$media-gutter-tiny`
@@ -177,7 +194,8 @@ Class level namespace variables allow you to namespace a selector based on the t
 * `$media-gutter-huge`
 * `$media-stacked-breakpoint`
 
-### _flag.scss
+### \_flag.scss
+
 * `$scales-objects-class-namespace`
 * `$flag-gutter`
 * `$flag-gutter-tiny`
@@ -186,11 +204,21 @@ Class level namespace variables allow you to namespace a selector based on the t
 * `$flag-gutter-huge`
 * `$flag-stacked-breakpoint`
 
-### _stats.scss
+### \_side-by-side.scss
+
+* `$side-by-side-gutter`
+
+### \_stack-split.scss
+
+* `$stack-split-gutter`
+
+### \_stats.scss
+
 * `$scales-objects-class-namespace`
 * `$stat-spacing`
 
-### _buttons.scss
+### \_buttons.scss
+
 * `$scales-components-class-namespace`
 * `$btn-background-color`
 * `$btn-border-width`
@@ -212,17 +240,20 @@ Class level namespace variables allow you to namespace a selector based on the t
 * `$btn-disabled-border-style`
 * `$btn-disabled-text-color`
 
-### _clearfix.scss
+### \_clearfix.scss
+
 * `$scales-utilities-class-namespace`
 * `$clearfix-class`
 
-### _size.scss
+### \_size.scss
+
 * `$scales-utilities-class-namespace`
 * `$size-range-start`
 * `$size-range-end`
 * `$size-step-value`
 
-### _spacing.scss
+### \_spacing.scss
+
 * `$scales-utilities-class-namespace`
 * `$space-s`
 * `$space-m`

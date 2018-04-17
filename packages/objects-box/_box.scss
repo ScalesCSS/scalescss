@@ -16,10 +16,10 @@ $scales-objects-class-namespace: null !default;
 // Available Variables
 ///
 $box-padding: 1em !default;
-$box-padding-tiny: $box-padding / 4 !default;
-$box-padding-small: $box-padding / 2 !default;
-$box-padding-large: $box-padding * 2 !default;
-$box-padding-huge: $box-padding * 4 !default;
+$box-padding-tiny: 0.25em !default;
+$box-padding-small: 0.5em !default;
+$box-padding-large: 2em !default;
+$box-padding-huge: 4em !default;
 
 //
 // Box is used to, well, box off content.
