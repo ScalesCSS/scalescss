@@ -1,19 +1,22 @@
 {
   "name": "@scalescss/objects-side-by-side",
-  "version": "1.0",
-  "description": "A simple pattern for displaying content side by side for Scales CSS",
+  "version": "1.0.0",
+  "description":
+    "A simple pattern for displaying content side by side for Scales CSS",
   "main": "_side-by-side.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-side-by-side"
+    "url":
+      "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-side-by-side"
   },
   "author": "Rob Copeland",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ScalesCSS/scalescss/issues"
   },
-  "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-side-by-side#readme"
+  "homepage":
+    "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-side-by-side#readme"
 }

@@ -1,19 +1,22 @@
 {
   "name": "@scalescss/objects-centered-column",
-  "version": "1.0",
-  "description": "A simple pattern for establishing a centered column layout for Scales CSS",
+  "version": "1.0.0",
+  "description":
+    "A simple pattern for establishing a centered column layout for Scales CSS",
   "main": "_centered-column.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ScalesCSS/scalescss/tree/master/packages/centered-column"
+    "url":
+      "https://github.com/ScalesCSS/scalescss/tree/master/packages/centered-column"
   },
   "author": "Rob Copeland",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ScalesCSS/scalescss/issues"
   },
-  "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-centered-column#readme"
+  "homepage":
+    "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-centered-column#readme"
 }
