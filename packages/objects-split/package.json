@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/objects-split",
-  "version": "3.3.0",
+  "version": "4.0.0",
   "description": "A pattern for aligning two elements away from one another for Scales CSS",
   "main": "_split.scss",
   "scripts": {

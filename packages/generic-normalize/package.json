@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/generic-normalize",
-  "version": "3.3.0",
+  "version": "4.0.0",
   "description": "A collection of HTML element and attribute style-normalizations for Scales CSS",
   "main": "_normalize.scss",
   "scripts": {

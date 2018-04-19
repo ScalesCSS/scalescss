@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/objects-box",
-  "version": "3.3.0",
+  "version": "4.0.0",
   "description": "A simple pattern for boxing off content for Scales CSS",
   "main": "_box.scss",
   "scripts": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-box#readme",
   "dependencies": {
-    "@scalescss/utilities-clearfix": "^3.1.1"
+    "@scalescss/utilities-clearfix": "^4.0.0"
   }
 }
