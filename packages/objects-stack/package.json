@@ -1,0 +1,19 @@
+{
+  "name": "@scalescss/objects-stack",
+  "version": "4.0.0",
+  "description": "The Stack object lays items out in a column and can be modified to lay items out in a row.",
+  "main": "_stack.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-stack"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScalesCSS/scalescss/issues"
+  },
+  "homepage": "https://github.com/ScalesCSS/scalescss/tree/master/packages/objects-stack#readme"
+}

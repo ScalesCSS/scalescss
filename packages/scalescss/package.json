@@ -34,7 +34,7 @@
     "@scalescss/objects-multi-col-list": "^4.0.0",
     "@scalescss/objects-side-by-side": "^4.0.0",
     "@scalescss/objects-split": "^4.0.0",
-    "@scalescss/objects-stack-split": "^4.0.0",
+    "@scalescss/objects-stack": "^4.0.0",
     "@scalescss/objects-stats": "^4.0.0",
     "@scalescss/objects-vertical-list": "^4.0.0",
     "@scalescss/utilities-clearfix": "^4.0.0",

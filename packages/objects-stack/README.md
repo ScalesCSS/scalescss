@@ -1,6 +1,6 @@
-# Stack Split Object for Scales
+# Stack Object for Scales
 
-A simple pattern for keeping items stacked until theres enough room for them to be side by side.
+The Stack object lays items out in a column and can be modified to lay items out in a row.
 
 ## Requirements
 
@@ -8,25 +8,47 @@ Scales uses the [Sass CSS preprocessor](http://sass-lang.com/), you'll need eith
 
 ## Installation
 
-* [NPM](http://npmjs.com): `npm install --save @scales/objects-stack-split`
+* [NPM](http://npmjs.com): `npm install --save @scales/objects-stack`
 
 ## Usage
 
 ```
-<div class="StackSplit">
-  <div class="StackSplit__item"><button>Button</button></div>
-  <div class="StackSplit__item"><a href="">Link</a></div>
+<div class="Stack Stack--split@xs">
+  <div class="Stack__item"><button>Button</button></div>
+  <div class="Stack__item"><a href="">Link</a></div>
+  <div class="Stack__item"><a href="">Link</a></div>
+  <div class="Stack__item"><a href="">Link</a></div>
+  <div class="Stack__item"><a href="">Link</a></div>
 </div>
 ```
 
 ## Available Classes
 
-* `.StackSplit`
-* `.StackSplit__item`
+* `.Stack`
+* `.Stack__item`
+* `.Stack--split@xs`
+* `.Stack--split@s`
+* `.Stack--split@m`
+* `.Stack--split@l`
+* `.Stack--split@xl`
+* `.Stack--tiny`
+* `.Stack--small`
+* `.Stack--medium`
+* `.Stack--large`
+* `.Stack--huge`
 
 ## Available Variables
 
-* `$stack-split-gutter`
+* `$stack-spacing-tiny`
+* `$stack-spacing-small`
+* `$stack-spacing-medium`
+* `$stack-spacing-large`
+* `$stack-spacing-huge`
+* `$split-breakpoint-xs`
+* `$split-breakpoint-s`
+* `$split-breakpoint-m`
+* `$split-breakpoint-l`
+* `$split-breakpoint-xl`
 
 ### Namespace Variables
 
@@ -56,8 +78,7 @@ To set either of these namespaces, you will need to set the variables in a file 
 
 ## Extending
 
-In your project or theme, you can easily extend the stack-split object for your own purposes.
+In your project or theme, you can easily extend the stack object for your own purposes.
 
 ```
-@import your-project/scalescss/objects-stack-split/stack-split
-
+@import your-project/scalescss/objects-stack/stack

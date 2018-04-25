@@ -214,9 +214,18 @@ Class level namespace variables allow you to namespace a selector based on the t
 
 * `$side-by-side-gutter`
 
-### \_stack-split.scss
+### \_stack.scss
 
-* `$stack-split-gutter`
+* `$stack-spacing-tiny`
+* `$stack-spacing-small`
+* `$stack-spacing-medium`
+* `$stack-spacing-large`
+* `$stack-spacing-huge`
+* `$split-breakpoint-xs`
+* `$split-breakpoint-s`
+* `$split-breakpoint-m`
+* `$split-breakpoint-l`
+* `$split-breakpoint-xl`
 
 ### \_stats.scss
 
