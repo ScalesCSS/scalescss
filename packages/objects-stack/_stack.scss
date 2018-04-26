@@ -12,10 +12,6 @@ $scales-namespace: null !default;
 ///
 $scales-objects-class-namespace: null !default;
 
-// ==========================================================================
-// Stack Object
-// ==========================================================================
-
 //
 // Available Variables
 ///
@@ -30,6 +26,9 @@ $split-breakpoint-m: 880px !default;
 $split-breakpoint-l: 1080px !default;
 $split-breakpoint-xl: 1280px !default;
 
+//
+// Default Stack
+///
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack {
   display: flex;
   flex-direction: column;
@@ -43,6 +42,9 @@ $split-breakpoint-xl: 1280px !default;
   }
 }
 
+//
+// Stack spacing modifiers
+///
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-tiny;
 }
