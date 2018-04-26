@@ -39,7 +39,7 @@ If you come up with new one's, please contribute on github!
 @import "@scalescss/objects-flag/flag";
 @import "@scalescss/objects-side-by-side/side-by-side";
 @import "@scalescss/objects-split/split";
-@import "@scalescss/objects-stack-split/stack-split";
+@import "@scalescss/objects-stack/stack";
 @import "@scalescss/objects-stats/stats";
 @import "@scalescss/objects-multi-col-list/multi-col-list";
 ```
@@ -77,7 +77,7 @@ If you come up with new one's, please contribute on github!
 @import "@scalescss/objects-flag/flag";
 @import "@scalescss/objects-side-by-side/side-by-side";
 @import "@scalescss/objects-split/split";
-@import "@scalescss/objects-stack-split/stack-split";
+@import "@scalescss/objects-stack/stack";
 @import "@scalescss/objects-stats/stats";
 @import "@scalescss/objects-multi-col-list/multi-col-list";
 @import "@scalescss/components-buttons/buttons";

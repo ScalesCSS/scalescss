@@ -1,0 +1,201 @@
+// ==========================================================================
+// Stack Object
+// ==========================================================================
+
+//
+// Scales namespace variable
+///
+$scales-namespace: null !default;
+
+//
+// Class level namespacing variable
+///
+$scales-objects-class-namespace: null !default;
+
+//
+// Available Variables
+///
+$stack-spacing-tiny: 0.25em !default;
+$stack-spacing-small: 0.5em !default;
+$stack-spacing-medium: 1em !default;
+$stack-spacing-large: 2em !default;
+$stack-spacing-huge: 4em !default;
+$split-breakpoint-xs: 480px !default;
+$split-breakpoint-s: 680px !default;
+$split-breakpoint-m: 880px !default;
+$split-breakpoint-l: 1080px !default;
+$split-breakpoint-xl: 1280px !default;
+
+//
+// Default Stack
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+  flex: 0 0 auto;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+//
+// Stack spacing modifiers
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+  margin-bottom: $stack-spacing-tiny;
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+  margin-bottom: $stack-spacing-small;
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+  margin-bottom: $stack-spacing-medium;
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+  margin-bottom: $stack-spacing-large;
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+  margin-bottom: $stack-spacing-huge;
+}
+
+//
+// Split at extra small breakpoint
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--split\@xs {
+  @media all and (min-width: $split-breakpoint-xs) {
+    flex-direction: row;
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-bottom: 0;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+       margin-right: $stack-spacing-tiny;
+     }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-small;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-medium;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-large;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-huge;
+    }
+  }
+}
+
+//
+// Split at  small breakpoint
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--split\@s {
+  @media all and (min-width: $split-breakpoint-s) {
+    flex-direction: row;
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-bottom: 0;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+       margin-right: $stack-spacing-tiny;
+     }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-small;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-medium;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-large;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-huge;
+    }
+  }
+}
+
+//
+// Split at medium breakpoint
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--split\@m {
+  @media all and (min-width: $split-breakpoint-m) {
+    flex-direction: row;
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-bottom: 0;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+       margin-right: $stack-spacing-tiny;
+     }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-small;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-medium;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-large;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-huge;
+    }
+  }
+}
+
+//
+// Split at large breakpoint
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--split\@l {
+  @media all and (min-width: $split-breakpoint-l) {
+    flex-direction: row;
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-bottom: 0;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+       margin-right: $stack-spacing-tiny;
+     }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-small;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-medium;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-large;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-huge;
+    }
+  }
+}
+
+//
+// Split at extra large breakpoint
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--split\@xl {
+  @media all and (min-width: $split-breakpoint-xl) {
+    flex-direction: row;
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-bottom: 0;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+       margin-right: $stack-spacing-tiny;
+     }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-small;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-medium;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-large;
+    }
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+      margin-right: $stack-spacing-huge;
+    }
+  }
+}
