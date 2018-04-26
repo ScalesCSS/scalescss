@@ -1,6 +1,6 @@
 # Stack Object for Scales
 
-The Stack object lays items out in a column and can be modified to lay items out in a row.
+The Stack object lays items out in a column and can be modified to lay items out in a row at a certain breakpoint.
 
 ## Requirements
 
