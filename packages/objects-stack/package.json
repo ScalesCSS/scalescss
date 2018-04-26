@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/objects-stack",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "The Stack object lays items out in a column and can be modified to lay items out in a row at a certain breakpoint.",
   "main": "_stack.scss",
   "scripts": {
