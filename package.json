@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/scalescss",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "description": "Scales is a design-free collection of OOCSS patterns, framework settings, & utilities to quickly build mobile-first, responsive web projects",
   "main": "_scalescss.scss",
   "scripts": {
@@ -34,7 +34,7 @@
     "@scalescss/objects-multi-col-list": "^4.0.0",
     "@scalescss/objects-side-by-side": "^4.0.0",
     "@scalescss/objects-split": "^4.0.0",
-    "@scalescss/objects-stack": "^4.0.0",
+    "@scalescss/objects-stack": "^5.0.0",
     "@scalescss/objects-stats": "^4.0.0",
     "@scalescss/objects-vertical-list": "^4.0.0",
     "@scalescss/utilities-clearfix": "^4.0.0",
