@@ -161,7 +161,10 @@ rules:
   'comment-word-blacklist': null
 
   # General / Sheet
-  'max-nesting-depth': 2
+  'max-nesting-depth':
+  - 2
+  - ignore:
+    - 'blockless-at-rules'
   'no-unknown-animations': true
 
   #
