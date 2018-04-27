@@ -36,10 +36,6 @@ $split-breakpoint-xl: 1280px !default;
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   flex: 0 0 auto;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 //
@@ -48,26 +44,46 @@ $split-breakpoint-xl: 1280px !default;
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-tiny;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-small;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-medium;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-large;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-huge;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 //
