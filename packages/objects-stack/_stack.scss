@@ -78,7 +78,7 @@ $split-breakpoint-xl: 1280px !default;
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-tiny;
-     }
+    }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-small;
