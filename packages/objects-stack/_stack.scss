@@ -38,30 +38,35 @@ $split-breakpoint-xl: 1280px !default;
   flex: 0 0 auto;
 
   &:last-child {
-    margin: 0;
+    margin-bottom: 0;
   }
 }
 
 //
 // Stack spacing modifiers
 ///
-.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-tiny;
 }
 
-.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-small;
 }
 
-.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-medium;
 }
 
-.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-large;
 }
 
-.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-huge;
 }
 
@@ -76,24 +81,64 @@ $split-breakpoint-xl: 1280px !default;
       margin-bottom: 0;
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-tiny;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-small;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-medium;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-large;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-huge;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
   }
 }
@@ -109,24 +154,64 @@ $split-breakpoint-xl: 1280px !default;
       margin-bottom: 0;
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-tiny;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-small;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-medium;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-large;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-huge;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
   }
 }
@@ -142,24 +227,64 @@ $split-breakpoint-xl: 1280px !default;
       margin-bottom: 0;
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-tiny;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-small;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-medium;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-large;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-huge;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
   }
 }
@@ -170,28 +295,69 @@ $split-breakpoint-xl: 1280px !default;
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--split\@l {
   @media all and (min-width: $split-breakpoint-l) {
     flex-direction: row;
+
     .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-bottom: 0;
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-tiny;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-small;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-medium;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-large;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-huge;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
   }
 }
@@ -207,24 +373,64 @@ $split-breakpoint-xl: 1280px !default;
       margin-bottom: 0;
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-tiny;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-small;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-medium;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-large;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
 
-    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-huge;
+
+      /* stylelint-disable max-nesting-depth */
+      &:last-child {
+        margin-right: 0;
+      }
+
+      /* stylelint-enable */
     }
   }
 }
