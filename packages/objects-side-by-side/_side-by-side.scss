@@ -25,11 +25,24 @@ $side-by-side-gutter: 1rem !default;
 }
 
 //
+// SideBySide Align Bottom
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}SideBySide--align-bottom {
+  align-items: flex-end;
+}
+
+//
+// SideBySide Align Center
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}SideBySide--align-center {
+  align-items: center;
+}
+
+//
 // Default SideBySide Item
 ///
 .#{$scales-namespace}#{$scales-objects-class-namespace}SideBySide__item {
   flex: 1;
-  margin: auto;
   margin-right: $side-by-side-gutter;
 }
 

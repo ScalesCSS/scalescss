@@ -25,6 +25,18 @@ The Side by Side object can be used on any elements that you want. For example:
 </div>
 ```
 
+To align items along the bottom:
+
+```
+<div class="SideBySide SideBySide--align-bottom">
+```
+
+To align items along the center:
+
+```
+<div class="SideBySide SideBySide--align-center">
+```
+
 ### Other uses
 
 You may wish to split the items in a way other than 50/50. Below are modifier classes that allow

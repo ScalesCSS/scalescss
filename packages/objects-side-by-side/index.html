@@ -9,9 +9,21 @@
     display: flex;
   }
 
+  .SideBySide--align-bottom {
+    align-items: flex-end;
+  }
+
+  .SideBySide--align-center {
+    align-items: center;
+  }
+
   .SideBySide__item {
     flex: 1;
     margin-right: 1rem;
+  }
+
+  .SideBySide__item:last-child {
+    margin-right: 0;
   }
 
   .SideBySide__item--one-quarter {
@@ -37,10 +49,51 @@
 
     <div class="SideBySide">
       <div class="SideBySide__item">
-        The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+        <p>
+          The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+        </p>
+        <p>
+          The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+        </p>
       </div>
       <div class="SideBySide__item">
-        The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+        <p>
+          The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+        </p>
+      </div>
+    </div>
+
+    <h3>Align Bottom</h3>
+    <div class="SideBySide SideBySide--align-bottom">
+      <div class="SideBySide__item">
+        <p>
+          The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+        </p>
+        <p>
+          The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+        </p>
+      </div>
+      <div class="SideBySide__item">
+        <p>
+          The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+        </p>
+      </div>
+    </div>
+
+    <h3>Align Center</h3>
+    <div class="SideBySide SideBySide--align-center">
+      <div class="SideBySide__item">
+        <p>
+          The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+        </p>
+        <p>
+          The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+        </p>
+      </div>
+      <div class="SideBySide__item">
+        <p>
+          The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+        </p>
       </div>
     </div>
 
