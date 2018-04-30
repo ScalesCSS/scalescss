@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stack Object - Scales</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<style>
+.Stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.Stack__item {
+  flex: 0 0 auto;
+}
+.Stack__item:last-child {
+  margin-bottom: 0;
+}
+
+.Stack--tiny .Stack__item {
+  margin-bottom: 0.25em;
+}
+
+.Stack--small .Stack__item {
+  margin-bottom: 0.5em;
+}
+
+.Stack--medium .Stack__item {
+  margin-bottom: 1em;
+}
+
+.Stack--large .Stack__item {
+  margin-bottom: 2em;
+}
+
+.Stack--huge .Stack__item {
+  margin-bottom: 4em;
+}
+
+@media all and (min-width: 480px) {
+  .Stack--split\@xs {
+    flex-direction: row;
+  }
+  .Stack--split\@xs .Stack__item {
+    margin-bottom: 0;
+  }
+  .Stack--split\@xs.Stack--tiny .Stack__item {
+    margin-right: 0.25em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@xs.Stack--tiny .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@xs.Stack--small .Stack__item {
+    margin-right: 0.5em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@xs.Stack--small .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@xs.Stack--medium .Stack__item {
+    margin-right: 1em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@xs.Stack--medium .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@xs.Stack--large .Stack__item {
+    margin-right: 2em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@xs.Stack--large .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@xs.Stack--huge .Stack__item {
+    margin-right: 4em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@xs.Stack--huge .Stack__item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media all and (min-width: 680px) {
+  .Stack--split\@s {
+    flex-direction: row;
+  }
+  .Stack--split\@s .Stack__item {
+    margin-bottom: 0;
+  }
+  .Stack--split\@s.Stack--tiny .Stack__item {
+    margin-right: 0.25em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@s.Stack--tiny .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@s.Stack--small .Stack__item {
+    margin-right: 0.5em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@s.Stack--small .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@s.Stack--medium .Stack__item {
+    margin-right: 1em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@s.Stack--medium .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@s.Stack--large .Stack__item {
+    margin-right: 2em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@s.Stack--large .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@s.Stack--huge .Stack__item {
+    margin-right: 4em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@s.Stack--huge .Stack__item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media all and (min-width: 880px) {
+  .Stack--split\@m {
+    flex-direction: row;
+  }
+  .Stack--split\@m .Stack__item {
+    margin-bottom: 0;
+  }
+  .Stack--split\@m.Stack--tiny .Stack__item {
+    margin-right: 0.25em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@m.Stack--tiny .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@m.Stack--small .Stack__item {
+    margin-right: 0.5em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@m.Stack--small .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@m.Stack--medium .Stack__item {
+    margin-right: 1em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@m.Stack--medium .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@m.Stack--large .Stack__item {
+    margin-right: 2em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@m.Stack--large .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@m.Stack--huge .Stack__item {
+    margin-right: 4em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@m.Stack--huge .Stack__item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media all and (min-width: 1080px) {
+  .Stack--split\@l {
+    flex-direction: row;
+  }
+  .Stack--split\@l .Stack__item {
+    margin-bottom: 0;
+  }
+  .Stack--split\@l.Stack--tiny .Stack__item {
+    margin-right: 0.25em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@l.Stack--tiny .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@l.Stack--small .Stack__item {
+    margin-right: 0.5em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@l.Stack--small .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@l.Stack--medium .Stack__item {
+    margin-right: 1em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@l.Stack--medium .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@l.Stack--large .Stack__item {
+    margin-right: 2em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@l.Stack--large .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@l.Stack--huge .Stack__item {
+    margin-right: 4em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@l.Stack--huge .Stack__item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .Stack--split\@xl {
+    flex-direction: row;
+  }
+  .Stack--split\@xl .Stack__item {
+    margin-bottom: 0;
+  }
+  .Stack--split\@xl.Stack--tiny .Stack__item {
+    margin-right: 0.25em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@xl.Stack--tiny .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@xl.Stack--small .Stack__item {
+    margin-right: 0.5em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@xl.Stack--small .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@xl.Stack--medium .Stack__item {
+    margin-right: 1em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@xl.Stack--medium .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@xl.Stack--large .Stack__item {
+    margin-right: 2em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@xl.Stack--large .Stack__item:last-child {
+    margin-right: 0;
+  }
+  .Stack--split\@xl.Stack--huge .Stack__item {
+    margin-right: 4em;
+    /* stylelint-disable max-nesting-depth */
+    /* stylelint-enable */
+  }
+  .Stack--split\@xl.Stack--huge .Stack__item:last-child {
+    margin-right: 0;
+  }
+}
+</style>
+</head>
+<body>
+  <header role="banner">
+    <h1>Stack Object for Scales</h1>
+  </header>
+  <main role="main">
+    <p>This page includes the default Stack object styles</p>
+
+    <h2>Stack usage</h2>
+      <p>
+        The Stack object lays items out in a column and can be modified to lay items out in a row at a certain breakpoint.
+      </p>
+
+      <h3>Stack with split at extra small breakpoint</h3>
+      <div class="Stack Stack--split@xs">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h3>Stack with split at extra small breakpoint with spacing sizes</h3>
+
+      <h4>Tiny</h4>
+      <div class="Stack Stack--tiny Stack--split@xs">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Small</h4>
+      <div class="Stack Stack--small Stack--split@xs">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Medium</h4>
+      <div class="Stack Stack--medium Stack--split@xs">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Large</h4>
+      <div class="Stack Stack--large Stack--split@xs">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Huge</h4>
+      <div class="Stack Stack--huge Stack--split@xs">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h3>Stack with split at small breakpoint</h3>
+      <div class="Stack Stack--split@s">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h3>Stack with split at small breakpoint with spacing sizes</h3>
+
+      <h4>Tiny</h4>
+      <div class="Stack Stack--tiny Stack--split@s">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Small</h4>
+      <div class="Stack Stack--small Stack--split@s">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Medium</h4>
+      <div class="Stack Stack--medium Stack--split@s">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Large</h4>
+      <div class="Stack Stack--large Stack--split@s">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Huge</h4>
+      <div class="Stack Stack--huge Stack--split@s">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h3>Stack with split at medium breakpoint</h3>
+      <div class="Stack Stack--split@m">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h3>Stack with split at medium breakpoint with spacing sizes</h3>
+
+      <h4>Tiny</h4>
+      <div class="Stack Stack--tiny Stack--split@m">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Small</h4>
+      <div class="Stack Stack--small Stack--split@m">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Medium</h4>
+      <div class="Stack Stack--medium Stack--split@m">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Large</h4>
+      <div class="Stack Stack--large Stack--split@m">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Huge</h4>
+      <div class="Stack Stack--huge Stack--split@m">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h3>Stack with split at large breakpoint</h3>
+      <div class="Stack Stack--split@l">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h3>Stack with split at large breakpoint with spacing sizes</h3>
+
+      <h4>Tiny</h4>
+      <div class="Stack Stack--tiny Stack--split@l">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Small</h4>
+      <div class="Stack Stack--small Stack--split@l">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+
+      <h4>Medium</h4>
+      <div class="Stack Stack--medium Stack--split@l">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Large</h4>
+      <div class="Stack Stack--large Stack--split@l">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Huge</h4>
+      <div class="Stack Stack--huge Stack--split@l">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h3>Stack with split at extra large breakpoint</h3>
+      <div class="Stack Stack--split@xl">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h3>Stack with split at extra large breakpoint with spacing sizes</h3>
+
+      <h4>Tiny</h4>
+      <div class="Stack Stack--tiny Stack--split@xl">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Small</h4>
+      <div class="Stack Stack--small Stack--split@xl">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Medium</h4>
+      <div class="Stack Stack--medium Stack--split@xl">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Large</h4>
+      <div class="Stack Stack--large Stack--split@xl">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+
+      <h4>Huge</h4>
+      <div class="Stack Stack--huge Stack--split@xl">
+        <div class="Stack__item"><button>Button</button></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+        <div class="Stack__item"><a href="">Link</a></div>
+      </div>
+  </main>
+</body>
+</html>

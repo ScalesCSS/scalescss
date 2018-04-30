@@ -20,8 +20,8 @@ $scales-base-class-namespace: null !default;
 // Available Variables
 ///
 $table-padding-large: 1em !default;
-$table-padding-medium: $table-padding-large / 2 !default;
-$table-padding-small: $table-padding-large / 4 !default;
+$table-padding-medium: 0.5em !default;
+$table-padding-small: 0.25em !default;
 $table-border-width: 1px !default;
 $table-border-style: solid !default;
 $table-border-color: #000 !default;

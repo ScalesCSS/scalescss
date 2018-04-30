@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/base-forms",
-  "version": "3.3.0",
+  "version": "4.0.0",
   "description": "Base form styles for Scales CSS",
   "main": "_forms.scss",
   "scripts": {

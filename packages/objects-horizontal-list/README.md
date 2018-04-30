@@ -12,7 +12,8 @@ Scales uses the [Sass CSS preprocessor](http://sass-lang.com/), you'll need eith
 
 ## Usage
 
-Horizontal List should be used whenever you need to make an ordered or unordered list horizontal instead of vertical. You can extend it with `--delimited` to semantically mark up a character delimited list for things like tags, etc. You can also center, right align, or have the list fill the available space.
+Horizontal List should be used whenever you need to make an ordered or unordered list horizontal instead of vertical. You can extend it with `--delimited` to semantically mark up a character delimited list for things like tags, etc. You can also center, right align, or have the list fill the available space. The spacing between elements can also be adjusted
+with tiny, small, medium, large, and huge modifiers.
 
 ### Default
 
@@ -24,27 +25,97 @@ Horizontal List should be used whenever you need to make an ordered or unordered
 </ul>
 ```
 
-### Character delimited
+### Tiny Spacing
 
 ```
-<ul class="HorizontalList HorizontalList--delimited">
+<ul class="HorizontalList HorizontalList--spacing-tiny">
   <li>Sass</li>
   <li>CSS</li>
   <li>HTML</li>
 </ul>
 ```
 
-### Character delimited override
+### Small Spacing
 
 ```
-<ul class="HorizontalList HorizontalList--delimited">
-  <li data-delimiter=" | ">Sass</li>
-  <li data-delimiter=" | ">CSS</li>
+<ul class="HorizontalList HorizontalList--spacing-small">
+  <li>Sass</li>
+  <li>CSS</li>
   <li>HTML</li>
 </ul>
 ```
 
-### Centered
+### Medium Spacing
+
+```
+<ul class="HorizontalList HorizontalList--spacing-medium">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Large Spacing
+
+```
+<ul class="HorizontalList HorizontalList--spacing-large">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Huge Spacing
+
+```
+<ul class="HorizontalList HorizontalList--spacing-huge">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Character delimited - Split spacing distribution
+
+```
+<ul class="HorizontalList HorizontalList--delimited-split-distribution">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Character delimited - Left spacing distribution
+
+```
+<ul class="HorizontalList HorizontalList--delimited-left-distribution">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Character delimited - Right spacing distribution
+
+```
+<ul class="HorizontalList HorizontalList--delimited-right-distribution">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Character delimiter override
+
+```
+<ul class="HorizontalList HorizontalList--delimited-split-distribution HorizontalList--spacing-medium">
+  <li data-delimiter="|">Sass</li>
+  <li data-delimiter="|">CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Centered horizontal list
 
 ```
 <ul class="HorizontalList HorizontalList--center">
@@ -54,7 +125,7 @@ Horizontal List should be used whenever you need to make an ordered or unordered
 </ul>
 ```
 
-### Right aligned
+### Right aligned horizontal list
 
 ```
 <ul class="HorizontalList HorizontalList--right">
@@ -64,7 +135,7 @@ Horizontal List should be used whenever you need to make an ordered or unordered
 </ul>
 ```
 
-### Left aligned
+### Left aligned horizontal list
 
 ```
 <ul class="HorizontalList HorizontalList--left">
@@ -74,7 +145,7 @@ Horizontal List should be used whenever you need to make an ordered or unordered
 </ul>
 ```
 
-### Fill
+### Fill style horizontal list
 
 ```
 <ul class="HorizontalList HorizontalList--fill">
@@ -97,11 +168,18 @@ Since there are times when you want a list to be horizontal at some media querie
 ## Available Classes
 
 * `.HorizontalList`
-* `.HorizontalList--delimited`
+* `.HorizontalList--spacing-tiny`
+* `.HorizontalList--spacing-small`
+* `.HorizontalList--spacing-medium`
+* `.HorizontalList--spacing-large`
+* `.HorizontalList--spacing-huge`
+* `.HorizontalList--delimited-split-distribution` - Combined with a spacing class, splits the space on either side of the delimiter.
+* `.HorizontalList--delimited-left-distribution` - Combined with a spacing class, adds space on the left of the delimiter.
+* `.HorizontalList--delimited-right-distribution` - Combined with a spacing class, adds space on the right of the delimiter.
 * `.HorizontalList--center`
 * `.HorizontalList--right`
 * `.HorizontalList--left`
-* `.HorizontalList--fill` - forces the list to take up 100% of it's parent.
+* `.HorizontalList--fill` - forces the list to take up 100% of the available space.
 
 ## Available Data Attributes
 
@@ -109,6 +187,12 @@ Since there are times when you want a list to be horizontal at some media querie
 
 ## Available Variables
 
+* `$horizontal-list-spacing`
+* `$horizontal-list-spacing-tiny`
+* `$horizontal-list-spacing-small`
+* `$horizontal-list-spacing-medium`
+* `$horizontal-list-spacing-large`
+* `$horizontal-list-spacing-huge`
 * `$horizontal-list-delimiter`
 
 ### Namespace Variables

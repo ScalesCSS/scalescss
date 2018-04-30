@@ -22,10 +22,10 @@ $scales-objects-class-namespace: null !default;
 // Available Variables
 ///
 $flag-gutter: 1em !default;
-$flag-gutter-tiny: $flag-gutter / 4 !default;
-$flag-gutter-small: $flag-gutter / 2 !default;
-$flag-gutter-large: $flag-gutter * 2 !default;
-$flag-gutter-huge: $flag-gutter * 4 !default;
+$flag-gutter-tiny: 0.25em !default;
+$flag-gutter-small: 0.5em !default;
+$flag-gutter-large: 2em !default;
+$flag-gutter-huge: 4em !default;
 $flag-stacked-breakpoint: 25em !default;
 
 //

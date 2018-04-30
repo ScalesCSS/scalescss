@@ -9,11 +9,14 @@ For simplicity, it is assumed that the files being imported are in the same dire
 ## The Imports
 
 ### These are global utility styles
+
 ```
 @import "@scalescss/generic-normalize/normalize";
 @import "@scalescss/generic-reset/reset";
 ```
+
 ### These are the base structure styles for standard HTML elements
+
 ```
 @import "@scalescss/base-typography/typography";
 @import "@scalescss/base-images/images";
@@ -24,24 +27,31 @@ For simplicity, it is assumed that the files being imported are in the same dire
 ```
 
 ### These are OOCSS based design patterns.
+
 If you come up with new one's, please contribute on github!
+
 ```
 @import "@scalescss/objects-box/box";
+@import "@scalescss/objects-centered-column/centered-column";
 @import "@scalescss/objects-horizontal-list/horizontal-list";
 @import "@scalescss/objects-vertical-list/vertical-list";
 @import "@scalescss/objects-media-object/media-object";
 @import "@scalescss/objects-flag/flag";
+@import "@scalescss/objects-side-by-side/side-by-side";
 @import "@scalescss/objects-split/split";
+@import "@scalescss/objects-stack/stack";
 @import "@scalescss/objects-stats/stats";
 @import "@scalescss/objects-multi-col-list/multi-col-list";
 ```
 
 ### Components
+
 ```
 @import "@scalescss/components-buttons/buttons";
 ```
 
 ### Utilities that need come later in the cascade
+
 ```
 @import "@scalescss/utilities-clearfix/clearfix";
 @import "@scalescss/utilities-size/size";
@@ -49,6 +59,7 @@ If you come up with new one's, please contribute on github!
 ```
 
 ## Order without headings in the way for easier copy/paste
+
 ```
 @import "@scalescss/generic-normalize/normalize";
 @import "@scalescss/generic-reset/reset";
@@ -59,11 +70,14 @@ If you come up with new one's, please contribute on github!
 @import "@scalescss/base-forms/forms";
 @import "@scalescss/base-tables/tables";
 @import "@scalescss/objects-box/box";
+@import "@scalescss/objects-centered-column/centered-column";
 @import "@scalescss/objects-horizontal-list/horizontal-list";
 @import "@scalescss/objects-vertical-list/vertical-list";
 @import "@scalescss/objects-media-object/media-object";
 @import "@scalescss/objects-flag/flag";
+@import "@scalescss/objects-side-by-side/side-by-side";
 @import "@scalescss/objects-split/split";
+@import "@scalescss/objects-stack/stack";
 @import "@scalescss/objects-stats/stats";
 @import "@scalescss/objects-multi-col-list/multi-col-list";
 @import "@scalescss/components-buttons/buttons";
