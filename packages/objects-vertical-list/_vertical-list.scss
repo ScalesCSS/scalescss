@@ -16,6 +16,11 @@ $scales-objects-class-namespace: null !default;
 // Available Variables
 ///
 $vertical-list-delimiter: ',\00A0' !default;
+$horizontal-list-spacing-tiny: 0.25em !default;
+$horizontal-list-spacing-small: 0.5em !default;
+$horizontal-list-spacing-medium: 1em !default;
+$horizontal-list-spacing-large: 2em !default;
+$horizontal-list-spacing-huge: 4em !default;
 
 //
 // Horizontal List classes
@@ -34,6 +39,59 @@ $vertical-list-delimiter: ',\00A0' !default;
 %#{$scales-namespace}#{$scales-objects-class-namespace}VerticalList,
 .#{$scales-namespace}#{$scales-objects-class-namespace}VerticalList {
   @include VerticalList;
+}
+
+//
+// Vertical List With Spacing
+///
+.#{$scales-namespace}#{$scales-objects-class-namespace}VerticalList--spacing-tiny {
+  > li {
+    margin-bottom: $horizontal-list-spacing-tiny;
+  }
+
+  > li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}VerticalList--spacing-small {
+  > li {
+    margin-bottom: $horizontal-list-spacing-small;
+  }
+
+  > li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}VerticalList--spacing-medium {
+  > li {
+    margin-bottom: $horizontal-list-spacing-medium;
+  }
+
+  > li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}VerticalList--spacing-large {
+  > li {
+    margin-bottom: $horizontal-list-spacing-large;
+  }
+
+  > li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.#{$scales-namespace}#{$scales-objects-class-namespace}VerticalList--spacing-huge {
+  > li {
+    margin-bottom: $horizontal-list-spacing-huge;
+  }
+
+  > li:last-child {
+    margin-bottom: 0;
+  }
 }
 
 //

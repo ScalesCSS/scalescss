@@ -24,6 +24,56 @@ Vertical List should be used whenever you need to make an ordered or unordered l
 </ul>
 ```
 
+### Tiny Spacing
+
+```
+<ul class="VerticalList VerticalList--spacing-tiny">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Small Spacing
+
+```
+<ul class="VerticalList VerticalList--spacing-small">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Medium Spacing
+
+```
+<ul class="VerticalList VerticalList--spacing-medium">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Large Spacing
+
+```
+<ul class="VerticalList VerticalList--spacing-large">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Huge Spacing
+
+```
+<ul class="VerticalList VerticalList--spacing-huge">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
 ### Character delimited
 
 ```
