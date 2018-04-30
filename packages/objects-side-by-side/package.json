@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/objects-side-by-side",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "A simple pattern for displaying content side by side for Scales CSS",
   "main": "_side-by-side.scss",
   "scripts": {
