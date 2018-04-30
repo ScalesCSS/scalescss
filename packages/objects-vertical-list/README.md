@@ -24,6 +24,56 @@ Vertical List should be used whenever you need to make an ordered or unordered l
 </ul>
 ```
 
+### Tiny Spacing
+
+```
+<ul class="VerticalList VerticalList--spacing-tiny">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Small Spacing
+
+```
+<ul class="VerticalList VerticalList--spacing-small">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Medium Spacing
+
+```
+<ul class="VerticalList VerticalList--spacing-medium">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Large Spacing
+
+```
+<ul class="VerticalList VerticalList--spacing-large">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
+### Huge Spacing
+
+```
+<ul class="VerticalList VerticalList--spacing-huge">
+  <li>Sass</li>
+  <li>CSS</li>
+  <li>HTML</li>
+</ul>
+```
+
 ### Character delimited
 
 ```
@@ -58,6 +108,11 @@ Since there are times when you want a list to be vertical at some media queries 
 
 * `.VerticalList`
 * `.VerticalList--delimited`
+* `.VerticalList--spacing-tiny`
+* `.VerticalList--spacing-small`
+* `.VerticalList--spacing-medium`
+* `.VerticalList--spacing-large`
+* `.VerticalList--spacing-huge`
 
 ## Available Data Attributes
 
@@ -66,6 +121,11 @@ Since there are times when you want a list to be vertical at some media queries 
 ## Available Variables
 
 * `$vertical-list-delimiter`
+* `$horizontal-list-spacing-tiny`
+* `$horizontal-list-spacing-small`
+* `$horizontal-list-spacing-medium`
+* `$horizontal-list-spacing-large`
+* `$horizontal-list-spacing-huge`
 
 ### Namespace Variables
 

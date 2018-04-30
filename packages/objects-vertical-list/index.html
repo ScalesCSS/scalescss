@@ -14,17 +14,51 @@
   display: block;
 }
 
+.VerticalList--spacing-tiny > li {
+  margin-bottom: 0.25em;
+}
+.VerticalList--spacing-tiny > li:last-child {
+  margin-bottom: 0;
+}
+
+.VerticalList--spacing-small > li {
+  margin-bottom: 0.5em;
+}
+.VerticalList--spacing-small > li:last-child {
+  margin-bottom: 0;
+}
+
+.VerticalList--spacing-medium > li {
+  margin-bottom: 1em;
+}
+.VerticalList--spacing-medium > li:last-child {
+  margin-bottom: 0;
+}
+
+.VerticalList--spacing-large > li {
+  margin-bottom: 2em;
+}
+.VerticalList--spacing-large > li:last-child {
+  margin-bottom: 0;
+}
+
+.VerticalList--spacing-huge > li {
+  margin-bottom: 4em;
+}
+.VerticalList--spacing-huge > li:last-child {
+  margin-bottom: 0;
+}
+
 .VerticalList--delimited > li::after {
   content: ", ";
 }
 .VerticalList--delimited > li:last-child::after {
-  content: '';
+  content: "";
 }
 
 .VerticalList > [data-delimiter]::after {
   content: attr(data-delimiter);
 }
-
 </style>
 </head>
 <body>
@@ -40,6 +74,46 @@
     <h3>Default styles</h3>
 
     <ul class="VerticalList">
+      <li>Sass</li>
+      <li>CSS</li>
+      <li>HTML</li>
+    </ul>
+
+    <h3>Tiny Spacing</h3>
+
+    <ul class="VerticalList VerticalList--spacing-tiny">
+      <li>Sass</li>
+      <li>CSS</li>
+      <li>HTML</li>
+    </ul>
+
+    <h3>Small Spacing</h3>
+
+    <ul class="VerticalList VerticalList--spacing-small">
+      <li>Sass</li>
+      <li>CSS</li>
+      <li>HTML</li>
+    </ul>
+
+    <h3>Medium Spacing</h3>
+
+    <ul class="VerticalList VerticalList--spacing-medium">
+      <li>Sass</li>
+      <li>CSS</li>
+      <li>HTML</li>
+    </ul>
+
+    <h3>Large Spacing</h3>
+
+    <ul class="VerticalList VerticalList--spacing-large">
+      <li>Sass</li>
+      <li>CSS</li>
+      <li>HTML</li>
+    </ul>
+
+    <h3>Huge Spacing</h3>
+
+    <ul class="VerticalList VerticalList--spacing-huge">
       <li>Sass</li>
       <li>CSS</li>
       <li>HTML</li>
