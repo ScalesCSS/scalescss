@@ -108,6 +108,11 @@ Since there are times when you want a list to be vertical at some media queries 
 
 * `.VerticalList`
 * `.VerticalList--delimited`
+* `.VerticalList--spacing-tiny`
+* `.VerticalList--spacing-small`
+* `.VerticalList--spacing-medium`
+* `.VerticalList--spacing-large`
+* `.VerticalList--spacing-huge`
 
 ## Available Data Attributes
 
@@ -116,6 +121,11 @@ Since there are times when you want a list to be vertical at some media queries 
 ## Available Variables
 
 * `$vertical-list-delimiter`
+* `$horizontal-list-spacing-tiny`
+* `$horizontal-list-spacing-small`
+* `$horizontal-list-spacing-medium`
+* `$horizontal-list-spacing-large`
+* `$horizontal-list-spacing-huge`
 
 ### Namespace Variables
 
