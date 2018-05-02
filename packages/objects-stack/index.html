@@ -13,75 +13,62 @@
 .Stack__item {
   flex: 0 0 auto;
 }
-.Stack__item:last-child {
-  margin-bottom: 0;
-}
 
-.Stack--tiny .Stack__item {
+.Stack--tiny > .Stack__item {
   margin-bottom: 0.25em;
 }
 
-.Stack--small .Stack__item {
+.Stack--small > .Stack__item {
   margin-bottom: 0.5em;
 }
 
-.Stack--medium .Stack__item {
+.Stack--medium > .Stack__item {
   margin-bottom: 1em;
 }
 
-.Stack--large .Stack__item {
+.Stack--large > .Stack__item {
   margin-bottom: 2em;
 }
 
-.Stack--huge .Stack__item {
+.Stack--huge > .Stack__item {
   margin-bottom: 4em;
+}
+
+.Stack--tiny > .Stack__item:last-child,
+.Stack--small > .Stack__item:last-child,
+.Stack--medium > .Stack__item:last-child,
+.Stack--large > .Stack__item:last-child,
+.Stack--huge > .Stack__item:last-child {
+  margin-bottom: 0;
 }
 
 @media all and (min-width: 480px) {
   .Stack--split\@xs {
     flex-direction: row;
   }
-  .Stack--split\@xs .Stack__item {
+  .Stack--split\@xs > .Stack__item {
     margin-bottom: 0;
   }
-  .Stack--split\@xs.Stack--tiny .Stack__item {
+  .Stack--split\@xs.Stack--tiny > .Stack__item {
     margin-right: 0.25em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@xs.Stack--tiny .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@xs.Stack--small .Stack__item {
+  .Stack--split\@xs.Stack--small > .Stack__item {
     margin-right: 0.5em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@xs.Stack--small .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@xs.Stack--medium .Stack__item {
+  .Stack--split\@xs.Stack--medium > .Stack__item {
     margin-right: 1em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@xs.Stack--medium .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@xs.Stack--large .Stack__item {
+  .Stack--split\@xs.Stack--large > .Stack__item {
     margin-right: 2em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@xs.Stack--large .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@xs.Stack--huge .Stack__item {
+  .Stack--split\@xs.Stack--huge > .Stack__item {
     margin-right: 4em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@xs.Stack--huge .Stack__item:last-child {
+  .Stack--split\@xs .Stack--tiny > .Stack__item:last-child,
+  .Stack--split\@xs .Stack--small > .Stack__item:last-child,
+  .Stack--split\@xs .Stack--medium > .Stack__item:last-child,
+  .Stack--split\@xs .Stack--large > .Stack__item:last-child,
+  .Stack--split\@xs .Stack--huge > .Stack__item:last-child {
     margin-right: 0;
   }
 }
@@ -90,47 +77,29 @@
   .Stack--split\@s {
     flex-direction: row;
   }
-  .Stack--split\@s .Stack__item {
+  .Stack--split\@s > .Stack__item {
     margin-bottom: 0;
   }
-  .Stack--split\@s.Stack--tiny .Stack__item {
+  .Stack--split\@s.Stack--tiny > .Stack__item {
     margin-right: 0.25em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@s.Stack--tiny .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@s.Stack--small .Stack__item {
+  .Stack--split\@s.Stack--small > .Stack__item {
     margin-right: 0.5em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@s.Stack--small .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@s.Stack--medium .Stack__item {
+  .Stack--split\@s.Stack--medium > .Stack__item {
     margin-right: 1em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@s.Stack--medium .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@s.Stack--large .Stack__item {
+  .Stack--split\@s.Stack--large > .Stack__item {
     margin-right: 2em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@s.Stack--large .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@s.Stack--huge .Stack__item {
+  .Stack--split\@s.Stack--huge > .Stack__item {
     margin-right: 4em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@s.Stack--huge .Stack__item:last-child {
+  .Stack--split\@s .Stack--tiny > .Stack__item:last-child,
+  .Stack--split\@s .Stack--small > .Stack__item:last-child,
+  .Stack--split\@s .Stack--medium > .Stack__item:last-child,
+  .Stack--split\@s .Stack--large > .Stack__item:last-child,
+  .Stack--split\@s .Stack--huge > .Stack__item:last-child {
     margin-right: 0;
   }
 }
@@ -139,47 +108,29 @@
   .Stack--split\@m {
     flex-direction: row;
   }
-  .Stack--split\@m .Stack__item {
+  .Stack--split\@m > .Stack__item {
     margin-bottom: 0;
   }
-  .Stack--split\@m.Stack--tiny .Stack__item {
+  .Stack--split\@m.Stack--tiny > .Stack__item {
     margin-right: 0.25em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@m.Stack--tiny .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@m.Stack--small .Stack__item {
+  .Stack--split\@m.Stack--small > .Stack__item {
     margin-right: 0.5em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@m.Stack--small .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@m.Stack--medium .Stack__item {
+  .Stack--split\@m.Stack--medium > .Stack__item {
     margin-right: 1em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@m.Stack--medium .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@m.Stack--large .Stack__item {
+  .Stack--split\@m.Stack--large > .Stack__item {
     margin-right: 2em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@m.Stack--large .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@m.Stack--huge .Stack__item {
+  .Stack--split\@m.Stack--huge > .Stack__item {
     margin-right: 4em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@m.Stack--huge .Stack__item:last-child {
+  .Stack--split\@m .Stack--tiny > .Stack__item:last-child,
+  .Stack--split\@m .Stack--small > .Stack__item:last-child,
+  .Stack--split\@m .Stack--medium > .Stack__item:last-child,
+  .Stack--split\@m .Stack--large > .Stack__item:last-child,
+  .Stack--split\@m .Stack--huge > .Stack__item:last-child {
     margin-right: 0;
   }
 }
@@ -188,47 +139,29 @@
   .Stack--split\@l {
     flex-direction: row;
   }
-  .Stack--split\@l .Stack__item {
+  .Stack--split\@l > .Stack__item {
     margin-bottom: 0;
   }
-  .Stack--split\@l.Stack--tiny .Stack__item {
+  .Stack--split\@l.Stack--tiny > .Stack__item {
     margin-right: 0.25em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@l.Stack--tiny .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@l.Stack--small .Stack__item {
+  .Stack--split\@l.Stack--small > .Stack__item {
     margin-right: 0.5em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@l.Stack--small .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@l.Stack--medium .Stack__item {
+  .Stack--split\@l.Stack--medium > .Stack__item {
     margin-right: 1em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@l.Stack--medium .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@l.Stack--large .Stack__item {
+  .Stack--split\@l.Stack--large > .Stack__item {
     margin-right: 2em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@l.Stack--large .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@l.Stack--huge .Stack__item {
+  .Stack--split\@l.Stack--huge > .Stack__item {
     margin-right: 4em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@l.Stack--huge .Stack__item:last-child {
+  .Stack--split\@l .Stack--tiny > .Stack__item:last-child,
+  .Stack--split\@l .Stack--small > .Stack__item:last-child,
+  .Stack--split\@l .Stack--medium > .Stack__item:last-child,
+  .Stack--split\@l .Stack--large > .Stack__item:last-child,
+  .Stack--split\@l .Stack--huge > .Stack__item:last-child {
     margin-right: 0;
   }
 }
@@ -237,47 +170,29 @@
   .Stack--split\@xl {
     flex-direction: row;
   }
-  .Stack--split\@xl .Stack__item {
+  .Stack--split\@xl > .Stack__item {
     margin-bottom: 0;
   }
-  .Stack--split\@xl.Stack--tiny .Stack__item {
+  .Stack--split\@xl.Stack--tiny > .Stack__item {
     margin-right: 0.25em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@xl.Stack--tiny .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@xl.Stack--small .Stack__item {
+  .Stack--split\@xl.Stack--small > .Stack__item {
     margin-right: 0.5em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@xl.Stack--small .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@xl.Stack--medium .Stack__item {
+  .Stack--split\@xl.Stack--medium > .Stack__item {
     margin-right: 1em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@xl.Stack--medium .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@xl.Stack--large .Stack__item {
+  .Stack--split\@xl.Stack--large > .Stack__item {
     margin-right: 2em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@xl.Stack--large .Stack__item:last-child {
-    margin-right: 0;
-  }
-  .Stack--split\@xl.Stack--huge .Stack__item {
+  .Stack--split\@xl.Stack--huge > .Stack__item {
     margin-right: 4em;
-    /* stylelint-disable max-nesting-depth */
-    /* stylelint-enable */
   }
-  .Stack--split\@xl.Stack--huge .Stack__item:last-child {
+  .Stack--split\@xl .Stack--tiny > .Stack__item:last-child,
+  .Stack--split\@xl .Stack--small > .Stack__item:last-child,
+  .Stack--split\@xl .Stack--medium > .Stack__item:last-child,
+  .Stack--split\@xl .Stack--large > .Stack__item:last-child,
+  .Stack--split\@xl .Stack--huge > .Stack__item:last-child {
     margin-right: 0;
   }
 }
