@@ -34,6 +34,7 @@ $split-breakpoint-xl: 1280px !default;
   flex-direction: column;
 }
 
+// Stack items retain their original width
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   flex: 0 0 auto;
 }
@@ -42,48 +43,41 @@ $split-breakpoint-xl: 1280px !default;
 // Stack spacing modifiers
 ///
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
-.#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+> .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-tiny;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
-.#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+> .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-small;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
-.#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+> .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-medium;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
-.#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+> .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-large;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
-.#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+> .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
   margin-bottom: $stack-spacing-huge;
+}
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+> .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+> .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+> .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+> .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+> .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child {
+  margin-bottom: 0;
 }
 
 //
@@ -91,70 +85,52 @@ $split-breakpoint-xl: 1280px !default;
 ///
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--split\@xs {
   @media all and (min-width: $split-breakpoint-xs) {
+    // At extra small breakpoint we switch from column to row
     flex-direction: row;
 
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    // Remove bottom margin in new row formation
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-bottom: 0;
     }
 
+    // Add spacing between items based on spacing size class
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-tiny;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-small;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-medium;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-large;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-huge;
+    }
 
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
+    // We want the last item to have zero margin on the right
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child {
+      margin-right: 0;
     }
   }
 }
@@ -164,70 +140,52 @@ $split-breakpoint-xl: 1280px !default;
 ///
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--split\@s {
   @media all and (min-width: $split-breakpoint-s) {
+    // At small breakpoint we switch from column to row
     flex-direction: row;
 
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    // Remove bottom margin in new row formation
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-bottom: 0;
     }
 
+    // Add spacing between items based on spacing size class
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-tiny;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-small;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-medium;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-large;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-huge;
+    }
 
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
+    // We want the last item to have zero margin on the right
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child {
+      margin-right: 0;
     }
   }
 }
@@ -237,70 +195,52 @@ $split-breakpoint-xl: 1280px !default;
 ///
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--split\@m {
   @media all and (min-width: $split-breakpoint-m) {
+    // At medium breakpoint we switch from column to row
     flex-direction: row;
 
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    // Remove bottom margin in new row formation
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-bottom: 0;
     }
 
+    // Add spacing between items based on spacing size class
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-tiny;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-small;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-medium;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-large;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-huge;
+    }
 
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
+    // We want the last item to have zero margin on the right
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child {
+      margin-right: 0;
     }
   }
 }
@@ -310,70 +250,52 @@ $split-breakpoint-xl: 1280px !default;
 ///
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--split\@l {
   @media all and (min-width: $split-breakpoint-l) {
+    // At large breakpoint we switch from column to row
     flex-direction: row;
 
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    // Remove bottom margin in new row formation
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-bottom: 0;
     }
 
+    // Add spacing between items based on spacing size class
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-tiny;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-small;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-medium;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-large;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-huge;
+    }
 
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
+    // We want the last item to have zero margin on the right
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child {
+      margin-right: 0;
     }
   }
 }
@@ -383,70 +305,52 @@ $split-breakpoint-xl: 1280px !default;
 ///
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--split\@xl {
   @media all and (min-width: $split-breakpoint-xl) {
+    // At extra large breakpoint we switch from column to row
     flex-direction: row;
 
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    // Remove bottom margin in new row formation
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-bottom: 0;
     }
 
+    // Add spacing between items based on spacing size class
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-tiny;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-small;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-medium;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-large;
-
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
     }
 
     &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item {
       margin-right: $stack-spacing-huge;
+    }
 
-      /* stylelint-disable max-nesting-depth */
-      &:last-child {
-        margin-right: 0;
-      }
-
-      /* stylelint-enable */
+    // We want the last item to have zero margin on the right
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+    > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child {
+      margin-right: 0;
     }
   }
 }
