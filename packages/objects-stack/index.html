@@ -64,11 +64,7 @@
   .Stack--split\@xs.Stack--huge > .Stack__item {
     margin-right: 4em;
   }
-  .Stack--split\@xs .Stack--tiny > .Stack__item:last-child,
-  .Stack--split\@xs .Stack--small > .Stack__item:last-child,
-  .Stack--split\@xs .Stack--medium > .Stack__item:last-child,
-  .Stack--split\@xs .Stack--large > .Stack__item:last-child,
-  .Stack--split\@xs .Stack--huge > .Stack__item:last-child {
+  .Stack--split\@xs.Stack--tiny > .Stack__item:last-child, .Stack--split\@xs.Stack--small > .Stack__item:last-child, .Stack--split\@xs.Stack--medium > .Stack__item:last-child, .Stack--split\@xs.Stack--large > .Stack__item:last-child, .Stack--split\@xs.Stack--huge > .Stack__item:last-child {
     margin-right: 0;
   }
 }
@@ -95,11 +91,7 @@
   .Stack--split\@s.Stack--huge > .Stack__item {
     margin-right: 4em;
   }
-  .Stack--split\@s .Stack--tiny > .Stack__item:last-child,
-  .Stack--split\@s .Stack--small > .Stack__item:last-child,
-  .Stack--split\@s .Stack--medium > .Stack__item:last-child,
-  .Stack--split\@s .Stack--large > .Stack__item:last-child,
-  .Stack--split\@s .Stack--huge > .Stack__item:last-child {
+  .Stack--split\@s.Stack--tiny > .Stack__item:last-child, .Stack--split\@s.Stack--small > .Stack__item:last-child, .Stack--split\@s.Stack--medium > .Stack__item:last-child, .Stack--split\@s.Stack--large > .Stack__item:last-child, .Stack--split\@s.Stack--huge > .Stack__item:last-child {
     margin-right: 0;
   }
 }
@@ -126,11 +118,7 @@
   .Stack--split\@m.Stack--huge > .Stack__item {
     margin-right: 4em;
   }
-  .Stack--split\@m .Stack--tiny > .Stack__item:last-child,
-  .Stack--split\@m .Stack--small > .Stack__item:last-child,
-  .Stack--split\@m .Stack--medium > .Stack__item:last-child,
-  .Stack--split\@m .Stack--large > .Stack__item:last-child,
-  .Stack--split\@m .Stack--huge > .Stack__item:last-child {
+  .Stack--split\@m.Stack--tiny > .Stack__item:last-child, .Stack--split\@m.Stack--small > .Stack__item:last-child, .Stack--split\@m.Stack--medium > .Stack__item:last-child, .Stack--split\@m.Stack--large > .Stack__item:last-child, .Stack--split\@m.Stack--huge > .Stack__item:last-child {
     margin-right: 0;
   }
 }
@@ -157,11 +145,7 @@
   .Stack--split\@l.Stack--huge > .Stack__item {
     margin-right: 4em;
   }
-  .Stack--split\@l .Stack--tiny > .Stack__item:last-child,
-  .Stack--split\@l .Stack--small > .Stack__item:last-child,
-  .Stack--split\@l .Stack--medium > .Stack__item:last-child,
-  .Stack--split\@l .Stack--large > .Stack__item:last-child,
-  .Stack--split\@l .Stack--huge > .Stack__item:last-child {
+  .Stack--split\@l.Stack--tiny > .Stack__item:last-child, .Stack--split\@l.Stack--small > .Stack__item:last-child, .Stack--split\@l.Stack--medium > .Stack__item:last-child, .Stack--split\@l.Stack--large > .Stack__item:last-child, .Stack--split\@l.Stack--huge > .Stack__item:last-child {
     margin-right: 0;
   }
 }
@@ -188,11 +172,7 @@
   .Stack--split\@xl.Stack--huge > .Stack__item {
     margin-right: 4em;
   }
-  .Stack--split\@xl .Stack--tiny > .Stack__item:last-child,
-  .Stack--split\@xl .Stack--small > .Stack__item:last-child,
-  .Stack--split\@xl .Stack--medium > .Stack__item:last-child,
-  .Stack--split\@xl .Stack--large > .Stack__item:last-child,
-  .Stack--split\@xl .Stack--huge > .Stack__item:last-child {
+  .Stack--split\@xl.Stack--tiny > .Stack__item:last-child, .Stack--split\@xl.Stack--small > .Stack__item:last-child, .Stack--split\@xl.Stack--medium > .Stack__item:last-child, .Stack--split\@xl.Stack--large > .Stack__item:last-child, .Stack--split\@xl.Stack--huge > .Stack__item:last-child {
     margin-right: 0;
   }
 }
@@ -490,6 +470,33 @@
         <div class="Stack__item"><a href="">Link</a></div>
         <div class="Stack__item"><a href="">Link</a></div>
       </div>
+
+    <h3>
+        Stack (medium breakpoint split modifier and huge spacing)
+        with additional nested Stack Object (large breakpoint split modifier and small spacing)
+    </h3>
+
+    <div class="Stack Stack--split@m Stack--huge">
+      <div class="Stack__item Stack Stack--split@l Stack--small">
+        <p class="Stack__item">The cat jumped over the fence.</p>
+        <p class="Stack__item">The dog followed the cat.</p>
+      </div>
+      <div class="Stack__item"><a href="">Link</a></div>
+    </div>
+
+    <h3>
+        Stack (medium breakpoint split modifier and huge spacing)
+        with additional nested Stack Object (medium spacing)
+    </h3>
+
+    <div class="Stack Stack--split@m Stack--huge">
+      <div class="Stack__item Stack Stack--medium">
+        <p class="Stack__item">The cat jumped over the fence.</p>
+        <p class="Stack__item">The dog followed the cat.</p>
+      </div>
+      <div class="Stack__item"><a href="">Link</a></div>
+    </div>
+
   </main>
 </body>
 </html>

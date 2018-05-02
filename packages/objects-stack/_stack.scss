@@ -67,7 +67,6 @@ $split-breakpoint-xl: 1280px !default;
   margin-bottom: $stack-spacing-huge;
 }
 
-// We want the last item to not have a bottom margin
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
 > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
 .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
@@ -121,15 +120,15 @@ $split-breakpoint-xl: 1280px !default;
     }
 
     // We want the last item to have zero margin on the right
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child {
       margin-right: 0;
     }
@@ -176,15 +175,15 @@ $split-breakpoint-xl: 1280px !default;
     }
 
     // We want the last item to have zero margin on the right
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child {
       margin-right: 0;
     }
@@ -231,15 +230,15 @@ $split-breakpoint-xl: 1280px !default;
     }
 
     // We want the last item to have zero margin on the right
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child {
       margin-right: 0;
     }
@@ -286,15 +285,15 @@ $split-breakpoint-xl: 1280px !default;
     }
 
     // We want the last item to have zero margin on the right
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child {
       margin-right: 0;
     }
@@ -341,15 +340,15 @@ $split-breakpoint-xl: 1280px !default;
     }
 
     // We want the last item to have zero margin on the right
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--tiny
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--small
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--medium
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--large
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child,
-    .#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
+    &.#{$scales-namespace}#{$scales-objects-class-namespace}Stack--huge
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Stack__item:last-child {
       margin-right: 0;
     }
