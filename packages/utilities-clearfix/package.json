@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/utilities-clearfix",
-  "version": "4.0.0",
+  "version": "6.0.0-0",
   "description": "A super minimal clearfix utility for Scales CSS",
   "main": "_clearfix.scss",
   "scripts": {
