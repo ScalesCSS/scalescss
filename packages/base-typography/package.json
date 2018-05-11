@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/base-typography",
-  "version": "6.0.0-0",
+  "version": "6.0.0-1",
   "description": "Base typographic styles for Scales CSS",
   "main": "_typography.scss",
   "scripts": {

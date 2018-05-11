@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/objects-centered-column",
-  "version": "6.0.0-0",
+  "version": "6.0.0-1",
   "description": "A simple pattern for establishing a centered column layout for Scales CSS",
   "main": "_centered-column.scss",
   "scripts": {

@@ -54,7 +54,7 @@ If you come up with new one's, please contribute on github!
 
 ```
 @import "@scalescss/utilities-clearfix/clearfix";
-@import "@scalescss/utilities-size/size";
+@import "@scalescss/utilities-width/width";
 @import "@scalescss/utilities-spacing/spacing";
 ```
 
@@ -82,6 +82,6 @@ If you come up with new one's, please contribute on github!
 @import "@scalescss/objects-multi-col-list/multi-col-list";
 @import "@scalescss/components-buttons/buttons";
 @import "@scalescss/utilities-clearfix/clearfix";
-@import "@scalescss/utilities-size/size";
+@import "@scalescss/utilities-width/width";
 @import "@scalescss/utilities-spacing/spacing";
 ```

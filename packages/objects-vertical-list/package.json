@@ -1,6 +1,6 @@
 {
   "name": "@scalescss/objects-vertical-list",
-  "version": "6.0.0-0",
+  "version": "6.0.0-1",
   "description": "A pattern for making a list vertical after it has been made horizontal for Scales CSS",
   "main": "_vertical-list.scss",
   "scripts": {

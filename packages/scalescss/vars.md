@@ -40,7 +40,7 @@ Class level namespace variables allow you to namespace a selector based on the t
   * Vertical List
 * `$scales-utilities-class-namespace`
   * Clearfix
-  * Size
+  * Width
   * Spacing
 
 ### \_reset.scss
@@ -260,12 +260,12 @@ Class level namespace variables allow you to namespace a selector based on the t
 * `$scales-utilities-class-namespace`
 * `$clearfix-class`
 
-### \_size.scss
+### \_width.scss
 
 * `$scales-utilities-class-namespace`
-* `$size-range-start`
-* `$size-range-end`
-* `$size-step-value`
+* `$width-range-start`
+* `$width-range-end`
+* `$width-step-value`
 
 ### \_spacing.scss
 

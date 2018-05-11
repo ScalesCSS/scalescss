@@ -1,5 +1,5 @@
 // ==========================================================================
-// Size overrides
+// Width Utilities
 // ==========================================================================
 
 //
@@ -19,22 +19,22 @@ $scales-utilities-class-namespace: null !default;
 //
 // Available variables
 ///
-$size-range-start: 5;
-$size-range-end: 100;
-$size-step-value: 5;
+$width-range-start: 5;
+$width-range-end: 100;
+$width-step-value: 5;
 
 //
-// Size classes
+// Width classes
 //
-// This will generate a list of classes in the format `.Size-[percent]`.
+// This will generate a list of classes in the format `.Width-[percent]`.
 // By default it will generate a class for every 5% step from 5 to 100.
 ///
-$size: $size-range-start;
+$width: $width-range-start;
 
-@while $size <= $size-range-end {
-  .#{$scales-namespace}#{$scales-utilities-class-namespace}Size-#{$size} {
-    width: unquote($string:'#{$size}%') !important;
+@while $width <= $width-range-end {
+  .#{$scales-namespace}#{$scales-utilities-class-namespace}Width-#{$width} {
+    width: unquote($string:'#{$width}%') !important;
   }
 
-  $size: $size + $size-step-value;
+  $width: $width + $width-step-value;
 }

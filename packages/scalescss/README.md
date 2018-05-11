@@ -13,9 +13,11 @@ Scales is a highly _scalable_ CSS architecture, it contains design _patterns_ (s
 Scales is managed as a monorepo. All of the Scales source code lives in a single repo, but is released as separate packages using [Lerna](https://github.com/lerna/lerna).
 
 ### Looking for the previous version of scales?
+
 [Scales 2.6.1](https://github.com/ScalesCSS/scalescss/tree/v2.6.1)
 
 ## Techniques/Concepts Used in Scales
+
 * [ITCSS](http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528) (Inverted Triangle CSS) architecture
 * Object Oriented CSS Design Patterns
 * Responsive Design
@@ -23,13 +25,16 @@ Scales is managed as a monorepo. All of the Scales source code lives in a single
 * BEM (Block, Element, Modifier)-style naming convention
 
 ## Browser Support
+
 Scales uses `box-sizing: border-box;`, and `display: table-cell;`, neither of which are supported in IE7 and under. There are a few media queries, but they are an enhancement. Thus, Scales is only for IE9+ and any modern browser, but IE8 is also mostly covered.
 
 ## Dependencies
+
 * [Sass](http://sass-lang.com/) - Either Ruby Sass or Libsass.
 * [NPM](http://npmjs.com) - To pull all of the scales packages together.
 
 ## Setup
+
 Make sure you have the dependencies installed on your system and then, from the root directory of your project, run:
 
 ```
@@ -43,11 +48,13 @@ Next you will want to create 3 files (name them whatever you want):
 1. A main file to import the settings, Scales packages, and all of your project partials. ex. `styles.scss`
 
 ### Settings/Variables
+
 Scales exposes a large number of variables that allow you to customize nearly everything.
 
 Have a look at all of the [available variables](https://github.com/ScalesCSS/scalescss/blob/master/packages/scalescss/vars.md).
 
 ### The Scales Packages
+
 Each piece of Scales is its own package on npm. Once you have all of the packages in your project, you will need to import them into your project. I recommend creating a `_scalescss.scss` file that imports everything.
 
 **The order of the imports is very important!**
@@ -68,18 +75,21 @@ Once you have these files sorted out, you will want to create a main Scss file t
 ```
 
 ## Compile to CSS
+
 Once you have these things set up you simply need to tell Sass what to compile:
 
 ```
 $ sass your-project/styles.scss your-project/css/styles.css
 ```
 
-There are many other options for compiling that you can find in the  [Sass Documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html). You can also look into using a task runner like [Gulp](http://gulpjs.com/) or a module bundler like [Webpack](https://webpack.github.io/).
+There are many other options for compiling that you can find in the [Sass Documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html). You can also look into using a task runner like [Gulp](http://gulpjs.com/) or a module bundler like [Webpack](https://webpack.github.io/).
 
 ## Pattern Library
+
 The [scalescss](https://github.com/ScalesCSS/scalescss/tree/master/packages/scalescss/) package includes an `index.html` file that serves as a basic pattern library for Scales. It shows all of the available patterns in their default state. This can be used as a reference, for testing, or styled into a more complete pattern library with your project's patterns as well.
 
 ## Props
+
 This couldn't have been done without the amazing work of [Harry Roberts](https://csswizardry.com/) on [inuitcss](https://github.com/inuitcss). A number of the design patterns and techniques in Scales were borrowed or adapted from inuitcss.
 
 I also wanted to thank [Nicole Sullivan](http://www.stubbornella.org/) for her work on [OOCSS](https://github.com/stubbornella/oocss/wiki), without which I would not be the developer I am today.
@@ -87,6 +97,7 @@ I also wanted to thank [Nicole Sullivan](http://www.stubbornella.org/) for her w
 ## Sites using Scales
 
 ### v2
+
 * [rocket.quickenloans.com](https://rocket.quickenloans.com/)
 * [quickenloans.com](https://quickenloans.com/)
 * [myql.com](https://www.myql.com/)
@@ -94,10 +105,12 @@ I also wanted to thank [Nicole Sullivan](http://www.stubbornella.org/) for her w
 * [rockframework.org](http://www.rockframework.org/)
 
 ### v1
+
 * [realestateagent.quickenloans.com](https://realestateagent.quickenloans.com/#!/)
 * [toflexornottoflex.com](http://toflexornottoflex.com/#/)
 
 ## Meta
+
 * Follow me on twitter [@yodasw16](http://twitter.com/yodasw16)
 * Check out [my website](http://davidgillhespy.com/)
 * Detroit people: Check out [Devtroit](http://devtroit.com/)
