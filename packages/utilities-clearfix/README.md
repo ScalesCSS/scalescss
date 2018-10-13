@@ -29,6 +29,12 @@ For debugging:
 </div>
 ```
 
+ClearFix is also able to be used as a mixin.
+
+```
+@include ClearFix;
+```
+
 ## Available Classes
 
 * `%ClearFix` - extend in your sass files

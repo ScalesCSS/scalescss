@@ -25,13 +25,20 @@ $scales-utilities-class-namespace: null !default;
 $clearfix-class: ClearFix !default;
 
 //
-// Clearfix
+// Clearfix Mixin
 ///
-%ClearFix,
-.#{$scales-namespace}#{$scales-utilities-class-namespace}#{$clearfix-class} {
+@mixin ClearFix{
   &::after {
     content: '';
     display: table;
     clear: both;
   }
+}
+
+//
+// Clearfix
+///
+%ClearFix,
+.#{$scales-namespace}#{$scales-utilities-class-namespace}#{$clearfix-class} {
+  @include ClearFix;
 }
