@@ -37,7 +37,6 @@ If you come up with new one's, please contribute on github!
 @import "@scalescss/objects-vertical-list/vertical-list";
 @import "@scalescss/objects-media-object/media-object";
 @import "@scalescss/objects-flag/flag";
-@import "@scalescss/objects-side-by-side/side-by-side";
 @import "@scalescss/objects-split/split";
 @import "@scalescss/objects-stack/stack";
 @import "@scalescss/objects-stats/stats";
@@ -75,7 +74,6 @@ If you come up with new one's, please contribute on github!
 @import "@scalescss/objects-vertical-list/vertical-list";
 @import "@scalescss/objects-media-object/media-object";
 @import "@scalescss/objects-flag/flag";
-@import "@scalescss/objects-side-by-side/side-by-side";
 @import "@scalescss/objects-split/split";
 @import "@scalescss/objects-stack/stack";
 @import "@scalescss/objects-stats/stats";

@@ -210,10 +210,6 @@ Class level namespace variables allow you to namespace a selector based on the t
 * `$flag-gutter-huge`
 * `$flag-stacked-breakpoint`
 
-### \_side-by-side.scss
-
-* `$side-by-side-gutter`
-
 ### \_stack.scss
 
 * `$stack-spacing-tiny`

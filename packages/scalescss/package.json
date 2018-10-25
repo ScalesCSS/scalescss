@@ -32,7 +32,6 @@
     "@scalescss/objects-horizontal-list": "^6.0.0-1",
     "@scalescss/objects-media-object": "^6.0.0-1",
     "@scalescss/objects-multi-col-list": "^6.0.0-1",
-    "@scalescss/objects-side-by-side": "^6.0.0-1",
     "@scalescss/objects-split": "^6.0.0-1",
     "@scalescss/objects-stack": "^6.0.0-1",
     "@scalescss/objects-stats": "^6.0.0-1",
