@@ -32,14 +32,12 @@ $flag-stacked-breakpoint: 25em !default;
 // Flag classes
 ///
 .#{$scales-namespace}#{$scales-objects-class-namespace}Flag {
-  display: table;
-  width: 100%;
+  display: flex;
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__body,
 .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
-  display: table-cell;
-  vertical-align: top;
+  flex: 1 1 auto;
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
@@ -52,7 +50,6 @@ $flag-stacked-breakpoint: 25em !default;
 }
 
 .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__body {
-  width: 100%;
 
   > :last-child,
   & {
@@ -64,12 +61,7 @@ $flag-stacked-breakpoint: 25em !default;
 // Reversed flag
 ///
 .#{$scales-namespace}#{$scales-objects-class-namespace}Flag--rev {
-  direction: rtl;
-
-  > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__body,
-  > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
-    direction: ltr;
-  }
+  flex-direction: row-reverse;
 
   > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
     padding-right: 0;
@@ -157,7 +149,7 @@ $flag-stacked-breakpoint: 25em !default;
 .#{$scales-namespace}#{$scales-objects-class-namespace}Flag--middle {
   > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__body,
   > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
-    vertical-align: middle;
+    justify-self: center;
   }
 }
 
@@ -167,7 +159,7 @@ $flag-stacked-breakpoint: 25em !default;
 .#{$scales-namespace}#{$scales-objects-class-namespace}Flag--bottom {
   > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__body,
   > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure {
-    vertical-align: bottom;
+    justify-self: flex-end;
   }
 }
 
@@ -180,7 +172,6 @@ $flag-stacked-breakpoint: 25em !default;
   // Default stacked flag
   ///
   .#{$scales-namespace}#{$scales-objects-class-namespace}Flag--stacked {
-    direction: ltr;
 
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__body,
     > .#{$scales-namespace}#{$scales-objects-class-namespace}Flag__figure,

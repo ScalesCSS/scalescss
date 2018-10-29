@@ -6,14 +6,12 @@
 <meta name="viewport" content="initial-scale=1,width=device-width">
 <style>
 .Flag {
-  display: table;
-  width: 100%;
+  display: flex;
 }
 
 .Flag__body,
 .Flag__figure {
-  display: table-cell;
-  vertical-align: top;
+  flex: 1 1 auto;
 }
 
 .Flag__figure {
@@ -32,12 +30,9 @@
 }
 
 .Flag--rev {
-  direction: rtl;
+  flex-direction: row-reverse;
 }
-.Flag--rev > .Flag__body,
-.Flag--rev > .Flag__figure {
-  direction: ltr;
-}
+
 .Flag--rev > .Flag__figure {
   padding-right: 0;
   padding-left: 1em;
@@ -82,18 +77,16 @@
 
 .Flag--middle > .Flag__body,
 .Flag--middle > .Flag__figure {
-  vertical-align: middle;
+  align-self: center;
 }
 
 .Flag--bottom > .Flag__body,
 .Flag--bottom > .Flag__figure {
-  vertical-align: bottom;
+  align-self: flex-end;
 }
 
 @media all and (max-width: 25em) {
-  .Flag--stacked {
-    direction: ltr;
-  }
+  
   .Flag--stacked > .Flag__body,
   .Flag--stacked > .Flag__figure, .Flag--stacked {
     display: block;
