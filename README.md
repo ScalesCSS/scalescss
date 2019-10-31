@@ -1,3 +1,6 @@
+# This library is no longer being maintained
+Scales has been pulled directly into https://github.com/sparkdesignsystem/spark-design-system and is no longer being directly maintained.
+
 # Scales
 
 Scales is a modular CSS framework for quickly building responsive web projects. It clocks in at only 3.8kb when minified and gzipped.
