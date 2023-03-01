@@ -41,6 +41,6 @@
     "@scalescss/utilities-width": "^6.0.0-1"
   },
   "devDependencies": {
-    "lerna": "^2.0.0-rc.5"
+    "lerna": "^6.5.1"
   }
 }
